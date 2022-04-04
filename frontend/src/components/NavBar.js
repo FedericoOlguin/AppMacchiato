@@ -46,6 +46,8 @@ const NavBar2 = (props) => {
         props.signOut(props.user.email)
     }
 
+    
+
     return (
         <AppBar className='App-header' position="static">
             {/* {console.log(props.user)} */}
