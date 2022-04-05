@@ -77,6 +77,16 @@ const ProductController = {
         }
     },
     //modifyStock
+    modifyStock: async (req, res) => {
+        const {productId, stock} = req.body.product
+        const user = req.user._id
+        try{
+            const newStock = await Product.findOneAndUpdate({'product.id':productId}, {$set:{'products.$.stock':stock}}, {new:true})
+            res.json({success:true, response: {newStock}, message:'The stock has been modified'})
+        }catch(err){
+            res.json({success: true, message: 'Something went wrong, please try again in a few minutes'})
+        }
+    }
 
 }
 
