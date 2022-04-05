@@ -79,7 +79,8 @@ function SignUp(props) {
                   <select className="inputFrom" defaultValue={"default"} name="pais" id="pais">
                     <option value="default">Select your Country</option>
                     {countries.map(country => {
-                      return (<option key={country.id} value={country.name}>{country.name}</option>)
+                      
+                      return (<option key={country.code} value={country.name}>{country.name}</option>)
                     })}
 
                   </select>
