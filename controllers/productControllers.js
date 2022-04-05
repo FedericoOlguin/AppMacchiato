@@ -76,6 +76,14 @@ const ProductController = {
             res.json({success: false, response: error, message: 'You must be logged in first in order to rate this product'})
         }
     },
+
+    modifyProduct: async (req, res) => {
+        const id = req.params.id;        
+        
+    
+        let product = await Product.findOneAndUpdate({ _id:req.params.id}, product);
+        console.log(product);
+      },
     //modifyStock
 
 }
