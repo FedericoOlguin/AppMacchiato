@@ -20,9 +20,10 @@ const ProductController = {
         })
     },
     loadProduct: async (req, res) => {
-        const{name, category, price, stock, description} = req.body;
+        const{name, image, category, price, stock, description} = req.body;
         new Product ({
             name:name,
+            image:image,
             category:category,
             price:price,
             stock:stock, 
