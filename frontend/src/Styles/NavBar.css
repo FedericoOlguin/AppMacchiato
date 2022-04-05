@@ -57,14 +57,22 @@
 }
 
 .nav-linkUser {
-  color: black;
+  color: #000;
   text-decoration: none;
-  padding: 1rem;
+  padding: .2rem;
+  font-size: .8rem;
 }
+
+.container-nav-LinkUser{
+  color: #EFEFEF;
+  
+}
+
 
 .navLi {
   list-style-type: none !important;
   color: #000;
+ 
 }
 
 .linkGeneral:hover {
@@ -115,9 +123,8 @@
   font-size: 1.2rem;
 }
 
-.pruebaMenu {
-  margin-right: 2rem !important;
-}
+
+
 
 @media (max-width: 567px) {
   .navbar {
