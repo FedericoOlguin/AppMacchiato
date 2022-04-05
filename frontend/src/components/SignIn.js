@@ -21,7 +21,7 @@ function SignIn(props) {
     let userObj = {
       email: datosInp.get("email"),
       password: datosInp.get("password"),
-      from: "signin",
+      from: "signup",
     }
     props.signIn(userObj)
     form.current.reset()
@@ -38,11 +38,11 @@ function SignIn(props) {
 
                 <label className="labelForm" htmlFor="name">
                   <span className='span-signup'>E-mail</span>
-                  <input className="inputFrom" type="email" id="name" name="name" required />
+                  <input className="inputFrom" type="email" id="email" name="email" required />
                 </label>
                 <label className="labelForm" htmlFor="lastName">
                   <span className='span-signup'>Password</span>
-                  <input className="inputFrom" type="password" id="lastName" name="lastName" />
+                  <input className="inputFrom" type="password" id="password" name="password" />
                 </label>
 
                 <div className='contenedor-butonsocial'>
