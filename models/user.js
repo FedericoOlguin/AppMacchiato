@@ -15,9 +15,9 @@ const userSchema = new mongoose.Schema({
     from:{type:Array, required:true},
     uniqueString:  {type: String, required:true},
     accessService: {
-        serviceID:{type:mongoose.Types.objectId, ref: 'product'},    
+        serviceID:{type:mongoose.Types.objectId, ref: 'products'},    
     }
 })
 
-const User = mongoose.model('user', userSchema)
+const User = mongoose.model('users', userSchema)
 module.exports = User
