@@ -1,6 +1,7 @@
 import React from "react";
 // import video from "../media/viaje1.mp4"
 import "../Styles/hero.css"
+import imgFondo from '../img/caffe2.jpg'
 
 function Hero() {
     return (
@@ -15,7 +16,8 @@ function Hero() {
                     <div className="scroll-down"></div>
                 </a>
             </div>
-            <img alt="hero" className="videoHero" src="https://images.pexels.com/photos/773958/pexels-photo-773958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"/>
+            
+            <img alt="hero" className="videoHero" src={imgFondo}/>
         </div>
 
     )

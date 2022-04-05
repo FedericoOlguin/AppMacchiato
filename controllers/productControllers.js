@@ -1,0 +1,83 @@
+const { response } = require('express');
+const Product = require('../models/product');
+
+const ProductController = {
+    getAllProducts: async (req,res) => {
+        let products;
+        let error = null;
+
+        try {
+            products = await Product.find();
+
+        }catch(err){
+            error = err
+            console.log(error);
+        }
+        res.json({
+            response: error? 'ERROR' : {products},
+            success: error?false:true,
+            error:error
+        })
+    },
+    loadProduct: async (req, res) => {
+        const{name, image, category, price, stock, description} = req.body;
+        new Product ({
+            name:name,
+            image:image,
+            category:category,
+            price:price,
+            stock:stock, 
+            description:description,
+        })
+        .save()
+        .then(response=>res.json({response}));
+    },
+    getOneProduct: async (req, res) => {
+        const id = req.params.id;
+        let product;
+        let error = null;
+
+        try{
+            product = await axios.findOne({_id:req.params.id})
+
+        }catch(err){
+            error = err
+            console.log(error);
+        }
+        res.json({
+            response: error? 'ERROR' : {product},
+            success: error?false:true,
+            error:error
+        })
+    },
+    scoreProduct: async (req, res) => {
+        const id = req.params.id;
+        const user = (req.user._id).toString()
+
+        let product;
+        let error = null;
+        let allProducts;
+
+        try{
+            product = await Product.findOne({_id:id})
+            let product = product._id
+            if (product.score.includes(user)) {
+                await Product.findOneAndUpdate({_id:id}, {$pull:{likes:user}}, {new:true})
+                allProducts = await Product.find({product:product})
+                res.json({success:true, response: allProducts})
+
+            }else {
+                await Product.findOneAndUpdate({_id:id}, {$push:{likes:user}}, {new:true})
+                allProducts = await Product.find({product:product})
+                res.json({success:true, response: allProducts})
+            }
+        }catch(err){
+            error = err
+            res.json({success: false, response: error, message: 'You must be logged in first in order to rate this product'})
+        }
+    },
+    //modifyStock
+
+}
+
+module.exports= ProductController

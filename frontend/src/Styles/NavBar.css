@@ -1,6 +1,9 @@
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Roboto', sans-serif;
+   /* font-family: 'Poppins', sans-serif; */
 }
+
+
 .navbar {
   background-color: transparent !important;
   width: 100%;
@@ -11,8 +14,21 @@
   transition: all 1s;
   flex-wrap: nowrap;
 }
-.navbarBackgound {
-  /* background-color: transparent !important; */
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  transition: .3s ease-in;
+  overflow: hidden;
+}
+
+.header-bg {
+  background-color: rgba(0, 0, 0, .9);
+}
+
+
+/* .navbarBackgound {
   width: 100%;
   position: fixed;
   display: flex;
@@ -20,12 +36,12 @@
   top: 0;
   z-index: 1000;
   padding: 1rem;
-  /* background-color: #141313 !important; */
-  background-color: #efefef !important;
+  background-color: #efefef09;
   transition: all 1s;
-}
+} */
+
+
 .menuLinks{
-  /* background-color: aliceblue; */
   display: flex;
   width: 80%;
   justify-content: flex-end;
@@ -34,33 +50,45 @@
 .linkGeneral {
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  /* color: rgba(255, 255, 255, 0.664); */
-  color: black;
+  color: #EFEFEF;
   font-size: x-large;
   text-decoration: none;
   font-size: 0.5!important;
 }
+
 .nav-linkUser {
-  color: black;
+  color: #000;
   text-decoration: none;
-  padding: 1rem;
+  padding: .2rem;
+  font-size: .8rem;
 }
+
+.container-nav-LinkUser{
+  color: #EFEFEF;
+  
+}
+
+
 .navLi {
   list-style-type: none !important;
   color: #000;
+ 
 }
+
 .linkGeneral:hover {
   /* color: white; */
   color: #000;
   background-color: rgba(255, 255, 255, 0.281);
   /* font-size: 2rem; */
 }
+
 .linkAvatar {
   text-decoration: none;
   list-style-type: none !important;
   margin: 0;
   padding: 0;
 }
+
 .linkAvatar:hover {
   background-color: transparent !important;
 }
@@ -76,24 +104,27 @@
   width: 4rem;
   border-radius: 50%;
 }
+
 .linkLogo {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
   /* color: white; */
-  color: #000;
+  color: #EFEFEF;
   text-decoration: none;
   align-items: center;
   display: flex;
 }
+
 .linkLogo:hover {
   color: rgba(255, 255, 255, 0.37);
 }
+
 .spanUser {
   font-size: 1.2rem;
 }
-.pruebaMenu {
-  margin-right: 2rem !important;
-}
+
+
+
 
 @media (max-width: 567px) {
   .navbar {
