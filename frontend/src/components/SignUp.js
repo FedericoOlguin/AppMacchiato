@@ -15,7 +15,8 @@ function SignUp(props) {
   const form = useRef()
 
   function send(event) {
-    event.prevenDefault()
+    console.log("Prueba");
+    event.preventDefault()
     form.current.focus()
     let datosInp = new FormData(form.current)
 
@@ -30,7 +31,9 @@ function SignUp(props) {
       rol: 'undefined',
 
     }
-    form.current.reset()
+    // form.current.reset()
+    console.log(userObj);
+
     props.signUp(userObj)
   }
 

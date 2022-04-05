@@ -1,3 +1,4 @@
+const { response } = require('express');
 const Product = require('../models/product');
 
 const ProductController = {
@@ -19,16 +20,17 @@ const ProductController = {
         })
     },
     loadProduct: async (req, res) => {
-        const{name, category, price, stock, description} = req.body;
+        const{name, image, category, price, stock, description} = req.body;
         new Product ({
-            name,
-            category,
-            price,
-            stock, 
-            description,
+            name:name,
+            image:image,
+            category:category,
+            price:price,
+            stock:stock, 
+            description:description,
         })
         .save()
-        .then(resp=>res.json({resp}));
+        .then(response=>res.json({response}));
     },
     getOneProduct: async (req, res) => {
         const id = req.params.id;
