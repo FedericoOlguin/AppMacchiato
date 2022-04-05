@@ -19,7 +19,7 @@ function SignUp(props) {
     event.preventDefault()
     form.current.focus()
     let datosInp = new FormData(form.current)
-    
+
     let userObj = {
       firstName: datosInp.get("name"),
       lastName: datosInp.get("lastName"),
@@ -29,11 +29,11 @@ function SignUp(props) {
       country: datosInp.get("pais"),
       from: "signup",
       rol: 'undefined',
-      
+
     }
     // form.current.reset()
     console.log(userObj);
-    
+
     props.signUp(userObj)
   }
 
