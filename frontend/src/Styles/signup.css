@@ -54,6 +54,8 @@
 .mainForm {
   padding-top: 1rem;
   background-color: #EFEEFE !important;
+  display: flex;
+  justify-content: center;
 }
 
 .subtitle-signup{
