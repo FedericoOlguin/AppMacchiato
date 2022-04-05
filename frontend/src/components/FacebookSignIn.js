@@ -1,8 +1,8 @@
 import React from 'react';
 import FacebookLogin from 'react-facebook-login';
 import { connect } from 'react-redux';
-import usuariosActions from "../redux/actions/usuariosActions"
-import '../styles/signUp.css'
+import usersActions from '../redux/actions/userAction';
+import '../Styles/signin.css';
 
 function FacebookSignIn(props) {
 
@@ -20,7 +20,7 @@ function FacebookSignIn(props) {
         <FacebookLogin
             cssClass="buttonFacebook"
             icon="fa-facebook"
-            textButton=" SignIn with Facebook"
+            textButton="Facebook"
             appId="726721372045263"
             autoLoad={false}
             fields="name,email,picture"
@@ -30,7 +30,7 @@ function FacebookSignIn(props) {
     );
 }
 const mapDispatchToProps = {
-    signIn: usuariosActions.signIn
+    signIn: usersActions.signIn
 
 }
 
