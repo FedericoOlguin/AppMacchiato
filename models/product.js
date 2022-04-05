@@ -9,5 +9,5 @@ const productSchema = new mongoose.Schema({
     scores:{type: Array, default:[]},
 })
 
-const Product = mongoose.model('product', productSchema)
+const Product = mongoose.model('products', productSchema)
 module.exports = Product

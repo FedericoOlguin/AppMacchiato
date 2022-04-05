@@ -49,7 +49,9 @@ const usersActions = {
             try {
                 const res = await axios.post(`https://mytinerarry-olguin.herokuapp.com/api/auth/signOut`, { userEmail })
                 localStorage.removeItem("token")
+                console.log(res)
                 dispatch({ type: "userSignOut", payLoad: null })
+
 
             } catch (err) {
                 console.log(err)
@@ -60,13 +62,13 @@ const usersActions = {
     verifyToken: (token) => {
         return async (dispatch, getState) => {
             try {
-                
+
                 const res = await axios.get(`https://mytinerarry-olguin.herokuapp.com/api/auth/signInToken`, {
                     headers: {
                         Authorization: "Bearer " + token   //dejar espacio en bearer antes del cierre de las comillas ( "Bearer ")
                     }
                 })
-                
+
                 if (res.data.success) {
                     dispatch({ type: "user2", payLoad: res.data.response })
                     dispatch({
