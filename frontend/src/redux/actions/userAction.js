@@ -5,7 +5,7 @@ const usersActions = {
     signUp: (objUser) => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.post(`https://mytinerarry-olguin.herokuapp.com/api/auth/signUp`, { objUser })
+                const res = await axios.post(`http://localhost:3000/api/auth/signUp`, { objUser })
 
                 dispatch({
                     type: "message",
@@ -24,7 +24,7 @@ const usersActions = {
     signIn: (objUser) => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.post(`https://mytinerarry-olguin.herokuapp.com/api/auth/signIn`, { objUser })
+                const res = await axios.post(`http://localhost:3000/api/auth/signIn`, { objUser })
                 if (res.data.success) {
                     localStorage.setItem("token", res.data.response.token)
                     dispatch({ type: "user", payLoad: res.data })
@@ -47,9 +47,11 @@ const usersActions = {
         // console.log(userEmail)
         return async (dispatch, getState) => {
             try {
-                const res = await axios.post(`https://mytinerarry-olguin.herokuapp.com/api/auth/signOut`, { userEmail })
+                const res = await axios.post(`http://localhost:3000/api/auth/signOut`, { userEmail })
                 localStorage.removeItem("token")
+                console.log(res)
                 dispatch({ type: "userSignOut", payLoad: null })
+
 
             } catch (err) {
                 console.log(err)
@@ -60,13 +62,13 @@ const usersActions = {
     verifyToken: (token) => {
         return async (dispatch, getState) => {
             try {
-                
-                const res = await axios.get(`https://mytinerarry-olguin.herokuapp.com/api/auth/signInToken`, {
+
+                const res = await axios.get(`http://localhost:3000/api/auth/signInToken`, {
                     headers: {
                         Authorization: "Bearer " + token   //dejar espacio en bearer antes del cierre de las comillas ( "Bearer ")
                     }
                 })
-                
+
                 if (res.data.success) {
                     dispatch({ type: "user2", payLoad: res.data.response })
                     dispatch({

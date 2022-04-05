@@ -10,12 +10,12 @@ const userSchema = new mongoose.Schema({
     password:[{type:String, required: true}],
     verifiedEmail:{type:Boolean, required:true, default:false},
     country: {type: String, required: true},
-    photoURL: {type:String, required:trune},
+    photoURL: {type:String, required:true},
     rol: {type:String, required:true},
     from:{type:Array, required:true},
     uniqueString:  {type: String, required:true},
     accessService: {
-        serviceID:{type:mongoose.Types.objectId, ref: 'products'},    
+        // serviceID:{type:mongoose.Types.objectId, ref: 'products'},    
     }
 })
 
