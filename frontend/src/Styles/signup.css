@@ -15,7 +15,7 @@
 
 #video-signup{
    width: 50%;
-   height: 113.6vh;
+   height: 100vh;
    /* display: flex;
    align-items: stretch; */
 }
@@ -293,6 +293,14 @@
   margin-bottom: 1rem;
 }
 
+#video-signup{
+  height: 113.45%;
+}
 
 }
 
+@media only screen and (min-width: 1200px) and (max-width: 1326px) {
+  #video-signup {
+    height: 113.55%;
+  }
+}
