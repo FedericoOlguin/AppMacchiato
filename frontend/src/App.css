@@ -9,14 +9,16 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;  
 }
 
 body {
-  background-color: #0a0c0edc;
+  background-color: #141313;
   min-height: 100vh;
   padding: 0!important;
   overflow: visible!important;
+  background-image: url(../src/img/fondo_alto.jpg);
+  background-repeat: repeat;
 }
 
 main {
@@ -30,7 +32,8 @@ main {
   z-index: 5;
   /* padding-bottom: 5rem; */
   /* background-color: #282c34dc; */
-  background-color: #1d1d1d;
+ /*  background-color: #1d1d1d; */
+  
 }
 
 ::-webkit-scrollbar {
