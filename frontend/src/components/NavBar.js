@@ -60,7 +60,7 @@ const NavBar2 = (props) => {
     window.addEventListener('scroll', changeColor)
     return (
         <div className={color ? 'header header-bg' : 'header'}>
-            <AppBar  position="sticky" sx={{ background: '#0001' }}>
+            <AppBar position="static" sx={{ background: '#0001' }}>
                 {/* {console.log(props.user)} */}
                 <Container maxWidth="xxl" className="navbarBackgound navbar-expand-lg ">
                     <Toolbar disableGutters>
@@ -166,17 +166,21 @@ const NavBar2 = (props) => {
                             >
                                 {
                                     props.user ?
-                                        (
+                                        (<div className='container-nav-LinkUser'>
                                             <MenuItem onClick={handleCloseUserMenu} className="navLi">
                                                 <LinkRouter className="nav-linkUser" aria-current="page" onClick={signOutUser} to="#">Sign out</LinkRouter>
                                             </MenuItem>
+                                            <MenuItem>
+                                                <LinkRouter className="nav-linkUser" aria-current="page" to="/">⚙Seetings</LinkRouter>
+                                            </MenuItem>
+                                        </div>
                                         ) : (
-                                            <div>
+                                            <div className='container-nav-LinkUser'>
                                                 <MenuItem onClick={handleCloseUserMenu} className="navLi">
-                                                    <LinkRouter className="nav-linkUser" aria-current="page" to="/signIn">Sign in</LinkRouter>
+                                                    <LinkRouter className="nav-linkUser" aria-current="page" to="/signIn">Sign In</LinkRouter>
                                                 </MenuItem>
                                                 <MenuItem onClick={handleCloseUserMenu} className="navLi">
-                                                    <LinkRouter className="nav-linkUser " to="/signUp">Sign Up</LinkRouter>
+                                                    <LinkRouter className="nav-linkUser" to="/signUp">Sign Up</LinkRouter>
                                                 </MenuItem>
                                             </div>
                                         )
