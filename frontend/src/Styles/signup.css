@@ -15,12 +15,14 @@
 
 #video-signup{
    width: 50%;
-   height: 100%;
-   
+   height: 100vh;
+   /* display: flex;
+   align-items: stretch; */
 }
 
 .video{
   object-fit: cover;
+  
   width: 100%;
   height: 100%;
   filter: brightness(0.85);
@@ -60,8 +62,7 @@
 
 .subtitle-signup{
   padding: 0 0 .2rem 2rem;
-  margin-bottom: 1rem;
-  
+  margin-bottom: 1rem;  
   background-color: #EFEEFE;
   width: 80%; 
   font-size: 3rem;
@@ -235,35 +236,71 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .formIn {
-    width: 50%;
+
+/* -------------responsividad ---------- */
+
+@media only screen and (min-width: 0px) and (max-width: 750px) {
+  #video-signup {
+    display: none;
   }
+
+  #form-signup{
+    width: 100%;
+  }
+
+  .subtitle-signup{
+    font-size: 2rem;
+    padding: 0 0 .2rem 0;
+  }
+
+  .buttonFacebook,
+  .buttonGoogle{
+    width: 90% !important;
+    font-size: .8rem;
+    height: 1.9rem;
+    justify-content: center;
+  }
+
+  .button{
+    font-size: .8rem;
+    height: 1.9rem;
+  }
+
+  .linkSingIn{
+    text-align: center;
+  }
+
+  .inputFrom{
+    padding-left: 0;
+  }
+
 }
 
-@media (max-width: 850px) {
-  .inputFrom {
-    width: 100%;
-  }
 
-  .fieldsetFrom {
-    width: 100%;
-  }
+@media only screen and (min-width: 750px) and (max-width: 1200px) {
+.buttonFacebook,
+.buttonGoogle {
+  width: 90% !important;
+  font-size: .8rem;
+  height: 1.9rem;
+  justify-content: center;
+  height: 2.5rem
+}
 
-  .form {
-    width: 90%;
-    padding: 0 1rem;
-  }
+.button {
+  font-size: .8rem;
+  height: 2.075rem;
+  margin-bottom: 1rem;
+}
 
-  .fotoHeroDetalle {
-    height: 150vh;
-  }
+#video-signup{
+  height: 113.45%;
+}
 
-  .overlay3 {
-    height: 15vh;
-  }
+}
 
-  .formIn {
-    width: 90%;
+@media only screen and (min-width: 1200px) and (max-width: 1326px) {
+  #video-signup {
+    height: 113.55%;
   }
 }
