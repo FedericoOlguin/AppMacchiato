@@ -15,7 +15,7 @@ function SignUp(props) {
   const form = useRef()
 
   function send(event) {
-    console.log("Prueba");
+
     event.preventDefault()
     form.current.focus()
     let datosInp = new FormData(form.current)
@@ -31,10 +31,10 @@ function SignUp(props) {
       rol: 'undefined',
 
     }
-    // form.current.reset()
-    console.log(userObj);
+
 
     props.signUp(userObj)
+    // form.current.reset()
   }
 
 
@@ -79,7 +79,7 @@ function SignUp(props) {
                   <select className="inputFrom" defaultValue={"default"} name="pais" id="pais">
                     <option value="default">Select your Country</option>
                     {countries.map(country => {
-                      
+
                       return (<option key={country.code} value={country.name}>{country.name}</option>)
                     })}
 
