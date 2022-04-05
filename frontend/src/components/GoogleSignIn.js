@@ -1,8 +1,8 @@
 import React from 'react';
 import GoogleLogin from 'react-google-login'
 import { connect } from 'react-redux';
-import usuariosActions from "../redux/actions/usuariosActions"
-import '../styles/signUp.css'
+import usersActions from '../redux/actions/userAction';
+import '../Styles/signin.css';
 
 function GoogleSignIn(props) {
 
@@ -22,7 +22,7 @@ function GoogleSignIn(props) {
         <GoogleLogin
             className="buttonGoogle"
             clientId="842579371648-ndfge64fqe7fainh0mjbo2o5kf4ucivt.apps.googleusercontent.com"
-            buttonText="SignUp with Google"
+            buttonText="Google"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
             cookiePolicy={'single_host_origin'}
@@ -32,7 +32,7 @@ function GoogleSignIn(props) {
 }
 
 const mapDispatchToProps = {
-    signIn: usuariosActions.signIn,
+    signIn: usersActions.signIn,
 
 }
 
