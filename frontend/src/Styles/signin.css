@@ -5,10 +5,11 @@
   height: 100vh;
 }
 
-#form-signup {
+#form-signin {
   width: 50%;
   background-color: #EFEEFE;
   height: 100%;
+  order: 3;
 }
 
 #video-signup {
@@ -46,7 +47,7 @@
   justify-content: center;
   overflow: hidden;
   position: relative;
-
+  
   background-color: #EFEEFE;
 
 }
@@ -56,6 +57,7 @@
   background-color: #EFEEFE !important;
   display: flex;
   justify-content: center;
+  
 }
 
 .subtitle-signup {
@@ -242,7 +244,7 @@
     display: none;
   }
 
-  #form-signup {
+  #form-signin {
     width: 100%;
   }
 

@@ -28,7 +28,7 @@ function SignIn(props) {
   }
   return (
     <div id='container-signup'>
-      <div id='form-signup'>
+      <div id='form-signin'>
         <main className="mainForm">
           <h2 className='subtitle-signup'>Macchiato</h2>
           <div className="formContainer">
@@ -37,32 +37,13 @@ function SignIn(props) {
               <fieldset className="fieldsetFrom">
 
                 <label className="labelForm" htmlFor="name">
-                  <span className='span-signup'>First Name</span>
-                  <input className="inputFrom" type="text" id="name" name="name" required />
+                  <span className='span-signup'>E-mail</span>
+                  <input className="inputFrom" type="email" id="name" name="name" required />
                 </label>
                 <label className="labelForm" htmlFor="lastName">
-                  <span className='span-signup'>Last Name</span>
-                  <input className="inputFrom" type="text" id="lastName" name="lastName" />
-                </label>
-                <label className="labelForm" htmlFor="email">
-                  <span className='span-signup'>E-mail</span>
-                  <input className="inputFrom" type="text" id="email" name="email" />
-                </label>
-
-
-
-                <label className="labelForm" htmlFor="password" >
                   <span className='span-signup'>Password</span>
-                  <input className="inputFrom" type="password" id="password" name="password" />
+                  <input className="inputFrom" type="password" id="lastName" name="lastName" />
                 </label>
-
-                <label className="labelForm" htmlFor="imageUrl">
-                  <span className='span-signup'>Image URL</span>
-                  <input className="inputFrom" type="text" id="imageUrl" name="imageUrl" />
-                </label>
-
-               
-
 
                 <div className='contenedor-butonsocial'>
                   <label className="labelForm" >
@@ -82,9 +63,9 @@ function SignIn(props) {
                       </svg>
                     </div>
                   </div>
-                  <span>Sign Up</span>
+                  <span>Sign In</span>
                 </button>
-                <span className='linkSingIn'>Do you already have an account with us?<LinkRouter className="linkSingIn" to={"/signIn"} > Singn In</LinkRouter></span>
+                <span className='linkSingIn'>You don't have an account?<LinkRouter className="linkSingIn" to={"/signUp"} > Sign Up</LinkRouter></span>
               </fieldset>
             </form>
           </div>

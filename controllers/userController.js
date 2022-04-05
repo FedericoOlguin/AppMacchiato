@@ -12,29 +12,32 @@ const sendEmail = async (email, uniqueString) => { //Funcion que envia email de 
         port: 465,
         secure: true,
         auth: {
-            user: "mydreamtinerary@gmail.com",                //DEFINIMOS LOS DATOS DE AUTORIZACION DE NUESTRO PROVEEDOR DE CORREO 
-            pass: "-123456asd"                                //Es necesario configurar el correo apra el uso de aplicaciones menos seguras
+            user: "macchiatoweb10@gmail.com",                //DEFINIMOS LOS DATOS DE AUTORIZACION DE NUESTRO PROVEEDOR DE CORREO 
+            pass: "macchiato123456"                                //Es necesario configurar el correo apra el uso de aplicaciones menos seguras
         }                                                     // y tambien no solocitar la verificacion en 2 pasos
     })
 
 
     // definimos los parametros del email
-    let sender = "mydreamtinerary@gmail.com"
+    let sender = "macchiatoweb10@gmail.com"
     let mailOptions = {
         from: sender,       //desde donde se enviara el email
         to: email,           //a quien se envia 
         subject: "User email verification", //es asunto el email
         html: `
         <table
-        style="width: 80%;height: 50vh;padding: 10px;margin:0 auto;border-collapse: collapse;background-color: rgb(100, 19, 19); border-radius: 8px;">
+        style="width: 80%;height: 50vh;padding: 10px;margin:0 auto;border-collapse: collapse;background-color: #A06235; border-radius: 8px;">
         <tr>
-            <td style="background-color: rgb(44, 43, 43);text-align: left;padding: 0; width: 50%;border-radius: 8px;">
-                <h3 style="font-family: sans-serif;font-size: 2rem;color: white ;text-align: center;margin-bottom: 1rem;padding: 0 1rem;">MyTinerary</h3>
+            <td style="background-color: #141313 ;text-align: left;padding: 0; width: 50%;border-radius: 8px; ">
+                <h3 style="font-family: sans-serif;font-size: 2rem;color: white ;text-align: center;margin-bottom: 1rem;padding: 0 1rem;">Macchiato Coffee</h3>
+                <div style="display: flex;">
+                  <img   src="https://i.ibb.co/2Y5nRqH/logo.png" alt="logo" style="width: 200px; margin:auto">
+                </div>
             </td>
         </tr>
         <tr>
             <td>
-                <h4 style="font-family: sans-serif;color: white ;text-align: center;">Click <a style="color: brown;"
+                <h4 style="font-family: sans-serif;color: #000 ;text-align: center;">Click <a style="color: #EFEEFE;"
                 href=http://localhost:4000/api/verify/${uniqueString}> here </a> to verify your email</h4>
 
             </td>
