@@ -74,8 +74,10 @@
     border-radius: 50px;
     cursor: pointer;
     margin-top: 10rem;
-    left: 200px;
+
   }
+
+  
 
   .scroll-down::before,
   .scroll-down::after {
@@ -89,7 +91,7 @@
     border: 2px solid white;
     border-top: transparent;
     border-left: transparent;
-    animation: scroll-down 1.5s ease-in-out infinite;
+    animation: scroll-down 1s ease-in-out infinite;
   }
   .scroll-down::before {
     top: 30%;
@@ -117,7 +119,7 @@
   /* Fin btn */
 
   @media only screen and (min-width: 0px) and (max-width: 480px) {
-    .overlay,.heroTitulo{
+    .heroTitulo{
       display: none;
     }
   
@@ -163,7 +165,6 @@
     .scroll-down {
       height: 40px;
       width: 25px;
-      left: 100px;
     }
   
   }

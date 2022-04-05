@@ -16,6 +16,7 @@ function Hero() {
                     <div className="scroll-down"></div>
                 </a>
             </div>
+            
             <img alt="hero" className="videoHero" src={imgFondo}/>
         </div>
 
