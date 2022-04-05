@@ -1,4 +1,5 @@
 require("dotenv").config()
+const passport = require("passport")
 const cors = require("cors")
 const express = require("express")
 require("./config/database")

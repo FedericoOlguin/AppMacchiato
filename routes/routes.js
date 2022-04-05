@@ -1,6 +1,6 @@
 const Router = require('express').Router()
-//const passport 
 const validator=require("../config/validacion")
+const passport = require("../config/passport")
 
 
 //rutas de usuarios
@@ -35,3 +35,6 @@ Router.route('/allproducts')
 
 Router.route('/allproducts/:id')
     .get(getOneProduct)
+
+
+    module.exports = Router;

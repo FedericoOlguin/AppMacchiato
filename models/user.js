@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
     from:{type:Array, required:true},
     uniqueString:  {type: String, required:true},
     accessService: {
-        serviceID:{type:mongoose.Types.objectId, ref: 'products'},    
+        // serviceID:{type:mongoose.Types.objectId, ref: 'products'},    
     }
 })
 
