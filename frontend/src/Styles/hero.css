@@ -13,6 +13,8 @@
   font-size: 2rem;
   color: #EFEEFE;
   overflow: hidden;
+  box-shadow: 15px 15px 40px #000;
+  margin-bottom: 6rem;
 }
 
 .overlay {
