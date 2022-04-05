@@ -28,7 +28,8 @@ const validator = (req, res, next) => {
             "string.min": "Country must contain more than 3 characters",
             "string.max": "The country must contain a maximum of 20 characters"
         }),
-        from: joi.string()
+        from: joi.string(),
+        rol: joi.string()
     })
     const validador = schema.validate(req.body.objUser, { abortEarly: false })
     if (validador.error) {
