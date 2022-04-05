@@ -4,7 +4,7 @@ const validator=require("../config/validacion")
 
 
 //rutas de usuarios
-const { signInUser, signUpUser, signOutUser, verifyEmail, verificarToken } = require("../controllers/ususariosController")
+const { signInUser, signUpUser, signOutUser, verifyEmail, verificarToken } = require("../controllers/userController")
 
 // rutas sigIn/signUp user
 Router.route("/auth/signUp")

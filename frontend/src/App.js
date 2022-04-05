@@ -2,8 +2,8 @@ import Home from './Pages/Home';
 /* import NavBar from "./components/NavBar" */
 import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import SignUp from '../../frontend/src/components/SignUp';
-import SignIn from '../../frontend/src/components/SignIn';
+import SignUp from './components/SignUp';
+import SignIn from './components/SignIn';
 
 function App(props) {
   return (
