@@ -30,7 +30,7 @@ function Home() {
         <NavBar />
         <Hero />
         <AboutUs />
-        <ProductsIndex/>
+        {/* <ProductsIndex/> */}
         
         <a href="#nav">
 
