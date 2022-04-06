@@ -1,6 +1,6 @@
 import React from "react";
 import "../Styles/FooterM.css"
-import facebook from "../img/IconFacebook.png"
+
 import instagram from "../img/IconInstagram.png"
 import twitter from "../img/IconTwitter.png"
 import whatsapp from "../img/IconWhatsapp.png"
@@ -31,7 +31,7 @@ const Footer = () => {
       </div>
       <div className="divIcon">
         <ul>
-          <li><a className="nav-link" target="_blank" rel="noreferrer nopener" href="https://facebook.com/"><img className="iconFooter" src={facebook} alt="iconoFacebook" /></a></li>
+          
           <li><a className="nav-link" target="_blank" rel="noreferrer nopener" href="https://twitter.com/"><img className="iconFooter" src={twitter} alt="iconoTwitter" /></a></li>
           <li><a className="nav-link" target="_blank" rel="noreferrer nopener" href="https://www.instagram.com/"><img className="iconFooter" src={instagram} alt="iconoInstagram" /></a></li>
           <li><a className="nav-link" target="_blank" rel="noreferrer nopener" href="https://www.whatsapp.com/"><img className="iconFooter" src={whatsapp} alt="iconoWhatsapp" /></a></li>
