@@ -10,6 +10,7 @@
   width: 100%;
   /* border: solid 2px white; */
   font-family: "Poppins", sans-serif;
+  margin-top: 10rem;
 }
 
 .globalFooter>video {
@@ -196,7 +197,6 @@ legend {
     height: 90px;
     margin: 0.4rem;
     margin-bottom: 0;
-    background-color: rgba(255, 255, 255, 0.178);
   }
 
   .primerElemento>p {
@@ -333,7 +333,6 @@ legend {
     height: 60px;
     margin: 0.4rem;
     margin-bottom: 0;
-    background-color: rgba(255, 255, 255, 0.178);
   }
 
   .primerElemento>p {
