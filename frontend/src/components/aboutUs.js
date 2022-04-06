@@ -18,9 +18,9 @@ function AboutUs() {
           </div>
         </div>
         <div className='card-text'>
-          <h1>About Macchiato</h1>
-          <p>We have the best human capital as the main input for our products.</p>
-          <span>We are the only brand in the world that belongs to its producers, who day by day grow the best quality  coffee.</span>
+          <h1>About Us</h1>
+          <p>After harvesting the fruits of the coffee trees, they are induced to a wet process where they take approximately one day to ferment.</p>
+          <span>Once the beans are sorted by size and weight, they can be roasted and, if desired, ground. </span>
           <LinkRouter className="link-about" aria-current="page" to="/aboutUs"><button className='boton-aboutUs'>See more</button></LinkRouter>
         </div>
       </div>
