@@ -8,20 +8,20 @@ import { Link as LinkRouter } from 'react-router-dom';
 import logo from "../img/logo.png"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBitcoin,  faFacebook, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
+import { faBitcoin, faFacebook, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 
 
 const Footer = () => {
   return (
 
     <div className='globalFooter'>
-      
-      <img src={""} className="imagenFooter"/>
+
+      {/* <img src={""} className="imagenFooter"/> */}
 
       <div className='footerContainer'>
 
         <div className='primerElemento'>
-          <img src={logo} /> 
+          <img alt='logo' src={logo} />
           <h3>Our Stores:</h3>
           <p>Buenos Aires, Arg.</p>
           <p>Medellín, Col.</p>
@@ -40,14 +40,14 @@ const Footer = () => {
 
         <div className='explore'>
           <h3>Explore:</h3>
-          <a href="#" className='enlace' id='home'> <LinkRouter to="/inicio" >HOME</LinkRouter></a>
-          <a href="#" className='enlace'>  <LinkRouter to="/cities" >COFFE</LinkRouter> </a> 
-          <a href="#" className='enlace'>  <LinkRouter to="/cities" >STORE</LinkRouter> </a> 
+          {/* <LinkRouter className='enlace' to="/inicio" >HOME</LinkRouter> */}
+          <LinkRouter className='enlace' to="/cities" >COFFE</LinkRouter>
+          <LinkRouter className='enlace' to="/cities" >STORE</LinkRouter>
         </div>
-        
+
 
       </div>
-            <h2>MACCHIATTO STORES © 2022</h2>
+      <h2>MACCHIATTO STORES © 2022</h2>
     </div>
 
 
