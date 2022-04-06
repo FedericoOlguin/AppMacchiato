@@ -198,7 +198,7 @@ const userController = {
                         })
                     }
                 } else {
-                    if (userExiste.emailVerificado) {
+                    if (userExiste.verifiedEmail) {
                         let passwordEquals = userExiste.password.filter(pass => bcryptjs.compareSync(password, pass))
                         if (passwordEquals.length > 0) {
                             const userData = {
@@ -250,7 +250,7 @@ const userController = {
         if (req.user) {
             res.json({
                 success: true,
-                response: { id: req.user.id, name: req.user.name, imageUrl: req.user.imageUrl, email: req.user.email, from: "token" },
+                response: { id: req.user.id, name: req.user.name, photoURL: req.user.photoURL, email: req.user.email, from: "token" },
                 message: "Welcome back " + req.user.name.firstName
             })
 
