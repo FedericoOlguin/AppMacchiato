@@ -1,0 +1,10 @@
+.card {
+  background-color: brown !important;
+  border-radius: 8px !important;
+  width: 100%;
+}
+
+.textCenter {
+  text-align: center;
+  font-size: 2rem !important;
+}
