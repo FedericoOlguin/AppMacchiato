@@ -16,27 +16,28 @@ import LoadingIcon from "./LoadingIcon"
 
 
 function ProductsCard(props) {
- 
+    console.log(props.products);
     if (!props.products) {
         return (<LoadingIcon />)
     }
+    
     return (
         <>
             {(props?.products).map(products =>
                 <Card className='card' key={products._id} sx={{ maxWidth: 400, margin: 3.5 }}>
                     <LinkRouter to={`/detalle/${products._id}`}>
                         <CardHeader className='textCenter'
-                            title={products.ciudad}
+                            title={products.name}
                         />
                         <CardMedia
                             component="img"
                             height="300"
-                            image={process.env.PUBLIC_URL + `../imagenes/${products.imagen}`}
+                            image={products.image}
                             alt="Paella dish"
                         />
                         <CardContent>
                             <Typography variant="body2" color="white" fontSize="1rem">
-                                Country: {products.pais}
+                                Category: {products.category}
                             </Typography>
                         </CardContent>
                         <CardActions disableSpacing>
