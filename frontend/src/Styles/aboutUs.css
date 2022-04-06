@@ -142,7 +142,6 @@
   .cards-city {
     height: auto;
     flex-direction: column!important;
-    border-bottom: #efeefe solid 1px;
   }
   .card{
     width: 90%;

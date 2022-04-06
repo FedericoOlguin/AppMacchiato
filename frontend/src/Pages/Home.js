@@ -30,13 +30,13 @@ function Home() {
         <NavBar />
         <Hero />
         <AboutUs />
-        <ProductsIndex/>
+        {/* <ProductsIndex/> */}
         
         <a href="#nav">
 
           <img alt='scroll' src={scrollUp} className={color ? ('scarollUp') : ("scarollUp2")} />
         </a>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     </>
   );
