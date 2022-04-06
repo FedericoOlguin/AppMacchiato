@@ -176,7 +176,8 @@ const NavBar2 = (props) => {
                                                 }} to="#">Sign out</LinkRouter>
                                             {/* </MenuItem> */}
                                             {/* <MenuItem> */}
-                                                <LinkRouter className="nav-linkUser" aria-current="page" to="/">⚙ Seetings</LinkRouter>
+                                            <LinkRouter className="nav-linkUser" aria-current="page" to="/">⚙
+                                                Setting</LinkRouter>
                                             {/* </MenuItem> */}
                                         </div>
                                         ) : (
