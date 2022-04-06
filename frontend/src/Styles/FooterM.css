@@ -154,10 +154,11 @@ footer li {
   .divNavFooter {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   .divNavFooter ul {
-    width: 60%;
+    width: 100%;
   }
 }
 
@@ -199,6 +200,7 @@ footer li {
   .divNavFooter {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   .divNavFooter ul {
