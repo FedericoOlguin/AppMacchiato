@@ -104,7 +104,7 @@ const NavBar2 = (props) => {
                                     <LinkRouter className="nav-linkUser" aria-current="page" to="/">Home</LinkRouter>
                                 </MenuItem>
                                 <MenuItem className="navLi" onClick={handleCloseNavMenu}>
-                                    <LinkRouter className="nav-linkUser" to="/cities">Cities</LinkRouter>
+                                    <LinkRouter className="nav-linkUser" to="/shop">Shop</LinkRouter>
                                 </MenuItem>
 
 

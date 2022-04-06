@@ -1,49 +1,67 @@
 .container-categorias{
-  background-color: aqua;
-  width: 70%;
+ /*  background-color: aqua; */
+  width: 65%;
   height: 70vh;
   display: flex;
   flex-direction: column;
-  margin: 3rem 0;
+  margin: 3rem 0 5rem 0;
 }
 
 .subcontainer-categorias{
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: seagreen;
+  flex-direction: row;  
+ /*  background-color: seagreen; */
   width: 100%;
   height: 50%;
-  margin: 1rem 0;
+  
 }
 
 .subcontainer-categorias1{
   width: 100%;
   height: 50%;
-  background-color: burlywood;
+ /*  background-color: burlywood; */
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
 }
 
 .primerContenedor{
-  border: 1px solid black;
-  background-color: aliceblue;
-  width: 25%;
+ /*  background-color: rgb(221, 82, 13); */
+  width: 30%;
   height: 100%;
+  color: #efefef
 }
 
-.segundoContenedor{
-  
-  background-color: blue;
-  border: 1px solid black;
+.segundoContenedor{  
+  /* background-color: blue; */
   width: 40%;
   height: 100%;
+  color: #efefef
 }
 
 .tercerContenedor{
-  background-color: yellowgreen;
-  border: 1px solid black;
-  width: 25%;
+  /* background-color: yellowgreen; */
+  width: 30%;
   height: 100%;
+  color: #efefef
+}
+
+.img-categorias{
+  object-fit:scale-down;
+  width: 100%;
+  height: 100%;
+}
+
+.tituloCategorias{
+  color: #efefef;
+  text-align: center;
+  font-size: 1.3em;
+  padding: 3rem 0 1rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.parrafoCategorias{
+  font-size: 1.1em;
+  text-align: center;
+  color: #efefefad;
 }
