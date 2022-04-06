@@ -14,7 +14,10 @@ const sendEmail = async (email, uniqueString) => { //Funcion que envia email de 
         auth: {
             user: "macchiatoweb10@gmail.com",                //DEFINIMOS LOS DATOS DE AUTORIZACION DE NUESTRO PROVEEDOR DE CORREO 
             pass: "macchiato123456"                                //Es necesario configurar el correo apra el uso de aplicaciones menos seguras
-        }                                                     // y tambien no solocitar la verificacion en 2 pasos
+        },                                                     // y tambien no solocitar la verificacion en 2 pasos
+        tls: {
+            rejectUnauthorized: false
+        }
     })
 
 
@@ -37,7 +40,7 @@ const sendEmail = async (email, uniqueString) => { //Funcion que envia email de 
         </tr>
         <tr>
             <td>
-                <h4 style="font-family: sans-serif;color: #000 ;text-align: center;">Click <a style="color: #EFEEFE;"
+                <h4 style="font-size: 1rem,font-family: sans-serif;color: #000 ;text-align: center;">Click <a style="color: #EFEEFE;"
                 href=http://localhost:4000/api/verify/${uniqueString}> here </a> to verify your email</h4>
 
             </td>

@@ -133,29 +133,11 @@
 .boton-aboutUs:hover {
   transform: scale(1.02, 1.02);
 }
-.imgSlider{
-  object-fit: cover!important;
+.imgSlider {
+  object-fit: cover !important;
 }
 /* --------------- */
 
-@media (max-width: 870px) {
-  .cards-city {
-    height: auto;
-    flex-direction: column!important;
-  }
-  .card{
-    width: 90%;
-    overflow: hidden;
-    height: 200;
-  }
-  .card-text {
-    padding: 0 1rem;
-    width: 80%;
-  }
-.swiper{
-  width: 100%;
-}
-}
 
 
 @media (max-width: 1400px) {
@@ -169,12 +151,41 @@
   .card-text > span {
     width: 90%;
   }
-  .boton-aboutUs{
+  .boton-aboutUs {
     margin-bottom: 2rem;
   }
 }
+@media (max-width: 870px) {
+  .cards-city {
+    height: auto;
+    flex-direction: column !important;
+  }
+  .card {
+    width: 90%;
+    overflow: hidden;
+    height: 200;
+  }
+  .card-text {
+    padding: 0 1rem;
+    width: 80%;
+  }
+  .swiper {
+    width: 100%;
+  }
+}
 
-
+@media (max-width: 520px) {
+  .parrafoCard {
+    font-size: 0.5rem;
+  }
+  .card-text {
+    margin: 0;
+    width: 100%;
+  }
+  .card-text h1{
+    font-size: 1.7rem;
+  }
+}
 
 /* -------------------- Breakpoint -480  -------------------- */
 /* @media (max-width: 480px) {
