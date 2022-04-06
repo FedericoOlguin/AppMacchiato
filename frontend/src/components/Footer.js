@@ -1,58 +1,43 @@
-import React from 'react'
+import React from "react";
 import "../Styles/FooterM.css"
-/* import ImagenHeder from "../img/imagenHeader.png" */
-/* import FondoFooter from "../img/fondoHeader.jpg" */
-import { Link as LinkRouter } from 'react-router-dom';
 
+import InstagramIcon from '@mui/icons-material/Instagram';
+import RoomIcon from '@mui/icons-material/Room';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { Link as LinkRouter } from "react-router-dom"
+import logo from '../img/logo.png'
 
-import logo from "../img/logo.png"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBitcoin, faFacebook, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 
 
 const Footer = () => {
   return (
+    <footer>
+      <div className="divNavFooter">
+        <ul>
+          <li className=""><LinkRouter className="footerNav" aria-current="page" to="/">Home</LinkRouter></li>
+          <li className=""><LinkRouter className="footerNav " to="/shop">Store</LinkRouter></li>
+          <li><LinkRouter className="footerNav" to="/signIn">Sign In</LinkRouter></li>
+          <li><LinkRouter className="footerNav" to="/signUp">Sign Up</LinkRouter></li>
 
-    <div className='globalFooter'>
+        </ul>
+      </div>
+      <div className="diVFooter">
+        <img src={logo} alt="logo" className="imgFooter"/>
+      </div>
+      <div className="divIcon">
+        <ul>
+          
+          <li><a className="nav-link" target="_blank" rel="noreferrer nopener" href="https://www.google.es/maps/place/ONI+Coffee+Shop/@48.8688602,2.3555228,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e0e33f60c7b:0x509e16fe7178f322!8m2!3d48.8688567!4d2.3577115?hl=es"><RoomIcon className="iconFooter"/></a></li>
 
-      {/* <img src={""} className="imagenFooter"/> */}
-
-      <div className='footerContainer'>
-
-        <div className='primerElemento'>
-          <img alt='logo' src={logo} />
-          <h3>Our Stores:</h3>
-          <p>Buenos Aires, Arg.</p>
-          <p>Medellín, Col.</p>
-          <p>Lima, Per.</p>
-        </div>
-
-        <div className='socialMedia'>
-          <h3>Follow us on social media</h3>
-          <div className='iconsMedia'>
-            <FontAwesomeIcon className='iconoMedia' icon={faFacebook} />
-            <FontAwesomeIcon className='iconoMedia' icon={faInstagram} />
-            <FontAwesomeIcon className='iconoMedia' icon={faWhatsapp} />
-            <FontAwesomeIcon className='iconoMedia' icon={faBitcoin} />
-          </div>
-        </div>
-
-        <div className='explore'>
-          <h3>Explore:</h3>
-          {/* <LinkRouter className='enlace' to="/inicio" >HOME</LinkRouter> */}
-          <LinkRouter className='enlace' to="/cities" >COFFE</LinkRouter>
-          <LinkRouter className='enlace' to="/cities" >STORE</LinkRouter>
-        </div>
-
+          <li><a className="nav-link" target="_blank" rel="noreferrer nopener" href="https://www.instagram.com/"><InstagramIcon className="iconFooter" /></a></li>
+          <li><a className="nav-link" target="_blank" rel="noreferrer nopener" href="https://www.whatsapp.com/"><WhatsAppIcon className="iconFooter"/></a></li>
+        </ul>
 
       </div>
-      <h2>MACCHIATTO STORES © 2022</h2>
-    </div>
-
-
-
+      <div className="divCopy">
+        <h6 >Copyrigth&copy; 2022 All rights reserved</h6>
+      </div>
+    </footer>
   )
 }
-
 export default Footer

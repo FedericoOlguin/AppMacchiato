@@ -38,6 +38,7 @@ body {
   border-radius: 50%;
   background-color: rgba(180, 171, 171, 0.616);
   transition: all 1s ease-in-out;
+  z-index: 100;
 }
 
 .main {

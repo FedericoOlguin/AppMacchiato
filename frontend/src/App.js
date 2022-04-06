@@ -33,7 +33,6 @@ function App(props) {
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
 
       </Routes>
-
       <Snackbar />
     </BrowserRouter>
   );
