@@ -1,41 +1,41 @@
 .cards-city {
   display: flex;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
   justify-content: center;
   width: 100%;
-  height: 70vh;
-  font-family: 'Roboto',sans-serif;
-  margin-top: 2rem;  
+  height: 60vh;
+  font-family: "Roboto", sans-serif;
+  margin-top: 2rem;
   align-items: center;
   align-content: center;
   margin-bottom: 4rem;
+  padding: 0 5rem;
 }
-
 
 .card {
   display: flex;
   flex-direction: column;
   margin: auto 4rem;
-  width: 35%;
-  height: 85%;
+  width: 50%;
+  height: 80%;
   background: radial-gradient(#111 50%, #000 100%);
   overflow: hidden;
   position: relative;
   border-radius: 5px;
-  box-shadow: 10px 10px 30px #0a0a0a;    
+  box-shadow: 15px 15px 15px #0a0a0a;
 }
 
-.card-text{
+.card-text {
   display: flex;
   flex-direction: column;
-  width: 40%;
-  height: 90%;
+  justify-content: center;
+  width: 50%;
+  height: 80%;
   margin: 0 2rem;
-  color: #EFEEFE;
-  
+  color: #efeefe;
 }
 
-.card-text>h1{
+.card-text > h1 {
   font-size: 2.5em;
   text-align: center;
   font-weight: 800;
@@ -44,17 +44,17 @@
   text-transform: uppercase;
 }
 
-.card-text>p{
+.card-text > p {
   font-weight: 300;
   align-self: center;
   width: 70%;
   text-align: justify;
   font-size: 1.5em;
-  color: #EFEEFE;
+  color: #efeefe;
   margin-bottom: 2rem;
 }
 
-.card-text>span{
+.card-text > span {
   font-size: 1.4em;
   text-align: justify;
   width: 70%;
@@ -64,10 +64,11 @@
 .img-card {
   max-width: 100%;
   height: 100%;
-  display: block;  
+  object-fit: cover;
+  display: block;
 }
 
-.card .img-card {  
+.card .img-card {
   transition: all 0.3s ease-out;
 }
 
@@ -75,7 +76,6 @@
   transform: scale(1.1) translateY(-15px);
   opacity: 0.3;
 }
-
 
 .description {
   position: absolute;
@@ -86,52 +86,52 @@
   text-align: center;
 }
 
-.description>h3 {
+.description > h3 {
   font-weight: bold;
   font-size: 2.5rem;
   margin: 0 0 1.2rem;
   transform: translateY(10px);
   opacity: 0;
   transition: all 0.3s ease-out;
-  text-shadow: 1px 1px 2px #EFEEFE;
-  color: #EFEEFE;
+  text-shadow: 1px 1px 2px #efeefe;
+  color: #efeefe;
 }
-
 
 .card:hover .description h3 {
   opacity: 1;
-  color: #EFEEFE;
+  color: #efeefe;
 }
 
 .card:hover .description h4 {
   opacity: 1;
-  color: #EFEEFE;
+  color: #efeefe;
 }
 
 .card:hover .description .boton-city {
   opacity: 1;
-} 
+}
 
-
-
-
-.link-about{
+.link-about {
   display: flex;
   align-self: center;
   text-decoration: none !important;
   margin-top: 2.3rem;
 }
 
-.boton-aboutUs{
-  border: 2px solid #EFEEFE;
+.boton-aboutUs {
+  border: 2px solid #efeefe;
   font-size: 1.2em;
-  padding: .3rem;
+  padding: 0.3rem;
   border-radius: 5px;
   background-color: transparent;
-  color: #EFEEFE;
+  color: #efeefe;
   cursor: pointer;
+  transition: all 0.5;
 }
 
+.boton-aboutUs:hover {
+  transform: scale(1.02,1.02);
+}
 
 /* -------------------- Breakpoint -480  -------------------- */
 @media (max-width: 480px) {
@@ -140,7 +140,6 @@
 
     margin: 1.5rem auto;
   }
-
 }
 
 /* -------------------- Breakpoint -760  -------------------- */
@@ -149,12 +148,8 @@
     width: 80% !important;
     height: 60vh !important;
     margin: 1.5rem auto;
-
   }
 }
-
-
-
 
 /* -------------------- Breakpoint -1000 -------------------- */
 @media (max-width: 1000px) {
@@ -165,6 +160,6 @@
   }
 }
 
-
 /* -------------------- Breakpoint -1200 -------------------- */
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+}

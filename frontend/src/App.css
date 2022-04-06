@@ -13,15 +13,33 @@ html {
 }
 
 body {
-  background-color: #141313;
+  /* background-color: #141313; */
   min-height: 100vh;
   padding: 0!important;
   overflow: visible!important;
-  background-image: url(../src/img/fondo_alto.jpg);
-  background-repeat: repeat;
+  /* background-image: url(../src/img/fondo_alto.jpg); */
+ 
+}
+.scarollUp{
+  position: fixed;
+  bottom: 2rem;
+  right: -4rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(180, 171, 171, 0.616);
+  transition: all 1s ease-in-out;
+}
+.scarollUp2{
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(180, 171, 171, 0.616);
+  transition: all 1s ease-in-out;
 }
 
-main {
+.main {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -30,6 +48,9 @@ main {
   align-items: center;
   box-shadow: 80px 80px 15px black;
   z-index: 5;
+  background-image: url(../src/img/fondo_alto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   /* padding-bottom: 5rem; */
   /* background-color: #282c34dc; */
  /*  background-color: #1d1d1d; */

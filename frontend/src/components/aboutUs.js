@@ -1,8 +1,9 @@
 import React from 'react';
 import '../Styles/aboutUs.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link as LinkRouter } from "react-router-dom";
 import Slider from '../components/slider'
+
 
 
 
@@ -23,6 +24,7 @@ function AboutUs() {
           <LinkRouter className="link-about" aria-current="page" to="/aboutUs"><button className='boton-aboutUs'>See more</button></LinkRouter>
         </div>
       </div>
+      
       <Slider />
     </>
   )
