@@ -60,7 +60,7 @@ const usersActions = {
         }
     },
     verifyToken: (token) => {
-        console.log(token);
+        // console.log(token);
         return async (dispatch, getState) => {
             try {
 

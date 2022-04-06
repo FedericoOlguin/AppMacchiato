@@ -60,6 +60,7 @@ const NavBar2 = (props) => {
     window.addEventListener('scroll', changeColor)
     return (
         <div  className={color ? 'header header-bg' : 'header'}>
+                {console.log(props.user)}
             <AppBar position="static" sx={{ background: '#0001' }}>
                 {/* {console.log(props.user)} */}
                 <Container maxWidth="xxl" className="navbarBackgound navbar-expand-lg ">
@@ -133,6 +134,7 @@ const NavBar2 = (props) => {
 
                         <Box sx={{ flexGrow: 0.008 }}>
                             <Tooltip title="Open settings" >
+                            
                                 {
                                     props.user ? (
                                         <div>

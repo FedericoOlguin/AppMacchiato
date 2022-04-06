@@ -181,7 +181,7 @@ const userController = {
                             id: userExiste._id,
                             name: userExiste.name,
                             email: userExiste.email,
-                            imageUrl: userExiste.imageUrl,
+                            photoURL: userExiste.photoURL,
                             from: from
                         }
                         await userExiste.save()
@@ -206,7 +206,7 @@ const userController = {
                                 id: userExiste._id,
                                 name: userExiste.name,
                                 email: userExiste.email,
-                                imageUrl: userExiste.imageUrl,
+                                photoURL: userExiste.photoURL,
                                 from: from
                             }
                             const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 })
