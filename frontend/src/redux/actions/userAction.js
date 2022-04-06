@@ -49,10 +49,13 @@ const usersActions = {
             try {
                 const res = await axios.post(`http://localhost:4000/api/auth/signOut`, { userEmail })
                 localStorage.removeItem("token")
-                
-                dispatch({ type: "userSignOut", payLoad: {
-                    
-                }})
+
+                dispatch({
+                    type: "userSignOut", payLoad: {
+                        view: true,
+                        message: res.data.message +" " +userEmail
+                    }
+                })
 
 
             } catch (err) {

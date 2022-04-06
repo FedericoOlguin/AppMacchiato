@@ -242,7 +242,8 @@ const userController = {
         await user.save()
         res.json({
             success: true,
-            message: "Close session" + userData.name.firstName
+            reponse: emailUser,
+            message: "Session closed " 
         })
         // res.json(console.log("closed session " + user.email))
 
