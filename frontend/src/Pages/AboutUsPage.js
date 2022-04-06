@@ -1,21 +1,23 @@
 import * as React from "react";
 import "../Styles/aboutUsPage.css";
-import imgFondo from "../img/image2.jpg";
+import imgFondo from "../img/About.jpg";
+import NavBar from '../components/NavBar';
 
 function AboutUsPage() {
   return (
+    <>
+    <NavBar />
     <div className="App-header">
-      <div className="overlay"></div>
-      <div className="heroTitulo">
+      <div className="HeroTitulo">
         <span className="spanTitulo">About Us</span>
-        <h1 className="h1">
+        <h3 className="h3">
           Macchiato is a chain of coffee shops of its own and artisanal
           production, whose brand experience is lived in its exclusive premises.
           Considered a French emblem brand, it occupies a privileged place in
           the sentiment of an entire country. It currently has more than 270
           coffee shop distributed throughout Europe, being present in more than
           12 countries.
-        </h1>
+        </h3>
         <span className="spanSubtitulo">
           Get to know the Macchiato experience
         </span>
@@ -40,7 +42,7 @@ function AboutUsPage() {
           We want to be a French company with a global reach, recognized for its
           raw materials and services, and excellence in the care of our Stores.
         </h3>
-        <span className="Mision">Mission</span>
+        <span className="Mission">Mission</span>
         <h3 className="h3">
           Elaborate all our products and services with high quality standards,
           maintaining their artisanal and ecological origin. We want to convey
@@ -49,8 +51,9 @@ function AboutUsPage() {
         </h3>
       </div>
 
-      <img alt="hero" className="videoHero" src={imgFondo} />
+      {/* <img alt="hero" className="videoHero" src={imgFondo} /> */}
     </div>
+    </>
   );
 }
 
