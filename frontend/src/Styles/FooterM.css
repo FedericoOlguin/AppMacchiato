@@ -90,7 +90,7 @@ footer li {
   justify-content: center;  
   align-items: center;  
   padding: 1rem;
-  flex-grow: 2;
+  flex-grow: 3;
 }
 
 .divCopy {
@@ -101,19 +101,23 @@ footer li {
   bottom: 0;
   text-align: center; 
   margin: auto;
-  left: 2rem;
+  /* left: 2rem; */
 }
 
 .divNavFooter {
   flex-grow: 2;
+  width: 100px;
 }
 
 .divNavFooter ul {
-  width: 50%;
+  max-width: 70%;
 }
 
 .divIcon {
-  flex-grow: 2.5;
+  width: 100;
+  flex-grow: 2;
+  padding: 1rem;
+
 }
 
 .divIcon li {
