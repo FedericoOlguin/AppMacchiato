@@ -15,9 +15,9 @@ const Footer = () => {
       <div className="divNavFooter">
         <ul>
           <li className=""><LinkRouter className="footerNav" aria-current="page" to="/">Home</LinkRouter></li>
-          <li className=""><LinkRouter className="footerNav " to="/cities">Cities</LinkRouter></li>
-          <li><LinkRouter className="footerNav" to="#">Log In</LinkRouter></li>
-          <li><LinkRouter className="footerNav" to="#">Sign Up</LinkRouter></li>
+          <li className=""><LinkRouter className="footerNav " to="/shop">shop</LinkRouter></li>
+          <li><LinkRouter className="footerNav" to="/signIn">Log In</LinkRouter></li>
+          <li><LinkRouter className="footerNav" to="/signUp'">Sign Up</LinkRouter></li>
 
         </ul>
       </div>

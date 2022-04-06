@@ -6,6 +6,8 @@ import AboutUs from '../components/aboutUs';
 import scrollUp from '../img/scrollUp.svg';
 import ProductsIndex from '../components/ProductsIndex';
 import Footer from '../components/Footer';
+import Categorias from '../components/categorias';
+
 
 function Home() {
 
@@ -36,6 +38,7 @@ function Home() {
 
           <img alt='scroll' src={scrollUp} className={color ? ('scarollUp') : ("scarollUp2")} />
         </a>
+        <Categorias/>
         <Footer/>
       </div>
     </>
