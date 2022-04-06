@@ -16,7 +16,7 @@ import LoadingIcon from "./LoadingIcon"
 
 
 function ProductsCard(props) {
-    console.log(props.products);
+    
     if (!props.products) {
         return (<LoadingIcon />)
     }
