@@ -1,0 +1,338 @@
+[
+    {"name":"Roasted Brazilian Oeiras Coffee",
+    "image": "https://www.modobarista.com/product_images/g/792/meli_or___________________-min__59793_zoom.jpg",
+    "category":" Coffees",
+    "price": "1713",
+    "stock": "115",
+    "description":"Coffee with fruity notes, panela, a clean cup and sweet acidity. Certified Organic Brazil. Weight 1000gr."    
+    },
+
+    {"name":"Coffee Blend Brazil Colombia",
+     "image": "https://www.modobarista.com/product_images/d/267/meli_hb-12-min__06421_zoom.jpg",
+    "category":" Coffees",
+    "price": "1835",
+    "stock": "115",
+    "description":"Blend 50% Brazil- 50% Colombia. Medium roast. Roaster Notes: Nuts, Cocoa, Caramel and Citrus. Weight 1000gr."
+   
+    },
+    {"name":"Coffe Brasil Bourbon",
+    "image":"https://www.modobarista.com/product_images/n/959/meli_bo-18-min__54995_zoom.jpg",
+    "category":" Coffees",
+    "price": "1569",
+    "stock": "90",
+    "description":"Smooth bodied coffee with hints of chocolate and caramel with intense bright acidity. Weight 1000gr"
+   
+    },
+    {"name":"Coffe Colombia Guanes",
+    "image":"https://www.modobarista.com/product_images/d/084/meli_co-09-min__32372_zoom.jpg",
+    "category":" Coffees",
+    "price": "1835",
+    "stock": "250",
+    "description":"Smooth bodied coffee with hints of chocolate and caramel with intense bright acidity. Weight: 750gr."
+    
+    },
+    {"name":"Coffee Ecuador Bourbon Cider-Organic",
+    "image":"https://www.modobarista.com/product_images/c/739/meli_ec-01-min__41712_zoom.jpg",
+    "category":" Coffees",
+    "price": "3392",
+    "stock": "101",
+    "description":"Filtered or in espresso, enjoy it as you like! Weight 1000gr."
+    
+    },
+    {"name":"Coffe Guatemala",
+    "image":"https://www.modobarista.com/product_images/g/843/meli_gu-04-min__95967_zoom.jpg",
+    "category":" Coffees",
+    "price": "2214",
+    "stock": "80",
+    "description":"Floral aroma coffee, soft sweet notes of red fruits. Weight:1000gr."
+   
+    },
+
+    {"name":"Green Coffee Barista mode Brazil Catua x1kg",
+    "image":"https://www.modobarista.com/product_images/u/823/Captura_de_Pantalla_2021-09-27_a_la%28s%29_17.19.59__02723_zoom.png",
+    "category":" Coffees",
+    "price": "2681",
+    "stock": "200",
+    "description":"Fractionated, variety: Catuai, medium body"
+    
+    },
+
+    {"name":"Green Coffee Barista mode Brazil Catuai x10kg",
+    "image":"https://www.modobarista.com/product_images/u/823/Captura_de_Pantalla_2021-09-27_a_la%28s%29_17.19.59__02723_zoom.png",
+    "category":" Coffees",
+    "price": "28447",
+    "stock": "50",
+    "description":"Coffee with fruity notes, panela, a clean cup and sweet acidity. Certified Organic Brazil"
+   
+    },
+
+    {"name":"Red Bialetti Coffee Maker 6 cups + 1/4 Colombian Coffee",
+    "image":"https://www.modobarista.com/product_images/p/869/combo_14__07413_zoom.png",
+    "category":" coffee maker",
+    "price": "19770",
+    "stock": "100",
+    "description":"The Italian coffee maker is easy to use and produces a full-bodied coffee rich in aromas."
+    
+    },
+    {"name":"Chemex 3 cups coffee maker + Filters",
+    "image":"https://www.modobarista.com/product_images/m/740/Chemex_3_cups_filtros__82797_zoom.jpg",
+    "category":" coffee maker",
+    "price": "24470",
+    "stock": "180",
+    "description":"Chemex is a manual coffee maker for preparing filtered coffee. It was invented by the chemist Peter J: Schulumbohm. It is one of the best filter coffee machines."
+   
+    },
+    {"name":" Clever Style Filter Coffee Maker",
+    "image":"https://www.modobarista.com/product_images/o/935/clever__67929_zoom.PNG",
+    "category":" Coffe maker",
+    "price": "3978",
+    "stock": "200",
+    "description":"The best features of the French press and the drip filter for the production of an excellent cup of coffee."
+    
+    },
+    {"name":"Delter Coffee Maker + Eco Cup",
+    "image":"https://www.modobarista.com/product_images/k/843/delter_y_eco__31694_zoom.PNG",
+    "category":" Coffe maker",
+    "price": "9470",
+    "stock": "115",
+    "description":"It produces a cup more similar to a filtrate, but with a more controlled dosage of water and agitation."
+    
+    },
+
+    {"name":"Basic",
+    "image":"https://www.modobarista.com/product_images/w/975/ascaso_basic__72098_zoom.jpg",
+    "category":" Coffe maker",
+    "price": "8999",
+    "stock": "115",
+    "description":"Basic model with the same technical features as our Dream model."
+   
+    },
+
+    {"name":"Baby T Plus",
+    "image": "https://www.modobarista.com/product_images/v/677/BABY_T__93238_zoom.png",
+    "category":" Coffe maker",
+    "price": "144645",
+    "stock": "55",
+    "description":"100% professional machine, exceptional thermal stability and energy efficient."
+   
+    },
+
+    {"name":"Big Dream",
+    "image":"https://www.modobarista.com/product_images/q/258/BD-2GR-modelos__50479_zoom.png",
+    "category":" Coffe maker",
+    "price": "42",
+    "stock": "115",
+    "description":" With everything the most demanding barista could want in a top-tier coffee machine. All its stainless steel components, thermal stability, double pre-infusion"
+    
+    },
+
+    {"name":"Domestic coffee maker 1L + 1/4 of Catuai coffee",
+    "image":"https://www.modobarista.com/product_images/n/361/domestic_de_litro__05237_zoom.PNG",
+    "category":" Coffe Maker",
+    "price": "4560",
+    "stock": "121",
+    "description":"1L domestic french press"
+    
+    },
+
+    {"name":"Coffe Maker",
+    "image":"https://www.modobarista.com/product_images/n/361/domestic_de_litro__05237_zoom.PNG",
+    "category":" Coffe Maker",
+    "price": "89600",
+    "stock": "115",
+    "description":"This coffee maker allows you to extract coffee, obtain steam, and hot water at the same time. It has a double boiler and a removable 1.7L water tank."
+   
+    },
+    {      
+        "name": "Manual mill Stainless steel ceramic wheels",
+        "image": "https://www.modobarista.com/product_images/w/148/molino-inox-1__09915_zoom.jpg",
+        "category": " Accessories",
+        "price": 4420,
+        "stock": 10,
+        "description": " Manual mill with ceramic wheels. Easily adjustable to the type of grinding desired. Easy to wash and disassemble, removable handle"
+       
+    },
+    {
+        "name": "Lume Electric Grinder",
+        "image": "https://www.modobarista.com/product_images/c/566/Captura_de_Pantalla_2021-09-13_a_la%28s%29_18.48.22__30124_zoom.png",
+        "category": " Accessories",
+        "price": 28569,
+        "stock": 6,
+        "description": "Lume is the lightest automatic grinder on the market offering a quality grind wherever you take it. On a full charge, Lume will grind up to 50 cups"
+       
+    },
+
+    {        "name": "Coffee grinder F64 EVO",
+        "image": "https://www.modobarista.com/product_images/n/030/f64_evo__38767_zoom.jpg",
+        "category": " Accessories",
+        "price": 265000,
+        "stock": 9,
+        "description": " It has a macrometric adjustment of the grinding, the milling cutters always work flat (adjustment with 3 springs) It has an aluminum body and top quality components"
+       
+    }, { "name": "Scale Touch Pro",
+        "image": "https://www.modobarista.com/product_images/n/815/WhatsApp_Image_2021-11-26_at_12.03.27-removebg-preview__31950_zoom.png",
+        "category": " Accessories",
+        "price": 26790,
+        "stock": 9,
+        "description": "It has 4 programs (Full automatic, manual, semi automatic and ratio mode)"
+       
+    },
+    {        "name": "BAG WITH VALVE STAND UP POUCH 200 GR",
+        "image": "https://www.modobarista.com/product_images/c/709/stan_up_web__55258_zoom.jpg",
+        "category": " Accessories",
+        "price":180,
+        "stock": 500,
+        "description": "BAGS WITH ALUMINUM INTERIOR. Zipper Closure"
+       
+    }, {        "name": "Recharbable capsules",
+        "image": "https://www.modobarista.com/product_images/i/310/dolce_gosto_portada__06221_zoom.jpg",
+        "category": " Accessories",
+        "price": 1550,
+        "stock": 101,
+        "description": "CAFFETTINO Refillable Capsules are the best way to use your Dolce. They allow you to create your own blends and save, while not contaminating each coffee."
+       
+    },
+    {   "name": "Plastic Knockbox",
+        "image": "https://www.modobarista.com/product_images/w/809/VK1803062-plastic_knock_box__97142_zoom.jpg",
+        "category": " Accessories",
+        "price": 6580,
+        "stock": 3,
+        "description": "Para los baristas profesionales y los usuarios domésticos de máquinas de espresso es esencial utilizar un tambor estable y sólido para la eliminación rápida de las superficies de espresso."
+       
+    },
+  
+    {   "name": "Cafiza",
+        "image": "https://www.modobarista.com/product_images/r/254/cafiza-limpieza__81439_zoom.PNG",
+        "category": " Barista tools",
+        "price": 6580,
+        "stock": 3,
+        "description": "Concentrated formula removes residue on group heads, valves and lines. It can also be used to make a soaking solution to clean portafilters, baskets, screens, and other parts."
+       
+    },
+    {   "name": "Red Urnex group brush",
+        "image": "https://www.modobarista.com/product_images/m/290/cepillo-urnex-rojo__59759_zoom.png",
+        "category": " Barista tools",
+        "price": 1970,
+        "stock": 97,
+        "description": "Ideal cleaning brush for espresso machines"
+       
+    },
+    {   "name": "Dellatazza group cleaning",
+        "image": "https://www.modobarista.com/product_images/y/713/dellatazza-gruppo__39768_zoom.jpg",
+        "category": " Barista tools",
+        "price":4651,
+        "stock": 32,
+        "description": "This product is an integral part of the daily maintenance of your espresso machine. Specifically formulated for use during group cleaning and machine unloading, Della Tazza cleaner has maximum solubility and cleaning power with easy rinsing. It is also very effective for cleaning portafilters."
+       
+    },
+    {   "name": "Pitcher Basic 20oz",
+        "image": "https://www.modobarista.com/product_images/i/556/pitcher_basic__31180_zoom.PNG",
+        "category": " Barista Tools",
+        "price":3760,
+        "stock": 37,
+        "description": "Milk Pitcher Basic - You cannot miss this pitcher to emulsify and serve milk in your preparations."
+       
+    },
+    {   "name": "Colors Pitchers",
+        "image": "https://www.modobarista.com/product_images/g/548/PITCHER-COLORES-NEW__69860_zoom.jpg",
+        "category": " Barista Tools",
+        "price":4651,
+        "stock": 32,
+        "description": "This product is an integral part of the daily maintenance of your espresso machine. Specifically formulated for use during group cleaning and machine unloading, Della Tazza cleaner has maximum solubility and cleaning power with easy rinsing. It is also very effective for cleaning portafilters."
+       
+    },
+    {   "name": "Silicone Pitcher",
+        "image": "https://www.modobarista.com/product_images/n/153/pitcher-silicona__85536_zoom.jpg",
+        "category": " Barista tools",
+        "price":4419,
+        "stock": 64,
+        "description": "Milk Pitcher without handle WITH SILICONE - You cannot miss this pitcher to emulsify and serve milk in your preparations."
+       
+    },
+    {   "name": "Tamper + tamping mat",
+        "image": "https://www.modobarista.com/product_images/r/132/combo_15__57624_zoom.png",
+        "category": " Barista tools",
+        "price":7910,
+        "stock": 100,
+        "description": "A necessary tool for every barista and cafeteria, the tamping mat helps maintain stability for better tamping and for countertop protection!"
+       
+    },
+    {   "name": "Clamp thermometer",
+        "image": "https://www.modobarista.com/product_images/v/259/VK05001037__00323_zoom.jpg",
+        "category": " Barista tools",
+        "price":1900,
+        "stock": 8,
+        "description": "The perfect ally for every Barista when it comes to serving good coffee. The temperature of the milk must reach a measure of 65-70ºC for a perfect foam (and a guaranteed latte art)."
+       
+    },
+    {   "name": "Digital thermometer with timer",
+        "image": "https://www.modobarista.com/product_images/r/621/WhatsApp_Image_2021-10-12_at_14.35.34__1_-removebg-preview__23965_zoom.png",
+        "category": " Barista tools",
+        "price":1700,
+        "stock": 15,
+        "description": "El aliado perfecto de todo Barista a la hora de servir un buen café.Timer digital para lograr tu espresso en el tiempo justo! The perfect ally for every Barista when it comes to serving good coffee. Digital timer to achieve your espresso at the right time!."
+       
+    },
+    {   "name": "microfiber cloth",
+        "image": "https://www.modobarista.com/product_images/s/784/PANO_MICROFIBRA__02846_zoom.png",
+        "category": " Barista tools",
+        "price":1900,
+        "stock": 58,
+        "description": "Microfiber absorbs 30% more than other fabrics. Durable, will not discolor with cleaners or bleach. They can be washed in the washing machine."
+       
+    },
+    {   "name": "microfiber cloth",
+        "image": "https://www.modobarista.com/product_images/s/784/PANO_MICROFIBRA__02846_zoom.png",
+        "category": " Barista tools",
+        "price":1900,
+        "stock": 58,
+        "description": "Microfiber absorbs 30% more than other fabrics. Durable, will not discolor with cleaners or bleach. They can be washed in the washing machine."
+       
+    },
+    {   "name": "microfiber cloth",
+        "image": "https://www.modobarista.com/product_images/s/784/PANO_MICROFIBRA__02846_zoom.png",
+        "category": " Barista tools",
+        "price":1900,
+        "stock": 58,
+        "description": "Microfiber absorbs 30% more than other fabrics. Durable, will not discolor with cleaners or bleach. They can be washed in the washing machine."
+       
+    },
+    {   "name": "microfiber cloth",
+        "image": "https://www.modobarista.com/product_images/s/784/PANO_MICROFIBRA__02846_zoom.png",
+        "category": " Barista tools",
+        "price":1900,
+        "stock": 58,
+        "description": "Microfiber absorbs 30% more than other fabrics. Durable, will not discolor with cleaners or bleach. They can be washed in the washing machine."
+       
+    },
+    {   "name": "microfiber cloth",
+        "image": "https://www.modobarista.com/product_images/s/784/PANO_MICROFIBRA__02846_zoom.png",
+        "category": " Barista tools",
+        "price":1900,
+        "stock": 58,
+        "description": "Microfiber absorbs 30% more than other fabrics. Durable, will not discolor with cleaners or bleach. They can be washed in the washing machine."
+       
+    },
+    {   "name": "microfiber cloth",
+        "image": "https://www.modobarista.com/product_images/s/784/PANO_MICROFIBRA__02846_zoom.png",
+        "category": " Barista tools",
+        "price":1900,
+        "stock": 58,
+        "description": "Microfiber absorbs 30% more than other fabrics. Durable, will not discolor with cleaners or bleach. They can be washed in the washing machine."
+       
+    },
+    {   "name": "microfiber cloth",
+        "image": "https://www.modobarista.com/product_images/s/784/PANO_MICROFIBRA__02846_zoom.png",
+        "category": " Barista tools",
+        "price":1900,
+        "stock": 58,
+        "description": "Microfiber absorbs 30% more than other fabrics. Durable, will not discolor with cleaners or bleach. They can be washed in the washing machine."
+       
+    }
+
+
+
+]
+
+
+
