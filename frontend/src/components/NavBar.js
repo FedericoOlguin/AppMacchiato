@@ -17,7 +17,7 @@ import "../Styles/NavBar.css"
 import { Link as LinkRouter } from "react-router-dom"
 import { connect } from 'react-redux';
 import logo from '../img/logo.png'
-// import usersActions from "../redux/actions/usuariosActions"
+import userActions from "../redux/actions/userAction"
 
 
 
@@ -138,7 +138,7 @@ const NavBar2 = (props) => {
                                         <div>
                                             <span className='spanUser'> {props.user.name.firstName}</span>
                                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 1 }}>
-                                                <Avatar alt="Remy Sharp" className='logo' src={props.user.imageUrl} />
+                                                <Avatar alt="Remy Sharp" className='logo' src={props.user.photoURL} />
                                             </IconButton>
                                         </div>
                                     ) :
@@ -197,12 +197,12 @@ const NavBar2 = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        // user: state.usuariosReducer.user
+        user: state.userReducer.user
     }
 }
 
 const mapDispatchToProps = {
-    // signOut: usersActions.signOut
+    signOut: userActions.signOut
 
 }
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar2);

@@ -61,7 +61,7 @@ const userController = {
         const { uniqueString } = req.params  // extraemos de los parametros el string unico 
         const user = await Usuario.findOne({ uniqueString: uniqueString }) //buscamos al usuario por el codigo unico
         if (user) {
-            user.emailVerificado = true   //cambiamos el email a verificado pasando true como parametro
+            user.verifiedEmail = true   //cambiamos el email a verificado pasando true como parametro
             await user.save()
             res.redirect("http://localhost:3000/signIn") //redirecciona al usuario a la ruta definida
             // res.json({success:true,response:"Your email has been successfully verified"})

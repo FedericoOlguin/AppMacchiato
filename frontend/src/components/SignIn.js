@@ -28,6 +28,7 @@ function SignIn(props) {
   }
   return (
     <div id='container-signup'>
+      {console.log(props.user)}
       <div id='form-signin'>
         <main className="mainForm">
           <h2 className='subtitle-signup'>Macchiato</h2>

@@ -22,6 +22,9 @@
   transition: .3s ease-in;
   overflow: hidden;
 }
+.pruebaMenu{
+  margin-right: 2rem!important;
+}
 
 .header-bg {
   background-color: rgba(0, 0, 0, .9);
@@ -59,20 +62,22 @@
 .nav-linkUser {
   color: #000;
   text-decoration: none;
-  padding: .2rem;
+  padding: 1.2rem;
   font-size: .8rem;
+  font-weight: 800;
 }
 
 .container-nav-LinkUser{
   color: #EFEFEF;
-  
+  flex-direction: column;
+  display: flex;
+  width: 6rem;
 }
 
 
 .navLi {
   list-style-type: none !important;
   color: #000;
- 
 }
 
 .linkGeneral:hover {
