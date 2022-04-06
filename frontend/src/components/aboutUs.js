@@ -19,7 +19,7 @@ function AboutUs() {
         </div>
         <div className='card-text'>
           <h1>About Us</h1>
-          <p>After harvesting the fruits of the coffee trees, they are induced to a wet process where they take approximately one day to ferment.</p>
+          <p className='parrafoCard'>After harvesting the fruits of the coffee trees, they are induced to a wet process where they take approximately one day to ferment.</p>
           <span>Once the beans are sorted by size and weight, they can be roasted and, if desired, ground. </span>
           <LinkRouter className="link-about" aria-current="page" to="/aboutUs"><button className='boton-aboutUs'>See more</button></LinkRouter>
         </div>

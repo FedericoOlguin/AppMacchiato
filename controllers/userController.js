@@ -240,7 +240,11 @@ const userController = {
         let user = await Usuario.findOne({ email: emailUser })
         // console.log(user);
         await user.save()
-        res.json(console.log("closed session " + user.email))
+        res.json({
+            success: true,
+            message: "Close session" + userData.name.firstName
+        })
+        // res.json(console.log("closed session " + user.email))
 
     },
     verificarToken: (req, res) => {
