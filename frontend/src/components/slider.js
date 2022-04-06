@@ -17,7 +17,7 @@ export default function App() {
   return (
     <div className="cards-city">
       <div className="card-text">
-        <h1>About Macchiato</h1>
+        <h1>Products</h1>
         <p>We have the best human capital as the main input for our products.</p>
         <span>We are the only brand in the world that belongs to its producers, who day by day grow the best quality  coffee.</span>
         <LinkRouter className="link-about" aria-current="page" to="/shop"><button className='boton-aboutUs'>Shop now</button></LinkRouter>

@@ -51,7 +51,7 @@
   width: 70%;
   text-align: justify;
   font-size: 1.5em;
-  color: #efeefe;
+  color: #efefefad;
   margin-bottom: 1rem;
 }
 
@@ -60,6 +60,7 @@
   text-align: justify;
   width: 70%;
   align-self: center;
+  color: #efefefad;
 }
 
 .img-card {
