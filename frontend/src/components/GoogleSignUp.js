@@ -15,9 +15,10 @@ function GoogleSignUp(props) {
             lastName: res.profileObj.familyName,
             email: res.profileObj.email,
             password: res.profileObj.googleId,
-            imageUrl: res.profileObj.imageUrl,
+            photoURL: res.profileObj.imageUrl,
             country: "Argentina",
             from: "google",
+            rol: "undefine"
             // pais: props.pais
         }
         await props.signUp(userData)

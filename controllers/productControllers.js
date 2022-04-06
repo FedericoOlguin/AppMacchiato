@@ -76,7 +76,25 @@ const ProductController = {
             res.json({success: false, response: error, message: 'You must be logged in first in order to rate this product'})
         }
     },
+
+    modifyProduct: async (req, res) => {
+        const id = req.params.id;        
+        
+    
+        let product = await Product.findOneAndUpdate({ _id:req.params.id}, product);
+        console.log(product);
+      },
     //modifyStock
+    modifyStock: async (req, res) => {
+        const {productId, stock} = req.body.product
+        const user = req.user._id
+        try{
+            const newStock = await Product.findOneAndUpdate({'product.id':productId}, {$set:{'products.$.stock':stock}}, {new:true})
+            res.json({success:true, response: {newStock}, message:'The stock has been modified'})
+        }catch(err){
+            res.json({success: true, message: 'Something went wrong, please try again in a few minutes'})
+        }
+    }
 
 }
 

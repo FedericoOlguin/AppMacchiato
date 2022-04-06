@@ -9,18 +9,22 @@
 
 #form-signup{
   width: 50%;
-  background-color: #EFEEFE;
+  /* background-color: #EFEEFE; */
+  /* background-color: #000; */
   height: 100%;
 }
 
 #video-signup{
    width: 50%;
    height: 100%;
-   
+   max-height: 100vh;
+   /* display: flex;
+   align-items: stretch; */
 }
 
 .video{
   object-fit: cover;
+  
   width: 100%;
   height: 100%;
   filter: brightness(0.85);
@@ -47,22 +51,27 @@
   overflow: hidden;
   position: relative;
   
-  background-color: #EFEEFE;
+  /* background-color: #EFEEFE; */
   
 }
 
 .mainForm {
+  justify-content: flex-start;
+  align-items: center;
   padding-top: 1rem;
   background-color: #EFEEFE !important;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   display: flex;
   justify-content: center;
 }
 
 .subtitle-signup{
   padding: 0 0 .2rem 2rem;
-  margin-bottom: 1rem;
-  
-  background-color: #EFEEFE;
+  margin-bottom: 1rem;  
+  /* background-color: #EFEEFE; */
   width: 80%; 
   font-size: 3rem;
   font-weight: bold;
@@ -73,7 +82,7 @@
 
 .form {
   width: 100%;  
-  background-color: #EFEEFE;
+  /* background-color: #EFEEFE; */
   border: none;
   display: flex;
   flex-wrap: wrap;
@@ -118,7 +127,8 @@
   font-weight: 600;
   margin-bottom: .5rem;
   border-bottom: 1px solid black;
-  background-color: #EFEEFE;
+  /* background-color: #EFEEFE; */
+  background-color: transparent;
 }
 
 .inputFrom option {
@@ -186,7 +196,7 @@
   display: flex;
   align-items: center;
   border: 1px solid black;
-  border-radius: 16px;
+  border-radius: 1px;
   overflow: hidden;
   margin: .5rem auto;
   transition: all 0.2s;
@@ -235,35 +245,71 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .formIn {
-    width: 50%;
+
+/* -------------responsividad ---------- */
+
+@media only screen and (min-width: 0px) and (max-width: 750px) {
+  #video-signup {
+    display: none;
   }
+
+  #form-signup{
+    width: 100%;
+  }
+
+  .subtitle-signup{
+    font-size: 2rem;
+    padding: 0 0 .2rem 0;
+  }
+
+  .buttonFacebook,
+  .buttonGoogle{
+    width: 90% !important;
+    font-size: .8rem;
+    height: 1.9rem;
+    justify-content: center;
+  }
+
+  .button{
+    font-size: .8rem;
+    height: 1.9rem;
+  }
+
+  .linkSingIn{
+    text-align: center;
+  }
+
+  .inputFrom{
+    padding-left: 0;
+  }
+
 }
 
-@media (max-width: 850px) {
-  .inputFrom {
-    width: 100%;
-  }
 
-  .fieldsetFrom {
-    width: 100%;
-  }
+@media only screen and (min-width: 750px) and (max-width: 1200px) {
+.buttonFacebook,
+.buttonGoogle {
+  width: 90% !important;
+  font-size: .8rem;
+  height: 1.9rem;
+  justify-content: center;
+  height: 2.5rem
+}
 
-  .form {
-    width: 90%;
-    padding: 0 1rem;
-  }
+.button {
+  font-size: .8rem;
+  height: 2.075rem;
+  margin-bottom: 1rem;
+}
 
-  .fotoHeroDetalle {
-    height: 150vh;
-  }
+#video-signup{
+  height: 113.45%;
+}
 
-  .overlay3 {
-    height: 15vh;
-  }
+}
 
-  .formIn {
-    width: 90%;
+@media only screen and (min-width: 1200px) and (max-width: 1326px) {
+  #video-signup {
+    height: 113.55%;
   }
 }

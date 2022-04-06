@@ -12,29 +12,35 @@ const sendEmail = async (email, uniqueString) => { //Funcion que envia email de 
         port: 465,
         secure: true,
         auth: {
-            user: "mydreamtinerary@gmail.com",                //DEFINIMOS LOS DATOS DE AUTORIZACION DE NUESTRO PROVEEDOR DE CORREO 
-            pass: "-123456asd"                                //Es necesario configurar el correo apra el uso de aplicaciones menos seguras
-        }                                                     // y tambien no solocitar la verificacion en 2 pasos
+            user: "macchiatoweb10@gmail.com",                //DEFINIMOS LOS DATOS DE AUTORIZACION DE NUESTRO PROVEEDOR DE CORREO 
+            pass: "macchiato123456"                                //Es necesario configurar el correo apra el uso de aplicaciones menos seguras
+        },                                                     // y tambien no solocitar la verificacion en 2 pasos
+        tls: {
+            rejectUnauthorized: false
+        }
     })
 
 
     // definimos los parametros del email
-    let sender = "mydreamtinerary@gmail.com"
+    let sender = "macchiatoweb10@gmail.com"
     let mailOptions = {
         from: sender,       //desde donde se enviara el email
         to: email,           //a quien se envia 
         subject: "User email verification", //es asunto el email
         html: `
         <table
-        style="width: 80%;height: 50vh;padding: 10px;margin:0 auto;border-collapse: collapse;background-color: rgb(100, 19, 19); border-radius: 8px;">
+        style="width: 80%;height: 50vh;padding: 10px;margin:0 auto;border-collapse: collapse;background-color: #A06235; border-radius: 8px;">
         <tr>
-            <td style="background-color: rgb(44, 43, 43);text-align: left;padding: 0; width: 50%;border-radius: 8px;">
-                <h3 style="font-family: sans-serif;font-size: 2rem;color: white ;text-align: center;margin-bottom: 1rem;padding: 0 1rem;">MyTinerary</h3>
+            <td style="background-color: #141313 ;text-align: left;padding: 0; width: 50%;border-radius: 8px; ">
+                <h3 style="font-family: sans-serif;font-size: 2rem;color: white ;text-align: center;margin-bottom: 1rem;padding: 0 1rem;">Macchiato Coffee</h3>
+                <div style="display: flex;">
+                  <img   src="https://i.ibb.co/2Y5nRqH/logo.png" alt="logo" style="width: 200px; margin:auto">
+                </div>
             </td>
         </tr>
         <tr>
             <td>
-                <h4 style="font-family: sans-serif;color: white ;text-align: center;">Click <a style="color: brown;"
+                <h4 style="font-size: 1rem,font-family: sans-serif;color: #000 ;text-align: center;">Click <a style="color: #EFEEFE;"
                 href=http://localhost:4000/api/verify/${uniqueString}> here </a> to verify your email</h4>
 
             </td>
@@ -58,7 +64,7 @@ const userController = {
         const { uniqueString } = req.params  // extraemos de los parametros el string unico 
         const user = await Usuario.findOne({ uniqueString: uniqueString }) //buscamos al usuario por el codigo unico
         if (user) {
-            user.emailVerificado = true   //cambiamos el email a verificado pasando true como parametro
+            user.verifiedEmail = true   //cambiamos el email a verificado pasando true como parametro
             await user.save()
             res.redirect("http://localhost:3000/signIn") //redirecciona al usuario a la ruta definida
             // res.json({success:true,response:"Your email has been successfully verified"})
@@ -178,7 +184,7 @@ const userController = {
                             id: userExiste._id,
                             name: userExiste.name,
                             email: userExiste.email,
-                            imageUrl: userExiste.imageUrl,
+                            photoURL: userExiste.photoURL,
                             from: from
                         }
                         await userExiste.save()
@@ -195,7 +201,7 @@ const userController = {
                         })
                     }
                 } else {
-                    if (userExiste.emailVerificado) {
+                    if (userExiste.verifiedEmail) {
                         let passwordEquals = userExiste.password.filter(pass => bcryptjs.compareSync(password, pass))
                         if (passwordEquals.length > 0) {
                             const userData = {
@@ -203,7 +209,7 @@ const userController = {
                                 id: userExiste._id,
                                 name: userExiste.name,
                                 email: userExiste.email,
-                                imageUrl: userExiste.imageUrl,
+                                photoURL: userExiste.photoURL,
                                 from: from
                             }
                             const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 })
@@ -237,7 +243,12 @@ const userController = {
         let user = await Usuario.findOne({ email: emailUser })
         // console.log(user);
         await user.save()
-        res.json(console.log("closed session " + user.email))
+        res.json({
+            success: true,
+            reponse: emailUser,
+            message: "Session closed " 
+        })
+        // res.json(console.log("closed session " + user.email))
 
     },
     verificarToken: (req, res) => {
@@ -247,7 +258,7 @@ const userController = {
         if (req.user) {
             res.json({
                 success: true,
-                response: { id: req.user.id, name: req.user.name, imageUrl: req.user.imageUrl, email: req.user.email, from: "token" },
+                response: { id: req.user.id, name: req.user.name, photoURL: req.user.photoURL, email: req.user.email, from: "token" },
                 message: "Welcome back " + req.user.name.firstName
             })
 

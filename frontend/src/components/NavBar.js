@@ -17,7 +17,7 @@ import "../Styles/NavBar.css"
 import { Link as LinkRouter } from "react-router-dom"
 import { connect } from 'react-redux';
 import logo from '../img/logo.png'
-// import usersActions from "../redux/actions/usuariosActions"
+import userActions from "../redux/actions/userAction"
 
 
 
@@ -56,12 +56,13 @@ const NavBar2 = (props) => {
             setColor(false)
         }
     }
-
+ 
     window.addEventListener('scroll', changeColor)
     return (
-        <div className={color ? 'header header-bg' : 'header'}>
+        <div  className={color ? 'header header-bg' : 'header'}>
+                
             <AppBar position="static" sx={{ background: '#0001' }}>
-                {/* {console.log(props.user)} */}
+                
                 <Container maxWidth="xxl" className="navbarBackgound navbar-expand-lg ">
                     <Toolbar disableGutters>
                         <Typography variant="h6" component="div" sx={{ p: 0, mr: 2, display: { xs: 'none', md: 'block' } }}>
@@ -103,7 +104,7 @@ const NavBar2 = (props) => {
                                     <LinkRouter className="nav-linkUser" aria-current="page" to="/">Home</LinkRouter>
                                 </MenuItem>
                                 <MenuItem className="navLi" onClick={handleCloseNavMenu}>
-                                    <LinkRouter className="nav-linkUser" to="/cities">Cities</LinkRouter>
+                                    <LinkRouter className="nav-linkUser" to="/shop">Store</LinkRouter>
                                 </MenuItem>
 
 
@@ -125,7 +126,7 @@ const NavBar2 = (props) => {
                                     <LinkRouter className="linkGeneral" aria-current="page" to="/">Home</LinkRouter>
                                 </Button>
                                 <Button sx={{ my: 0, color: 'white', display: 'flex' }} className="navLi">
-                                    <LinkRouter className="linkGeneral" to="/cities">Cofee</LinkRouter>
+                                    <LinkRouter className="linkGeneral" to="/shop">Store</LinkRouter>
                                 </Button>
 
                             </div>
@@ -133,12 +134,13 @@ const NavBar2 = (props) => {
 
                         <Box sx={{ flexGrow: 0.008 }}>
                             <Tooltip title="Open settings" >
+                            
                                 {
                                     props.user ? (
                                         <div>
                                             <span className='spanUser'> {props.user.name.firstName}</span>
                                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 1 }}>
-                                                <Avatar alt="Remy Sharp" className='logo' src={props.user.imageUrl} />
+                                                <Avatar alt="Remy Sharp" className='logo' src={props.user.photoURL} />
                                             </IconButton>
                                         </div>
                                     ) :
@@ -167,21 +169,25 @@ const NavBar2 = (props) => {
                                 {
                                     props.user ?
                                         (<div className='container-nav-LinkUser'>
-                                            <MenuItem onClick={handleCloseUserMenu} className="navLi">
-                                                <LinkRouter className="nav-linkUser" aria-current="page" onClick={signOutUser} to="#">Sign out</LinkRouter>
-                                            </MenuItem>
-                                            <MenuItem>
-                                                <LinkRouter className="nav-linkUser" aria-current="page" to="/">⚙Seetings</LinkRouter>
-                                            </MenuItem>
+                                            {/* <MenuItem onClick={handleCloseUserMenu} className="navLi"> */}
+                                                <LinkRouter className="nav-linkUser" aria-current="page" onClick={()=>{
+                                                    signOutUser()
+                                                    handleCloseUserMenu()
+                                                }} to="#">Sign out</LinkRouter>
+                                            {/* </MenuItem> */}
+                                            {/* <MenuItem> */}
+                                            <LinkRouter className="nav-linkUser" aria-current="page" to="/">⚙
+                                                Setting</LinkRouter>
+                                            {/* </MenuItem> */}
                                         </div>
                                         ) : (
                                             <div className='container-nav-LinkUser'>
-                                                <MenuItem onClick={handleCloseUserMenu} className="navLi">
-                                                    <LinkRouter className="nav-linkUser" aria-current="page" to="/signIn">Sign In</LinkRouter>
-                                                </MenuItem>
-                                                <MenuItem onClick={handleCloseUserMenu} className="navLi">
-                                                    <LinkRouter className="nav-linkUser" to="/signUp">Sign Up</LinkRouter>
-                                                </MenuItem>
+                                                {/* <MenuItem onClick={handleCloseUserMenu} className="navLi"> */}
+                                                    <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" aria-current="page" to="/signIn">Sign In</LinkRouter>
+                                                {/* </MenuItem> */}
+                                                {/* <MenuItem onClick={handleCloseUserMenu} className="navLi"> */}
+                                                    <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/signUp">Sign Up</LinkRouter>
+                                                {/* </MenuItem> */}
                                             </div>
                                         )
                                 }
@@ -197,12 +203,12 @@ const NavBar2 = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        // user: state.usuariosReducer.user
+        user: state.userReducer.user
     }
 }
 
 const mapDispatchToProps = {
-    // signOut: usersActions.signOut
+    signOut: userActions.signOut
 
 }
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar2);

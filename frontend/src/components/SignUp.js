@@ -1,6 +1,6 @@
 import React from 'react';
 import usersActions from '../redux/actions/userAction';
-import '../Styles/signup.css';
+import '../Styles/signin.css';
 import { useRef } from 'react';
 import { connect } from 'react-redux'
 import { Link as LinkRouter } from "react-router-dom";
@@ -15,11 +15,11 @@ function SignUp(props) {
   const form = useRef()
 
   function send(event) {
-    console.log("Prueba");
+
     event.preventDefault()
     form.current.focus()
     let datosInp = new FormData(form.current)
-    
+
     let userObj = {
       firstName: datosInp.get("name"),
       lastName: datosInp.get("lastName"),
@@ -29,12 +29,12 @@ function SignUp(props) {
       country: datosInp.get("pais"),
       from: "signup",
       rol: 'undefined',
-      
+
     }
-    // form.current.reset()
-    console.log(userObj);
-    
+
+
     props.signUp(userObj)
+    // form.current.reset()
   }
 
 
@@ -79,7 +79,8 @@ function SignUp(props) {
                   <select className="inputFrom" defaultValue={"default"} name="pais" id="pais">
                     <option value="default">Select your Country</option>
                     {countries.map(country => {
-                      return (<option key={country.id} value={country.name}>{country.name}</option>)
+
+                      return (<option key={country.code} value={country.name}>{country.name}</option>)
                     })}
 
                   </select>

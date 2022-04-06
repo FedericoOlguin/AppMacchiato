@@ -34,12 +34,7 @@ const userReducer = (state = initialState, action) => {
             }
         case "userSignOut":
             return {
-                user: action.payLoad,
-                snackbar: {
-                    view: false,
-                    message: "",
-                    success: false
-                }
+                snackbar: action.payLoad
             }
         default:
             return state

@@ -1,0 +1,110 @@
+
+.container-Slider{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  height: 70vh;
+  font-family: 'Roboto',
+  sans-serif;
+  align-items: center;
+  align-content: center;
+  
+}
+
+.card-text2 {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 90%;
+  margin: 0 2.5rem;
+  color: #EFEEFE;
+  order: -1;
+}
+
+.card-text2>h1 {
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+}
+
+.card-text2>p {
+  font-weight: 300;
+  align-self: center;
+  width: 70%;
+  text-align: justify;
+  font-size: 1.5em;
+  color: #EFEEFE;
+  margin-bottom: 2rem;
+}
+
+.card-text2>span {
+  font-size: 1.4em;
+  text-align: justify;
+  width: 70%;
+  align-self: center;
+}
+
+.mySwiper{
+  display: flex;
+  flex-direction: column;
+  margin: auto 4rem;
+  width: 35%;
+  height: 85%;
+  background: radial-gradient(#111 50%, #000 100%);
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 10px 10px 30px #0a0a0a;
+  
+}
+
+
+.swiper-slide {  
+  background: transparent;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-radius: 5px !important;
+  
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px !important;
+}
+
+
+
+.link-about {
+  display: flex;
+  align-self: center;
+  text-decoration: none !important;
+  margin-top: 2.3rem;
+}
+
+.boton-aboutUs {
+  border: 2px solid #EFEEFE;
+  font-size: 1.2em;
+  padding: .3rem;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #EFEEFE;
+  cursor: pointer;
+}
