@@ -1,11 +1,11 @@
 import React from "react";
 import "../Styles/FooterM.css"
 
-import instagram from "../img/IconInstagram.png"
-import twitter from "../img/IconTwitter.png"
-import whatsapp from "../img/IconWhatsapp.png"
+import InstagramIcon from '@mui/icons-material/Instagram';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Link as LinkRouter } from "react-router-dom"
-
+import logo from '../img/logo.png'
 
 
 
@@ -22,19 +22,14 @@ const Footer = () => {
         </ul>
       </div>
       <div className="diVFooter">
-
-        <p><LinkRouter className="navbar-brand linkLogo" to="/">MyTinerary</LinkRouter></p>
-        <p>Contact: <a className="mail" href="http://gmail.com/" target="_blank" rel="nopener noreferrer">xxxxx@gmail.com</a></p>
-        <p>Adress: San Martín 4598  Capital Federal.</p>
-
-
+        <img src={logo} alt="logo" className="imgFooter"/>
       </div>
       <div className="divIcon">
         <ul>
           
-          <li><a className="nav-link" target="_blank" rel="noreferrer nopener" href="https://twitter.com/"><img className="iconFooter" src={twitter} alt="iconoTwitter" /></a></li>
-          <li><a className="nav-link" target="_blank" rel="noreferrer nopener" href="https://www.instagram.com/"><img className="iconFooter" src={instagram} alt="iconoInstagram" /></a></li>
-          <li><a className="nav-link" target="_blank" rel="noreferrer nopener" href="https://www.whatsapp.com/"><img className="iconFooter" src={whatsapp} alt="iconoWhatsapp" /></a></li>
+          <li><a className="nav-link" target="_blank" rel="noreferrer nopener" href="mailto:macchiatoweb10@hmail.com"><MailOutlineIcon className="iconFooter" /></a></li>
+          <li><a className="nav-link" target="_blank" rel="noreferrer nopener" href="https://www.instagram.com/"><InstagramIcon className="iconFooter" /></a></li>
+          <li><a className="nav-link" target="_blank" rel="noreferrer nopener" href="https://www.whatsapp.com/"><WhatsAppIcon className="iconFooter"/></a></li>
         </ul>
 
       </div>
