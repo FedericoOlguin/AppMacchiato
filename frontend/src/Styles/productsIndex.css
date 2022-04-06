@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border: solid white 2px;
+    /* border: solid white 2px; */
     padding: 50px 10px 50px 10px;
 }
 .productsIndex > h1{

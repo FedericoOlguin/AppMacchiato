@@ -4,7 +4,7 @@
   justify-content: space-around;
   object-fit: scale-down;
   background-color: rgba(0, 0, 0, 0.726);
-  border: rgb(94, 94, 94) solid 3px;
+  /* border: rgb(94, 94, 94) solid 3px; */
   height: 37vh;
   width: 100%;
   /* border: solid 2px white; */
