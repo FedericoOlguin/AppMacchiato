@@ -104,7 +104,7 @@ const NavBar2 = (props) => {
                                     <LinkRouter className="nav-linkUser" aria-current="page" to="/">Home</LinkRouter>
                                 </MenuItem>
                                 <MenuItem className="navLi" onClick={handleCloseNavMenu}>
-                                    <LinkRouter className="nav-linkUser" to="/shop">Shop</LinkRouter>
+                                    <LinkRouter className="nav-linkUser" to="/shop">Store</LinkRouter>
                                 </MenuItem>
 
 
@@ -126,7 +126,7 @@ const NavBar2 = (props) => {
                                     <LinkRouter className="linkGeneral" aria-current="page" to="/">Home</LinkRouter>
                                 </Button>
                                 <Button sx={{ my: 0, color: 'white', display: 'flex' }} className="navLi">
-                                    <LinkRouter className="linkGeneral" to="/cities">Cofee</LinkRouter>
+                                    <LinkRouter className="linkGeneral" to="/shop">Store</LinkRouter>
                                 </Button>
 
                             </div>

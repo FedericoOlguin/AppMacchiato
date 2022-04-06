@@ -4,7 +4,6 @@ import NavBar from '../components/NavBar'
 import React,{useState} from 'react';
 import AboutUs from '../components/aboutUs';
 import scrollUp from '../img/scrollUp.svg';
-import ProductsIndex from '../components/ProductsIndex';
 import Footer from '../components/Footer';
 import Categorias from '../components/categorias';
 
@@ -32,7 +31,7 @@ function Home() {
         <NavBar />
         <Hero />
         <AboutUs />
-        {/* <ProductsIndex/> */}
+        
         
         <a href="#nav">
 
