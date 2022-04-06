@@ -238,11 +238,12 @@ const userController = {
     signOutUser: async (req, res) => {
         let emailUser = req.body.userEmail
         let user = await Usuario.findOne({ email: emailUser })
-        // console.log(user);
+        console.log(user);
         await user.save()
         res.json({
             success: true,
-            message: "Close session" + userData.name.firstName
+            reponse: user.emailUser,
+            message: "Close session" 
         })
         // res.json(console.log("closed session " + user.email))
 
