@@ -26,7 +26,7 @@ Router.route("/auth/signInToken")
 
 
 //Rutas de productos
-const { getAllProducts, loadProduct, getOneProduct,modifyProduct } = require('../controllers/productControllers')
+const { getAllProducts, loadProduct, getOneProduct,modifyStock } = require('../controllers/productControllers')
 
 
 Router.route('/allproducts')
@@ -35,7 +35,7 @@ Router.route('/allproducts')
 
 Router.route('/allproducts/:id')
     .get(getOneProduct)
-    .put(modifyProduct)
+    .put(passport.authenticate('jwt', {session:false}), modifyStock)
 
 
     module.exports = Router;

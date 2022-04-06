@@ -18,6 +18,7 @@ function GoogleSignUp(props) {
             photoURL: res.profileObj.imageUrl,
             country: "Argentina",
             from: "google",
+            rol: "undefine"
             // pais: props.pais
         }
         await props.signUp(userData)
