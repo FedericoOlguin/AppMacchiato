@@ -1,33 +1,43 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import React from "react";
+import Card from "./Card";
 
-export default function MediaCard() {
+import image1 from "../img/image1.jpg";
+import image2 from '../img/image2.jpg'
+import image3 from '../img/image3.jpg'
+
+const cards = [
+  {
+    id: 1,
+    title: "Fazt Web",
+    image: image1,
+    url: "https://faztweb.com",
+  },
+  {
+    id: 2,
+    title: "Fazt Blog",
+    image: image2,
+    url: "https://blog.faztweb.com",
+  },
+  {
+    id: 3,
+    title: "Fazt Youtube",
+    image: image3,
+    url: "https://youtube.com/fazttech",
+  },
+];
+
+function Cards() {
   return (
-    <Card sx={{ maxWidth: 345, borderRadius: 16 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
-        alt="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+    <div className="container d-flex justify-content-center align-items-center h-100">
+      <div className="row">
+        {cards.map(({ title, image, url, id }) => (
+          <div className="col-md-4" key={id}>
+            <Card imageSource={image} title={title} url={url} />
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
+
+export default Cards;
