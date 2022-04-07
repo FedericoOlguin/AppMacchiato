@@ -1,23 +1,25 @@
 .productsIndex{
     display: flex;
+    height: 100vh;
     justify-content: center;
     flex-wrap: wrap;
-    border: solid white 2px;
-    padding: 50px 10px 50px 10px;
 }
 .productsIndex > h1{
     font-weight: 800;
-    padding: 25px 10px 15px 10px;
+    margin-top: 35px;
     color: rgb(161, 70, 70);
     text-shadow: 2px 3px 2px rgb(0, 0, 0);
+    text-align: center;
+    width: 100%;
 }
 .section{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 15px 0px 15px 0px;
-    padding: 15px 0px 15px 0px;
-    width: 75%;
-    min-height: 20vh;
+    margin: 15px 20px 50px 20px;
+    padding: 60px 0px 20px 0px;
+    width: 25%;
+    height: 60vh;
     color: rgb(161, 70, 70) 8px;
     border-radius: 8px;
     -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
@@ -26,188 +28,199 @@
     background-image: url(https://jberlife.com/wp-content/uploads/2021/04/GettyImages-1191995863-2-scaled.jpg);
 }
 .section > img{
-    width: 19rem;
-    height: 16rem;
+    align-self: center;
+    width: 13rem;
+    height: 10rem;
     border-radius: 8px;
+    margin-bottom: 25px;
+    /* border: solid white 1px; */
 }
+
 .txtCard{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    justify-content: center;
+    width: 95%;
+    height: 30vh;
     align-items: center;
     color: white;
     justify-content: center;
-    padding: 0rem 3rem 0rem 3rem ;
+    margin: 0px;
 }
 .txtCard > h2{
     color: rgb(161, 70, 70);
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
-    padding: 2rem 0rem 0rem 0rem;
+    margin: 0px 10px 0px 10px;
     text-align: center;
-    font-size: 26px;
+    font-size: 23px;
 
 }
 .txtCard > h4{
-    padding: 2rem;
-    text-justify: initial;
+    margin: 20px 25px 25px 25px;
+    text-align: center;
 }
 
-@media screen and (max-width: 1100px) { 
+@media screen and (max-width: 1150px) { 
+    .productsIndex{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* padding: 15px 10px 50px 10px; */
+    }
+    .productsIndex > h1{
+        font-weight: 800;
+        margin-top: 35px;
+        color: rgb(161, 70, 70);
+        text-shadow: 2px 3px 2px rgb(0, 0, 0);
+        text-align: center;
+        width: 100%;
+    }
+    .section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 15px 20px 50px 20px;
+        padding: 60px 0px 20px 0px;
+        width: 28%;
+        height: 60vh;
+        color: rgb(161, 70, 70) 8px;
+        border-radius: 8px;
+        -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
+        -moz-box-shadow: inset -5px 17px 109px 8px rgba(0,0,0,0.88);
+        box-shadow: inset -5px 17px 109px 8px rgba(49, 49, 49, 0.88);
+        background-image: url(https://jberlife.com/wp-content/uploads/2021/04/GettyImages-1191995863-2-scaled.jpg);
+    }
+    .section > img{
+        align-self: center;
+        width: 13rem;
+        height: 10rem;
+        border-radius: 8px;
+        margin-bottom: 25px;
+        /* border: solid white 1px; */
+    }
+    
     .txtCard{
         display: flex;
         flex-direction: column;
-        width: 50%;
+        justify-content: center;
+        width: 95%;
+        height: 30vh;
         align-items: center;
         color: white;
         justify-content: center;
-        padding: 0rem 3rem 0rem 3rem ;
+        margin: 0px;
     }
     .txtCard > h2{
         color: rgb(161, 70, 70);
         text-shadow: 1px 1px 1px rgb(0, 0, 0);
-        padding: 0rem 0rem 0rem 0rem;
+        margin: 0px 10px 0px 10px;
         text-align: center;
-        font-size: 21px;
+        font-size: 17px;
     
     }
     .txtCard > h4{
-        padding: 0.3rem 0rem 0rem 0rem;
+        margin: 20px 25px 25px 25px;
         text-align: center;
-        font-size: 13px;
-        text-justify: initial;
+        font-size: 14px;
     }
 }
-
-@media screen and (max-width: 900px) { 
+@media screen and (max-width: 800px) {  
     .productsIndex{
         display: flex;
+        min-height: 100vh;
         justify-content: center;
         flex-wrap: wrap;
-        border: solid white 2px;
-        padding: 50px 10px 50px 10px;
-    }
-    .section{
-        margin: 15px 0px 15px 0px;
-        padding: 0px 0px 0px 0px;
-        width: 90%;
-        min-height: 20vh;
-        color: rgb(161, 70, 70) 5px;
-        border-radius: 10px;
-    }
-    .section > img{
-        width: 16rem;
-        height: 14rem;
-        border-radius: 8px;
-    }
-    .txtCard{
-        width: 50%;
-        justify-content: center;
-        padding: 0rem 1rem 0rem 1rem ;
-    }
-    .txtCard > h2{
-        padding: 0rem 0rem 0rem 0rem;
-        text-shadow: 1px 1px 1px rgb(0, 0, 0);
-        font-size: 20px;
-    
-    }
-    .txtCard > h4{
-        padding: 0.3rem 0rem 0rem 0rem;
-        font-size: 13px;
-        text-justify: initial;
-    }
-}
-
-    @media screen and (max-width: 600px) { 
-        .productsIndex{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        border: solid white 2px;
-        padding: 50px 10px 50px 10px;
+        /* padding: 15px 10px 50px 10px; */
     }
     .productsIndex > h1{
-        font-weight: 800;
-        font-size: 22px; 
+        font-size: 21px;
     }
     .section{
+        display: flex;
         flex-direction: column;
-        margin: 15px 0px 15px 0px;
-        padding: 0px 0px 0px 0px;
-        width: 70%;
-        min-height: 20vh;
-        color: rgb(161, 70, 70) 5px;
-        border-radius: 10px;
+        justify-content: center;
+        margin: 15px 10px 50px 10px;
+        padding: 60px 0px 20px 0px;
+        width: 27%;
+        height: 50vh;
+
+    }
+    .txtCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 95%;
+        height: 30vh;
+        align-items: center;
+        color: white;
+        justify-content: center;
+        margin: 0px;
     }
     .section > img{
         align-self: center;
-        width: 16rem;
-        height: 14rem;
-        margin: 9px 0px 9px 0px;
+        width: 10rem;
+        height: 17rem;
         border-radius: 8px;
-    }
-    .txtCard{
-        width: 90%;
-        justify-content: center;
-        align-self: center;
-        padding: 1rem 1rem 1rem 1rem ;
+        margin-bottom: 25px;
+        /* border: solid white 1px; */
     }
     .txtCard > h2{
-        padding: 0rem 0rem 0rem 0rem;
-        font-size: 20px;
-    
+        margin: 0px 10px 0px 10px;
+        font-size: 14px;
     }
     .txtCard > h4{
-        padding: 0.3rem 0rem 0rem 0rem;
-        font-size: 13px;
-        text-justify: initial;
+        margin: 20px 25px 25px 25px;
+        text-align: center;
+        font-size: 11px;
     }
-}
-
-    @media screen and (max-width: 470px) { 
-
+    @media screen and (max-width: 700px) { 
         .productsIndex{
             display: flex;
+            min-height: 220vh;
             justify-content: center;
             flex-wrap: wrap;
-            border: solid white 2px;
-            padding: 50px 10px 50px 10px;
+            /* padding: 15px 10px 50px 10px; */
         }
         .productsIndex > h1{
-            font-weight: 800;
-            font-size: 18px; 
+            font-size: 19px;
         }
         .section{
+            display: flex;
             flex-direction: column;
-            margin: 15px 0px 15px 0px;
-            padding: 0px 0px 0px 0px;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 10px 20px 10px;
+            padding: 30px 0px 20px 0px;
             width: 70%;
-            min-height: 20vh;
-            color: rgb(161, 70, 70) 5px;
-            border-radius: 10px;
+            height: 50vh;
+        }
+        .txtCard{
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+            height: 30vh;
+            align-items: center;
+            justify-self: center;
+            color: white;
+            margin: 0px;
         }
         .section > img{
             align-self: center;
-            width: 13rem;
-            height: 11rem;
+            width: 10rem;
+            height: 17rem;
             border-radius: 8px;
-        }
-        .txtCard{
-            width: 90%;
-            justify-content: center;
-            align-self: center;
-            padding: 1rem 1rem 1rem 1rem ;
+            margin-bottom: 25px;
+            /* border: solid white 1px; */
         }
         .txtCard > h2{
-            padding: 0rem 0rem 0rem 0rem;
-            font-size: 20px;
-        
+            margin: 0px 10px 0px 10px;
+            font-size: 17px;
         }
         .txtCard > h4{
-            padding: 0.3rem 0rem 0rem 0rem;
+            margin: 20px 25px 25px 25px;
+            text-align: center;
             font-size: 13px;
-            text-justify: initial;
         }
-
 }
-
-
+}

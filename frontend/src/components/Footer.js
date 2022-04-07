@@ -3,11 +3,9 @@ import "../Styles/FooterM.css"
 /* import ImagenHeder from "../img/imagenHeader.png" */
 /* import FondoFooter from "../img/fondoHeader.jpg" */
 import { Link as LinkRouter } from 'react-router-dom';
-import footerBack from "../img/footer.jpg";
 import logo from "../img/logo.png"
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBitcoin, faFacebook, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
+import { faBitcoin,  faFacebook, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 
 
 const Footer = () => {
@@ -15,7 +13,7 @@ const Footer = () => {
 
     <div className='globalFooter'>
       
-      <img src={footerBack} className="imagenFooter"/>
+      <img src={""} className="imagenFooter"/>
 
       <div className='footerContainer'>
 
