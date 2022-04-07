@@ -19,7 +19,8 @@
   width: 15em;
   height: 45vh;
   color: rgb(161, 70, 70) 8px;
-  border-radius: 8px;
+  border-radius: 0px 31px 0px 29px;
+  box-shadow: 2px 5px 21px 4px #000000;
   -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
   -moz-box-shadow: inset -5px 17px 109px 8px rgba(0,0,0,0.88);
   box-shadow: inset -5px 17px 109px 8px rgba(49, 49, 49, 0.88);
@@ -97,7 +98,7 @@ h5{
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.527);
+  background-color: rgba(0, 0, 0, 0.267);
   text-decoration: none;
   font-weight: 800;
   font-size: 0.8rem;
