@@ -2,6 +2,7 @@ import * as React from "react";
 import "../Styles/aboutUsPage.css";
 import imgFondo from "../img/About.jpg";
 import NavBar from '../components/NavBar';
+import Devs from "../components/Devs.js";
 
 function AboutUsPage() {
   return (
@@ -51,8 +52,9 @@ function AboutUsPage() {
         </h3>
       </div>
 
-      {/* <img alt="hero" className="videoHero" src={imgFondo} /> */}
+      <img alt="hero" className="videoHero" src={imgFondo} />
     </div>
+    <Devs/>
     </>
   );
 }
