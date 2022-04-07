@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -16,71 +16,76 @@ import productActions from "../redux/actions/productActions";
 import '../Styles/ProductsCards.css'
 import coffePack from "../img/coffePack.png"
 
+const categories = [ {name: "Coffees",},{name: "coffee maker",},{name: "Accessories",},{name: "Barista tools",}]
 
 function ProductsCard(props) {
-    console.log(props)
     
     useEffect(()=>{
-
+        
     },[])
+    const [eventInput, setEventInput] = useState("");
+    const [eventSelect, setEventSelect] = useState("");
+    const [loaded, setLoaded] = useState(false);
+    function filter(){
+        setLoaded(!loaded)
+        props.filter(props.allProducts, eventInput, eventSelect)
+    }
+
 
     if (!props.filtered) {
         return (<LoadingIcon />)
     }
     
     return (
-        <div> 
+    <>
+    <div className='contenedorCardsGeneral'>
+    <div className='filters'>
+        
+        <div className='input'>
+            <input
+            className='input-text'
+            placeholder='Search your product by name'
+            onChange={(event)=>{setEventInput(event.target.value); filter()}}/>
+        </div>
 
-        <div className='cardProducto'>
-            <p className='precio'> $19.99 </p>
-            <img alt='cardPho' src={coffePack} className="imagenHeader" />
+        <div className='select'>
+            <select className="form-control select" onChange={(event)=>{setEventSelect(event.target.value); filter()}}>
+                <option value={""}>
+                    {""}
+                    -choose the category-
+                </option>
+                {categories.map((category) => {
+                    return (
+                        <option key={category.name} value={category.name}>
+                            {category.name}
+                        </option>
+                    );
+                })}
+            </select>
+        </div>
+
+    </div>        
+    <div className='ContainerStore'> 
+
+    {props.filtered?.map(products =>
+        <div className='cardProducto' key={products._id}>
+        <LinkRouter to={`/detalle/${products._id}`} />
+            <p className='precio'> {"$" + products.price} </p>
+            <p className='flag'> {/* {"$" + products.flag} */} </p>
+            <img alt='cardPho' src={products.image} className="imagenHeader" />
         <div className='txtCard'>
-            <h2> COFFE X SPECIAL</h2>
-            <h4> In our stores you can try a lot of different and exclusive coffees, as well as take some to your home and share with your family. </h4>
+            <h2> {products.name} </h2>
+            {/* <h4> Other property </h4> */}
+            <h5> Agregar al carrito </h5>
         </div>
+        </div>
+        )}
     </div>
-
-
-
-        <>
-        <div className='container-cards'>
-            {props.filtered?.map(products =>
-                <Card className='card' key={products._id} sx={{ maxWidth: 400, margin: 3.5 }}>
-                    <LinkRouter to={`/detalle/${products._id}`}>
-                        <CardHeader className='textCenter'
-                            title={products.name}
-                        />
-                        <CardMedia
-                            component="img"
-                            height="300"
-                            image={products.image}
-                            alt="Paella dish"
-                        />
-                        <CardContent>
-                            <Typography variant="body1" color="white" fontSize="1rem" className='categoryTxt'>
-                                Category: {products.category}
-                            </Typography>
-                        </CardContent>
-                        <CardActions disableSpacing>
-                            <IconButton aria-label="add to favorites" className='icon'>
-                                <FavoriteIcon />
-                            </IconButton>
-
-                            <IconButton aria-label="share" className='icon'>
-                                <LoupeIcon />
-                            </IconButton>
-
-                        </CardActions>
-                    </LinkRouter>
-                </Card>
-
-            )}
-        </div>
-        </>
-
-        </div>
-    )
+    </div>
+    </>    
+        )
 }
+  
 
 
 const mapStateToProps = (state) => {

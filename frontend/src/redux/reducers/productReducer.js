@@ -18,17 +18,52 @@ const productReducer = (state= initialState, action) => {
                 oneProduct:action.payload
             };
         case 'filter':
-            const filter = action.payload.apiData.filter((data) => 
-            data.ciudad
-            .toString()
-            .trim()
-            .toLowerCase()
-            .startsWith(action.payload.value.trim().toLowerCase())
-            );
-            return{
-                ...state,
-                filtered:filter,
-            };
+            let filteredWithInput;
+            let filteredWithSelect;
+
+
+            if (action.payload.valueInput!==""){
+                if(action.payload.valueSelect!==""){
+                    filteredWithInput = action.payload.allProducts.filter((product) => 
+                        product.name
+                        .toLowerCase()
+                        .startsWith(action.payload.valueInput.trim().toLowerCase())
+                        );
+                    filteredWithSelect = filteredWithInput.filter((product) => 
+                    product.category
+                    .trim()
+                    .toLowerCase()
+                    ===action.payload.valueSelect.trim().toString()
+                    );
+                    return{
+                        ...state,
+                        filtered:filteredWithSelect
+                    }
+                }else{
+                    filteredWithInput = action.payload.allProducts.filter((product) => 
+                        product.name
+                        .toLowerCase()
+                        .startsWith(action.payload.valueInput.trim().toLowerCase())
+                        );
+                        return{
+                            ...state,
+                            filtered: filteredWithInput
+                        }
+                }
+            }else if(action.payload.valueSelect!==""){
+                filteredWithSelect = action.payload.allProducts.filter((product) => 
+                product.category
+                .trim()
+                .toLowerCase()===action.payload.valueSelect.trim().toLowerCase()
+                );
+                return{
+                    ...state,
+                    filtered:filteredWithSelect
+                }
+            }else{
+                return state;
+            }
+
         default:
             return state;
 

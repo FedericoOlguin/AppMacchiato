@@ -20,7 +20,7 @@ const ProductController = {
         })
     },
     loadProduct: async (req, res) => {
-        const{name, image, category, price, stock, description} = req.body;
+        const{name, image, category, price, stock, description, flag} = req.body;
         new Product ({
             name:name,
             image:image,
@@ -28,6 +28,7 @@ const ProductController = {
             price:price,
             stock:stock, 
             description:description,
+            flag:flag,
         })
         .save()
         .then(response=>res.json({response}));
