@@ -72,7 +72,7 @@ const NavBar2 = (props) => {
                 <Container maxWidth="xxl" className="navbarBackgound navbar-expand-lg ">
                     <Toolbar disableGutters>
                         <Typography variant="h6" component="div" sx={{ p: 0, mr: 2, display: { xs: 'none', md: 'block' } }}>
-                            <LinkRouter className="navbar-brand linkLogo" to={"/"}><img className="logo" src={logo} alt="LogoMyTinerary" /> Macchiato</LinkRouter>
+                            <LinkRouter className="navbar-brand linkLogo" to="/"><img className="logo" src={logo} alt="LogoMyTinerary" /> Macchiato</LinkRouter>
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -107,10 +107,10 @@ const NavBar2 = (props) => {
 
 
                                 <MenuItem className="navLi" onClick={handleCloseNavMenu}>
-                                    <LinkRouter className="nav-linkUser" aria-current="page" to={"/"}>Home</LinkRouter>
+                                    <LinkRouter className="nav-linkUser" aria-current="page" to="/">Home</LinkRouter>
                                 </MenuItem>
                                 <MenuItem className="navLi" onClick={handleCloseNavMenu}>
-                                    <LinkRouter className="nav-linkUser" to={"/shop"}>Store</LinkRouter>
+                                    <LinkRouter className="nav-linkUser" to="/shop">Store</LinkRouter>
                                 </MenuItem>
 
 
@@ -122,17 +122,17 @@ const NavBar2 = (props) => {
                             component="div"
                             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                         >
-                            <LinkRouter className="navbar-brand linkLogo" to={"/"}><img className="logo" src={logo} alt="LogoMachiato" /> Macchiato</LinkRouter>
+                            <LinkRouter className="navbar-brand linkLogo" to="/"><img className="logo" src={logo} alt="LogoMachiato" /> Macchiato</LinkRouter>
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
                             <div className='menuLinks'>
 
                                 <Button onClick={handleCloseNavMenu} className="navLi">
-                                    <LinkRouter className="linkGeneral" aria-current="page" to={"/"}>Home</LinkRouter>
+                                    <LinkRouter className="linkGeneral" aria-current="page" to="/">Home</LinkRouter>
                                 </Button>
                                 <Button sx={{ my: 0, color: 'white', display: 'flex' }} className="navLi">
-                                    <LinkRouter className="linkGeneral" to={"/shop"}>Store</LinkRouter>
+                                    <LinkRouter className="linkGeneral" to="/shop">Store</LinkRouter>
                                 </Button>
 
                             </div>
@@ -176,23 +176,23 @@ const NavBar2 = (props) => {
                                     props.user ?
                                         (<div className='container-nav-LinkUser'>
                                             {/* <MenuItem onClick={handleCloseUserMenu} className="navLi"> */}
-                                                <LinkRouter className="nav-linkUser" aria-current="page" onClick={()=>{
-                                                    signOutUser()
-                                                    handleCloseUserMenu()
-                                                }} to={"#"}>Sign out</LinkRouter>
+                                            <LinkRouter className="nav-linkUser" aria-current="page" onClick={() => {
+                                                signOutUser()
+                                                handleCloseUserMenu()
+                                            }} to="#">Sign out</LinkRouter>
                                             {/* </MenuItem> */}
                                             {/* <MenuItem> */}
-                                            <LinkRouter className="nav-linkUser" aria-current="page" to={"/"}>⚙
+                                            <LinkRouter className="nav-linkUser" aria-current="page" to="/">⚙
                                                 Setting</LinkRouter>
                                             {/* </MenuItem> */}
                                         </div>
                                         ) : (
                                             <div className='container-nav-LinkUser'>
                                                 {/* <MenuItem onClick={handleCloseUserMenu} className="navLi"> */}
-                                                    <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" aria-current="page" to={"/signIn"}>Sign In</LinkRouter>
+                                                <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" aria-current="page" to="/signIn">Sign In</LinkRouter>
                                                 {/* </MenuItem> */}
                                                 {/* <MenuItem onClick={handleCloseUserMenu} className="navLi"> */}
-                                                    <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to={"/signUp"}>Sign Up</LinkRouter>
+                                                <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/signUp">Sign Up</LinkRouter>
                                                 {/* </MenuItem> */}
                                             </div>
                                         )

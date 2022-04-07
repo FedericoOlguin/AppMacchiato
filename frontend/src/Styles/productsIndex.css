@@ -12,7 +12,7 @@
     text-align: center;
     width: 100%;
 }
-.section{
+.cardProducto{
     display: flex;
     flex-direction: column;
     justify-content: center;

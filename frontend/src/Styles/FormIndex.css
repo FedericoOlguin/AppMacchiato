@@ -6,20 +6,17 @@
     margin-bottom: 2rem;
     background-color: rgba(128, 128, 128, 0.123);
 }
-
-.globalForm > h1 {
-    border: solid white 1px ;
-    width: 50%; 
-}
 .containerImg{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    width: 50%;
+    /* border: #F2F3EB solid 1px; */
 }
 .containerImg > img{
     width: 23rem;
     height: 19rem;
+    /* border: #F2F3EB solid 1px; */
 }
 
 /* @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700); */
@@ -57,16 +54,13 @@ textarea {
 }
 
 #container {
-  /* border: solid 3px #b3b3b3; */
   width: 50%;
-  margin: 30px 20px 20px 20px;
-  /* border: solid white 2px; */
-  /* position: relative; */
+  margin: 2rem 3rem 1rem 3rem;
 }
 
 form {
-  padding: 8.5px;
-  margin: 20px 0;
+  padding: 0.2rem;
+  margin: 2rem 0; 
 }
 
 h1 {
@@ -77,26 +71,22 @@ h1 {
   text-align: center;
   text-transform: uppercase;
 }
-
 .underline {
   border-bottom: solid 2px #928d8a;
   margin: -0.512em auto;
-  width: 80px;
+  width: 6rem;
 }
-
 .icon_wrapper {
-  margin: 30px auto 0;
+  margin: 3rem auto 0;
   width: 100%;
 }
-
 .icon {
   display: block;
   fill:  rgb(161, 70, 70);
-  height: 50px;
+  height: 3rem;
   margin: 0 auto;
-  width: 50px;
+  width: 5rem;
 }
-
 .email {
 	float: right;
 	width: 45%;
@@ -104,11 +94,11 @@ h1 {
 
 input[type='text'], [type='email'], select, textarea {
 	background: none;
-  border: none;
+   border: none; 
 	border-bottom: solid 2px #cecccb;
 	color: #000000;
 	font-size: 1.000em;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1px;
 	margin: 0em 0 1.475em 0;
 	padding: 0 0 0.575em 0;
@@ -130,58 +120,43 @@ input[type='text']:focus, [type='email']:focus, textarea:focus {
 	outline: none;
 	padding: 0 0 0.675em 0;
 }
-
 .message {
 	float: none;
 }
-
 .name {
 	float: left;
 	width: 45%;
 }
 
-select {
-  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
-  outline: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
-
-select::-ms-expand {
-  display: none;
-}
-
-.subject {
-  width: 100%;
-}
-
 .telephone {
   width: 100%;
 }
-
 textarea {
 	line-height: 150%;
-	height: 75px;
+	height: 5rem;
 	resize: none;
   width: 100%;
 }
 
 ::-webkit-input-placeholder {
-	color: #dfd9d7;
+	color: #ffffff;
 }
 
 :-moz-placeholder { 
-	color: #c9c1bd;
+	color: rgb(255, 255, 255);
 	opacity: 1;
 }
 
 ::-moz-placeholder {
-	color: #c9c1bd;
+	color: #ffffff;
 	opacity: 1;
 }
 
 :-ms-input-placeholder {
 	color: #cac3bf;
+}
+.textArea{
+    color: #ffffff;
 }
 
 #form_button {
@@ -209,11 +184,6 @@ textarea {
   color: #F2F3EB;
 }
 
-
-@media only screen and (max-width: 770px) {
-	
-}
-
 @media screen and (max-width: 768px) {
     .globalForm{
         /* background-color: rgba(128, 128, 128, 0.274); */
@@ -224,20 +194,33 @@ textarea {
         width: 97%;
         min-height: 80vh;
     }
+    .containerImg{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        color: #dfd9d7;
+    }
+    .imgForm{
+        width: 40vw;
+        height: 39vh;
+    }
+    .containerImg > img{
+        width: 18rem;
+        height: 13rem;
+        /* border: #F2F3EB solid 1px; */
+    }
+    .icon_wrapper {
+        margin: 2rem auto 0;
+        width: 100%;
+      }
+      #contact_form{
+          margin: 0;
+          padding: 1rem;
+      }
 }
-.containerImg{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    color: #dfd9d7;
-}
-.imgForm{
-    width: 40vw;
-    height: 300px;
-}
-
+    
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 26px;
@@ -248,7 +231,7 @@ textarea {
   }
   
   #form_button {
-    padding: 15px 25px;
+    padding: 1rem 1rem;
   }
 }
 
@@ -256,11 +239,11 @@ textarea {
   h1 {
     font-size: 18px;
   }
-  
-  .icon {
-    height: 35px;
-    width: 35px;
-  }
+  .containerImg > img{
+    width: 15rem;
+    height: 12rem;
+    /* border: #F2F3EB solid 1px; */
+}
   
   .underline {
     width: 53px;
