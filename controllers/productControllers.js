@@ -96,7 +96,6 @@ const ProductController = {
             res.json({success: true, message: 'Something went wrong, please try again in a few minutes'})
         }
     }
-
 }
 
 module.exports= ProductController

@@ -33,7 +33,7 @@ const { getAllProducts, loadProduct, getOneProduct, modifyStock } = require('../
 
 Router.route('/allproducts')
     .get(getAllProducts)
-    .post(loadProduct)
+    .post(passport.authenticate("jwt", { session: false }), verifedRol, loadProduct)
 
 Router.route('/allproducts/:id')
     .get(getOneProduct)
