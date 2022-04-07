@@ -49,20 +49,22 @@ const NavBar2 = (props) => {
 
     /* when windows do scroll */
     const [color, setColor] = React.useState(false)
+
     const changeColor = () => {
-        if (window.scrollY >= 100) {
+
+        if (window.scrollY >= 10) {
             setColor(true)
         } else {
             setColor(false)
         }
     }
- 
+
     window.addEventListener('scroll', changeColor)
     return (
-        <div  className={color ? 'header header-bg' : 'header'}>
-                
+        <div className={color ? 'header header-bg' : 'header'}>
+
             <AppBar position="static" sx={{ background: '#0001' }}>
-                
+
                 <Container maxWidth="xxl" className="navbarBackgound navbar-expand-lg ">
                     <Toolbar disableGutters>
                         <Typography variant="h6" component="div" sx={{ p: 0, mr: 2, display: { xs: 'none', md: 'block' } }}>
@@ -106,6 +108,9 @@ const NavBar2 = (props) => {
                                 <MenuItem className="navLi" onClick={handleCloseNavMenu}>
                                     <LinkRouter className="nav-linkUser" to="/shop">Store</LinkRouter>
                                 </MenuItem>
+                                <MenuItem className="navLi" onClick={handleCloseNavMenu}>
+                                    <LinkRouter className="nav-linkUser" to="/aboutUs">About Us</LinkRouter>
+                                </MenuItem>
 
 
                             </Menu>
@@ -128,13 +133,16 @@ const NavBar2 = (props) => {
                                 <Button sx={{ my: 0, color: 'white', display: 'flex' }} className="navLi">
                                     <LinkRouter className="linkGeneral" to="/shop">Store</LinkRouter>
                                 </Button>
+                                <Button sx={{ my: 0, color: 'white', display: 'flex' }} className="navLi">
+                                    <LinkRouter className="linkGeneral" to="/aboutUs">About Us</LinkRouter>
+                                </Button>
 
                             </div>
                         </Box>
 
                         <Box sx={{ flexGrow: 0.008 }}>
                             <Tooltip title="Open settings" >
-                            
+
                                 {
                                     props.user ? (
                                         <div>
@@ -170,10 +178,10 @@ const NavBar2 = (props) => {
                                     props.user ?
                                         (<div className='container-nav-LinkUser'>
                                             {/* <MenuItem onClick={handleCloseUserMenu} className="navLi"> */}
-                                                <LinkRouter className="nav-linkUser" aria-current="page" onClick={()=>{
-                                                    signOutUser()
-                                                    handleCloseUserMenu()
-                                                }} to="#">Sign out</LinkRouter>
+                                            <LinkRouter className="nav-linkUser" aria-current="page" onClick={() => {
+                                                signOutUser()
+                                                handleCloseUserMenu()
+                                            }} to="#">Sign out</LinkRouter>
                                             {/* </MenuItem> */}
                                             {/* <MenuItem> */}
                                             <LinkRouter className="nav-linkUser" aria-current="page" to="/">⚙
@@ -183,10 +191,10 @@ const NavBar2 = (props) => {
                                         ) : (
                                             <div className='container-nav-LinkUser'>
                                                 {/* <MenuItem onClick={handleCloseUserMenu} className="navLi"> */}
-                                                    <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" aria-current="page" to="/signIn">Sign In</LinkRouter>
+                                                <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" aria-current="page" to="/signIn">Sign In</LinkRouter>
                                                 {/* </MenuItem> */}
                                                 {/* <MenuItem onClick={handleCloseUserMenu} className="navLi"> */}
-                                                    <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/signUp">Sign Up</LinkRouter>
+                                                <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/signUp">Sign Up</LinkRouter>
                                                 {/* </MenuItem> */}
                                             </div>
                                         )

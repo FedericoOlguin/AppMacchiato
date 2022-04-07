@@ -9,7 +9,7 @@ import Snackbar from "./components/Snackbar"
 import React, { useEffect } from 'react';
 import userAction from './redux/actions/userAction';
 import { connect } from "react-redux"
-import AboutUsPage from './Pages/AboutUsPage';
+import AboutPage from './Pages/AboutPage';
 
 function App(props) {
   useEffect(() => {
@@ -23,12 +23,12 @@ function App(props) {
 
   return (
     <BrowserRouter>
-      {/* <NavBar /> */}
       <Routes>
 
         <Route path='*' element={<Home />} />{" "}
         <Route path='/' element={<Home />} />
         <Route path='/shop' element={<Shop/>} />
+        <Route path='/aboutUs' element={<AboutPage/>}/>
         <Route path='/signUp' element={props.user ? <Navigate replace to='/' /> : <SignUp />} />
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
         <Route path='/AboutUsPage' element={<AboutUsPage/>} />
@@ -46,6 +46,5 @@ const mapStateToProps = (state) => {
     user: state.userReducer.user
   }
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

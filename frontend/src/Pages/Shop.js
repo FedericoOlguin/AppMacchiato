@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import productActions from "../redux/actions/productActions";
 import ProductsCard from "../components/ProductsCard";
@@ -11,16 +11,30 @@ import Footer from "../components/Footer";
 
 
 function Shop(props) {
+    // const [cardsToDisplay, setCards] = useState();
     //para usar despues cuando apliquee filtros
     //const [cardsToDisplay, setCards] = useState();
 
     useEffect(() => {
         window.scrollTo(0, 0)
-
         props.getAllProducts()
+
+
 
     }, [])
 
+
+
+    // async function filterByName(e){
+    //     const filteredCards = cardsToDisplay.filter((product) =>
+    //         product.name
+    //         .toString()
+    //         .trim()
+    //         .toLowerCaser()
+    //         .startsWith(e.target.value.trim().toLowerCaser())
+    //         );
+    //         setCards(filteredCards)
+    // }
 
 
     return (
@@ -29,7 +43,7 @@ function Shop(props) {
             <h1>Soy el shop</h1>
 
 
-            <ProductsCard products={props.allProducts} />
+            <ProductsCard />
 
             {/* <LinkRouter to={'/home'}>
                 <button> go back to home </button>
@@ -40,15 +54,15 @@ function Shop(props) {
 
 }
 
-const mapStateToProps = (state) => {
-    return {
-        allProducts: state.productReducer.allProducts
-    }
-}
+// const mapStateToProps = (state) => {
+//     return {
+//         allProducts: state.productReducer.allProducts
+//     }
+// }
 
 const mapDispatchToProps = {
     getAllProducts: productActions.getAllProducts
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Shop);
+export default connect(null, mapDispatchToProps)(Shop);

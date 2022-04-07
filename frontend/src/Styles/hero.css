@@ -42,7 +42,7 @@
 .spanTitulo {
   /* font-family: 'Poppins', sans-serif; */
   font-family: 'Roboto',  sans-serif;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 600;
   display: block;
   width: 95%;
@@ -53,7 +53,7 @@
 
 .h1 {
   width: 80%;
-  font-size: 2.3rem;
+  font-size: 2.0rem;
   line-height: 3rem;
   text-align: center;
 }
@@ -135,8 +135,9 @@
         font-size: 2rem;
       }
       .h1 {
-        font-size: 1.8rem;
-        width: 90%;
+        font-size: 1.5rem;
+        width: 80%;
+        
         line-height:20px;
       }
       .heroTitulo {
