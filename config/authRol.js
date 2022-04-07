@@ -11,8 +11,8 @@ const verifedRol = async (req, res, next) => {
             next()
             console.log(req.user.rol);
         } else {
-            console.log("no se puede acceder/Falta de autorizacion apra el citio");
-            res.json({ response: "no se puede acceder/Falta de autorizacion apra el citio" })
+            console.log("no se puede acceder/Falta de autorizacion para el citio");
+            res.json({ response: "no se puede acceder/Falta de autorizacion para el citio" })
         }
     } catch (err) {
         console.log(err);

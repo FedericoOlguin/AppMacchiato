@@ -1,4 +1,4 @@
-.ContainerStore{
+.ContainerStore {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -10,7 +10,7 @@
   background-attachment: fixed;
 }
 
-.cardProducto{
+.cardProducto {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,22 +21,22 @@
   color: rgb(161, 70, 70) 8px;
   border-radius: 8px;
   -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
-  -moz-box-shadow: inset -5px 17px 109px 8px rgba(0,0,0,0.88);
+  -moz-box-shadow: inset -5px 17px 109px 8px rgba(0, 0, 0, 0.88);
   box-shadow: inset -5px 17px 109px 8px rgba(49, 49, 49, 0.88);
   background-image: url(https://jberlife.com/wp-content/uploads/2021/04/GettyImages-1191995863-2-scaled.jpg);
 }
-.tituloCard{
+.tituloCard {
   border: solid 1px white;
   margin: 0;
 }
-.cardProducto > img{
+.cardProducto > img {
   align-self: center;
   width: 55%;
   height: 8rem;
   margin-bottom: 0px;
   /* border: solid white 1px; */
 }
-.precio{
+.precio {
   color: blanchedalmond;
   background-color: rgba(133, 43, 43, 0.925);
   border: solid 1px rgba(168, 168, 168, 0.61);
@@ -49,7 +49,7 @@
   left: 1rem;
   z-index: 100;
 }
-.flag{
+.flag {
   color: blanchedalmond;
   background-color: rgba(139, 42, 42, 0.548);
   /* border: solid 1px rgba(168, 168, 168, 0.61); */
@@ -63,7 +63,7 @@
   left: 11.8rem;
   z-index: 101;
 }
-.txtCard{
+.txtCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,7 +75,7 @@
   margin: 0px;
   /* border: solid white 1px; */
 }
-.txtCard > h2{
+.txtCard > h2 {
   display: flex;
   width: 100%;
   height: 3rem;
@@ -89,7 +89,7 @@
   text-align: center;
   font-size: 1rem;
 }
-h5{
+h5 {
   display: flex;
   width: 50%;
   height: 1.6rem;
@@ -103,7 +103,7 @@ h5{
   font-size: 0.8rem;
   margin: 2rem 1rem 1rem 1rem;
 }
-h5:hover{
+h5:hover {
   display: flex;
   width: 60%;
   height: 1.6rem;
@@ -116,13 +116,29 @@ h5:hover{
   font-weight: 800;
   font-size: 0.9rem;
 }
-.txtCard > h4{
+.txtCard > h4 {
   margin: 20px 25px 25px 25px;
   text-align: center;
-}     
-.contenedorCardsGeneral{
+}
+.contenedorCardsGeneral {
   margin-top: 100px;
 }
-.input-text{
+.input-text {
   color: black;
+}
+.textCenter {
+  text-align: center;
+  font-size: 2rem !important;
+  text-decoration: none !important  ;
+}
+
+.container-cards {
+  /* display: flex; */
+  flex-wrap: wrap;
+}
+.icon {
+  color: white !important;
+}
+.categoryTxt {
+  text-decoration: none !important;
 }

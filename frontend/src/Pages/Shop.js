@@ -5,6 +5,7 @@ import ProductsCard from "../components/ProductsCard";
 // import { Link as LinkRouter } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import '../Styles/shop.css'
 
 
 
@@ -38,18 +39,18 @@ function Shop(props) {
 
 
     return (
-        <>
+        <div className="container-shop">
             <NavBar />
-            <h1>Soy el shop</h1>
+            <div className="container-filterAndShop">
+                <div className="container-filters">
 
-
-            <ProductsCard />
-
-            {/* <LinkRouter to={'/home'}>
-                <button> go back to home </button>
-            </LinkRouter> */}
+                </div>
+                <div className="container-cards">
+                    <ProductsCard />
+                </div>
+            </div>
             <Footer />
-        </>
+        </div>
     )
 
 }
