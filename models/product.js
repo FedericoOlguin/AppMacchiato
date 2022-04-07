@@ -8,6 +8,7 @@ const productSchema = new mongoose.Schema({
     stock:{type: Number, required: true},
     description:{type: String, required: true},
     scores:{type: Array, default:[]},
+    sale:{type: Boolean, default: false}
 })
 
 const Product = mongoose.model('products', productSchema)

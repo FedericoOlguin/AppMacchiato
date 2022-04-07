@@ -49,20 +49,26 @@ const NavBar2 = (props) => {
 
     /* when windows do scroll */
     const [color, setColor] = React.useState(false)
+
     const changeColor = () => {
-        if (window.scrollY >= 100) {
-            setColor(true)
+        if (window.scrollY < 100) {
+
         } else {
-            setColor(false)
+
+            if (window.scrollY >= 100) {
+                setColor(true)
+            } else {
+                setColor(false)
+            }
         }
     }
- 
+
     window.addEventListener('scroll', changeColor)
     return (
-        <div  className={color ? 'header header-bg' : 'header'}>
-                
+        <div className={color ? 'header header-bg' : 'header'}>
+
             <AppBar position="static" sx={{ background: '#0001' }}>
-                
+
                 <Container maxWidth="xxl" className="navbarBackgound navbar-expand-lg ">
                     <Toolbar disableGutters>
                         <Typography variant="h6" component="div" sx={{ p: 0, mr: 2, display: { xs: 'none', md: 'block' } }}>
@@ -134,7 +140,7 @@ const NavBar2 = (props) => {
 
                         <Box sx={{ flexGrow: 0.008 }}>
                             <Tooltip title="Open settings" >
-                            
+
                                 {
                                     props.user ? (
                                         <div>
