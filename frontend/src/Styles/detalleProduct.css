@@ -94,12 +94,15 @@ font-family: 'EB Garamond', serif;
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     font-size: 18px;
     padding: 20px 40px;
-    text-transform: uppercase;}
+    text-transform: uppercase;
+	color: #ffe6e6 !important;
+}
+
 	
 .a.cta-btn{
 	top: 2rem;
 	text-decoration: none !important;
-	color: #a6a2a2 ;
+	color: #a6a2a2 ! important;
 }
 .btn-holder {
     display: flex;

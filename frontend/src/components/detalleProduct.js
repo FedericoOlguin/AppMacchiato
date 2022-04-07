@@ -3,7 +3,7 @@ import { Link as LinkRouter } from "react-router-dom";
 import '../Styles/detalleProduct.css'
 
 
-function Detalle(){
+ export default function Detalle(){
 
 return(
     <div id="container">
@@ -37,6 +37,4 @@ return(
 
 
 )
-
-
 }
