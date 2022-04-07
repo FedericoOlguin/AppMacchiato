@@ -120,4 +120,9 @@ h5:hover{
   margin: 20px 25px 25px 25px;
   text-align: center;
 }     
-
+.contenedorCardsGeneral{
+  margin-top: 100px;
+}
+.input-text{
+  color: black;
+}

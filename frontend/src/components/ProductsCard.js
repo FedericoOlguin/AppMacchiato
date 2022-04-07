@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -16,21 +16,55 @@ import productActions from "../redux/actions/productActions";
 import '../Styles/ProductsCards.css'
 import coffePack from "../img/coffePack.png"
 
+const categories = [ {name: "Coffees",},{name: "coffee maker",},{name: "Accessories",},{name: "Barista tools",}]
 
 function ProductsCard(props) {
-    console.log(props)
     
     useEffect(()=>{
-
+        
     },[])
+    const [eventInput, setEventInput] = useState("");
+    const [eventSelect, setEventSelect] = useState("");
+    const [loaded, setLoaded] = useState(false);
+    function filter(){
+        setLoaded(!loaded)
+        props.filter(props.allProducts, eventInput, eventSelect)
+    }
+
 
     if (!props.filtered) {
         return (<LoadingIcon />)
     }
     
     return (
+    <>
+    <div className='contenedorCardsGeneral'>
+    <div className='filters'>
+        
+        <div className='input'>
+            <input
+            className='input-text'
+            placeholder='Search your product by name'
+            onChange={(event)=>{setEventInput(event.target.value); filter()}}/>
+        </div>
 
-            
+        <div className='select'>
+            <select className="form-control select" onChange={(event)=>{setEventSelect(event.target.value); filter()}}>
+                <option value={""}>
+                    {""}
+                    -choose the category-
+                </option>
+                {categories.map((category) => {
+                    return (
+                        <option key={category.name} value={category.name}>
+                            {category.name}
+                        </option>
+                    );
+                })}
+            </select>
+        </div>
+
+    </div>        
     <div className='ContainerStore'> 
 
     {props.filtered?.map(products =>
@@ -47,7 +81,8 @@ function ProductsCard(props) {
         </div>
         )}
     </div>
-        
+    </div>
+    </>    
         )
 }
   

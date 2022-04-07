@@ -8,9 +8,9 @@ const productActions = {
     }
     },
     // comentado ya que no le veo sentido a tenerlo en redux 
-    filter: (allProducts, value) => {
+    filter: (allProducts, valueInput, valueSelect) => {
         return(dispatch, getState) => {
-            dispatch({type: 'filter', payload: {allProducts, value} })
+            dispatch({type: 'filter', payload: {allProducts, valueInput, valueSelect} })
         }
     
     },
