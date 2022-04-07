@@ -6,16 +6,13 @@
   flex-direction: column;
   margin: 3rem 0 5rem 0;
 }
-
 .subcontainer-categorias{
   display: flex;
   flex-direction: row;  
  /*  background-color: seagreen; */
   width: 100%;
   height: 50%;
-  
 }
-
 .subcontainer-categorias1{
   width: 100%;
   height: 50%;
@@ -23,34 +20,29 @@
   display: flex;
   flex-direction: row;
 }
-
 .primerContenedor{
  /*  background-color: rgb(221, 82, 13); */
   width: 30%;
   height: 100%;
-  color: #efefef
+  color: #efefef;
 }
-
 .segundoContenedor{  
   /* background-color: blue; */
   width: 40%;
   height: 100%;
-  color: #efefef
+  color: #efefef;
 }
-
 .tercerContenedor{
   /* background-color: yellowgreen; */
   width: 30%;
   height: 100%;
-  color: #efefef
+  color: #efefef;
 }
-
 .img-categorias{
   object-fit:scale-down;
   width: 100%;
   height: 100%;
 }
-
 .tituloCategorias{
   color: #efefef;
   text-align: center;
@@ -59,9 +51,61 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-
 .parrafoCategorias{
   font-size: 1.1em;
   text-align: center;
   color: #efefefad;
+}
+
+@media screen and (max-width: 800px) { 
+  .tituloCategorias{
+
+    font-size: 1em;
+    padding: 3rem 0 1rem 0;
+    margin-top: 1rem;
+  }
+  .parrafoCategorias{
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 600px) { 
+  .tituloCategorias{
+
+    font-size: 0.7em;
+    padding: 3rem 0 1rem 0;
+    margin: 1rem 0.5rem 0rem 0.5rem;
+  }
+  .parrafoCategorias{
+    font-size: 0.7em;
+    margin: 0rem 1rem 0rem 1rem;
+  }
+  .container-categorias{
+     width: 75%;
+     height: 70vh;
+     display: flex;
+     flex-direction: column;
+     margin: 3rem 0 5rem 0;
+   }
+   .subcontainer-categorias{
+    display: flex;
+    flex-direction: row;  
+   /*  background-color: seagreen; */
+    width: 100%;
+    height: 40%;
+  }
+  .subcontainer-categorias1{
+    width: 100%;
+    height: 40%;
+   /*  background-color: burlywood; */
+    display: flex;
+    flex-direction: row;
+  }
+  .container-categorias{
+    /*  background-color: aqua; */
+     width: 80%;
+     height: 70vh;
+     display: flex;
+     flex-direction: column;
+     margin: 3rem 0 5rem 0;
+   }
 }

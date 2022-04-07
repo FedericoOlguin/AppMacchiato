@@ -24,7 +24,7 @@ const ProductsIndex = () => {
             <div className='section'>
                 <div className='txtCard'>
                     <h2> Professional Coffe Maker </h2>
-                    <h4> Give your bussines the best tool to get the btter tastie and texture coffes, prepair in a few minutes Capuccinos, Moccachinos, or inclusive some delicius Macchiatos </h4>
+                    <h4> Give your bussines the best tool to get the better tastie and texture coffes, prepair in a few minutes Capuccinos, Moccachinos, or inclusive some delicius Macchiatos </h4>
                 </div>
                 <img alt='cardPho' src={machineCoffe} className="imagenHeader" />
             </div>

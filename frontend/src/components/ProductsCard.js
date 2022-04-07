@@ -14,11 +14,11 @@ import { connect } from 'react-redux';
 import LoadingIcon from "./LoadingIcon"
 import productActions from "../redux/actions/productActions";
 import '../Styles/ProductsCards.css'
-
-
+import coffePack from "../img/coffePack.png"
 
 
 function ProductsCard(props) {
+    console.log(props)
     
     useEffect(()=>{
 
@@ -29,6 +29,19 @@ function ProductsCard(props) {
     }
     
     return (
+        <div> 
+
+        <div className='cardProducto'>
+            <p className='precio'> $19.99 </p>
+            <img alt='cardPho' src={coffePack} className="imagenHeader" />
+        <div className='txtCard'>
+            <h2> COFFE X SPECIAL</h2>
+            <h4> In our stores you can try a lot of different and exclusive coffees, as well as take some to your home and share with your family. </h4>
+        </div>
+    </div>
+
+
+
         <>
         <div className='container-cards'>
             {props.filtered?.map(products =>
@@ -44,16 +57,16 @@ function ProductsCard(props) {
                             alt="Paella dish"
                         />
                         <CardContent>
-                            <Typography variant="body2" color="white" fontSize="1rem">
+                            <Typography variant="body1" color="white" fontSize="1rem" className='categoryTxt'>
                                 Category: {products.category}
                             </Typography>
                         </CardContent>
                         <CardActions disableSpacing>
-                            <IconButton aria-label="add to favorites">
+                            <IconButton aria-label="add to favorites" className='icon'>
                                 <FavoriteIcon />
                             </IconButton>
 
-                            <IconButton aria-label="share">
+                            <IconButton aria-label="share" className='icon'>
                                 <LoupeIcon />
                             </IconButton>
 
@@ -64,6 +77,8 @@ function ProductsCard(props) {
             )}
         </div>
         </>
+
+        </div>
     )
 }
 

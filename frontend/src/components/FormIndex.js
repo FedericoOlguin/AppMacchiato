@@ -5,8 +5,8 @@ import imgForm from "../img/logo.png"
 const FormIndex = () => {
   return (
     <div className="globalForm">
-    <section className="containerImg"> 
 
+    <section className="containerImg"> 
         <img src={imgForm} className="imgForm" />    
     </section>
 
@@ -23,6 +23,7 @@ const FormIndex = () => {
         <div class="name">
           <label for="name"></label>
           <input
+          className="textArea"
             type="text"
             placeholder="My name is"
             name="name"
@@ -33,6 +34,7 @@ const FormIndex = () => {
         <div class="email">
           <label for="email"></label>
           <input
+          className="textArea"
             type="email"
             placeholder="E-mail"
             name="email"
@@ -43,6 +45,7 @@ const FormIndex = () => {
         <div class="telephone">
           <label for="name"></label>
           <input
+          className="textArea"
             type="text"
             placeholder="Number Phone"
             name="telephone"
@@ -57,6 +60,7 @@ const FormIndex = () => {
         <div class="message">
           <label for="message"></label>
           <textarea
+          className="textArea"
             name="message"
             placeholder="Ask us what you want"
             id="message_input"
