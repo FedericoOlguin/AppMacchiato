@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import productActions from "../redux/actions/productActions";
 import ProductsCard from "../components/ProductsCard";
@@ -23,8 +23,8 @@ function Shop(props) {
 
     }, [])
 
-    
-    
+
+
     // async function filterByName(e){
     //     const filteredCards = cardsToDisplay.filter((product) =>
     //         product.name
@@ -38,12 +38,12 @@ function Shop(props) {
 
 
     return (
-        <>  
+        <>
             <NavBar />
             <h1>Soy el shop</h1>
 
 
-            <ProductsCard/>
+            <ProductsCard />
 
             {/* <LinkRouter to={'/home'}>
                 <button> go back to home </button>
