@@ -1,0 +1,25 @@
+.fondo-AboutUs{
+  background-image: url(../img/fondo_alto.jpg)
+}
+
+.container-AboutPage{
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+}
+
+.img-aboutUsPage{
+  width: 100%;
+  background-image: url(../img/workCoffee.jpg);
+  background-size: cover;
+  height: 60vh;
+}
+
+.container-ppal{
+  background-color: #efeefe;
+  width: 80%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+
+}
