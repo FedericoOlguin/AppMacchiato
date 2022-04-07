@@ -1,17 +1,18 @@
 import React from "react";
-import "../Styles/FormIndex.css";
-import imgForm from "../img/logo.png"
+import "../Styles/FormIndex.css";    /* daña el form sign up y sign in... */
+
 
 const FormIndex = () => {
   return (
     <div className="globalForm">
 
     <section className="containerImg"> 
-        <img src={imgForm} className="imgForm" />    
+        <h1 className="tituloform">Macchiato</h1>
+        {/* <img src={imgForm} className="imgForm" />   */}  
     </section>
 
-      <div id="container">
-        <h1>&bull; Keep in Touch &bull;</h1>
+      <div id="containerFormIndex">
+        <h1 className="tituloform">&bull; Keep in Touch &bull;</h1>
         <div class="underline"></div>
         <div class="icon_wrapper">
           <svg class="icon" viewBox="0 0 145.192 145.192">
@@ -49,7 +50,7 @@ const FormIndex = () => {
             type="text"
             placeholder="Number Phone"
             name="telephone"
-            id="telephone_input"
+            id="telephone_input" 
             required
           />
         </div>

@@ -1,71 +1,49 @@
 .globalForm{
-    /* background-color: rgba(128, 128, 128, 0.274); */
+    
     display: flex;
     width: 97%;
     min-height: 80vh;
     margin-bottom: 2rem;
-    background-color: rgba(128, 128, 128, 0.123);
+    
 }
 .containerImg{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
-    /* border: #F2F3EB solid 1px; */
-}
-.containerImg > img{
-    width: 23rem;
-    height: 19rem;
-    /* border: #F2F3EB solid 1px; */
+   
 }
 
-/* @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700); */
-
-html {
-    font-family: 'Roboto',  sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  background: #F2F3EB;
-}
-
-button {
-  overflow: visible;
-}
-
-button, select {
-  text-transform: none;
-}
-
-button, input, select, textarea {
-  color: #ffffff;
-  font: inherit;
+#name_input,
+.textArea,
+#name_input{
+  color: #efeefe;
   margin: 0;
 }
 
-input {
+#name_input{
   line-height: normal;
 }
 
-textarea {
-  overflow: auto;
+.textArea{
+overflow: auto;
 }
 
-#container {
+
+
+#containerFormIndex{
   width: 50%;
   margin: 2rem 3rem 1rem 3rem;
 }
 
-form {
+#contact_form{
   padding: 0.2rem;
   margin: 2rem 0; 
 }
 
-h1 {
+.tituloform {
   color: #d4d4d4;
-  font-size: 32px;
+  font-size: 3rem;
   font-weight: 700;
   letter-spacing: 7px;
   text-align: center;
@@ -92,11 +70,12 @@ h1 {
 	width: 45%;
 }
 
-input[type='text'], [type='email'], select, textarea {
+.textArea
+{
 	background: none;
    border: none; 
-	border-bottom: solid 2px #cecccb;
-	color: #000000;
+	border-bottom: solid 2px #efefef;
+	color: #efefef;
 	font-size: 1.000em;
   font-weight: 500;
   letter-spacing: 1px;
@@ -116,9 +95,9 @@ input[type='text'], [type='email'], select, textarea {
 	transition: all 0.3s;
 }
 
-input[type='text']:focus, [type='email']:focus, textarea:focus {
-	outline: none;
-	padding: 0 0 0.675em 0;
+.textArea:focus {
+  outline: none;
+  padding: 0 0 0.675em 0;
 }
 .message {
 	float: none;
@@ -131,9 +110,9 @@ input[type='text']:focus, [type='email']:focus, textarea:focus {
 .telephone {
   width: 100%;
 }
-textarea {
+
+.textArea{
 	line-height: 150%;
-	height: 5rem;
 	resize: none;
   width: 100%;
 }
@@ -169,7 +148,7 @@ textarea {
   font-size: 0.875em;
   font-weight: bold;
   outline: none;
-  padding: 20px 20px;
+  padding:  .8rem;
   margin: 0px 0px 25px 15px;
   text-transform: uppercase;
   -webkit-transition: all 0.3s;
@@ -177,11 +156,13 @@ textarea {
 	-ms-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
+  border-radius: 5px;
+  transition: all 0.5;
 }
 
 #form_button:hover {
-  background: #474544;
-  color: #F2F3EB;
+  transform: scale(1.02, 1.02);
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
@@ -203,8 +184,8 @@ textarea {
         color: #dfd9d7;
     }
     .imgForm{
-        width: 40vw;
-        height: 39vh;
+        display: none;
+        
     }
     .containerImg > img{
         width: 18rem;
@@ -219,10 +200,14 @@ textarea {
           margin: 0;
           padding: 1rem;
       }
+
+      #containerFormIndex >h1{
+        display: none;
+      }
 }
     
 @media screen and (max-width: 480px) {
-  h1 {
+  .tituloform {
     font-size: 26px;
   }
   
@@ -236,7 +221,7 @@ textarea {
 }
 
 @media screen and (max-width: 420px) {
-  h1 {
+  .tituloform {
     font-size: 18px;
   }
   .containerImg > img{
@@ -249,7 +234,7 @@ textarea {
     width: 53px;
   }
   
-  input[type='text'], [type='email'], select, textarea {
+  .textArea{
     font-size: 0.875em;
   }
 }
