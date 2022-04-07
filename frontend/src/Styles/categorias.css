@@ -24,17 +24,27 @@
   width: 30%;
   height: 100%;
   color: #efefef;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .segundoContenedor{  
   width: 40%;
   height: 100%;
   color: #efefef;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 1rem;
 }
 .tercerContenedor{
   /* background-color: yellowgreen; */
   width: 30%;
   height: 100%;
   color: #efefef;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .img-categorias{
   object-fit:scale-down;
@@ -75,6 +85,7 @@
   #container-categorias{
     margin-bottom: 3rem;
     width: 80%;
+    height: 500px;
     
   }
 
@@ -107,6 +118,6 @@
 
 @media screen and (max-width:400px){
   #container-categorias{
-    display: none;
+    /* display: none; */
   }
 }
