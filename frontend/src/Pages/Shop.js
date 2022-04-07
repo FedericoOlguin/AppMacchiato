@@ -11,38 +11,30 @@ import Footer from "../components/Footer";
 
 
 function Shop(props) {
-    const [cardsToDisplay, setCards] = useState();
+    // const [cardsToDisplay, setCards] = useState();
     //para usar despues cuando apliquee filtros
     //const [cardsToDisplay, setCards] = useState();
 
     useEffect(() => {
         window.scrollTo(0, 0)
-        getAllProducts()
+        props.getAllProducts()
 
 
 
     }, [])
-    async function getAllProducts(){
-        try{
-            await props.getAllProducts()
-            .then(setCards(props.allProducts))
-        }catch(err){
-            alert('error, try again later')
-        }
-    }
+
     
     
-    console.log(cardsToDisplay);
-    async function filterByName(e){
-        const filteredCards = cardsToDisplay.filter((product) =>
-            product.name
-            .toString()
-            .trim()
-            .toLowerCaser()
-            .startsWith(e.target.value.trim().toLowerCaser())
-            );
-            setCards(filteredCards)
-    }
+    // async function filterByName(e){
+    //     const filteredCards = cardsToDisplay.filter((product) =>
+    //         product.name
+    //         .toString()
+    //         .trim()
+    //         .toLowerCaser()
+    //         .startsWith(e.target.value.trim().toLowerCaser())
+    //         );
+    //         setCards(filteredCards)
+    // }
 
 
     return (
@@ -51,7 +43,7 @@ function Shop(props) {
             <h1>Soy el shop</h1>
 
 
-            <ProductsCard products={cardsToDisplay&&props.allProducts} />
+            <ProductsCard/>
 
             {/* <LinkRouter to={'/home'}>
                 <button> go back to home </button>
@@ -62,15 +54,15 @@ function Shop(props) {
 
 }
 
-const mapStateToProps = (state) => {
-    return {
-        allProducts: state.productReducer.allProducts
-    }
-}
+// const mapStateToProps = (state) => {
+//     return {
+//         allProducts: state.productReducer.allProducts
+//     }
+// }
 
 const mapDispatchToProps = {
     getAllProducts: productActions.getAllProducts
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Shop);
+export default connect(null, mapDispatchToProps)(Shop);
