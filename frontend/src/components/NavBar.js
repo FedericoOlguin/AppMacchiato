@@ -51,15 +51,11 @@ const NavBar2 = (props) => {
     const [color, setColor] = React.useState(false)
 
     const changeColor = () => {
-        if (window.scrollY < 100) {
 
+        if (window.scrollY >= 10) {
+            setColor(true)
         } else {
-
-            if (window.scrollY >= 100) {
-                setColor(true)
-            } else {
-                setColor(false)
-            }
+            setColor(false)
         }
     }
 

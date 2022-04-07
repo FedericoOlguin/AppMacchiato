@@ -32,7 +32,7 @@ body {
 }
 .scarollUp2{
   position: fixed;
-  bottom: 2rem;
+  bottom: 10rem;
   right: 2rem;
   width: 2.5rem;
   border-radius: 50%;

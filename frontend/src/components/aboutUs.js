@@ -17,7 +17,6 @@ function AboutUs() {
             <h3>From the field for you</h3>
           </div>
         </div>
-        
         <div className='card-text'>
           <h1>About Us</h1>
           <p className='parrafoCard'>After harvesting the fruits of the coffee trees, they are induced to a wet process where they take approximately one day to ferment.</p>
