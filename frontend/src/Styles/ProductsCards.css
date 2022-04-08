@@ -87,7 +87,12 @@
   width: 15em;
   height: 300px;
   color: rgb(161, 70, 70) 8px;
+<<<<<<< HEAD
   border-radius: 5px;
+=======
+  border-radius: 0px 31px 0px 29px;
+  box-shadow: 2px 5px 21px 4px #000000;
+>>>>>>> c5898a90cf3ae7d7e5d5caf3e290166d4838719c
   -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
   -moz-box-shadow: inset -5px 17px 109px 8px rgba(0, 0, 0, 0.88);
   box-shadow: inset -5px 17px 109px 8px rgba(49, 49, 49, 0.88);
@@ -154,6 +159,40 @@
   text-align: center;
   font-size: 1rem;
 }
+<<<<<<< HEAD
+=======
+h5{
+  display: flex;
+  width: 50%;
+  height: 1.6rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.267);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.8rem;
+  margin: 2rem 1rem 1rem 1rem;
+}
+h5:hover{
+  display: flex;
+  width: 60%;
+  height: 1.6rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.527);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+.txtCard > h4{
+  margin: 20px 25px 25px 25px;
+  text-align: center;
+}     
+>>>>>>> c5898a90cf3ae7d7e5d5caf3e290166d4838719c
 
 .textCenter {
   text-align: center;

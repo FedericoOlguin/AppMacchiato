@@ -6,6 +6,7 @@ import ProductsCard from "../components/ProductsCard";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import '../Styles/shop.css'
+import Carousel from "../components/Carousel"
 
 
 
@@ -43,6 +44,7 @@ function Shop(props) {
             <NavBar />
             <div className="container-filterAndShop">
                 <div className="container-cards">
+                    <Carousel />
                     <ProductsCard />
                 </div>
             </div>

@@ -1,17 +1,26 @@
 import * as React from 'react';
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import empy from '../img/empy.svg'
+=======
+import { useEffect } from 'react';
+>>>>>>> c5898a90cf3ae7d7e5d5caf3e290166d4838719c
 import { Link as LinkRouter } from "react-router-dom"
 import { connect } from 'react-redux';
 import LoadingIcon from "./LoadingIcon"
 import productActions from "../redux/actions/productActions";
 import '../Styles/ProductsCards.css'
+<<<<<<< HEAD
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import DetailsIcon from '@mui/icons-material/Details';
+=======
+import { Autoplay, Pagination, Navigation, Grid } from "swiper";
+>>>>>>> c5898a90cf3ae7d7e5d5caf3e290166d4838719c
 
 const categories = [{ name: "Coffees", }, { name: "coffee maker", }, { name: "Accessories", }, { name: "Barista tools", }]
 
 function ProductsCard(props) {
+<<<<<<< HEAD
 
 
     const [eventInput, setEventInput] = useState("");
@@ -29,6 +38,12 @@ function ProductsCard(props) {
 
     }
 
+=======
+    console.log(props)
+    
+    useEffect(()=>{
+    },[])
+>>>>>>> c5898a90cf3ae7d7e5d5caf3e290166d4838719c
 
     if (!props.filtered) {
         return (<LoadingIcon />)
@@ -104,9 +119,13 @@ function ProductsCard(props) {
         </>
     )
 }
+<<<<<<< HEAD
 
 
 
+=======
+  
+>>>>>>> c5898a90cf3ae7d7e5d5caf3e290166d4838719c
 const mapStateToProps = (state) => {
     return {
         allProducts: state.productReducer.allProducts,
@@ -117,6 +136,5 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
     filter: productActions.filter,
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductsCard)
