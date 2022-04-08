@@ -78,52 +78,52 @@ function AboutPage() {
       <div className='contenedor-developers'>
         <div className='fotos-developers'>
 
-          <div className='fotos-1ercontenedor'>
+          <div className='fotos-contenedor'>
 
-            <div className='contenedor-uno'>
-              <div className='contenedor-devimg'>
+            <div className='contenedorLinkedIn'>
+              {/* <div className='contenedor-devimg'> */}
                 <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/marcia-montivero-gutierrez-383009207/"><img  src={marcia} alt='desarrollador' className='img-dev' /></a>
-              </div>
+              {/* </div> */}
               <h3 className='nombreDesarrollador'>Marcia Montivero</h3>
             </div>
 
-            <div className='contenedor-dos'>
-              <div className='contenedor-devimg'>
+            <div className='contenedorLinkedIn'>
+              {/* <div className='contenedor-devimg'> */}
                 <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/federico-olgu%C3%ADn-1b405b201/"><img src={fede} alt='desarrollador'className='img-dev' /></a>
-              </div>
+              {/* </div> */}
               <h3 className='nombreDesarrollador'>Federico Olguín</h3>
             </div>
 
-            <div className='contenedor-tres'>
-              <div className='contenedor-devimg'>
+            <div className='contenedorLinkedIn'>
+              {/* <div className='contenedor-devimg'> */}
                 <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/hernan-funes-50301421b/"><img src={hernan} alt='desarrollador'className='img-dev' /></a>
-              </div>
+              {/* </div> */}
               <h3 className='nombreDesarrollador'>Hernán Funes</h3>
             </div>
 
           </div>
 
-          <div className='fotos-2ercontenedor'>
+          <div className='fotos-contenedor'>
 
-            <div className='contenedor-uno'>
-              <div className='contenedor-devimg'>
+            <div className='contenedorLinkedIn'>
+              {/* <div className='contenedor-devimg'> */}
                 <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/fernanda-arrieta-755665b0/"><img src={fernanda} className='img-dev' alt='desarrollador'  /></a>
-              </div>
+              {/* </div> */}
               <h3 className='nombreDesarrollador'>Fernanda Arrieta</h3>
             </div>
 
-            <div className='contenedor-dos'>
-              <div className='contenedor-devimg'>
+            <div className='contenedorLinkedIn'>
+              {/* <div className='contenedor-devimg'> */}
                 <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/juan-sebastian-londo%C3%B1o-cossio-9444781b7/"><img src={sebas} alt='desarrollador' className='img-dev' /></a>
-              </div>
+              {/* </div> */}
 
               <h3 className='nombreDesarrollador'>Sebastian Londoño</h3>
             </div>
 
-            <div className='contenedor-tres'>
-              <div className='contenedor-devimg'>
+            <div className='contenedorLinkedIn'>
+              {/* <div className='contenedor-devimg'> */}
                 <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/daniel-mart%C3%ADnez-casta%C3%B1eda-8b363b15a/"><img src={dani} alt='desarrollador' className='img-dev' /></a>
-              </div>
+              {/* </div> */}
               <h3 className='nombreDesarrollador'>Daniel Martinez</h3>
             </div>
 
