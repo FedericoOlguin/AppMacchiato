@@ -187,8 +187,8 @@ const NavBar2 = (props) => {
                                             <LinkRouter className="nav-linkUser" aria-current="page" to="/">⚙
                                                 Setting</LinkRouter>
                                             {/* </MenuItem> */}
-                                            {console.log(props.user)}
-                                            {props.user?.rol === "user" ? (
+                                            
+                                            {props.authorized ? (
                                                 <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/panel">Admin panel</LinkRouter>
                                             ) : (
                                                 <></>
@@ -218,7 +218,8 @@ const NavBar2 = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        user: state.userReducer.user
+        user: state.userReducer.user,
+        authorized: state.userReducer.authorized
     }
 }
 
