@@ -129,7 +129,7 @@ const userController = {
                     photoURL: photoURL,
                     country: country,
                     verifiedEmail: false,
-                    rol: rol,
+                    rol: "user",
                     from: [from],
                 })
                 // Se comprueba el metodo y la procedencia del registro
@@ -180,12 +180,12 @@ const userController = {
                     let passwordEquals = userExiste.password.filter(pass => bcryptjs.compareSync(password, pass))
                     if (passwordEquals.length > 0) {
                         const userData = {
-                            view: true,
                             id: userExiste._id,
                             name: userExiste.name,
                             email: userExiste.email,
                             photoURL: userExiste.photoURL,
-                            from: from
+                            from: from,
+                            rol: userExiste.rol
                         }
                         await userExiste.save()
                         const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 })
@@ -205,12 +205,12 @@ const userController = {
                         let passwordEquals = userExiste.password.filter(pass => bcryptjs.compareSync(password, pass))
                         if (passwordEquals.length > 0) {
                             const userData = {
-                                view: true,
                                 id: userExiste._id,
                                 name: userExiste.name,
                                 email: userExiste.email,
                                 photoURL: userExiste.photoURL,
-                                from: from
+                                from: from,
+                                rol: userExiste.rol
                             }
                             const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 })
                             res.json({
@@ -242,11 +242,11 @@ const userController = {
         let emailUser = req.body.userEmail
         let user = await Usuario.findOne({ email: emailUser })
         // console.log(user);
-        await user.save()
+        // await user.save()
         res.json({
             success: true,
-            reponse: emailUser,
-            message: "Session closed " 
+            reponse: user.name,
+            message: "Session  " + user.name.firstName + " closed"
         })
         // res.json(console.log("closed session " + user.email))
 
@@ -258,7 +258,7 @@ const userController = {
         if (req.user) {
             res.json({
                 success: true,
-                response: { id: req.user.id, name: req.user.name, photoURL: req.user.photoURL, email: req.user.email, from: "token" },
+                response: { id: req.user.id, name: req.user.name, photoURL: req.user.photoURL, email: req.user.email, from: "token", rol: req.user.rol },
                 message: "Welcome back " + req.user.name.firstName
             })
 

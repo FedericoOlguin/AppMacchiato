@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import productActions from "../redux/actions/productActions";
 import ProductsCard from "../components/ProductsCard";
-// import { Link as LinkRouter } from "react-router-dom";
+
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import '../Styles/shop.css'
@@ -42,9 +42,6 @@ function Shop(props) {
         <div className="container-shop">
             <NavBar />
             <div className="container-filterAndShop">
-                <div className="container-filters">
-
-                </div>
                 <div className="container-cards">
                     <ProductsCard />
                 </div>

@@ -11,6 +11,12 @@ import dani from '../img/daniel.jpg'
 import hernan from '../img/hernan.jpg'
 
 function AboutPage() {
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  
   return (
     <div className='fondo-AboutUs'>
       <NavBar />

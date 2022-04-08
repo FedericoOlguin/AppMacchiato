@@ -15,11 +15,11 @@ const userReducer = (state = initialState, action) => {
             return {
                 ...state,
                 user: action.payLoad.response.userData,
-                snackbar: {
-                    view: action.payLoad.response.userData.view,
-                    message: action.payLoad.message,
-                    success: action.payLoad.success
-                }
+                // snackbar: {
+                //     view: action.payLoad.response.userData.view,
+                //     message: action.payLoad.message,
+                //     success: action.payLoad.success
+                // }
             }
         case "user2":
             return {
