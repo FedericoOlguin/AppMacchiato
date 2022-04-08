@@ -31,7 +31,7 @@ function App(props) {
         <Route path='/aboutUs' element={<AboutPage/>}/>
         <Route path='/signUp' element={props.user ? <Navigate replace to='/' /> : <SignUp />} />
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
-        <Route path='/AboutUsPage' element={<AboutUsPage/>} />
+        <Route path='/AboutUsPage' element={<AboutPage/>} />
       </Routes>
       <Snackbar />
     </BrowserRouter>
