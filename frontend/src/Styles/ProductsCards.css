@@ -1,11 +1,9 @@
-.contenedorCardsGeneral{
+.contenedorCardsGeneral {
   margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
-
-
 
 /* -------------slider------------- */
 .sliderPromocion {
@@ -17,33 +15,29 @@
   margin: 1rem 0;
 }
 
-.ContainerSlider{
+.ContainerSlider {
   width: 70%;
   align-self: center;
   background-color: aliceblue;
   height: 100%;
 }
 
-
-
-
-
 /* -------------filters------------- */
 
-.filters{
-width: 20%;
-height: 100vh; 
-display: flex;
-flex-direction: column;
+.filters {
+  width: 20%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 
-align-items: center;
+  align-items: center;
 }
 
-.input-text{
+.input-text {
   margin: 3rem auto;
   width: 100%;
-  height: 5vh; 
-  padding: .5rem;
+  height: 5vh;
+  padding: 0.5rem;
   background-color: #efeefe;
   border: 1px solid #efeefe;
   font-size: 1.3em;
@@ -51,7 +45,7 @@ align-items: center;
   border-radius: 5px;
 }
 
-.form-control{
+.form-control {
   width: 100%;
   height: 5vh;
   font-size: 1.3em;
@@ -60,29 +54,24 @@ align-items: center;
   border: 1px solid #efeefe;
   border-radius: 5px;
   color: #1d1d1d;
-  
-  
-  
 }
 
-
-
-
 /* -------------card------------- */
-.ContainerStore{
-  width: 80%;
+.ContainerStore {
+  max-width: 80%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   flex-wrap: wrap;
-  background-attachment: fixed;
-  
+  /* background-attachment: fixed; */
+}
+.container-cards {
+  width: 100%;
+  display: flex;
 }
 
-
-
-.cardProducto{
+.cardProducto {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,9 +86,7 @@ align-items: center;
   background-image: url(https://jberlife.com/wp-content/uploads/2021/04/GettyImages-1191995863-2-scaled.jpg);
 }
 
-
-
-.cardProducto > img{
+.cardProducto > img {
   align-self: center;
   width: 55%;
   height: 8rem;
@@ -120,7 +107,7 @@ align-items: center;
   z-index: 100;
 }
 
-.flag{
+.flag {
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -146,7 +133,7 @@ align-items: center;
   margin: 0px;
 }
 
-.txtCard > h2{
+.txtCard > h2 {
   display: flex;
   width: 100%;
   height: 3rem;
@@ -160,25 +147,23 @@ align-items: center;
   font-size: 1rem;
 }
 
-
 .textCenter {
   text-align: center;
   font-size: 2rem !important;
   text-decoration: none !important  ;
 }
 
-
-.categoryTxt{
+.categoryTxt {
   text-decoration: none !important;
 }
 
-.botonesShop{
-  margin-top: .3rem;
+.botonesShop {
+  margin-top: 0.3rem;
   width: 90%;
   display: flex;
   justify-content: space-evenly;
 }
 
-.iconShop{
+.iconShop {
   cursor: pointer;
 }
