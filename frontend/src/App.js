@@ -28,7 +28,7 @@ function App(props) {
         <Route path='*' element={<Home />} />{" "}
         <Route path='/' element={<Home />} />
         <Route path='/shop' element={<Shop />} />
-        <Route path='/aboutUs' element={<AboutPage/>}/>
+        <Route path='/aboutUs' element={<AboutPage />} />
         <Route path='/signUp' element={props.user ? <Navigate replace to='/' /> : <SignUp />} />
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
         <Route path='/signIn' element={props.user?.rol !== "user" ? <Navigate replace to='/' /> : <SignIn />} />

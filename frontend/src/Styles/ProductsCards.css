@@ -1,40 +1,126 @@
+<<<<<<< HEAD
 .ContainerStore {
+=======
+.contenedorCardsGeneral{
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+>>>>>>> 91242d44483d21b25d74bb52d02dc69c801e28af
   width: 100%;
+}
+
+
+
+/* -------------slider------------- */
+.sliderPromocion {
+  display: flex;
+  background-color: red;
+  width: 100%;
+  height: 40vh;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.ContainerSlider{
+  width: 70%;
+  align-self: center;
+  background-color: aliceblue;
+  height: 100%;
+}
+
+
+
+
+
+/* -------------filters------------- */
+
+.filters{
+width: 20%;
+height: 100vh; 
+display: flex;
+flex-direction: column;
+
+align-items: center;
+}
+
+.input-text{
+  margin: 3rem auto;
+  width: 100%;
+  height: 5vh; 
+  padding: .5rem;
+  background-color: #efeefe;
+  border: 1px solid #efeefe;
+  font-size: 1.3em;
+  color: #1d1d1d;
+  border-radius: 5px;
+}
+
+.form-control{
+  width: 100%;
+  height: 5vh;
+  font-size: 1.3em;
+  text-align: center;
+  background-color: #efeefe;
+  border: 1px solid #efeefe;
+  border-radius: 5px;
+  color: #1d1d1d;
+  
+  
+  
+}
+
+
+
+
+/* -------------card------------- */
+.ContainerStore{
+  width: 80%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  /* padding: 2rem 1rem 1rem 1rem; */
-  background-image: url(../img/fondo_alto.jpg);
   background-attachment: fixed;
+  
 }
 
+<<<<<<< HEAD
 .cardProducto {
+=======
+
+
+.cardProducto{
+>>>>>>> 91242d44483d21b25d74bb52d02dc69c801e28af
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 2rem 2rem 2rem 2rem;
-  /* padding: 0px 0px 20px 0px; */
   width: 15em;
   height: 45vh;
   color: rgb(161, 70, 70) 8px;
-  border-radius: 8px;
+  border-radius: 5px;
   -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
   -moz-box-shadow: inset -5px 17px 109px 8px rgba(0, 0, 0, 0.88);
   box-shadow: inset -5px 17px 109px 8px rgba(49, 49, 49, 0.88);
   background-image: url(https://jberlife.com/wp-content/uploads/2021/04/GettyImages-1191995863-2-scaled.jpg);
 }
+<<<<<<< HEAD
 .tituloCard {
   border: solid 1px white;
   margin: 0;
 }
 .cardProducto > img {
+=======
+
+
+
+.cardProducto > img{
+>>>>>>> 91242d44483d21b25d74bb52d02dc69c801e28af
   align-self: center;
   width: 55%;
   height: 8rem;
   margin-bottom: 0px;
-  /* border: solid white 1px; */
+  object-fit: scale-down;
 }
 .precio {
   color: blanchedalmond;
@@ -49,19 +135,20 @@
   left: 1rem;
   z-index: 100;
 }
-.flag {
-  color: blanchedalmond;
-  background-color: rgba(139, 42, 42, 0.548);
-  /* border: solid 1px rgba(168, 168, 168, 0.61); */
-  border-radius: 50px;
+
+.flag{
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
   text-align: center;
   position: relative;
   font-size: 0.8rem;
-  width: 2rem;
-  height: 2.3rem;
+  width: 1.8rem;
+  height: 1.8rem;
   top: 0.2rem;
   left: 11.8rem;
   z-index: 101;
+  background-size: cover;
 }
 .txtCard {
   display: flex;
@@ -73,9 +160,13 @@
   color: white;
   justify-content: center;
   margin: 0px;
-  /* border: solid white 1px; */
 }
+<<<<<<< HEAD
 .txtCard > h2 {
+=======
+
+.txtCard > h2{
+>>>>>>> 91242d44483d21b25d74bb52d02dc69c801e28af
   display: flex;
   width: 100%;
   height: 3rem;
@@ -83,12 +174,12 @@
   justify-content: center;
   color: rgb(161, 70, 70);
   text-shadow: 1px 1px 1px rgb(0, 0, 0);
-  /* margin: 0px 10px 0px 10px; */
   padding: 0.1rem 1rem 0rem 1rem;
   background-color: rgba(105, 105, 105, 0.171);
   text-align: center;
   font-size: 1rem;
 }
+<<<<<<< HEAD
 h5 {
   display: flex;
   width: 50%;
@@ -126,12 +217,17 @@ h5:hover {
 .input-text {
   color: black;
 }
+=======
+
+
+>>>>>>> 91242d44483d21b25d74bb52d02dc69c801e28af
 .textCenter {
   text-align: center;
   font-size: 2rem !important;
   text-decoration: none !important  ;
 }
 
+<<<<<<< HEAD
 .container-cards {
   /* display: flex; */
   flex-wrap: wrap;
@@ -142,3 +238,20 @@ h5:hover {
 .categoryTxt {
   text-decoration: none !important;
 }
+=======
+
+.categoryTxt{
+  text-decoration: none !important;
+}
+
+.botonesShop{
+  margin-top: .3rem;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.iconShop{
+  cursor: pointer;
+}
+>>>>>>> 91242d44483d21b25d74bb52d02dc69c801e28af
