@@ -11,7 +11,10 @@ import userAction from './redux/actions/userAction';
 import { connect } from "react-redux"
 import AboutPage from './Pages/AboutPage';
 import ErrorScreen from './components/ErrorScreen';
-import userReducer from './redux/reducers/userReducer';
+import Seetings from './Pages/Seetings';
+import SeetingsChange from './Pages/SeetingsChanges';
+import PanelProducts from './Pages/PanelProducts'; /* toca organizarla, solo se hzo así para poder diseñarla */
+
 
 function App(props) {
   // const [authorized, setAuthorized] = React.useState(false)
@@ -35,8 +38,11 @@ function App(props) {
         <Route path='/aboutUs' element={<AboutPage />} />
         <Route path='/signUp' element={props.user ? <Navigate replace to='/' /> : <SignUp />} />
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
-        <Route path='/panel' element={props.authorized ? (<Navigate replace to='/err' />) : (<SignIn />)} />
+        <Route path='/panel' element={props.authorized ? (<Navigate replace to='/err' />) : (<PanelProducts />)} />
         <Route path='/err' element={<ErrorScreen />} />
+        <Route path='/seetings' element={<Seetings />}/>
+        <Route path='/seetingsChanges' element={<SeetingsChange/>}/>
+        {/* <Route path='/panelproductos' element={<PanelProducts/>}/> ésto toca borrarlo dps solo es para diseñarlo */}
 
 
       </Routes>

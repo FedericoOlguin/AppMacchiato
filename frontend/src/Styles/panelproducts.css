@@ -1,0 +1,193 @@
+.caja-panel{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../img/fondo_alto.jpg");
+}
+
+.centro-panel{
+  width: 100%;
+  height: 60vh;
+  background-image: url("../img/fondoproductos.jpg");
+  background-size: cover;
+  background-position: 10% 30%;
+}
+
+.container-panel{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 80vh;
+  background-color: slateblue;
+  justify-content: space-evenly;
+  
+}
+
+.titulo-panel{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  color: #efeefe;
+  font-size: 3em;
+  
+}
+
+
+.card-panel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  height: 35vh;
+  color: rgb(161, 70, 70) 8px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
+  -moz-box-shadow: inset -5px 17px 109px 8px rgba(0, 0, 0, 0.88);
+  box-shadow: inset -5px 17px 109px 8px rgba(49, 49, 49, 0.88);
+  background-image: url(https://jberlife.com/wp-content/uploads/2021/04/GettyImages-1191995863-2-scaled.jpg);
+  margin-top: 1rem;
+}
+
+.boton-panel{
+  width: 30%;
+  height: 35vh;
+  display: flex;
+  background-color: yellow;
+  margin-top: 1rem;
+}
+
+
+
+
+
+/* -----------------botones--------------- */
+
+
+.button-elimintate {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #e62222;
+}
+
+.button-elimintate,
+.button-elimintate span {
+  transition: 200ms;
+}
+
+.button-elimintate .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+}
+
+.button-elimintate .icon {
+  position: absolute;
+  border-left: 1px solid #c41b1b;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-elimintate svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.button-elimintate:hover {
+  background: #ff3636;
+}
+
+.button-elimintate:hover .text {
+  color: transparent;
+}
+
+.button-elimintate:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.button-elimintate:focus {
+  outline: none;
+}
+
+.button-elimintate:active .icon svg {
+  transform: scale(0.8);
+}
+
+
+/* ---boton modificar------ */
+
+.button-modify {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: purple;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: purple;
+}
+
+.button-modify,
+.button-modify span {
+  transition: 200ms;
+}
+
+.button-modify .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+}
+
+.button-modify .icon {
+  position: absolute;
+  border-left: 1px solid #000;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-modify svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.button-modify:hover {
+  background: #ff3636;
+}
+
+.button-modify:hover .text {
+  color: transparent;
+}
+
+.button-modify:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.button-modify:focus {
+  outline: none;
+}
+
+.button-modify:active .icon svg {
+  transform: scale(0.8);
+}
