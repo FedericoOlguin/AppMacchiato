@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-.ContainerStore {
-=======
 .contenedorCardsGeneral{
   margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
->>>>>>> 91242d44483d21b25d74bb52d02dc69c801e28af
   width: 100%;
 }
 
@@ -84,13 +80,9 @@ align-items: center;
   
 }
 
-<<<<<<< HEAD
-.cardProducto {
-=======
 
 
 .cardProducto{
->>>>>>> 91242d44483d21b25d74bb52d02dc69c801e28af
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,18 +96,10 @@ align-items: center;
   box-shadow: inset -5px 17px 109px 8px rgba(49, 49, 49, 0.88);
   background-image: url(https://jberlife.com/wp-content/uploads/2021/04/GettyImages-1191995863-2-scaled.jpg);
 }
-<<<<<<< HEAD
-.tituloCard {
-  border: solid 1px white;
-  margin: 0;
-}
-.cardProducto > img {
-=======
 
 
 
 .cardProducto > img{
->>>>>>> 91242d44483d21b25d74bb52d02dc69c801e28af
   align-self: center;
   width: 55%;
   height: 8rem;
