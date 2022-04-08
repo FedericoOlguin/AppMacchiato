@@ -1,4 +1,5 @@
 import axios from "axios";
+import req from "express/lib/request";
 
 
 const usersActions = {
@@ -113,12 +114,22 @@ const usersActions = {
                 })
 
                 dispatch({ type: "verified", payLoad: res.data })
-                // return res.data
+
             } catch (err) {
                 console.log(err)
             }
         }
     },
+    getInfoUser: (token) => {
+        return async (dispatch, getState) => {
+            const res = await axios.get(`http://localhost:4000/api/auth/signInRol`, {
+                headers: {
+                    Authorization: "Bearer " + token   //dejar espacio en bearer antes del cierre de las comillas ( "Bearer ")
+                }
+            })
+            return res.data.response
+        }
+    }
 
 }
 

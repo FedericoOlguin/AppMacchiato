@@ -281,6 +281,24 @@ const userController = {
                 message: "Please login again"
             })
         }
+    },
+    infoUser: async (req, res) => {
+        const id = req.params.id
+
+        try {
+            let userRes
+            const devolver = Usuario.find({ _id: id })
+            userRes = {
+                name: devolver.name,
+                photoURL: devolver.photoURL,
+                country: devolver.country,
+                email: devolver.email
+            }
+            res.json({ response: userRes })
+
+        } catch (err) {
+            console.log(err);
+        }
     }
 
 }
