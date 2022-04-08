@@ -1,6 +1,7 @@
 const Router = require('express').Router()
-const validator=require("../config/validacion")
+const validator = require("../config/validacion")
 const passport = require("../config/passport")
+const verifedRol = require("../config/authRol")
 
 
 //rutas de usuarios
@@ -22,20 +23,21 @@ Router.route("/verify/:uniqueString")
 
 Router.route("/auth/signInToken")
     .get(passport.authenticate("jwt", { session: false }), verificarToken)
+// .get(passport.authenticate("jwt", { session: false }), verifedRol, verificarToken)   EJEMPLO DE IMPLEMENTACION
 
 
 
 //Rutas de productos
-const { getAllProducts, loadProduct, getOneProduct,modifyStock } = require('../controllers/productControllers')
+const { getAllProducts, loadProduct, getOneProduct, modifyStock } = require('../controllers/productControllers')
 
 
 Router.route('/allproducts')
     .get(getAllProducts)
-    .post(loadProduct)
+    .post(passport.authenticate("jwt", { session: false }), verifedRol, loadProduct)
 
 Router.route('/allproducts/:id')
     .get(getOneProduct)
-    .put(passport.authenticate('jwt', {session:false}), modifyStock)
+    .put(passport.authenticate('jwt', { session: false }), modifyStock)
 
 
-    module.exports = Router;
+module.exports = Router;

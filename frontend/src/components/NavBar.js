@@ -187,6 +187,12 @@ const NavBar2 = (props) => {
                                             <LinkRouter className="nav-linkUser" aria-current="page" to="/">⚙
                                                 Setting</LinkRouter>
                                             {/* </MenuItem> */}
+                                            {console.log(props.user)}
+                                            {props.user?.rol === "user" ? (
+                                                <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/panel">Admin panel</LinkRouter>
+                                            ) : (
+                                                <></>
+                                            )}
                                         </div>
                                         ) : (
                                             <div className='container-nav-LinkUser'>
@@ -196,6 +202,7 @@ const NavBar2 = (props) => {
                                                 {/* <MenuItem onClick={handleCloseUserMenu} className="navLi"> */}
                                                 <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/signUp">Sign Up</LinkRouter>
                                                 {/* </MenuItem> */}
+
                                             </div>
                                         )
                                 }
@@ -204,7 +211,7 @@ const NavBar2 = (props) => {
                     </Toolbar>
                 </Container>
             </AppBar >
-        </div>
+        </div >
     );
 };
 
