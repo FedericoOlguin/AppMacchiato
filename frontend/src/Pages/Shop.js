@@ -5,6 +5,7 @@ import ProductsCard from "../components/ProductsCard";
 // import { Link as LinkRouter } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Carousel from "../components/Carousel"
 
 
 
@@ -42,7 +43,7 @@ function Shop(props) {
             <NavBar />
             <h1>Soy el shop</h1>
 
-
+            <Carousel />
             <ProductsCard />
 
             {/* <LinkRouter to={'/home'}>

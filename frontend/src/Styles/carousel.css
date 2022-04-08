@@ -1,0 +1,44 @@
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    width: 100%;
+    height: 2rem;
+}
+.swiper {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 10px;
+  }
+
+  
+  .swiper-slide {
+    width: 10rem;
+    height: 10rem;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 30%;
+    padding-top: 2rem;
+  }
+  .swiper-slide p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    font-size: 1rem;
+    font-weight: 800;
+    color: rgb(228, 228, 228);
+  }
+  .SwiperSlide{
+      display: flex;
+      flex-direction: column;
+  }
+
+  

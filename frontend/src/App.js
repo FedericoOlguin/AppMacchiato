@@ -1,5 +1,6 @@
 import Home from './Pages/Home';
 import Shop from './Pages/Shop';
+import Detalle from "./components/detalleProduct"
 /* import NavBar from "./components/NavBar" */
 import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -29,6 +30,7 @@ function App(props) {
         <Route path='*' element={<Home />} />{" "}
         <Route path='/' element={<Home />} />
         <Route path='/shop' element={<Shop/>} />
+        <Route path='/detalle/:id' element={<Detalle />} />
         <Route path='/signUp' element={props.user ? <Navigate replace to='/' /> : <SignUp />} />
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
 
