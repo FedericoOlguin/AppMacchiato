@@ -1,4 +1,4 @@
-import { func } from 'joi'
+
 import React from 'react'
 import '../Styles/panelproducts.css'
 import Navbar from '../components/NavBar';

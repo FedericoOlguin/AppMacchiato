@@ -58,7 +58,7 @@ const mapDispatchToProps = {
 const mapStateToProps = (state) => {
   return {
     user: state.userReducer.user,
-    authorized: userReducer.authorized
+    authorized: state.userReducer.authorized
   }
 }
 
