@@ -184,7 +184,7 @@ const NavBar2 = (props) => {
                                             }} to="#">Sign out</LinkRouter>
                                             {/* </MenuItem> */}
                                             {/* <MenuItem> */}
-                                            <LinkRouter className="nav-linkUser" aria-current="page" to={"/seetings"}>⚙
+                                            <LinkRouter className="nav-linkUser" aria-current="page" to={'/seetings'}>⚙
                                                 Setting</LinkRouter>
                                             {/* </MenuItem> */}
                                             {console.log(props.user)}

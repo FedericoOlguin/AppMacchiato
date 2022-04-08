@@ -16,11 +16,19 @@ function Seetings(props) {
 
         <div id='cardUser'>
           <div className="esquema-card">
-            <h1 className='subtitle-user'>Profile</h1>
-            <div className='fotoUser-Card'></div>
+            <div  className='img-h1'>
+              <h1 className='subtitle-user'>Profile</h1>
+              <div className='fotoUser-Card'>
+                <img
+                src={props.user?.photoURL}
+                className='fotoUsuario'
+                />
+              </div>
+            </div>
             <h2 className='infoUser'>{props.user?.name.firstName}</h2>
-            <h2 className='infoUser'>Londoño</h2>
+            <h2 className='infoUser'>Apellido</h2>
             <h2 className='infoUser'>País</h2>
+            <h2 className='infoUser'>{props.user?.email}</h2>
 
             <div className="div-user">
               <LinkRouter className='link-user' aria-current="page" to={"/seetingsChanges"}>
