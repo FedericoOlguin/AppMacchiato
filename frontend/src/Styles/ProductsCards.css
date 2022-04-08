@@ -34,7 +34,7 @@
 }
 
 .input-text {
-  margin: 3rem auto;
+  margin: 3rem 0 3rem 3rem;
   width: 100%;
   height: 5vh;
   padding: 0.5rem;
@@ -54,6 +54,7 @@
   border: 1px solid #efeefe;
   border-radius: 5px;
   color: #1d1d1d;
+  margin-left: 3rem;
 }
 
 /* -------------card------------- */
@@ -167,3 +168,32 @@
 .iconShop {
   cursor: pointer;
 }
+
+
+@media only screen and (min-width: 0px) and (max-width: 1200px) {
+  .filters{
+    width: 100%;
+    height: auto;
+  }
+  .ContainerStore{
+    max-width: 100%;
+  }
+  
+  .input-text,
+  .form-control{
+    margin: 2rem auto;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1325px) {
+  .input-text,
+  .form-control{
+     width: 80%;
+     margin-left: 3rem;
+  }
+  .filter{
+    align-items: center;
+  }
+}
+

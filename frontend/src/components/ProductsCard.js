@@ -58,7 +58,7 @@ function ProductsCard(props) {
                         <select className="form-control" onChange={(event) => { setEventSelect(event.target.value); filter(eventInput, event.target.value) }}>
                             <option value={""}>
                                 {""}
-                                -choose the category-
+                                Choose the category
                             </option>
                             {categories.map((category) => {
                                 return (
