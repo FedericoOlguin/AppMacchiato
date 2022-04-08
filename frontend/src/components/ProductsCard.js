@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-
+import empy from '../img/empy.svg'
 import { Link as LinkRouter } from "react-router-dom"
 import { connect } from 'react-redux';
 import LoadingIcon from "./LoadingIcon"
@@ -75,27 +75,33 @@ function ProductsCard(props) {
 
 
                 <div className='ContainerStore'>
-
-                    {props.filtered?.map(products =>
-                        <div className='cardProducto' key={products._id}>
-                            <LinkRouter to={`/detalle/${products._id}`} />
-                            <p className='precio'> {"$" + products.price} </p>
-                            <div className='bandera'>
-                                <img alt="flag" src={products.flag} className='flag' />
-                            </div>
-                            <img alt='cardPho' src={products.image} className="imagenHeader" />
-                            <div className='txtCard'>
-                                <h2> {products.name} </h2>
-                                {/* <h4> Other property </h4> */}
-                                <div className='botonesShop'>
-                                    <LocalGroceryStoreIcon className='iconShop'/>
-                                    <DetailsIcon className='iconShop' />
+                    {props.filtered?.length !== 0 ? (
+                        props.filtered?.map(products =>
+                            <div className='cardProducto' key={products._id}>
+                                <LinkRouter to={`/detalle/${products._id}`} />
+                                <p className='precio'> {"$" + products.price} </p>
+                                <div className='bandera'>
+                                    <img alt="flag" src={products.flag} className='flag' />
+                                </div>
+                                <img alt='cardPho' src={products.image} className="imagenHeader" />
+                                <div className='txtCard'>
+                                    <h2> {products.name} </h2>
+                                    {/* <h4> Other property </h4> */}
+                                    <div className='botonesShop'>
+                                        <LocalGroceryStoreIcon className='iconShop' />
+                                        <DetailsIcon className='iconShop' />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+
+                        )) : (
+                            <div className='nofound'>
+                                <h2 className='nofound-h2'>Sorry we did not find your search</h2>
+                                <img alt='empy' src={empy} className='imagenVacia' />
+                            </div>
                     )}
                 </div>
-            </div>
+            </div>            
         </>
     )
 }

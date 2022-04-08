@@ -10,6 +10,7 @@ import sebas from '../img/sebastian.jpg'
 import dani from '../img/daniel.jpg'
 import hernan from '../img/hernan.jpg'
 
+
 function AboutPage() {
 
   React.useEffect(() => {
@@ -128,7 +129,7 @@ function AboutPage() {
 
           </div>
         </div>
-      </div>
+      </div>      
       <Footer />
     </div>
   )

@@ -65,7 +65,8 @@
   justify-content: center;
   /* align-items: center; */
   flex-wrap: wrap;
-  /* background-attachment: fixed; */
+  /* background-attachment: fixed; */ 
+  margin: auto;
 }
 .container-cards {
   width: 100%;
@@ -168,6 +169,38 @@
 .iconShop {
   cursor: pointer;
 }
+
+ .nofound{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem 2rem 2rem 2rem;
+  width: 70%;
+  height: 300px;
+  color: #efeefe !important;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
+  -moz-box-shadow: inset -5px 17px 109px 8px rgba(0, 0, 0, 0.88);
+  box-shadow: inset -5px 17px 109px 8px rgba(49, 49, 49, 0.88);
+  background-image: url(https://jberlife.com/wp-content/uploads/2021/04/GettyImages-1191995863-2-scaled.jpg);
+  overflow: hidden;
+ }
+
+ .nofound-h2{
+   margin-top: 1.5rem;
+
+ }
+
+ .imagenVacia{
+  align-self: center;
+  width: 55%;
+  height: 8rem;
+  margin: auto;
+  object-fit: scale-down;
+ }
+
+
 
 
 @media only screen and (min-width: 0px) and (max-width: 1200px) {
