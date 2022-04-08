@@ -11,6 +11,10 @@ import userAction from './redux/actions/userAction';
 import { connect } from "react-redux"
 import AboutPage from './Pages/AboutPage';
 import ErrorScreen from './components/ErrorScreen';
+import Seetings from './Pages/Seetings';
+import SeetingsChange from './Pages/SeetingsChanges';
+
+
 
 function App(props) {
   useEffect(() => {
@@ -34,7 +38,8 @@ function App(props) {
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
         <Route path='/panel' element={props.user?.rol !== "user" ? <Navigate replace to='/err' /> : <SignIn />} />
         <Route path='/err' element={<ErrorScreen />} />
-
+        <Route path='/seetings' element={<Seetings />}/>
+        <Route path='seetingsChanges' element={<SeetingsChange/>}/>
       </Routes>
       <Snackbar />
     </BrowserRouter>
