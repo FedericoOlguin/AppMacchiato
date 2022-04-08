@@ -48,7 +48,7 @@ function ProductsCard(props) {
                     <div className='input'>
                         <input
                             className='input-text'
-                            placeholder='Search your product by name'
+                            placeholder='Search your product'
                             color='#000'
                             onChange={(event) => { setEventInput(event.target.value); filter(event.target.value, eventSelect) }} />
                     </div>
