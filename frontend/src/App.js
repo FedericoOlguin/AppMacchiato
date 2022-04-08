@@ -10,6 +10,7 @@ import React, { useEffect } from 'react';
 import userAction from './redux/actions/userAction';
 import { connect } from "react-redux"
 import AboutPage from './Pages/AboutPage';
+import ErrorScreen from './components/ErrorScreen';
 
 function App(props) {
   useEffect(() => {
@@ -31,7 +32,8 @@ function App(props) {
         <Route path='/aboutUs' element={<AboutPage />} />
         <Route path='/signUp' element={props.user ? <Navigate replace to='/' /> : <SignUp />} />
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
-        <Route path='/signIn' element={props.user?.rol !== "user" ? <Navigate replace to='/' /> : <SignIn />} />
+        <Route path='/panel' element={props.user?.rol !== "user" ? <Navigate replace to='/err' /> : <SignIn />} />
+        <Route path='/err' element={<ErrorScreen />} />
 
       </Routes>
       <Snackbar />

@@ -43,9 +43,8 @@ function ProductsCard(props) {
                         <h1>Slider promociones</h1>
                     </div>
                 </div>
-
+                
                 <div className='filters'>
-
                     <div className='input'>
                         <input
                             className='input-text'
