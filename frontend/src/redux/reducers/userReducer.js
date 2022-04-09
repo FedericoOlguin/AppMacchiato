@@ -36,7 +36,7 @@ const userReducer = (state = initialState, action) => {
         case "userSignOut":
             return {
                 snackbar: action.payLoad,
-                authorized: null
+                authorized: false
             }
         case "verified":
             return {

@@ -1,26 +1,18 @@
 import * as React from 'react';
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import empy from '../img/empy.svg'
-=======
-import { useEffect } from 'react';
->>>>>>> c5898a90cf3ae7d7e5d5caf3e290166d4838719c
 import { Link as LinkRouter } from "react-router-dom"
 import { connect } from 'react-redux';
 import LoadingIcon from "./LoadingIcon"
 import productActions from "../redux/actions/productActions";
 import '../Styles/ProductsCards.css'
-<<<<<<< HEAD
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import DetailsIcon from '@mui/icons-material/Details';
-=======
-import { Autoplay, Pagination, Navigation, Grid } from "swiper";
->>>>>>> c5898a90cf3ae7d7e5d5caf3e290166d4838719c
+import Carousel from "../components/Carousel"
 
 const categories = [{ name: "Coffees", }, { name: "coffee maker", }, { name: "Accessories", }, { name: "Barista tools", }]
 
 function ProductsCard(props) {
-<<<<<<< HEAD
 
 
     const [eventInput, setEventInput] = useState("");
@@ -38,12 +30,6 @@ function ProductsCard(props) {
 
     }
 
-=======
-    console.log(props)
-    
-    useEffect(()=>{
-    },[])
->>>>>>> c5898a90cf3ae7d7e5d5caf3e290166d4838719c
 
     if (!props.filtered) {
         return (<LoadingIcon />)
@@ -52,13 +38,13 @@ function ProductsCard(props) {
     return (
         <>
             <div className='contenedorCardsGeneral'>
-
                 <div className='sliderPromocion'>
                     <div className='ContainerSlider'>
-                        <h1>Slider promociones</h1>
+                        <Carousel todosProductos={props.allProducts} />
+                        {/* <h1>Slider promociones</h1> */}
                     </div>
                 </div>
-                
+
                 <div className='filters'>
                     <div className='input'>
                         <input
@@ -109,23 +95,19 @@ function ProductsCard(props) {
                             </div>
 
                         )) : (
-                            <div className='nofound'>
-                                <h2 className='nofound-h2'>Sorry we did not find your search</h2>
-                                <img alt='empy' src={empy} className='imagenVacia' />
-                            </div>
+                        <div className='nofound'>
+                            <h2 className='nofound-h2'>Sorry we did not find your search</h2>
+                            <img alt='empy' src={empy} className='imagenVacia' />
+                        </div>
                     )}
                 </div>
-            </div>            
+            </div>
         </>
     )
 }
-<<<<<<< HEAD
 
 
 
-=======
-  
->>>>>>> c5898a90cf3ae7d7e5d5caf3e290166d4838719c
 const mapStateToProps = (state) => {
     return {
         allProducts: state.productReducer.allProducts,

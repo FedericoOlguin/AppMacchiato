@@ -33,6 +33,7 @@ function App(props) {
   return (
     <BrowserRouter>
       <Routes>
+        {props.authorized}
         <Route path='*' element={<Home />} />{" "}
         <Route path='/' element={<Home />} />
         <Route path='/shop' element={<Shop />} />
@@ -40,7 +41,7 @@ function App(props) {
         <Route path='/detalle/:id' element={<Detalle />} />
         <Route path='/signUp' element={props.user ? <Navigate replace to='/' /> : <SignUp />} />
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
-        <Route path='/panel' element={props.authorized ? (<Navigate replace to='/err' />) : (<PanelProducts />)} />
+        <Route path='/panel' element={!props.authorized ? (<Navigate replace to='/err' />) : (<PanelProducts />)} />
         <Route path='/err' element={<ErrorScreen />} />
         <Route path='/seetings' element={<Seetings />}/>
         <Route path='/seetingsChanges' element={<SeetingsChange/>}/>

@@ -276,10 +276,7 @@ const userController = {
             res.json(true)
 
         } else {
-            res.json({
-                success: false,
-                message: "Please login again"
-            })
+            res.json(false)
         }
     },
     infoUser: async (req, res) => {

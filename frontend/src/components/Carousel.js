@@ -14,23 +14,23 @@ import { Autoplay, Pagination, Navigation, Grid } from "swiper";
 
 
 
-function Carousel (props) {
-    console.log(props)
-    
-    useEffect(()=>{
-    },[])
+function Carousel(props) {
+  console.log(props)
+
+  useEffect(() => {
+  }, [])
 
   return (
 
-<> 
+    <>
 
-    <Swiper 
+      <Swiper
         slidesPerView={4}
         grid={{
-          rows:2
+          rows: 2
         }}
         slidesPerGroup={2}
-        
+
         spaceBetween={10}
         /*centeredSlides={true}*/
         autoplay={{
@@ -42,30 +42,30 @@ function Carousel (props) {
         modules={[Autoplay, Pagination, Navigation, Grid]}
         className="mySwiper"
       >
-      {props.filtered?.map(products =>
-        <SwiperSlide className="SwiperSlide">  
-            <img className="imgCarousel" src={products.image}/>
-            <p className="nombreImagen">{products.name}</p> 
-        </SwiperSlide>
-        
+        {props.todosProductos?.map(products =>
+          <SwiperSlide key={products._id} className="SwiperSlide">
+            <img alt="productIMG" className="imgCarousel" src={products.image} />
+            <p className="nombreImagen">{products.name}</p>
+          </SwiperSlide>
+
         )}
         <h2> Checkout our new stock </h2>
-    </Swiper>
+      </Swiper>
 
-</>
+    </>
 
-);
+  );
 }
 
 const mapStateToProps = (state) => {
-    return {
-        allProducts: state.productReducer.allProducts,
-        filtered: state.productReducer.filtered,
-    }
+  return {
+    allProducts: state.productReducer.allProducts,
+    filtered: state.productReducer.filtered,
+  }
 }
 
 const mapDispatchToProps = {
-    filter: productActions.filter,
+  filter: productActions.filter,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Carousel)
