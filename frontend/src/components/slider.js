@@ -18,8 +18,8 @@ export default function Slider() {
     <div className="cards-city">
       <div className="card-text">
         <h1>Products</h1>
-        <p>We have the best human capital as the main input for our products.</p>
-        <span>We are the only brand in the world that belongs to its producers, who day by day grow the best quality  coffee.</span>
+        <p>We focus on having the best human capital as the main input for our products.</p>
+        <span>We are the only brand in the world that produces its own coffee, obtaining the best quality coffee every day.</span>
         <LinkRouter className="link-about" aria-current="page" to="/shop"><button className='boton-aboutUs'>Shop now</button></LinkRouter>
       </div>
       <div className='card'>

@@ -15,7 +15,7 @@ function Categorias() {
           <h1 className='tituloCategorias'>
             coffee roasters </h1>
           <p className='parrafoCategorias'>
-            We are manufacturers of coffee roasting machines. Contact us</p>
+          We manufacture coffee roasters. Contact Us</p>
         </div>
         <div className='tercerContenedor'>
           <img src={creation} className='img-categorias' alt='productos' />
@@ -26,14 +26,14 @@ function Categorias() {
       <div className='subcontainer-categorias1'>
         <div className='primerContenedor'>
           <h1 className='tituloCategorias'>specialty coffee</h1>
-          <p className='parrafoCategorias'>Exclusive Coffes  and trademarks From Around the World.</p>
+          <p className='parrafoCategorias'>Exclusive coffees and brands from around the world.</p>
         </div>
         <div className='segundoContenedor'>
           <img src={machineCoffe} className='img-categorias' alt='productos' />
         </div>
         <div className='tercerContenedor'>
           <h1 className='tituloCategorias'>Coffee courses</h1>
-          <p className='parrafoCategorias'>At Macchiato we have an educational system for baristas</p>
+          <p className='parrafoCategorias'>We have an educational system for baristas</p>
         </div>
         
       </div>

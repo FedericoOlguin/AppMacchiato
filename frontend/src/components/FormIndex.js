@@ -51,7 +51,7 @@ const FormIndex = () => {
             <input
               className="textArea"
               type="text"
-              placeholder="Number Phone"
+              placeholder="Phone"
               name="telephone"
               id="telephone_input"
               required
@@ -66,7 +66,7 @@ const FormIndex = () => {
             <textarea
               className="textArea"
               name="message"
-              placeholder="Ask us what you want"
+              placeholder="Ask whatever you want"
               id="message_input"
               cols="10"
               rows="1"

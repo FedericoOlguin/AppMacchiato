@@ -3,6 +3,7 @@ const bcryptjs = require("bcryptjs")
 const crypto = require("crypto")
 const nodemaider = require("nodemailer")
 const jwt = require("jsonwebtoken")
+const { json } = require("express/lib/response")
 
 
 const sendEmail = async (email, uniqueString) => { //Funcion que envia email de verificcacion
@@ -185,7 +186,6 @@ const userController = {
                             email: userExiste.email,
                             photoURL: userExiste.photoURL,
                             from: from,
-                            rol: userExiste.rol
                         }
                         await userExiste.save()
                         const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 })
@@ -210,7 +210,6 @@ const userController = {
                                 email: userExiste.email,
                                 photoURL: userExiste.photoURL,
                                 from: from,
-                                rol: userExiste.rol
                             }
                             const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 })
                             res.json({
@@ -267,6 +266,35 @@ const userController = {
                 success: false,
                 message: "Please login again"
             })
+        }
+    },
+    authenticated: (req, res) => {
+        // console.log("-----------req.user:--------------");
+        // console.log(req.user)
+        // console.log("----------Fin req.user:-----------");
+        if (req.user.rol.includes("admin")) {
+            res.json(true)
+
+        } else {
+            res.json(false)
+        }
+    },
+    infoUser: async (req, res) => {
+        const id = req.params.id
+
+        try {
+            let userRes
+            const devolver = Usuario.find({ _id: id })
+            userRes = {
+                name: devolver.name,
+                photoURL: devolver.photoURL,
+                country: devolver.country,
+                email: devolver.email
+            }
+            res.json({ response: userRes })
+
+        } catch (err) {
+            console.log(err);
         }
     }
 
