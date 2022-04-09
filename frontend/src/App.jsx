@@ -42,7 +42,8 @@ function App(props) {
         <Route path='/seetingsChanges' element={<SeetingsChange/>}/>
         <Route path='/signUp' element={props.user ? <Navigate replace to='/' /> : <SignUp />} />
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
-        <Route path='/panel' element={!props.authorized ? (<Navigate replace to='/err' />) : (<PanelProducts />)} />
+        {props.user?( <Route path='/panel' element={!props.authorized ? (<Navigate replace to='/err' />) : (<PanelProducts />)} />):(<></>)}
+        {/* // <Route path='/panel' element={!props.authorized ? (<Navigate replace to='/err' />) : (<PanelProducts />)} /> */}
         {/* <Route path='/detalle/:id' element={<Detalle />} /> */}
         <Route path='/detalle/:id' element={<Detalle />} />
         

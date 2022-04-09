@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import '../Styles/seetings.css';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
@@ -8,22 +8,23 @@ import usersActions from '../redux/actions/userAction';
 
 
 function Seetings(props) {
-  const[data, setData] = useState()
+  const [data, setData] = useState()
 
-  useEffect(()=>{
+  useEffect(() => {
     props.getInfoUser(props.user?.id)
-    .then(response => setData(response))
+      .then(response => setData(response))
   }, [])
-  
-  
+
+
   return (
     <div className='containerCardUser'>
       <NavBar />
-      {console.log(data)}
+      {/* {console.log(data)} */}
 
       <div className='container-cardppal'>
 
         <div id='cardUser'>
+
           <div className="esquema-card">
             <div className='img-h1'>
               <h1 className='subtitle-user'>Profile</h1>
@@ -35,10 +36,13 @@ function Seetings(props) {
                 />
               </div>
             </div>
-            <h2 className='infoUser'>{props.user?.name.firstName}</h2>
-            <h2 className='infoUser'>Apellido</h2>
-            <h2 className='infoUser'>País</h2>
-            <h2 className='infoUser'>{props.user?.email}</h2>
+
+            <div className='datosuser'>
+            <h2 className='infoUser'>Name: {props.user?.name.firstName}</h2>
+            <h2 className='infoUser'>Last name: </h2>
+            <h2 className='infoUser'>País {data?.country}</h2>
+            <h2 className='infoUser'>Email: {props.user?.email}</h2>
+            </div>
 
             <div className="div-user">
               <LinkRouter className='link-user' aria-current="page" to={"/seetingsChanges"}>
@@ -67,7 +71,7 @@ function Seetings(props) {
   )
 }
 
-const mapDispatchToProps ={
+const mapDispatchToProps = {
   getInfoUser: usersActions.getInfoUser
 }
 

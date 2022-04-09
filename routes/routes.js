@@ -17,7 +17,7 @@ Router.route("/auth/signIn")
 Router.route("/auth/signOut")
     .post(signOutUser)
 
-Router.route("user/info")
+Router.route("/user/info")
     .get(passport.authenticate("jwt", { session: false }), infoUser)
 
 // rutas para verificar token y email
