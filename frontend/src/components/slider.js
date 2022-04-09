@@ -1,8 +1,8 @@
 import "../Styles/slider.css";
 import { Link as LinkRouter } from "react-router-dom";
 import "../Styles/aboutUs.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Carousel } from 'react-bootstrap';
+/* import 'bootstrap/dist/css/bootstrap.min.css';
+import { Carousel } from 'react-bootstrap'; */
 
 
 
@@ -19,7 +19,7 @@ export default function Slider() {
       </div>
       <div className='card'>
 
-        <Carousel fade className="ejemplo-carousel">
+        {/* <Carousel fade className="ejemplo-carousel">
           <Carousel.Item className="contenedor-ejemplo">
             <img
               className="d-block w-100 imgEjmplo"
@@ -69,7 +69,7 @@ export default function Slider() {
             />
           </Carousel.Item>
 
-        </Carousel>
+        </Carousel> */}
       </div>
 
     </div>
