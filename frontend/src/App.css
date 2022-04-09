@@ -20,6 +20,8 @@ body {
   overflow: visible !important;
   /* background-image: url(../src/img/fondo_alto.jpg); */
 }
+
+
 .scarollUp {
   position: fixed;
   bottom: 2rem;

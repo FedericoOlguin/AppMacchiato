@@ -46,7 +46,6 @@
 .primercontenedor-detalle {
   width: 100%;
   height: auto;
-
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -64,9 +63,9 @@
 
 .imagen-detalle {
   position: absolute;
-  top: -6rem;
+  top: -8rem;
   max-width: 350px;
-  left: 1.5rem;
+  left: -1rem;
   max-height: 350px;
   filter: brightness(1.2);
 }
@@ -101,7 +100,8 @@
   /* width: 40%; */
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  margin-left: 2rem;
 }
 .textCard {
   display: flex;
