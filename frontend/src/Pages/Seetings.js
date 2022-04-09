@@ -1,16 +1,25 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import '../Styles/seetings.css';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { Link as LinkRouter } from "react-router-dom";
 import { connect } from 'react-redux'
+import usersActions from '../redux/actions/userAction';
 
 
 function Seetings(props) {
+  const[data, setData] = useState()
+
+  useEffect(()=>{
+    props.getInfoUser(props.user?.id)
+    .then(response => setData(response))
+  }, [])
+  
+  
   return (
     <div className='containerCardUser'>
       <NavBar />
-      {console.log(props)}
+      {console.log(data)}
 
       <div className='container-cardppal'>
 
@@ -58,6 +67,9 @@ function Seetings(props) {
   )
 }
 
+const mapDispatchToProps ={
+  getInfoUser: usersActions.getInfoUser
+}
 
 
 const mapStateToProps = (state) => {
@@ -66,5 +78,5 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, null)(Seetings)
+export default connect(mapStateToProps, mapDispatchToProps)(Seetings)
 
