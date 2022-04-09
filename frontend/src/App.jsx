@@ -15,6 +15,7 @@ import Seetings from './Pages/Seetings';
 import SeetingsChange from './Pages/SeetingsChanges';
 import PanelProducts from './Pages/PanelProducts'; /* toca organizarla, solo se hzo así para poder diseñarla */
 import Detalle from "./components/DetalleProdct";
+import productActions from './redux/actions/productActions';
 
 function App(props) {
   
@@ -24,6 +25,7 @@ function App(props) {
       props.verifyToken(token)
       props.verifiedRol(localStorage.getItem("token"))
       // .then(res => setAuthorized(res))
+      props.iniciarAlRecargar()
     }
 
   }, [])
@@ -55,7 +57,8 @@ function App(props) {
 
 const mapDispatchToProps = {
   verifyToken: userAction.verifyToken,
-  verifiedRol: userAction.verifiedRol
+  verifiedRol: userAction.verifiedRol,
+  iniciarAlRecargar: productActions.iniciarAlRecargar
 }
 const mapStateToProps = (state) => {
   return {

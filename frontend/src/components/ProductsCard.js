@@ -9,6 +9,7 @@ import '../Styles/ProductsCards.css'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import DetailsIcon from '@mui/icons-material/Details';
 import Carousel from "../components/Carousel"
+import Cart from "../components/Cart"
 
 const categories = [{ name: "Coffees", }, { name: "coffee maker", }, { name: "Accessories", }, { name: "Barista tools", }]
 
@@ -88,7 +89,7 @@ function ProductsCard(props) {
                                     <h2> {products.name} </h2>
                                     {/* <h4> Other property </h4> */}
                                     <div className='botonesShop'>
-                                        <LocalGroceryStoreIcon className='iconShop' />
+                                        <LocalGroceryStoreIcon onClick={() => props.addToCart(products._id)} className='iconShop' />
                                         <LinkRouter to={`/detalle/${products._id}`} >
                                             <DetailsIcon className='iconShop' />
                                         </LinkRouter>
@@ -103,6 +104,7 @@ function ProductsCard(props) {
                         </div>
                     )}
                 </div>
+                <Cart />
             </div>
         </>
     )
@@ -114,11 +116,16 @@ const mapStateToProps = (state) => {
     return {
         allProducts: state.productReducer.allProducts,
         filtered: state.productReducer.filtered,
+        cart: state.productReducer.cart
     }
 }
 
 const mapDispatchToProps = {
     filter: productActions.filter,
+    addToCart: productActions.addToCart,
+    removeOneFromCart: productActions.removeOneFromCart,
+    removeAllFromCart: productActions.removeAllFromCart,
+    emptyCart: productActions.emptyCart
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductsCard)
