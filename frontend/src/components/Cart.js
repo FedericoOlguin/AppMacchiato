@@ -17,10 +17,6 @@ import DetailsIcon from '@mui/icons-material/Details';
 const Cart = (props) => {
 
 
-
-
-
-
     return (
         <>
             <h1 className='txtCard'> -------------  carrito --------------</h1>
@@ -41,6 +37,7 @@ const Cart = (props) => {
                                 <div className='botonesCart'>
                                     <button onClick={() => props.removeOneFromCart(products._id)}> Eliminar un producto</button>
                                     <button onClick={() => props.removeAllFromCart(products._id)}> Eliminar todos</button>
+                                    <button onClick={() => props.addToCart(products._id)}>sumar uno</button>
 
                                 </div>
                                 <p className='nofound-h2' >${products.price} X { products.quantity} = ${products.price*products.quantity}</p>
