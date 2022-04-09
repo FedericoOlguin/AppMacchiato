@@ -1,6 +1,5 @@
 import Home from './Pages/Home';
 import Shop from './Pages/Shop';
-import Detalle from "./components/detalleProduct"
 /* import NavBar from "./components/NavBar" */
 import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -15,10 +14,10 @@ import ErrorScreen from './components/ErrorScreen';
 import Seetings from './Pages/Seetings';
 import SeetingsChange from './Pages/SeetingsChanges';
 import PanelProducts from './Pages/PanelProducts'; /* toca organizarla, solo se hzo así para poder diseñarla */
-
+import Detalle from "./components/DetalleProdct";
 
 function App(props) {
-  // const [authorized, setAuthorized] = React.useState(false)
+  
   useEffect(() => {
     if (localStorage.getItem("token") !== null) {
       const token = localStorage.getItem("token")
@@ -34,20 +33,19 @@ function App(props) {
     <BrowserRouter>
       <Routes>
         {props.authorized}
-        <Route path='*' element={<Home />} />{" "}
+        <Route path='*' element={<Home />} />
         <Route path='/' element={<Home />} />
         <Route path='/shop' element={<Shop />} />
+        <Route path='/err' element={<ErrorScreen />} />
+        <Route path='/seetings' element={<Seetings />}/>
         <Route path='/aboutUs' element={<AboutPage />} />
-        <Route path='/detalle/:id' element={<Detalle />} />
+        <Route path='/seetingsChanges' element={<SeetingsChange/>}/>
         <Route path='/signUp' element={props.user ? <Navigate replace to='/' /> : <SignUp />} />
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
         <Route path='/panel' element={!props.authorized ? (<Navigate replace to='/err' />) : (<PanelProducts />)} />
-        <Route path='/err' element={<ErrorScreen />} />
-        <Route path='/seetings' element={<Seetings />}/>
-        <Route path='/seetingsChanges' element={<SeetingsChange/>}/>
-        {/* <Route path='/panelproductos' element={<PanelProducts/>}/> ésto toca borrarlo dps solo es para diseñarlo */}
-
-
+        {/* <Route path='/detalle/:id' element={<Detalle />} /> */}
+        <Route path='/detalle/:id' element={<Detalle />} />
+        
       </Routes>
       <Snackbar />
     </BrowserRouter>

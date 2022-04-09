@@ -189,7 +189,7 @@ const NavBar2 = (props) => {
                                             {/* </MenuItem> */}
                                             {console.log(props.authorized)}
                                             {props.authorized ? (
-                                                <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/panel">Admin panel</LinkRouter>
+                                                <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/panel">Panel</LinkRouter>
                                             ) : (
                                                 <></>
                                             )}

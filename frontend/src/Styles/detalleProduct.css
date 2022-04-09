@@ -1,0 +1,38 @@
+.contDetalle {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../img/fondo_alto.jpg);
+  overflow: hidden;
+}
+.hero {
+  min-height: 100%;
+
+  height: 40vh;
+  background-image: url(https://images.pexels.com/photos/942802/pexels-photo-942802.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: cover;
+  filter: brightness(0.8);
+}
+
+.product {
+  width: 80%;
+  height: 40vh;
+  background-color: slateblue;
+  z-index: 1000;
+  display: flex;
+  position: relative;
+  top: -5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.product p {
+  color: black;
+  font-size: larger;
+  font-weight: 600;
+}
+.detalle {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+}

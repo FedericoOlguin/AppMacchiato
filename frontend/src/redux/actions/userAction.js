@@ -121,8 +121,9 @@ const usersActions = {
         }
     },
     getInfoUser: (token) => {
+        console.log(token);
         return async (dispatch, getState) => {
-            const res = await axios.get(`http://localhost:4000/api/auth/signInRol`, {
+            const res = await axios.get(`http://localhost:4000/api/user/info`, {
                 headers: {
                     Authorization: "Bearer " + token   //dejar espacio en bearer antes del cierre de las comillas ( "Bearer ")
                 }

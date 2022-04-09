@@ -78,7 +78,7 @@ function ProductsCard(props) {
                     {props.filtered?.length !== 0 ? (
                         props.filtered?.map(products =>
                             <div className='cardProducto' key={products._id}>
-                                <LinkRouter to={`/detalle/${products._id}`} />
+
                                 <p className='precio'> {"$" + products.price} </p>
                                 <div className='bandera'>
                                     <img alt="flag" src={products.flag} className='flag' />
@@ -89,7 +89,9 @@ function ProductsCard(props) {
                                     {/* <h4> Other property </h4> */}
                                     <div className='botonesShop'>
                                         <LocalGroceryStoreIcon className='iconShop' />
-                                        <DetailsIcon className='iconShop' />
+                                        <LinkRouter to={`/detalle/${products._id}`} >
+                                            <DetailsIcon className='iconShop' />
+                                        </LinkRouter>
                                     </div>
                                 </div>
                             </div>
