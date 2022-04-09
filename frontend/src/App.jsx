@@ -1,5 +1,9 @@
 import Home from './Pages/Home';
 import Shop from './Pages/Shop';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 502cfef318bda75d7a31b1e5d54dd24a288448f9
 /* import NavBar from "./components/NavBar" */
 import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
