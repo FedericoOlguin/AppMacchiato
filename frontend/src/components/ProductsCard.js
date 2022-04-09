@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import empy from '../img/empy.svg'
 import { Link as LinkRouter } from "react-router-dom"
 import { connect } from 'react-redux';

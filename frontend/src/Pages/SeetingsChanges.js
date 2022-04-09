@@ -3,7 +3,6 @@ import '../Styles/seetingschange.css'
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Countries from '../components/apiCountry';
-import { Link as LinkRouter } from "react-router-dom";
 import BuildIcon from '@mui/icons-material/Build';
 
 function SeetingsChange(){
