@@ -12,7 +12,7 @@ function AboutUs() {
     <>
       <div className='cards-city'>
         <div className='card' >
-          <img src={"https://images.unsplash.com/photo-1472495010058-65576a9959e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"} alt="Farmer" className='img-card' />
+          <img src={"https://images.unsplash.com/photo-1462690417829-5b41247f6b0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"} alt="Farmer" className='img-card' />
           <div className='description'>
             <h3>From the field for you</h3>
           </div>

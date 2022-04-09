@@ -39,7 +39,7 @@ function Seetings(props) {
 
             <div className='datosuser'>
             <h2 className='infoUser'>Name: {props.user?.name.firstName}</h2>
-            <h2 className='infoUser'>Last name: </h2>
+              <h2 className='infoUser'>Last name: {props.user?.name.lastName}</h2>
             <h2 className='infoUser'>País {data?.country}</h2>
             <h2 className='infoUser'>Email: {props.user?.email}</h2>
             </div>
