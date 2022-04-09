@@ -12,6 +12,7 @@
   background-image: url("../img/fondoproductos.jpg");
   background-size: cover;
   background-position: 10% 30%;
+  filter: brightness(0.5)
 }
 
 .container-panel{
@@ -20,7 +21,6 @@
   flex-wrap: wrap;
   width: 100%;
   min-height: 80vh;
-  background-color: slateblue;
   justify-content: space-evenly;
   
 }
@@ -37,11 +37,11 @@
 
 .card-panel{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   width: 60%;
-  height: 35vh;
-  color: rgb(161, 70, 70) 8px;
+  height: 38vh;
+  color: #efeefe;
   border-radius: 5px;
   -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
   -moz-box-shadow: inset -5px 17px 109px 8px rgba(0, 0, 0, 0.88);
@@ -50,12 +50,52 @@
   margin-top: 1rem;
 }
 
-.boton-panel{
+.panel-imgproducto{
   width: 30%;
+  height: 100%; 
+  display: flex;
+  align-items: center ;
+  margin-right: .2rem;
+}
+
+.imagen-producto{
+  width: 100%;
+  height: 90%;
+  margin: auto;
+  object-fit: scale-down;
+  border-right: 3px solid #efeefe;
+   
+}
+
+ .items-producto{
+  display: flex;
+  width: 33%;
+  flex-direction: column;
+  height: 100%;
+} 
+
+.subtitulo-producto{
+  width: 100%;
+  height: 30%;
+  padding: .6rem 0;
+}
+
+ .respuesta-producto{
+   padding-bottom: .5rem;
+   border-bottom: 1px solid #efeefe;
+   width: 90%;
+   font-size: 1.1em;
+ }
+
+.boton-panel{
+  width: 20%;
   height: 35vh;
   display: flex;
-  background-color: yellow;
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  
 }
 
 
@@ -76,6 +116,7 @@
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
   background: #e62222;
+  margin: 1rem 0;
 }
 
 .button-elimintate,
@@ -136,11 +177,12 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  background: purple;
+  background: seagreen;
   border: none;
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-  background: purple;
+  background: seagreen;
+  margin: 1rem 0;
 }
 
 .button-modify,
@@ -171,7 +213,7 @@
 }
 
 .button-modify:hover {
-  background: #ff3636;
+  background: seagreen;
 }
 
 .button-modify:hover .text {

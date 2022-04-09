@@ -6,11 +6,6 @@ import { Link as LinkRouter } from "react-router-dom"
 
 
 const ErrorScreen = () => {
-
-
-
-
-
     return (
 
         < div className="errorScreen">

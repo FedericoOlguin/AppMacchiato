@@ -55,7 +55,7 @@ function Snack(props) {
                     }}
                     open={props.snackbar.view}
                     onClose={handleClose}
-                    autoHideDuration={7000}
+                    autoHideDuration={4000}
                 >
                     <>
                         {(typeof props.snackbar.message) === "string" ?

@@ -4,7 +4,8 @@ const initialState = {
         view: false,
         message: "",
         success: false
-    }
+    },
+    authorized: false
 }
 
 
@@ -35,6 +36,11 @@ const userReducer = (state = initialState, action) => {
         case "userSignOut":
             return {
                 snackbar: action.payLoad
+            }
+        case "verified":
+            return {
+                ...state,
+                authorized: action.payLoad
             }
         default:
             return state

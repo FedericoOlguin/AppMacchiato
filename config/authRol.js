@@ -1,23 +1,28 @@
 
 
 
+const authUsers = {
 
-const verifedRol = async (req, res, next) => {
+    verifedRol: async (req, res, next) => {
 
-    try {
+        try {
 
 
-        if (req.user.rol === "Admin365") {
-            next()
-            console.log(req.user.rol);
-        } else {
-            console.log("no se puede acceder/Falta de autorizacion para el citio");
-            res.json({ response: "no se puede acceder/Falta de autorizacion para el citio" })
+            if (req.user.rol === "admin") {
+                next()
+                console.log(req.user.rol);
+            } else {
+                console.log("no se puede acceder/Falta de autorizacion para el citio");
+                res.json({ response: "no se puede acceder/Falta de autorizacion para el citio" })
+            }
+        } catch (err) {
+            console.log(err);
         }
-    } catch (err) {
-        console.log(err);
-    }
+    },
+    // isAthenticated: async (req, res, next) => {
+
+    // }
+
 }
 
-
-module.exports = verifedRol
+module.exports = authUsers
