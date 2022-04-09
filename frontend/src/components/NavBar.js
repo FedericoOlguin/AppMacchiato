@@ -187,7 +187,7 @@ const NavBar2 = (props) => {
                                             <LinkRouter className="nav-linkUser" aria-current="page" to={'/seetings'}>⚙
                                                 Setting</LinkRouter>
                                             {/* </MenuItem> */}
-                                            
+                                            {console.log(props.authorized)}
                                             {props.authorized ? (
                                                 <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/panel">Admin panel</LinkRouter>
                                             ) : (

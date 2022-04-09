@@ -8,6 +8,7 @@ import productActions from "../redux/actions/productActions";
 import '../Styles/ProductsCards.css'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import DetailsIcon from '@mui/icons-material/Details';
+import Carousel from "../components/Carousel"
 
 const categories = [{ name: "Coffees", }, { name: "coffee maker", }, { name: "Accessories", }, { name: "Barista tools", }]
 
@@ -37,13 +38,13 @@ function ProductsCard(props) {
     return (
         <>
             <div className='contenedorCardsGeneral'>
-
                 <div className='sliderPromocion'>
                     <div className='ContainerSlider'>
-                        <h1>Slider promociones</h1>
+                        <Carousel todosProductos={props.allProducts} />
+                        {/* <h1>Slider promociones</h1> */}
                     </div>
                 </div>
-                
+
                 <div className='filters'>
                     <div className='input'>
                         <input
@@ -94,13 +95,13 @@ function ProductsCard(props) {
                             </div>
 
                         )) : (
-                            <div className='nofound'>
-                                <h2 className='nofound-h2'>Sorry we did not find your search</h2>
-                                <img alt='empy' src={empy} className='imagenVacia' />
-                            </div>
+                        <div className='nofound'>
+                            <h2 className='nofound-h2'>Sorry we did not find your search</h2>
+                            <img alt='empy' src={empy} className='imagenVacia' />
+                        </div>
                     )}
                 </div>
-            </div>            
+            </div>
         </>
     )
 }
@@ -117,6 +118,5 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
     filter: productActions.filter,
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductsCard)

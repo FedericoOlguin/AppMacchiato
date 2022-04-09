@@ -16,12 +16,13 @@ function Seetings(props) {
 
         <div id='cardUser'>
           <div className="esquema-card">
-            <div  className='img-h1'>
+            <div className='img-h1'>
               <h1 className='subtitle-user'>Profile</h1>
               <div className='fotoUser-Card'>
                 <img
-                src={props.user?.photoURL}
-                className='fotoUsuario'
+                  alt='PhotoUser'
+                  src={props.user?.photoURL}
+                  className='fotoUsuario'
                 />
               </div>
             </div>

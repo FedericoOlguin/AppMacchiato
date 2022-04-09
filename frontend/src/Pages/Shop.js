@@ -11,6 +11,7 @@ import '../Styles/shop.css'
 
 
 
+
 function Shop(props) {
     // const [cardsToDisplay, setCards] = useState();
     //para usar despues cuando apliquee filtros
@@ -43,6 +44,7 @@ function Shop(props) {
             <NavBar />
             <div className="container-filterAndShop">
                 <div className="container-cards">
+            
                     <ProductsCard />
                 </div>
             </div>
