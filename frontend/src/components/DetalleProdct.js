@@ -6,6 +6,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { connect } from "react-redux";
 import productActions from "../redux/actions/productActions";
+import LoadingIcon from "./LoadingIcon"
 
 
 
@@ -24,13 +25,7 @@ const Detalle = (props) => {
 
     if(prod===undefined){
         return(
-            <h1>
-                {/* {console.table(props.allProducts.filter(prod => prod._id === id))} */}
-                      {/* {console.log(prod)}
-                {console.log(id)} */}
-                Native no sirve 
-
-            </h1>
+           <LoadingIcon />
         )
     }
     return (
