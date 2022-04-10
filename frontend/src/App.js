@@ -9,7 +9,8 @@ import Snackbar from "./components/Snackbar"
 import React, { useEffect } from 'react';
 import userAction from './redux/actions/userAction';
 import { connect } from "react-redux"
-
+import AboutPage from './Pages/AboutPage';
+import ErrorScreen from './components/ErrorScreen';
 
 
 function App(props) {
@@ -24,14 +25,16 @@ function App(props) {
 
   return (
     <BrowserRouter>
-      {/* <NavBar /> */}
       <Routes>
 
         <Route path='*' element={<Home />} />{" "}
         <Route path='/' element={<Home />} />
-        <Route path='/shop' element={<Shop/>} />
+        <Route path='/shop' element={<Shop />} />
+        <Route path='/aboutUs' element={<AboutPage />} />
         <Route path='/signUp' element={props.user ? <Navigate replace to='/' /> : <SignUp />} />
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
+        <Route path='/panel' element={props.user?.rol !== "user" ? <Navigate replace to='/err' /> : <SignIn />} />
+        <Route path='/err' element={<ErrorScreen />} />
 
       </Routes>
       <Snackbar />

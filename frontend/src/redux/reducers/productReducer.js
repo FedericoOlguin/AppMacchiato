@@ -1,34 +1,27 @@
 const initialState = {
     allProducts: [],
-    oneProduct:[],
-    filtered:[],
+    oneProduct: [],
+    filtered: [],
 };
 
-const productReducer = (state= initialState, action) => {
+const productReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'get_products':
-            return{
+            return {
                 ...state,
                 allProducts: action.payload,
                 filtered: action.payload,
             };
         case 'get_one_product':
-            return{
+            return {
                 ...state,
-                oneProduct:action.payload
+                oneProduct: action.payload
             };
         case 'filter':
-            const filter = action.payload.apiData.filter((data) => 
-            data.ciudad
-            .toString()
-            .trim()
-            .toLowerCase()
-            .startsWith(action.payload.value.trim().toLowerCase())
-            );
-            return{
+            return {
                 ...state,
-                filtered:filter,
-            };
+                filtered: action.payload
+            }
         default:
             return state;
 

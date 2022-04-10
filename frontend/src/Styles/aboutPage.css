@@ -1,0 +1,251 @@
+.fondo-AboutUs {
+  background-image: url(../img/fondo_alto.jpg);
+}
+
+.container-AboutPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.img-aboutUsPage {
+  width: 100%;
+  background-image: url(../img/workCoffee.jpg);
+  background-size: cover;
+  height: 80vh;
+  background-attachment: fixed;
+  background-position: center;
+  /* filter: contrast(1.1); */
+  filter: brightness(0.5);
+}
+
+.container-ppal {
+  background-color: #1d1d1d;
+  width: 80%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-self: center;
+  border-radius: 5px;
+  position: relative;
+  top: -5rem;
+}
+
+/* interior del componente carta */
+
+.container-textoAbout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0 1rem;
+}
+.derecha {
+  align-self: flex-end;
+  width: 70%;
+}
+.izquierda {
+  align-self: flex-start;
+  width: 70%;
+}
+.tituloh1 {
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  color: #efeefe;
+}
+
+.parrafo-About {
+  font-size: 2em;
+  text-align: justify;
+  padding: 2rem 3rem 3rem 3rem;
+  font-weight: 500;
+  color: #efeefe;
+}
+
+.tituloh2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  padding: 2rem;
+  color: #efeefe;
+}
+
+/*---------- video ------*/
+
+.container-videoAbout {
+  width: 100%;
+  height: 50vh;
+  align-self: center;
+  margin: 0rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.video-AboutUs {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  align-self: center;
+}
+
+/* -------sección developers---- */
+
+.contenedor-developers {
+  margin: 2rem auto 4rem;
+  display: flex;
+  width: 60%;
+  height: 60vh;
+}
+
+.h1-developers {
+  color: #efeefe;
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 2em;
+}
+
+.fotos-developers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.fotos-contenedor {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50%;
+}
+
+
+
+.contenedorLinkedIn {
+  width: 33%;
+  height: 100%;
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.nombreDesarrollador {
+  color: #efeefe;
+  font-size: 1.3em;
+  text-align: center;
+  width: 100%;
+  height: 20%;
+}
+
+.contenedor-devimg {
+  /* background-color: black; */
+  width: 130px;
+  height: 130px;
+  /* -moz-border-radius: 50%; */
+  /* -webkit-border-radius: 50%; */
+  /* border-radius: 50%; */
+  align-self: center;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.img-dev {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 590px) {
+  .parrafo-About {
+    font-size: 1.3rem;
+    padding: 0 1rem 1rem;
+  }
+  .tituloh1 {
+    font-size: 2.3rem;
+  }
+  .tituloh2 {
+    font-size: 1.8rem;
+  }
+  .video-AboutUs {
+    border-radius: 0;
+  }
+  .container-videoAbout {
+    height: 30vh;
+  }
+  .img-aboutUsPage {
+    height: 50vh;
+  }
+  .h1-developers {
+    padding: 0 0.7rem;
+  }
+}
+
+
+
+@media (max-width: 770px) {
+  .contenedor-developers {
+    height: auto;
+    width: 90%;
+    height: 60vh;
+    flex-direction: row;
+  }
+  
+  .fotos-contenedor {
+    /* flex-direction: column; */
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+ .contenedorLinkedIn{
+   padding: 10px;
+   width: 100%;
+ }
+ .fotos-developers{
+   flex-direction: row;
+ }
+  
+  .img-dev {
+    flex-direction: row;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container-ppal {
+    width: 90%;
+  }
+  .h1-developers {
+    font-size: 1.5rem;
+  }
+  .fotos-developers{
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    height: auto;
+  }
+  .contenedorLinkedIn{
+    /* align-items: flex-start; */
+    width: 100%;
+    padding: 0;
+  }
+  .nombreDesarrollador{
+    font-size: 1rem;
+  }
+ 
+}

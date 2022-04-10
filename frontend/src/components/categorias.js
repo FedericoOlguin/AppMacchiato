@@ -6,7 +6,7 @@ import creation from '../img/creations.png'
 
 function Categorias() {
   return (
-    <div className='container-categorias'>
+    <div id='container-categorias'>
       <div className='subcontainer-categorias'>
         <div className='primerContenedor'>
           <img src={coffePack}  className='img-categorias' alt='productos'/>

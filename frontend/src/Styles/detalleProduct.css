@@ -13,7 +13,7 @@ body {
 #container{
 	/* top: 10rem !important; */
 	overflow: hidden;
-	margin: 5em auto;
+/* 	margin: 5em auto; */
 	height: 100vh;
 	width: 100%; 
 	display: flex;
@@ -23,11 +23,11 @@ body {
 }
 
 .product-details {
-	margin-top: 8rem;
+	margin-top: 2rem;
 	text-align: center;
 	overflow: hidden;
 	padding: 30px;
-	height: 100%;
+	
 	float: left;
 	width: 40%;
     border-right: double #ffe6e6;

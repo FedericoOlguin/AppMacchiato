@@ -2,10 +2,14 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import productActions from "../redux/actions/productActions";
 import ProductsCard from "../components/ProductsCard";
-// import { Link as LinkRouter } from "react-router-dom";
+
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import Detalle from "../components/detalleProduct";
+import '../Styles/shop.css'
+
+
+
+
 
 function Shop(props) {
   // const [cardsToDisplay, setCards] = useState();
@@ -28,20 +32,40 @@ function Shop(props) {
   //         setCards(filteredCards)
   // }
 
-  return (
+/*   return (
     <>
-      <NavBar />
+      <NavBar /> */
       {/*  <h1>Soy el shop</h1> */}
-      <Detalle />
+     {/*  <Detalle /> */}
 
       {/* <ProductsCard /> */}
 
-      {/* <LinkRouter to={'/home'}>
-                <button> go back to home </button>
-            </LinkRouter> */}
-      <Footer />
-    </>
-  );
+
+
+    // async function filterByName(e){
+    //     const filteredCards = cardsToDisplay.filter((product) =>
+    //         product.name
+    //         .toString()
+    //         .trim()
+    //         .toLowerCaser()
+    //         .startsWith(e.target.value.trim().toLowerCaser())
+    //         );
+    //         setCards(filteredCards)
+    // }
+
+
+    return (
+        <div className="container-shop">
+            <NavBar />
+            <div className="container-filterAndShop">
+                <div className="container-cards">
+                    <ProductsCard />
+                </div>
+            </div>
+            <Footer />
+        </div>
+    )
+
 }
 
 // const mapStateToProps = (state) => {

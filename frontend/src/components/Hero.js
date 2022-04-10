@@ -12,7 +12,7 @@ function Hero() {
                 The best coffee in the world,
                 </span>
                 <h1 className="h1">you find it in Macchiato</h1>
-                <a href="#">
+                <a href="#container-categorias">
                     <div className="scroll-down"></div>
                 </a>
             </div>

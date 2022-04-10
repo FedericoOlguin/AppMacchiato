@@ -2,14 +2,18 @@ import * as React from 'react';
 import { Link as LinkRouter } from "react-router-dom";
 import '../Styles/detalleProduct.css'
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import productActions from '../redux/actions/productActions';
 
 
- export default function Detalle(){
+function Detalle(props){
 
+  console.log(props)
+/* 
   const min= 0;
   const max= 250;
-  const [value, setValue]= useState(min)
+  const [value, setValue]= useState(min) */
   
 /* //printing default value of data that is 0 in h2 tag
 document.getElementById("counting").innerText = data;
@@ -65,3 +69,11 @@ return(
 
 )
 }
+const mapStateToProps = (state) => {
+  return {
+    getOneProduct: state.productReducer. getOneProduct,
+     
+  }
+}
+
+export default connect(mapStateToProps, null)(Detalle)
