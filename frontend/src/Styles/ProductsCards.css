@@ -8,7 +8,7 @@
 /* -------------slider------------- */
 .sliderPromocion {
   display: flex;
-  background-color: red;
+  /* background-color: red; */
   width: 100%;
   height: 40vh;
   justify-content: center;
@@ -218,14 +218,14 @@
 }
 
 /* ---------------- Carrito---------------- */
-.containerCart * {
+/* .containerCart * {
   color: white;
 }
 .containerCart {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-}
+} */
 /* ---------------- fin Carrito---------------- */
 
 @media only screen and (min-width: 0px) and (max-width: 1200px) {

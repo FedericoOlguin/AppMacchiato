@@ -16,6 +16,10 @@ import SeetingsChange from './Pages/SeetingsChanges';
 import PanelProducts from './Pages/PanelProducts'; /* toca organizarla, solo se hzo así para poder diseñarla */
 import Detalle from "./components/DetalleProdct";
 import productActions from './redux/actions/productActions';
+import ShoppingCart from './Pages/ShopingCart';
+
+
+
 
 function App(props) {
   
@@ -48,7 +52,7 @@ function App(props) {
         {/* // <Route path='/panel' element={!props.authorized ? (<Navigate replace to='/err' />) : (<PanelProducts />)} /> */}
         {/* <Route path='/detalle/:id' element={<Detalle />} /> */}
         <Route path='/detalle/:id' element={<Detalle />} />
-        
+        <Route path='/shoppingCart' element={<ShoppingCart/>}/>
       </Routes>
       <Snackbar />
     </BrowserRouter>

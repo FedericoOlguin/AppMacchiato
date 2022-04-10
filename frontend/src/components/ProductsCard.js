@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import empy from '../img/empy.svg'
 import { Link as LinkRouter } from "react-router-dom"
 import { connect } from 'react-redux';
@@ -8,9 +8,7 @@ import productActions from "../redux/actions/productActions";
 import '../Styles/ProductsCards.css'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import DetailsIcon from '@mui/icons-material/Details';
-import Cart from "../components/Cart"
-// import Carousel from "../components/Carousel"
-
+import Carousel from "../components/Carousel"
 
 
 const categories = [{ name: "Coffees", }, { name: "coffee maker", }, { name: "Accessories", }, { name: "Barista tools", }]
@@ -43,7 +41,7 @@ function ProductsCard(props) {
             <div className='contenedorCardsGeneral'>
                 <div className='sliderPromocion'>
                     <div className='ContainerSlider'>
-                        {/* <Carousel todosProductos={props.allProducts} /> */}
+                        <Carousel todosProductos={props.allProducts} />
                         {/* <h1>Slider promociones</h1> */}
                     </div>
                 </div>
@@ -106,7 +104,7 @@ function ProductsCard(props) {
                         </div>
                     )}
                 </div>
-                <Cart />
+               
             </div>
         </>
     )

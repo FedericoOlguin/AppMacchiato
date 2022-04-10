@@ -40,3 +40,23 @@
   border-radius: 5px !important;
 }
 
+.mySwiper{
+   width: 100% !important;
+   max-height: 60vh !important;
+   object-fit: cover !important;
+}
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 870px) {
+  .mySwiper{
+    max-height: 85vh !important;
+  }
+}
+
+@media only screen and (min-width: 871px) and (max-width: 870px) {
+  .mySwiper {
+    max-height: 85vh !important;
+  }
+}
+
