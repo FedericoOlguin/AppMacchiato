@@ -135,16 +135,25 @@
   /* bottom: 5rem; */
   /* background-color: rgba(255, 255, 255, 0.452); */
   /* border-radius: 20%; */
-  color: #f3a446;
+  /* color: #f3a446; */
   /* z-index: 8; */
   /* box-shadow: 5px 15px 15px black; */
 }
+
+.carritoCompras2{
+  color: #000 !important;
+}
+
+.carritolink2{
+  margin: auto 1rem auto 0;
+}
+
 
 
 .carritolink{
   text-decoration: none;
   color: #efeefeb2;
-  margin: auto 1rem auto 0;
+  margin: auto 0;
 }
 .carritolink:hover{
   color: #fff;
