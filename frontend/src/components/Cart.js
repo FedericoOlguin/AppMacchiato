@@ -19,8 +19,8 @@ const Cart = (props) => {
 
     let totalCompra = 0
 
-    function sumar(suma){
-        totalCompra+=suma
+    function sumar(suma) {
+        totalCompra += suma
     }
     return (
         <>
@@ -35,13 +35,13 @@ const Cart = (props) => {
 
                                 <div className='Container-imgCart'>
                                     <img alt='cardPho' src={products.image} className="imagenHeader-Cart" />
-                                    {/* <img alt="flag" src={products.flag} className='flag-Cart' /> */}
+
                                 </div>
 
-                                {/* <div className='container-mayor'> */}
+
                                 <div className='subtitulo-Cart'>
                                     <h2> {products.name} </h2>
-                                    {/* <p className='precio-Cart'> {"$ " + products.price} </p> */}
+
                                     <div className='botons-Carts'>
                                         <button className='botonShopping' onClick={() => props.addToCart(products._id)}><AiOutlinePlus className='iconoSho' /></button>
                                         <button className='botonShopping' onClick={() => props.removeOneFromCart(products._id)}> <AiOutlineMinus className='iconoSho' /></button>
@@ -52,24 +52,17 @@ const Cart = (props) => {
 
 
                                 <div className='botonesCart-Cart'>
-                                    {/* <div className='botons-Carts'>
-                                        <button className='botonShopping' onClick={() => props.addToCart(products._id)}><AiOutlinePlus className='iconoSho' /></button>
-                                        <button className='botonShopping' onClick={() => props.removeOneFromCart(products._id)}> <AiOutlineMinus className='iconoSho' /></button>
-                                        <button className='botonShopping' onClick={() => props.removeAllFromCart(products._id)}> <AiOutlineClose className='iconoSho' /></button>
-                                    </div> */}
+
                                     <p className='precio-Cart'> {"$ " + products.price} </p>
                                     <div className='bandera-Cart'>
                                         <p className='nofound-h2-Cart ' >{products.quantity}</p>
                                     </div>
-                                    <div className='subtotal-shop'>
-                                        <p className='nofound-h2-Shop' > Subtotal = $ {products.price * products.quantity}</p>
-                                    </div>
+                                        <p className='nofound-h2-Shop' > Subtotal= $ {products.price * products.quantity}</p>
+                                    {/* <div className='subtotal-shop'> */}
+                                    {/* </div> */}
                                 </div>
 
-                                {/* <div className='subtotal-shop'>
-                                    <p className='nofound-h2-Shop' > Subtotal = $ {products.price * products.quantity}</p>
-                                </div> */}
-                                {/* </div> */}
+
 
                             </div>
 
@@ -85,10 +78,10 @@ const Cart = (props) => {
                 <div className='totalCompra'>
                     <div className='totalCompraCentro'>
                         <h3>Total</h3>
-                        <h3>${totalCompra}</h3>
+                        <h3>$ {totalCompra}</h3>
                         <div>
-                            <button className='botonvaciar-carrito' onClick={() => props.emptyCart()} > Vaciar carrito</button>
-                            <button className='botonvaciar-carrito' onClick={() => props.emptyCart()} > Terminar compra</button>
+                            <button className='botonvaciar-carrito vaciar' onClick={() => props.emptyCart()} >Empty cart</button>
+                            <button className='botonvaciar-carrito finalizar' onClick={() => props.emptyCart()} >Proceed to checkout</button>
                         </div>
                     </div>
                 </div>
