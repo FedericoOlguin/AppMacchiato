@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Link as LinkRouter } from "react-router-dom";
-import '../Styles/detalleProduct.css'
 import { NavLink } from 'react-router-dom';
 
 

@@ -6,6 +6,7 @@ import ProductsCard from "../components/ProductsCard";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel"
+import Detalle from "../components/detalleJS"
 
 
 
@@ -41,10 +42,10 @@ function Shop(props) {
     return (
         <>
             <NavBar />
-            <h1>Soy el shop</h1>
 
             <Carousel />
             <ProductsCard />
+            <Detalle />
 
             {/* <LinkRouter to={'/home'}>
                 <button> go back to home </button>

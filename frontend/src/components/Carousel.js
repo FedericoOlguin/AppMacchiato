@@ -5,6 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import Carousel1 from "../img/Carousel_1.jpg"
+import Carousel2 from "../img/Carousel_2.jpg"
+
 
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
@@ -17,6 +20,8 @@ import { Autoplay, Pagination, Navigation, Grid } from "swiper";
 function Carousel (props) {
     console.log(props)
     
+    const images = [Carousel1, Carousel2]
+
     useEffect(()=>{
     },[])
 
@@ -25,16 +30,16 @@ function Carousel (props) {
 <> 
 
     <Swiper 
-        slidesPerView={4}
+        slidesPerView={1}
         grid={{
-          rows:2
+          rows:1
         }}
-        slidesPerGroup={2}
+        slidesPerGroup={8}
         
         spaceBetween={10}
         /*centeredSlides={true}*/
         autoplay={{
-          delay: 4400,
+          delay: 6400,
           disableOnInteraction: true
         }}
 
@@ -42,14 +47,13 @@ function Carousel (props) {
         modules={[Autoplay, Pagination, Navigation, Grid]}
         className="mySwiper"
       >
-      {props.filtered?.map(products =>
+      {images.map(image => 
+      
         <SwiperSlide className="SwiperSlide">  
-            <img className="imgCarousel" src={products.image}/>
-            <p className="nombreImagen">{products.name}</p> 
+            <img className="imgCarousel" src={image}/>
         </SwiperSlide>
         
         )}
-        <h2> Checkout our new stock </h2>
     </Swiper>
 
 </>
