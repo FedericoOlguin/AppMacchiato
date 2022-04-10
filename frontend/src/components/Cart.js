@@ -1,17 +1,17 @@
 
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+
 import empy from '../img/empy.svg'
-import { Link as LinkRouter } from "react-router-dom"
+
 import { connect } from 'react-redux';
-import LoadingIcon from "./LoadingIcon"
+
 import productActions from "../redux/actions/productActions";
 import '../Styles/ProductsCards.css'
 import '../Styles/shopingCart.css'
 import { AiOutlineMinus } from 'react-icons/ai';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
-import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+
 
 
 

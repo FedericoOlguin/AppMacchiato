@@ -11,9 +11,9 @@ import GoogleSignIn from '../components/GoogleSignIn'
 
 function SignIn(props) {
   const form = useRef()
-  window.scrollTo(0,0)
-  
-  function send(event){
+  window.scrollTo(0, 0)
+
+  function send(event) {
     event.preventDefault()
     form.current.focus()
     let datosInp = new FormData(form.current)
@@ -30,7 +30,17 @@ function SignIn(props) {
     <div id='container-signup'>
       {console.log(props.user)}
       <div id='form-signin'>
-        <main className="mainForm">
+        <div id='video-signup'>
+          <video
+            autoPlay
+            loop
+            muted
+            className='video'
+          >
+            <source src={VideoFormulario2} type='video/mp4' />
+          </video>
+        </div>
+        <main className="mainFormin">
           <h2 className='subtitle-signup'>Macchiato</h2>
           <div className="formContainer">
             <form action="" className="form" onSubmit={send} ref={form} id="form">
@@ -72,16 +82,7 @@ function SignIn(props) {
           </div>
 
         </main>
-      </div>
-      <div id='video-signup'>
-        <video
-          autoPlay
-          loop
-          muted
-          className='video'
-        >
-          <source src={VideoFormulario2} type='video/mp4' />
-        </video>
+
       </div>
     </div>
   )
