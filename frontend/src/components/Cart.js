@@ -25,7 +25,9 @@ const Cart = (props) => {
     return (
         <>
             {console.log(props)}
-            <h1 className='txtCard-Cart'> Shopping cart</h1>
+            <div className='txtCard-Cart'>
+                <h1 className='titulo-shoping'> Shopping cart</h1>
+            </div>
             <div className='row'>
                 <div className='containerCart-Cart'>
                     {props.cart?.length !== 0 ? (
@@ -57,7 +59,7 @@ const Cart = (props) => {
                                     <div className='bandera-Cart'>
                                         <p className='nofound-h2-Cart ' >{products.quantity}</p>
                                     </div>
-                                        <p className='nofound-h2-Shop' > Subtotal= $ {products.price * products.quantity}</p>
+                                    <p className='nofound-h2-Shop' > Subtotal= $ {products.price * products.quantity}</p>
                                     {/* <div className='subtotal-shop'> */}
                                     {/* </div> */}
                                 </div>
