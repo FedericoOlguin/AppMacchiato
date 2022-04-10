@@ -128,6 +128,20 @@
   font-size: 1.2rem;
 }
 
+.carritoCompras{
+  cursor: pointer;
+}
+
+.carritolink{
+  text-decoration: none;
+  color: #efeefeb2;
+  margin: auto 1rem auto 0;
+}
+
+.carritolink:hover{
+  color: #fff;
+}
+
 @media (max-width: 567px) {
   .navbar {
     padding: 0;

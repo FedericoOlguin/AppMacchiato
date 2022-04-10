@@ -65,6 +65,37 @@ const productActions = {
             return res
         }
     },
+    addToCart: (id) => {
+        return async (dispatch, getState) => {
+            // console.log(id);
+            dispatch({ type: "addToCart", payload: id })
+        }
+    },
+    removeOneFromCart: (id) => {
+        return (dispatch, getState) => {
+            dispatch({ type: "removeOneFromCart", payload: id })
+        }
+
+    },
+    removeAllFromCart: (id) => {
+        return (dispatch, getState) => {
+            dispatch({ type: "removeAllFromCart", payload: id })
+        }
+    },
+    emptyCart: () => {
+        return async (dispatch, getState) => {
+            // console.log(id);
+            dispatch({ type: "emptyCart" })
+        }
+    },
+    iniciarAlRecargar: () => {
+        let datosCart = JSON.parse(localStorage.getItem("shopCart"))
+        console.log(datosCart);
+
+        return async (dispatch, getState) => {
+            dispatch({ type: "iniciarAlRecargar", payload: datosCart })
+        }
+    }
 }
 
 export default productActions;

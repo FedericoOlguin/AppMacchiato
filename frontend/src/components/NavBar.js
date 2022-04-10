@@ -18,7 +18,7 @@ import { Link as LinkRouter } from "react-router-dom"
 import { connect } from 'react-redux';
 import logo from '../img/logo.png'
 import userActions from "../redux/actions/userAction"
-
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
 const NavBar2 = (props) => {
@@ -142,10 +142,13 @@ const NavBar2 = (props) => {
 
                         <Box sx={{ flexGrow: 0.008 }}>
                             <Tooltip title="Open settings" >
-
+                                
                                 {
                                     props.user ? (
-                                        <div>
+                                        <div> 
+                                            <LinkRouter className="carritolink" to="/shoppingCart">
+                                            <ShoppingCartIcon className='carritoCompras' />
+                                            </LinkRouter>
                                             <span className='spanUser'> {props.user.name.firstName}</span>
                                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 1 }}>
                                                 <Avatar alt="Remy Sharp" className='logo' src={props.user.photoURL} />
