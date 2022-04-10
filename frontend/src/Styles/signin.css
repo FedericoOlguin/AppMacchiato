@@ -6,6 +6,7 @@
 }
 
 #form-signin {
+<<<<<<< HEAD
   width: 100%;
   background-color: #efeefe;
   min-height: 100%;
@@ -13,6 +14,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+=======
+  width: 50%;
+  background-color: #EFEEFE;
+  height: 100%;
+  order: 3;
+>>>>>>> 803aa66070289a3689cd8217eb0f51932bb8da9e
 }
 /* .form{
   height: 100%;
@@ -58,12 +65,13 @@
   align-items: center;
 }
 
-/* .mainForm {
+.mainForm {
   padding-top: 1rem;
   background-color: #EFEEFE !important;
   display: flex;
   justify-content: center;
   
+<<<<<<< HEAD
 } */
 .mainFormin {
   width: 50%;
@@ -72,7 +80,10 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
+=======
+>>>>>>> 803aa66070289a3689cd8217eb0f51932bb8da9e
 }
+
 .subtitle-signup {
   padding: 0 0 0.2rem 2rem;
   margin-bottom: 1rem;

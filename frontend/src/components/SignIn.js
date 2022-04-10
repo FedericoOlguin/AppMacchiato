@@ -30,6 +30,7 @@ function SignIn(props) {
     <div id='container-signup'>
       {console.log(props.user)}
       <div id='form-signin'>
+<<<<<<< HEAD
         <div id='video-signup'>
           <video
             autoPlay
@@ -41,6 +42,10 @@ function SignIn(props) {
           </video>
         </div>
         <main className="mainFormin">
+=======
+        <main className="mainForm">
+          <h2 className='subtitle-signup'>Macchiato</h2>
+>>>>>>> 803aa66070289a3689cd8217eb0f51932bb8da9e
           <div className="formContainer">
             <form action="" className="form" onSubmit={send} ref={form} id="form">
           <h2 className='subtitle-signup'>Macchiato</h2>
@@ -82,7 +87,16 @@ function SignIn(props) {
           </div>
 
         </main>
-
+      </div>
+      <div id='video-signup'>
+        <video
+          autoPlay
+          loop
+          muted
+          className='video'
+        >
+          <source src={VideoFormulario2} type='video/mp4' />
+        </video>
       </div>
     </div>
   )
