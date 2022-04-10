@@ -1,6 +1,4 @@
-
-
-.container-shoping{
+.container-shoping {
   display: flex;
   width: 100%;
   min-height: 100vh;
@@ -8,68 +6,106 @@
   background-size: cover;
   flex-direction: column;
   filter: brightness(0.7);
-  
 }
-
 
 /* ---------------------cart comrpa --------------------*/
 
-.txtCard-Cart{
+.txtCard-Cart {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   height: 30vh;
   align-items: center;
-  color: #000;
+  /* color: #000; */
+  font-size: 3rem;
   justify-content: center;
-  margin-top: 4rem;  
+  margin-top: 4rem;
 }
-
 
 /* ---------------- Carrito---------------- */
-.containerCart-Cart * {
+/* .containerCart-Cart * {
   color: white;
-}
+} */
 
+.totalCompra {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  /* position: fixed; */
+  right: 1rem;
+  top: 20rem;
+  /* background-color: #f3a446; */
+  background-color: rgba(0, 0, 0, 0.685);
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.totalCompraCentro{
+  border: #efeefe solid 3px; 
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: space-evenly;
+}
 .containerCart-Cart {
   display: flex;
   flex-wrap: wrap;
   width: 70%;
   height: 100vh;
   overflow-y: scroll;
+  justify-content: center;
 }
 /* ---------------- fin Carrito---------------- */
 
-
 .cardProducto-Cart {
-  
-  width: 100%;
-  height: 40vh;  
+  color: white;
+  width: 80%;
+  height: 30vh;
   z-index: 1000;
+  flex-wrap: wrap;
   display: flex;
   border-radius: 5px;
-  justify-content: space-evenly;
-  margin: 5rem 2rem 0 3rem;
-  -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
+  justify-content: space-between;
+  /* margin: 5rem 2rem 0 3rem; */
+  margin: 5rem 0;
+  /* -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
   -moz-box-shadow: inset -5px 17px 109px 8px rgba(0, 0, 0, 0.88);
-  box-shadow: inset -5px 17px 109px 8px rgba(49, 49, 49, 0.88);
+  box-shadow: inset -5px 17px 109px 8px rgba(49, 49, 49, 0.88); */
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.705);
   background-image: url(https://jberlife.com/wp-content/uploads/2021/04/GettyImages-1191995863-2-scaled.jpg);
 }
 
-.Container-imgCart{
+.Container-imgCart {
   display: flex;
-  width: 30%;
+  width: 20%;
   justify-content: center;
+  /* padding: 0 0 0 2rem; */
+  margin-left: 2rem;
 }
 
-.imagenHeader-Cart{
-  position: relative;
-  top: -2.5rem;
-  right: -2rem;
+.imagenHeader-Cart {
+  /* position: relative; */
+  /* top: -2.5rem; */
+  /* right: -2rem; */
+  margin-top: -5rem;
   max-width: 350px;
   max-height: 350px;
-  filter: brightness(1.2);  
+  filter: brightness(1.2);
 }
 
 .flag-Cart {
@@ -78,86 +114,107 @@
   height: 50px;
   margin: 2rem 3rem auto 0;
   text-align: center;
-  z-index: 101;  
+  z-index: 101;
 }
 
-.container-mayor{
+.container-mayor {
   width: 70%;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.subtitulo-Cart{
-  width: 100%;
-  height: 30%;
+.subtitulo-Cart {
+  /* width: 100%; */
+  max-width: 30%;
+  height: 100%;
   text-align: center;
   font-size: 1.7em;
   display: flex;
-  flex-direction: row !important;
+  flex-direction: column !important;
   align-items: center;
-  justify-content: space-evenly;
-  padding: .3rem;
+  justify-content: space-around;
+  padding: 0.5rem 0;
   flex-grow: 1;
 }
 
-.subtitulo-Cart>h2{
-  width: 70%;
+.subtitulo-Cart > h2 {
+  /* width: 100%; */
+  font-size: 1.3;
+  flex-wrap: wrap;
 }
 
-.precio-Cart{
+.precio-Cart {
   text-align: center;
-  padding: .2rem;
+  padding: 0.2rem;
   color: blanchedalmond;
   background-color: rgba(133, 43, 43, 0.925);
   border: solid 1px rgba(168, 168, 168, 0.61);
-  border-radius: 5px;
+  border-radius: 3px;
+  font-size: 1.4rem;
 }
 
-.botonesCart-Cart{
-  width: 100%;
-  height: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.botons-Carts{
-  width: 70%;
+.botonesCart-Cart {
+  /* width: 100%; */
+  width: 20rem;
   height: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 3rem;
+}
+
+.botons-Carts {
+  width: 70%;
+  /* height: 100%; */
+  display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.bandera-Cart{
-  flex-grow: 1;
+.bandera-Cart {
+  /* flex-grow: 1; */
   display: flex;
   justify-content: center;
+  width: 50%;
+  padding: 0.2rem 0;
+  border: 2px solid #efeefe;
+  border-radius: 3px;
 }
 
-.botonShopping{
+.botonShopping {
   width: 40px;
   height: 40px;
   cursor: pointer;
   background-color: #f3a446 !important;
   border: none;
+  border-radius: 30%;
 }
 
-.iconoSho{
+.iconoSho {
   color: #000 !important;
   font-size: 1.5em;
 }
 
-.nofound-h2-Cart{
-  padding: .6rem 1.2rem;
-  border: 2px solid #efeefe;
+.nofound-h2-Cart {
+  /* padding: .6rem 1.2rem; */
+  /* border: 2px solid #efeefe; */
   font-size: 1.5em;
+  /* color: black; */
+}
+.black {
+  /* color: #000; */
+  width: 50%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.767);
+  border-radius: 8px;
+  padding: 2rem 0;
 }
 
-.subtotal-shop{
+.subtotal-shop {
   width: 100%;
   height: 20%;
   display: flex;
@@ -165,12 +222,12 @@
   align-items: center;
 }
 
-.nofound-h2-Shop{
-  font-size: 1.5em;
+.nofound-h2-Shop {
+  font-size: 1em;
   border-bottom: 3px solid #efeefe;
 }
 
-.nofound-Cart{
+.nofound-Cart {
   width: 100%;
   margin-top: 15rem;
   height: 50vh;
@@ -179,9 +236,10 @@
   font-size: 2.5rem;
   flex-direction: column;
   transition: all 1s ease-in-out;
+  align-items: center;
 }
 
-.imagenVacia-Cart{
+.imagenVacia-Cart {
   align-self: center;
   width: 55%;
   height: 8rem;
@@ -189,7 +247,11 @@
   object-fit: scale-down;
 }
 
-.botonvaciar-carrito{
-  margin: 2rem auto;
-  
+.botonvaciar-carrito {
+  width: 8rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  background-color: #aa8e6c !important;
+  border: none;
+  /* border-radius: 30%; */
 }

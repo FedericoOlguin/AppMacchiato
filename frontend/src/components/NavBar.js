@@ -111,6 +111,9 @@ const NavBar2 = (props) => {
                                 <MenuItem className="navLi" onClick={handleCloseNavMenu}>
                                     <LinkRouter className="nav-linkUser" to="/aboutUs">About Us</LinkRouter>
                                 </MenuItem>
+                                {/* <LinkRouter className="carritolink" to="/shoppingCart">
+                                            <ShoppingCartIcon className='carritoCompras' />
+                                            </LinkRouter> */}
 
 
                             </Menu>
@@ -136,19 +139,22 @@ const NavBar2 = (props) => {
                                 <Button sx={{ my: 0, color: 'white', display: 'flex' }} className="navLi">
                                     <LinkRouter className="linkGeneral" to="/aboutUs">About Us</LinkRouter>
                                 </Button>
+                                <LinkRouter className="carritolink" to="/shoppingCart">
+                                    <ShoppingCartIcon className='carritoCompras' />
+                                </LinkRouter>
 
                             </div>
                         </Box>
 
                         <Box sx={{ flexGrow: 0.008 }}>
                             <Tooltip title="Open settings" >
-                                
+
                                 {
                                     props.user ? (
-                                        <div> 
-                                            <LinkRouter className="carritolink" to="/shoppingCart">
+                                        <div>
+                                            {/* <LinkRouter className="carritolink" to="/shoppingCart">
                                             <ShoppingCartIcon className='carritoCompras' />
-                                            </LinkRouter>
+                                            </LinkRouter> */}
                                             <span className='spanUser'> {props.user.name.firstName}</span>
                                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 1 }}>
                                                 <Avatar alt="Remy Sharp" className='logo' src={props.user.photoURL} />

@@ -48,7 +48,7 @@
 .menuLinks {
   display: flex;
   /* width: 80%; */
-  margin-left: 5rem;
+  margin-left: 2rem;
 }
 
 .linkGeneral {
@@ -130,17 +130,26 @@
 
 .carritoCompras{
   cursor: pointer;
+  /* position: fixed; */
+  /* left: 2rem; */
+  /* bottom: 5rem; */
+  /* background-color: rgba(255, 255, 255, 0.452); */
+  /* border-radius: 20%; */
+  color: #f3a446;
+  /* z-index: 8; */
+  /* box-shadow: 5px 15px 15px black; */
 }
+
 
 .carritolink{
   text-decoration: none;
   color: #efeefeb2;
   margin: auto 1rem auto 0;
 }
-
 .carritolink:hover{
   color: #fff;
 }
+
 
 @media (max-width: 567px) {
   .navbar {

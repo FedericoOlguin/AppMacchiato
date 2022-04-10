@@ -287,14 +287,14 @@ const userController = {
         try {
             let userRes
             const devolver =  await Usuario.findOne({ _id: id })
-            console.log(devolver);
+            // console.log(devolver);
             userRes = {
                 name: devolver.name,
                 photoURL: devolver.photoURL,
                 country: devolver.country,
                 email: devolver.email
             }
-            console.log(userRes);
+            // console.log(userRes);
             res.json({ response: userRes })
 
         } catch (err) {
