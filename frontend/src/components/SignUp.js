@@ -44,8 +44,8 @@ function SignUp(props) {
     <div id='container-signup'>
       <div id='form-signup'>
         <main className="mainForm">
-          <LinkRouter className="scrollback" to={"/"}><ArrowBackIosNewIcon className='iconoBack'/>
-          </LinkRouter>          
+          <LinkRouter className="scrollback" to={"/"}><ArrowBackIosNewIcon className='iconoBack' />
+          </LinkRouter>
           <h2 className='subtitle-signup'>Macchiato</h2>
           <div className="formContainer">
             <form action="" className="form" onSubmit={send} ref={form} id="form">
@@ -116,16 +116,16 @@ function SignUp(props) {
           </div>
 
         </main>
-      </div>
-      <div id='video-signup'>
-        <video
-          autoPlay
-          loop
-          muted
-          className='video'
-        >
-          <source src={VideoFormulario} type='video/mp4' />
-        </video>
+        <div id='video-signup'>
+          <video
+            autoPlay
+            loop
+            muted
+            className='video'
+          >
+            <source src={VideoFormulario} type='video/mp4' />
+          </video>
+        </div>
       </div>
     </div>
   )

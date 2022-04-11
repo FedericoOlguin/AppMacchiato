@@ -26,20 +26,22 @@ body {
   position: fixed;
   bottom: 2rem;
   right: -4rem;
-  width: 2.5rem;
+  width: 2rem;
   border-radius: 50%;
   background-color: rgba(180, 171, 171, 0.616);
   transition: all 1s ease-in-out;
+  box-shadow: 8px 15px 10px black;
 }
 .scarollUp2 {
   position: fixed;
   bottom: 10rem;
-  right: 2rem;
-  width: 2.5rem;
+  right: 1.5rem;
+  width: 2rem;
   border-radius: 50%;
   background-color: rgba(180, 171, 171, 0.616);
   transition: all 1s ease-in-out;
   z-index: 100;
+  box-shadow: 8px 15px 10px black;
 }
 
 .main {

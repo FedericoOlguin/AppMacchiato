@@ -115,7 +115,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-image: url(https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+ /*  background-image: url(https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); */
   background-size: cover;
   border-radius: 5px;
   /* filter: brightness(0.5); */

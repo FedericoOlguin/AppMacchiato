@@ -48,7 +48,6 @@ function Shop(props) {
             <NavBar />
             <div className="container-filterAndShop">
                 <div className="container-cards">
-
                     <ProductsCard />
                 </div>
             </div>
