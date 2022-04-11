@@ -8,6 +8,7 @@ import VideoFormulario from '../img/VideoFormulario.mp4';
 import FacebookSignUp from '../components/FacebookSignUp';
 import GoogleSignUp from '../components/GoogleSignUp'
 import countries from '../components/apiCountry';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 
 function SignUp(props) {
@@ -43,6 +44,8 @@ function SignUp(props) {
     <div id='container-signup'>
       <div id='form-signup'>
         <main className="mainForm">
+          <LinkRouter className="scrollback" to={"/"}><ArrowBackIosNewIcon className='iconoBack'/>
+          </LinkRouter>          
           <h2 className='subtitle-signup'>Macchiato</h2>
           <div className="formContainer">
             <form action="" className="form" onSubmit={send} ref={form} id="form">

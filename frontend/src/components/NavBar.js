@@ -18,7 +18,7 @@ import { Link as LinkRouter } from "react-router-dom"
 import { connect } from 'react-redux';
 import logo from '../img/logo.png'
 import userActions from "../redux/actions/userAction"
-
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
 const NavBar2 = (props) => {
@@ -51,15 +51,11 @@ const NavBar2 = (props) => {
     const [color, setColor] = React.useState(false)
 
     const changeColor = () => {
-        if (window.scrollY < 100) {
 
+        if (window.scrollY >= 10) {
+            setColor(true)
         } else {
-
-            if (window.scrollY >= 100) {
-                setColor(true)
-            } else {
-                setColor(false)
-            }
+            setColor(false)
         }
     }
 
@@ -112,6 +108,9 @@ const NavBar2 = (props) => {
                                 <MenuItem className="navLi" onClick={handleCloseNavMenu}>
                                     <LinkRouter className="nav-linkUser" to="/shop">Store</LinkRouter>
                                 </MenuItem>
+                                <MenuItem className="navLi" onClick={handleCloseNavMenu}>
+                                    <LinkRouter className="nav-linkUser" to="/aboutUs">About Us</LinkRouter>
+                                </MenuItem>
 
 
                             </Menu>
@@ -134,16 +133,22 @@ const NavBar2 = (props) => {
                                 <Button sx={{ my: 0, color: 'white', display: 'flex' }} className="navLi">
                                     <LinkRouter className="linkGeneral" to="/shop">Store</LinkRouter>
                                 </Button>
+                                <Button sx={{ my: 0, color: 'white', display: 'flex' }} className="navLi">
+                                    <LinkRouter className="linkGeneral" to="/aboutUs">About Us</LinkRouter>
+                                </Button>
 
                             </div>
                         </Box>
 
                         <Box sx={{ flexGrow: 0.008 }}>
                             <Tooltip title="Open settings" >
-
+                                
                                 {
                                     props.user ? (
-                                        <div>
+                                        <div> 
+                                            <LinkRouter className="carritolink" to="/shoppingCart">
+                                            <ShoppingCartIcon className='carritoCompras' />
+                                            </LinkRouter>
                                             <span className='spanUser'> {props.user.name.firstName}</span>
                                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 1 }}>
                                                 <Avatar alt="Remy Sharp" className='logo' src={props.user.photoURL} />
@@ -182,9 +187,15 @@ const NavBar2 = (props) => {
                                             }} to="#">Sign out</LinkRouter>
                                             {/* </MenuItem> */}
                                             {/* <MenuItem> */}
-                                            <LinkRouter className="nav-linkUser" aria-current="page" to="/">⚙
+                                            <LinkRouter className="nav-linkUser" aria-current="page" to={'/seetings'}>⚙
                                                 Setting</LinkRouter>
                                             {/* </MenuItem> */}
+                                            {/* {console.log(props.authorized)} */}
+                                            {props.authorized ? (
+                                                <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/panel">Panel</LinkRouter>
+                                            ) : (
+                                                <></>
+                                            )}
                                         </div>
                                         ) : (
                                             <div className='container-nav-LinkUser'>
@@ -194,6 +205,7 @@ const NavBar2 = (props) => {
                                                 {/* <MenuItem onClick={handleCloseUserMenu} className="navLi"> */}
                                                 <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/signUp">Sign Up</LinkRouter>
                                                 {/* </MenuItem> */}
+
                                             </div>
                                         )
                                 }
@@ -202,14 +214,15 @@ const NavBar2 = (props) => {
                     </Toolbar>
                 </Container>
             </AppBar >
-        </div>
+        </div >
     );
 };
 
 
 const mapStateToProps = (state) => {
     return {
-        user: state.userReducer.user
+        user: state.userReducer.user,
+        authorized: state.userReducer.authorized
     }
 }
 

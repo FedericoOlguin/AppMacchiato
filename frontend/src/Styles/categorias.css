@@ -1,10 +1,11 @@
-.container-categorias{
+#container-categorias{
  /*  background-color: aqua; */
   width: 65%;
   height: 70vh;
   display: flex;
   flex-direction: column;
   margin: 3rem 0 5rem 0;
+  
 }
 .subcontainer-categorias{
   display: flex;
@@ -16,32 +17,40 @@
 .subcontainer-categorias1{
   width: 100%;
   height: 50%;
- /*  background-color: burlywood; */
   display: flex;
   flex-direction: row;
 }
 .primerContenedor{
- /*  background-color: rgb(221, 82, 13); */
   width: 30%;
   height: 100%;
   color: #efefef;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .segundoContenedor{  
-  /* background-color: blue; */
   width: 40%;
   height: 100%;
   color: #efefef;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 1rem;
 }
 .tercerContenedor{
   /* background-color: yellowgreen; */
   width: 30%;
   height: 100%;
   color: #efefef;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .img-categorias{
   object-fit:scale-down;
   width: 100%;
   height: 100%;
+  filter: drop-shadow(-10px 25px 90px rgba(255, 255, 255, 0.575));
 }
 .tituloCategorias{
   color: #efefef;
@@ -59,53 +68,51 @@
 
 @media screen and (max-width: 800px) { 
   .tituloCategorias{
-
     font-size: 1em;
-    padding: 3rem 0 1rem 0;
-    margin-top: 1rem;
+    margin-right: .5rem;
   }
   .parrafoCategorias{
-    font-size: 0.9em;
+    display: none;
+  }
+  #container-categorias {
+    
+    width: 80%;
+    margin-bottom: 3rem;
   }
 }
-@media screen and (max-width: 600px) { 
-  .tituloCategorias{
+@media screen and (max-width: 620px) { 
 
-    font-size: 0.7em;
-    padding: 3rem 0 1rem 0;
-    margin: 1rem 0.5rem 0rem 0.5rem;
+  #container-categorias{
+    margin-bottom: 3rem;
+    width: 80%;
+    height: 500px;
+    
   }
-  .parrafoCategorias{
-    font-size: 0.7em;
-    margin: 0rem 1rem 0rem 1rem;
-  }
-  .container-categorias{
-     width: 75%;
-     height: 70vh;
-     display: flex;
-     flex-direction: column;
-     margin: 3rem 0 5rem 0;
-   }
-   .subcontainer-categorias{
-    display: flex;
-    flex-direction: row;  
-   /*  background-color: seagreen; */
-    width: 100%;
-    height: 40%;
-  }
+
+  .subcontainer-categorias,
   .subcontainer-categorias1{
     width: 100%;
-    height: 40%;
-   /*  background-color: burlywood; */
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    
   }
-  .container-categorias{
-    /*  background-color: aqua; */
-     width: 80%;
-     height: 70vh;
-     display: flex;
-     flex-direction: column;
-     margin: 3rem 0 5rem 0;
-   }
+
+  .primerContenedor,
+  .segundoContenedor,
+  .tercerContenedor{
+    width: 30%;
+    text-align: center;
+  }
+
+  .tituloCategorias{
+    font-size: 1em;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .img-categorias{
+    display: none;
+  }
+  
 }
+

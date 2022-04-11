@@ -17,7 +17,7 @@
 .header {
   position: fixed;
   width: 100%;
-  z-index: 50;
+  z-index: 500;
   transition: 0.3s ease-in;
   overflow: hidden;
 }
@@ -30,7 +30,7 @@
 }
 
 .header-bg {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: black;
 }
 
 /* .navbarBackgound {
@@ -47,12 +47,12 @@
 
 .menuLinks {
   display: flex;
-  width: 80%;
-  justify-content: flex-end;
+  /* width: 80%; */
+  margin-left: 5rem;
 }
 
 .linkGeneral {
-  padding: 0.5rem 1rem;
+  padding: 0.1rem 1rem;
   border-radius: 5px;
   color: #efefef;
   font-size: x-large;
@@ -126,6 +126,20 @@
 
 .spanUser {
   font-size: 1.2rem;
+}
+
+.carritoCompras{
+  cursor: pointer;
+}
+
+.carritolink{
+  text-decoration: none;
+  color: #efeefeb2;
+  margin: auto 1rem auto 0;
+}
+
+.carritolink:hover{
+  color: #fff;
 }
 
 @media (max-width: 567px) {

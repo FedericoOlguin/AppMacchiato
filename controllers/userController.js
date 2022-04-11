@@ -3,6 +3,7 @@ const bcryptjs = require("bcryptjs")
 const crypto = require("crypto")
 const nodemaider = require("nodemailer")
 const jwt = require("jsonwebtoken")
+const { json } = require("express/lib/response")
 
 
 const sendEmail = async (email, uniqueString) => { //Funcion que envia email de verificcacion
@@ -129,7 +130,7 @@ const userController = {
                     photoURL: photoURL,
                     country: country,
                     verifiedEmail: false,
-                    rol: rol,
+                    rol: "user",
                     from: [from],
                 })
                 // Se comprueba el metodo y la procedencia del registro
@@ -180,12 +181,11 @@ const userController = {
                     let passwordEquals = userExiste.password.filter(pass => bcryptjs.compareSync(password, pass))
                     if (passwordEquals.length > 0) {
                         const userData = {
-                            view: true,
                             id: userExiste._id,
                             name: userExiste.name,
                             email: userExiste.email,
                             photoURL: userExiste.photoURL,
-                            from: from
+                            from: from,
                         }
                         await userExiste.save()
                         const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 })
@@ -205,12 +205,11 @@ const userController = {
                         let passwordEquals = userExiste.password.filter(pass => bcryptjs.compareSync(password, pass))
                         if (passwordEquals.length > 0) {
                             const userData = {
-                                view: true,
                                 id: userExiste._id,
                                 name: userExiste.name,
                                 email: userExiste.email,
                                 photoURL: userExiste.photoURL,
-                                from: from
+                                from: from,
                             }
                             const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 })
                             res.json({
@@ -242,11 +241,11 @@ const userController = {
         let emailUser = req.body.userEmail
         let user = await Usuario.findOne({ email: emailUser })
         // console.log(user);
-        await user.save()
+        // await user.save()
         res.json({
             success: true,
-            reponse: emailUser,
-            message: "Session closed " 
+            reponse: user.name,
+            message: "Session  " + user.name.firstName + " closed"
         })
         // res.json(console.log("closed session " + user.email))
 
@@ -258,7 +257,7 @@ const userController = {
         if (req.user) {
             res.json({
                 success: true,
-                response: { id: req.user.id, name: req.user.name, photoURL: req.user.photoURL, email: req.user.email, from: "token" },
+                response: { id: req.user.id, name: req.user.name, photoURL: req.user.photoURL, email: req.user.email, from: "token", rol: req.user.rol },
                 message: "Welcome back " + req.user.name.firstName
             })
 
@@ -267,6 +266,39 @@ const userController = {
                 success: false,
                 message: "Please login again"
             })
+        }
+    },
+    authenticated: (req, res) => {
+        // console.log("-----------req.user:--------------");
+        // console.log(req.user)
+        // console.log("----------Fin req.user:-----------");
+        if (req.user.rol.includes("admin")) {
+            res.json(true)
+
+        } else {
+            res.json(false)
+        }
+    },
+    infoUser: async (req, res) => {
+        const id = req.user.id
+
+        // console.log(id);
+
+        try {
+            let userRes
+            const devolver =  await Usuario.findOne({ _id: id })
+            console.log(devolver);
+            userRes = {
+                name: devolver.name,
+                photoURL: devolver.photoURL,
+                country: devolver.country,
+                email: devolver.email
+            }
+            console.log(userRes);
+            res.json({ response: userRes })
+
+        } catch (err) {
+            console.log(err);
         }
     }
 

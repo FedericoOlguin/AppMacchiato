@@ -27,7 +27,7 @@ function Carousel (props) {
 
   return (
 
-<> 
+    <>
 
     <Swiper 
         slidesPerView={1}
@@ -56,20 +56,20 @@ function Carousel (props) {
         )}
     </Swiper>
 
-</>
+    </>
 
-);
+  );
 }
 
 const mapStateToProps = (state) => {
-    return {
-        allProducts: state.productReducer.allProducts,
-        filtered: state.productReducer.filtered,
-    }
+  return {
+    allProducts: state.productReducer.allProducts,
+    filtered: state.productReducer.filtered,
+  }
 }
 
 const mapDispatchToProps = {
-    filter: productActions.filter,
+  filter: productActions.filter,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Carousel)

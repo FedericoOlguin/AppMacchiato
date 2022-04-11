@@ -20,7 +20,7 @@ const ProductController = {
         })
     },
     loadProduct: async (req, res) => {
-        const{name, image, category, price, stock, description} = req.body;
+        const{name, image, category, price, stock, description, flag} = req.body;
         new Product ({
             name:name,
             image:image,
@@ -28,17 +28,17 @@ const ProductController = {
             price:price,
             stock:stock, 
             description:description,
+            flag:flag,
         })
         .save()
         .then(response=>res.json({response}));
     },
     getOneProduct: async (req, res) => {
-        const id = req.params.id;
+        const id = req.params.id
         let product;
         let error = null;
-
         try{
-            product = await axios.findOne({_id:req.params.id})
+            product = await Product.findOne({_id:id})
 
         }catch(err){
             error = err
@@ -95,7 +95,6 @@ const ProductController = {
             res.json({success: true, message: 'Something went wrong, please try again in a few minutes'})
         }
     }
-
 }
 
 module.exports= ProductController

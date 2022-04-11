@@ -11,6 +11,7 @@
   align-content: center;
   margin-bottom: 4rem;
   padding: 0 5rem;
+  
 }
 
 .card {
@@ -18,7 +19,7 @@
   flex-direction: column;
   margin: auto 4rem;
   width: 50%;
-  height: 80%;
+  height: 90%;
   background: radial-gradient(#111 50%, #000 100%);
   overflow: hidden;
   position: relative;
@@ -30,10 +31,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
-  height: 80%;
+  width: 100%;
+  height: 90%;
   margin: 0 2rem;
   color: #efeefe;
+  flex-grow: 1;
 }
 
 .card-text > h1 {
@@ -64,9 +66,9 @@
 }
 
 .img-card {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:cover;
   display: block;
 }
 
@@ -134,9 +136,7 @@
 .boton-aboutUs:hover {
   transform: scale(1.02, 1.02);
 }
-.imgSlider {
-  object-fit: cover !important;
-}
+
 /* --------------- */
 
 
@@ -156,19 +156,28 @@
     margin-bottom: 2rem;
   }
 }
+
+@media(max-width: 1200px ){
+  .card-text>h1{
+    margin-bottom: 1rem;
+  }
+}
+
+
 @media (max-width: 870px) {
   .cards-city {
     height: auto;
     flex-direction: column !important;
   }
   .card {
-    width: 90%;
+    width: 80% !important;
     overflow: hidden;
-    height: 200;
+    height: 50% !important; 
+    margin-bottom: 1rem;
   }
   .card-text {
     padding: 0 1rem;
-    width: 80%;
+    width: 80%; 
   }
   .swiper {
     width: 100%;
@@ -185,6 +194,30 @@
   }
   .card-text h1{
     font-size: 1.7rem;
+  }
+}
+
+
+@media (max-width: 480px){
+  .card{
+    width: 100% !important;
+  }
+
+  .card-text > h1{
+    font-size: 1.5em;
+  }
+
+  .card-text >p{
+    font-size: 1em;
+  }
+
+  .card-text > span{
+    font-size: 1em;
+  }
+
+  .boton-aboutUs{
+    font-size: 1.1em !important;
+    
   }
 }
 
