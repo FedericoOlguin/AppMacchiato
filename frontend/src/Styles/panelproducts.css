@@ -147,11 +147,11 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  background: red;
+  background: #f94144;
   border: none;
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-  background: #e62222;
+  background: #f94144;
   margin: 1rem 0;
 }
 
@@ -168,7 +168,7 @@
 
 .button-elimintate .icon {
   position: absolute;
-  border-left: 1px solid #c41b1b;
+  border-left: 1px solid #000;
   transform: translateX(110px);
   height: 40px;
   width: 40px;
@@ -183,7 +183,7 @@
 }
 
 .button-elimintate:hover {
-  background: #ff3636;
+  background: #f94144;
 }
 
 .button-elimintate:hover .text {
@@ -212,11 +212,11 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  background: seagreen;
+  background: #8cb369;
   border: none;
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-  background: seagreen;
+  background: #8cb369;
   margin: 1rem 0;
 }
 
@@ -248,7 +248,7 @@
 }
 
 .button-modify:hover {
-  background: seagreen;
+  background: #8cb369;
 }
 
 .button-modify:hover .text {
