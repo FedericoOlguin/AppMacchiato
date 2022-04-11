@@ -4,6 +4,8 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Countries from '../components/apiCountry';
 import BuildIcon from '@mui/icons-material/Build';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import {Link as LinkRouter} from 'react-router-dom'
 
 function SeetingsChange(){
   return(
@@ -16,6 +18,8 @@ function SeetingsChange(){
 
         <div id='form-signup-seetings'>
           <main className="mainForm-seetings2">
+            <LinkRouter className="scrollback" to={"/seetings"}><ArrowBackIosNewIcon className='iconoBack' />
+            </LinkRouter>
             <h2 className='subtitle-signup-seetings'>Seetings your profile</h2>
             <div className="formContainer-seetings">
               <form action="" className="form-seetings" /* onSubmit={""} ref={""} */ id="form">
