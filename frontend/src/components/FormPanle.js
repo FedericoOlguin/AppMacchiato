@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import '../Styles/panelproducts.css'
-import Footer from '../components/Footer';
 import { connect } from "react-redux"
 import productActions from "../redux/actions/productActions"
 

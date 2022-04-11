@@ -17,20 +17,20 @@ function SignUp(props) {
   const [files, setFiles] = useState()
 
   async function send(event) {
-console.log(files);
+    console.log(files);
     event.preventDefault()
     const file = await files[0]
     form.current.focus()
     let datosInp = new FormData(form.current)
 
-    datosInp.append("firstName",datosInp.get("name"))
-    datosInp.append("lastName",datosInp.get("lastName"))
-    datosInp.append("email",datosInp.get("email"))
-    datosInp.append("password",datosInp.get("password"))
-    datosInp.append("photoURL",file)
-    datosInp.append("country",datosInp.get("pais"))
-    
-console.log(datosInp.get("firstName"));
+    datosInp.append("firstName", datosInp.get("name"))
+    datosInp.append("lastName", datosInp.get("lastName"))
+    datosInp.append("email", datosInp.get("email"))
+    datosInp.append("password", datosInp.get("password"))
+    datosInp.append("photoURL", file)
+    datosInp.append("country", datosInp.get("pais"))
+
+    console.log(datosInp.get("firstName"));
     // let userObj = {
     //   firstName: datosInp.get("name"),
     //   lastName: datosInp.get("lastName"),
