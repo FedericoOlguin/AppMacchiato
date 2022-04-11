@@ -62,7 +62,27 @@ const productActions = {
                     success: res.data.success
                 }
             })
-            return res
+            // return res
+        }
+    },
+    loadProduct: (objProd, id) => {
+        const token = localStorage.getItem('token')
+        return async (dispatch, getState) => {
+            const res = await axios.post(`http://localhost:4000/api/allproducts/${id}`, { objProd }, {
+                headers: {
+                    Authorization: 'Bearer ' + token
+                }
+            })
+            console.log(res.data.success);
+            dispatch({
+                type: 'message',
+                payLoad: {
+                    view: true,
+                    message: res.data.message,
+                    success: res.data.success
+                }
+            })
+            // return res
         }
     },
     addToCart: (id) => {
@@ -90,7 +110,7 @@ const productActions = {
     },
     iniciarAlRecargar: () => {
         let datosCart = JSON.parse(localStorage.getItem("shopCart"))
-        console.log(datosCart);
+        // console.log(datosCart);
 
         return async (dispatch, getState) => {
             dispatch({ type: "iniciarAlRecargar", payload: datosCart })

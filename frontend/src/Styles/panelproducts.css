@@ -1,4 +1,4 @@
-.caja-panel{
+.caja-panel {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -6,41 +6,57 @@
   background-image: url("../img/fondo_alto.jpg");
 }
 
-.centro-panel{
+.centro-panel {
   width: 100%;
   height: 60vh;
   background-image: url("../img/fondoproductos.jpg");
   background-size: cover;
   background-position: 10% 30%;
-  filter: brightness(0.5)
+  filter: brightness(0.5);
 }
 
-.container-panel{
+.container-panel {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  min-height: 80vh;
+  min-height: 50vh;
   justify-content: space-evenly;
-  
 }
 
-.titulo-panel{
+.container-tituloPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
-  text-align: center;
-  margin: auto;
-  color: #efeefe;
-  font-size: 3em;
-  
+  height: 30vh;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
 }
 
+.titulo-panel {
+  font-size: 4rem;
+  color: #efeefe;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  border: 4px double #efeefe;
+}
 
-.card-panel{
+.container-panelCard {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  min-height: 50vh;
+}
+
+.card-panel {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 60%;
-  height: 38vh;
+  height: 40vh;
   color: #efeefe;
   border-radius: 5px;
   -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
@@ -50,60 +66,60 @@
   margin: 4rem 0 2rem;
 }
 
-.panel-imgproducto{
+.panel-imgproducto {
   width: 30%;
-  height: 100%; 
+  height: 100%;
   display: flex;
-  align-items: center ;
-  margin-right: .2rem;
+  align-items: center;
+  margin-right: 0.2rem;
 }
 
-.imagen-producto{
+.imagen-producto {
   width: 100%;
   height: 90%;
   margin: auto;
   object-fit: scale-down;
   border-right: 3px solid #efeefe;
-   
 }
 
- .items-producto{
+.items-producto {
   display: flex;
   width: 33%;
   flex-direction: column;
   height: 100%;
-} 
-
-.subtitulo-producto{
-  width: 100%;
-  height: 30%;
-  padding: .6rem 0;
 }
 
- .respuesta-producto{
-   padding-bottom: .5rem;
-   border-bottom: 1px solid #efeefe;
-   width: 90%;
-   font-size: 1.1em;
- }
+.subtitulo-producto {
+  width: 100%;
+  height: 30%;
+  padding: 0.6rem 0;
+}
 
-.boton-panel{
+.respuesta-producto {
+  padding-bottom: 0.5rem;
+  border: none;
+  border-bottom: 2px solid #efeefe;
+  width: 90%;
+  font-size: 1.1em;
+  background-color: transparent;
+  color: #efeefe;
+}
+
+.boton-panel {
   width: 20%;
-  height: 35vh;
+  height: 40vh;
   display: flex;
   margin: 4rem 0 2rem;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
-  
 }
 
-
-.boton-panelProduct{
+.boton-panelProduct {
   border: 2px solid #efeefe;
   font-size: 1.2em;
-  padding: 0.3rem;
-  margin: 0 5rem ;
+  padding: 0.5rem;
+  margin: 0 5rem;
   border-radius: 5px;
   background-color: transparent;
   color: #efeefe;
@@ -115,22 +131,15 @@
   transform: scale(1.02, 1.02);
 }
 
-
-.container-butonPanel{
+.container-butonPanel {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 1rem;
 }
 
-
-
-
-
-
-
 /* -----------------botones--------------- */
-
 
 .button-elimintate {
   width: 150px;
@@ -138,11 +147,11 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  background: red;
+  background: #f94144;
   border: none;
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-  background: #e62222;
+  background: #f94144;
   margin: 1rem 0;
 }
 
@@ -159,7 +168,7 @@
 
 .button-elimintate .icon {
   position: absolute;
-  border-left: 1px solid #c41b1b;
+  border-left: 1px solid #000;
   transform: translateX(110px);
   height: 40px;
   width: 40px;
@@ -174,7 +183,7 @@
 }
 
 .button-elimintate:hover {
-  background: #ff3636;
+  background: #f94144;
 }
 
 .button-elimintate:hover .text {
@@ -195,7 +204,6 @@
   transform: scale(0.8);
 }
 
-
 /* ---boton modificar------ */
 
 .button-modify {
@@ -204,11 +212,11 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  background: seagreen;
+  background: #8cb369;
   border: none;
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-  background: seagreen;
+  background: #8cb369;
   margin: 1rem 0;
 }
 
@@ -240,7 +248,7 @@
 }
 
 .button-modify:hover {
-  background: seagreen;
+  background: #8cb369;
 }
 
 .button-modify:hover .text {
@@ -261,29 +269,26 @@
   transform: scale(0.8);
 }
 
-
-
 /* --------------------------form agregar producto---------------- */
 
 #form-signup-panelProducts {
   margin: 8rem auto;
   width: 50%;
   height: 100%;
+  transition: all 1s ease-in-out;
 }
-
 
 .container-panelProduct {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .butonpanelProducts {
   cursor: pointer;
   font-size: 1rem !important;
 }
-
-
 
 /* form */
 @keyframes ingreso {
@@ -307,7 +312,6 @@
   position: relative;
 
   /* background-color: #EFEEFE; */
-
 }
 
 .mainForm-panelProducts {
@@ -325,14 +329,14 @@
 }
 
 .subtitle-signup-panelProducts {
-  padding: 0 0 .2rem 2rem;
+  padding: 1rem;
   margin-bottom: 1.5rem;
   /* background-color: #EFEEFE; */
   width: 80%;
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
@@ -350,7 +354,6 @@
   z-index: 5;
 }
 
-
 .fieldsetFrom-panelProducts {
   width: 80%;
   display: flex;
@@ -358,7 +361,6 @@
   justify-content: space-between;
   align-items: center;
   border: none;
-
 }
 
 .span-signup-panelProducts {
@@ -368,9 +370,9 @@
 .labelForm-panelProducts {
   display: flex;
   flex-direction: column;
-  padding: .2rem;
+  padding: 0.2rem;
   width: 70%;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
   margin-top: 1rem;
 }
 
@@ -378,11 +380,11 @@
   color: black;
   width: 100%;
   align-self: center;
-  height: 1.60rem;
+  height: 1.6rem;
   border: none;
   padding-left: 2rem;
   font-weight: 600;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   border-bottom: 1px solid black;
   background-color: transparent !important;
 }
@@ -391,18 +393,17 @@
   color: black;
 }
 
-
 .button-panelProducts {
   font-size: 1rem;
-  background: #EFEEFE;
+  background: #efeefe;
   color: #000;
-  padding: 0.5em .5em;
+  padding: 0.5em 0.5em;
   display: flex;
   align-items: center;
   border: 1px solid black;
   border-radius: 1px;
   overflow: hidden;
-  margin: .5rem auto 1.5rem;
+  margin: 0.5rem auto 1.5rem;
   transition: all 0.2s;
 }
 
@@ -413,8 +414,8 @@
 }
 
 .linkSingIn-panelProducts {
-  font-size: .9rem;
-  margin-top: .5rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
 
 .button-panelProducts svg {
@@ -449,7 +450,6 @@
   }
 }
 
-
 /* -------------responsividad ---------- */
 
 /* @media only screen and (min-width: 0px) and (max-width: 750px) {
@@ -482,3 +482,133 @@
   }
 
 } */
+
+@media (max-width: 1020px) {
+  .container-tituloPanel {
+    margin-top: 2rem;
+  }
+
+  .titulo-panel {
+    font-size: 3em;
+  }
+
+  .container-butonPanel {
+    margin-top: 0.1rem;
+  }
+
+  .boton-panelProduct {
+    font-size: 1.15em;
+  }
+
+  #form-signup-panelProducts {
+    width: 60%;
+  }
+
+  .subtitle-signup-panelProducts {
+    font-size: 2.2rem;
+  }
+
+  .container-panelCard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-panel {
+    margin: 3rem 0 0;
+    width: 80%;
+  }
+
+  .boton-panel {
+    margin: 1rem 0;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .subtitulo-producto {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 800px) {
+  .container-tituloPanel {
+    margin-top: 1rem;
+  }
+
+  .titulo-panel {
+    font-size: 2.5em;
+  }
+
+  .container-butonPanel {
+    margin-top: 0rem;
+  }
+
+  .boton-panelProduct {
+    font-size: 1.025em;
+    width: auto;
+  }
+
+  #form-signup-panelProducts {
+    width: 70%;
+  }
+
+  .subtitle-signup-panelProducts {
+    font-size: 2rem;
+  }
+
+  .subtitulo-producto {
+    font-size: 1em;
+  }
+
+}
+
+@media (max-width: 680px) {
+  .card-panel{
+    flex-direction: column;
+    height: auto;
+  }
+  .panel-imgproducto{
+    width: 100%;
+    margin-top: .5rem;
+  }
+  .imagen-producto{
+    width: 70%;
+    object-fit: contain;
+    border-left: 3px solid #efeefe;
+  }
+
+  .items-producto{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 1.2rem;
+  }
+
+  .respuesta-producto{
+    font-size: 1em;
+    text-align: center;    
+  }
+}
+
+@media (max-width: 570px) {
+  .boton-panelProduct {
+    font-size: 1em;
+    margin: 0 1rem;
+  }
+  #form-signup-panelProducts {
+    width: 90%;
+  }
+
+  .subtitle-signup-panelProducts {
+    padding: 0;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 410px) {
+  .boton-panel{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

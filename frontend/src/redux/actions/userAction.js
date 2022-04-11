@@ -36,6 +36,7 @@ const usersActions = {
                             success: res.data.success
                         }
                     })
+                    dispatch({ type: "verified", payLoad: res.data.response.validate })
                 } else {
                     dispatch({
                         type: "message",
@@ -121,7 +122,7 @@ const usersActions = {
         }
     },
     getInfoUser: () => {
-        const token =localStorage.getItem("token")
+        const token = localStorage.getItem("token")
         // console.log(token);
         return async (dispatch, getState) => {
             const res = await axios.get(`http://localhost:4000/api/user/info`, {
