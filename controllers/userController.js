@@ -42,7 +42,7 @@ const sendEmail = async (email, uniqueString) => { //Funcion que envia email de 
         <tr>
             <td>
                 <h4 style="font-size: 1rem,font-family: sans-serif;color: #000 ;text-align: center;">Click <a style="color: #EFEEFE;"
-                href=http://localhost:4000/api/verify/${uniqueString}> here </a> to verify your email</h4>
+                href=https://macchiatoapp.herokuapp.com//api/verify/${uniqueString}> here </a> to verify your email</h4>
 
             </td>
         </tr>

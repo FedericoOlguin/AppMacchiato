@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku":"cd frontend && npm install && npm run build"
+    "heroku-postbuild":"cd frontend && npm install && npm run build"
   },
   "repository": {
     "type": "git",
