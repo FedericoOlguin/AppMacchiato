@@ -6,7 +6,7 @@ const usersActions = {
     signUp: (objUser) => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.post(`https://macchiatoapp.herokuapp.com//api/auth/signUp`, { objUser })
+                const res = await axios.post(`https://macchiatoapp.herokuapp.com/api/auth/signUp`, { objUser })
                 console.log(res);
                 dispatch({
                     type: "message",
@@ -25,7 +25,7 @@ const usersActions = {
     signIn: (objUser) => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.post(`https://macchiatoapp.herokuapp.com//api/auth/signIn`, { objUser })
+                const res = await axios.post(`https://macchiatoapp.herokuapp.com/api/auth/signIn`, { objUser })
                 if (res.data.success) {
                     localStorage.setItem("token", res.data.response.token)
                     dispatch({ type: "user", payLoad: res.data })
@@ -55,7 +55,7 @@ const usersActions = {
         // console.log(userEmail)
         return async (dispatch, getState) => {
             try {
-                const res = await axios.post(`https://macchiatoapp.herokuapp.com//api/auth/signOut`, { userEmail })
+                const res = await axios.post(`https://macchiatoapp.herokuapp.com/api/auth/signOut`, { userEmail })
                 localStorage.removeItem("token")
                 console.log(res);
                 dispatch({
@@ -77,7 +77,7 @@ const usersActions = {
         return async (dispatch, getState) => {
             try {
 
-                const res = await axios.get(`https://macchiatoapp.herokuapp.com//api/auth/signInToken`, {
+                const res = await axios.get(`https://macchiatoapp.herokuapp.com/api/auth/signInToken`, {
                     headers: {
                         Authorization: "Bearer " + token   //dejar espacio en bearer antes del cierre de las comillas ( "Bearer ")
                     }
@@ -107,7 +107,7 @@ const usersActions = {
         return async (dispatch, getState) => {
             try {
 
-                const res = await axios.get(`https://macchiatoapp.herokuapp.com//api/auth/signInRol`, {
+                const res = await axios.get(`https://macchiatoapp.herokuapp.com/api/auth/signInRol`, {
                     headers: {
                         Authorization: "Bearer " + token   //dejar espacio en bearer antes del cierre de las comillas ( "Bearer ")
                     }
@@ -124,7 +124,7 @@ const usersActions = {
         const token =localStorage.getItem("token")
         // console.log(token);
         return async (dispatch, getState) => {
-            const res = await axios.get(`https://macchiatoapp.herokuapp.com//api/user/info`, {
+            const res = await axios.get(`https://macchiatoapp.herokuapp.com/api/user/info`, {
                 headers: {
                     Authorization: "Bearer " + token   //dejar espacio en bearer antes del cierre de las comillas ( "Bearer ")
                 }
