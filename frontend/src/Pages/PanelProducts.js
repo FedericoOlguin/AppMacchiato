@@ -30,15 +30,15 @@ function PanelProducts() {
           </div>
           <div className='items-producto'>
             <h2 className='subtitulo-producto'>Nombre producto</h2>
-            <h2 className='respuesta-producto'> aqui va la respuesta</h2>
+            <input className='respuesta-producto' placeholder='aqui va tu respuesta'/>
             <h2 className='subtitulo-producto'>Precio</h2>
-            <h2 className='respuesta-producto'> aqui va la respuesta</h2>
+            <input className='respuesta-producto' placeholder='aqui va tu respuesta'/>
           </div>
           <div className='items-producto'>
             <h2 className='subtitulo-producto'>Stock</h2>
-            <h2 className='respuesta-producto'> aqui va la respuesta</h2>
+            <input className='respuesta-producto' placeholder='aqui va tu respuesta'/>
             <h2 className='subtitulo-producto'>Sale</h2>
-            <h2 className='respuesta-producto'> aqui va la respuesta</h2>
+            <input className='respuesta-producto' placeholder='aqui va tu respuesta'/>
           </div>
         </div>
 
