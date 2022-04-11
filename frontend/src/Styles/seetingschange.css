@@ -85,9 +85,8 @@
 }
 
 .subtitle-signup-seetings {
-  padding: 0 0 .2rem 2rem;
+  padding: .5rem;
   margin-bottom: 1.5rem;
-  /* background-color: #EFEEFE; */
   width: 80%;
   font-size: 2.5rem;
   font-weight: bold;
@@ -220,33 +219,23 @@
 
 /* -------------responsividad ---------- */
 
-/* @media only screen and (min-width: 0px) and (max-width: 750px) {
-  #video-signup {
-    display: none;
+@media (max-width: 1000px) {
+  .subtitle-signup-seetings{
+    font-size: 2em;
   }
+}
 
-  #form-signup {
-    width: 100%;
+@media (max-width: 660px) {
+  #form-signup-seetings{
+    width: 70%;
   }
+}
 
-  .subtitle-signup {
-    font-size: 2rem;
-    padding: 0 0 .2rem 0;
+@media (max-width: 480px) {
+  #form-signup-seetings{
+    width: 90%;
   }
-
-  
-
-  .button {
-    font-size: .8rem;
-    height: 1.9rem;
+  .subtitle-signup-seetings{
+    font-size: 1.5em;
   }
-
-  .linkSingIn {
-    text-align: center;
-  }
-
-  .inputFrom {
-    padding-left: 0;
-  }
-
-} */
+}
