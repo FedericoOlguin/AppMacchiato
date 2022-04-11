@@ -20,28 +20,7 @@ function Shop(props) {
     props.getAllProducts();
   }, []);
 
-<<<<<<< HEAD
-  // async function filterByName(e){
-  //     const filteredCards = cardsToDisplay.filter((product) =>
-  //         product.name
-  //         .toString()
-  //         .trim()
-  //         .toLowerCaser()
-  //         .startsWith(e.target.value.trim().toLowerCaser())
-  //         );
-  //         setCards(filteredCards)
-  // }
-
-/*   return (
-    <>
-      <NavBar /> */
-      {/*  <h1>Soy el shop</h1> */}
-     {/*  <Detalle /> */}
-
-      {/* <ProductsCard /> */}
-=======
-    }, [])
->>>>>>> 4b54ed5c2f4e09d41e79051195d9113bef887a04
+   /*  }, []) */
 
     return (
         <div className="container-shop">
