@@ -102,11 +102,30 @@ const ProductController = {
         catch(error){
             console.log(error)
             res.json({success: true,message:"Something went wrong try again in a few minutes"})
-        }
-    
-        
+        }    
+               
+      },
+      
+      deleteProduct: async (req, res) => {
+
+        try{
+            let product= await Product.findById(req.params.id);
+
+            if(!product){
+                res.status (404).json({message:"the product does not exist"})
+            }         
+
+            await Product.findOneAndRemove({_id:req.params.id})
+            res.json({message:"Product removed successfully"})
+        }         
+             
+        catch(error){
+            console.log(error)
+            res.json({success: true,message:"Something went wrong try again in a few minutes"})
+        }           
         
       },
+
     //modifyStock
     modifyStock: async (req, res) => {
         const {productId, stock} = req.body.product
