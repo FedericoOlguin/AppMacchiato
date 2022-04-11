@@ -21,6 +21,9 @@ const validator = (req, res, next) => {
             'string.min': 'The password must contain a minimum of 8 characters and contain uppercase, lowercase and number',
             'string.pattern': "The password must be alphanumeric and contain a number"
         }),
+        // photoURL: joi.required().messages({
+        //     "required.min": "missing image upload"
+        // }),
         photoURL: joi.string().min(3).trim().pattern(new RegExp("[a-zA-z0-9]")).required().messages({
             "string.min": "The url must contain at least 5 characters"
         }),
