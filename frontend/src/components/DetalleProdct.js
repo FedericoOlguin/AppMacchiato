@@ -29,45 +29,45 @@ const Detalle = (props) => {
         )
     }
     return (
-
-        < div className="contDetalle">
-            <NavBar />
-            {console.log(prod)}
-            <div className="hero">
-
-                <div className="product">
-                    <div className="contenedorBotonImg">
-                        <div className="buy-detalle">
-                            <button onClick={() => props.addToCart(prod._id)} className='button-detalle' ><span class="text">Add Store</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className="rotate" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
-                        </div>
-                        <div className="imgDetalle-container">
-                            <img
-                                alt="DetalleProducto"
-                                src={prod.image}
-                                className="imagen-detalle"
-                            />
-                        </div>
-                    </div>
-                    <div className="textCard">
-                        <div className="primercontenedor-detalle">
-                            <h1 className="titulo-detalle">{prod.name}</h1>
-                        </div>
-                        <div className="p-detalle">
-                            <p>{prod.description}</p>
-                        </div>
-                        <div className="priceStock-detalle">
-                            <p>$ {prod.price}</p>
-                            <p>Stock: {prod.stock}</p>
-                        </div>
-                    </div>
-
-
+        <div className="fondo">
+            < div className="contDetalle">
+                <NavBar />
+                {console.log(prod)}
+                <div className="hero">
                 </div>
 
+                <div className="contenedorCardDetalle">
+                    <div className="product">
+                        <div className="contenedorBotonImg">
+                            <div>
+
+                                <img alt="DetalleProducto" src={prod.image} className="imagen-detalle" />
+                            </div>
+                            <div className="buy-detalle">
+                                <button onClick={() => props.addToCart(prod._id)} className='button-detalle' ><span class="text">Add Store</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className="rotate" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+                            </div>
+                        </div>
+                        <div className="textCard">
+                            <div className="primercontenedor-detalle">
+                                <h1 className="titulo-detalle">{prod.name}</h1>
+                            </div>
+                            <div className="p-detalle">
+                                <p>{prod.description}</p>
+                            </div>
+                            <div className="priceStock-detalle">
+                                <p>$ {prod.price}</p>
+                                <p>Stock: {prod.stock}</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div >
             </div >
             <Footer />
-        </div >
 
+        </div>
     )
 }
 

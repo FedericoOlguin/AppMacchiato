@@ -47,7 +47,7 @@ const Cart = (props) => {
                                     <div className='botons-Carts'>
                                         {/* {console.log(products._id)} */}
                                         {/* {console.log(props.cart)} */}
-                                        <button className='botonShopping' onClick={() => props.addToCart(products._id)}><AiOutlinePlus className='iconoSho' /></button>
+                                        <button className='botonShopping' onClick={() => props.addToCart(products?._id)}><AiOutlinePlus className='iconoSho' /></button>
                                         <button className='botonShopping' onClick={() => props.removeOneFromCart(products._id)}> <AiOutlineMinus className='iconoSho' /></button>
                                         <button className='botonShopping' onClick={() => props.removeAllFromCart(products._id)}> <AiOutlineClose className='iconoSho' /></button>
                                     </div>
