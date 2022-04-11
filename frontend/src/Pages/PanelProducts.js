@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../Styles/panelproducts.css'
 import Navbar from '../components/NavBar';
 import Footer from '../components/Footer';
@@ -7,14 +7,26 @@ import { Link as LinkRouter } from "react-router-dom";
 import { connect } from "react-redux"
 import productActions from '../redux/actions/productActions';
 import FormPanle from '../components/FormPanle';
+import CardModify from '../components/CardModify';
 
 function PanelProducts(props) {
 
-  const [form, setForm] = useState(false)
+  useEffect(() => {
+    props.getAllProducts()
 
+}, [])
+
+  const [form, setForm] = useState(false)
+  const [form2, setForm2] = useState(false)
+
+  
 
   function openForm() {
     setForm(!form)
+  }
+
+  function openForm2() {
+    setForm2(!form2)
   }
 
   return (
@@ -29,41 +41,14 @@ function PanelProducts(props) {
         <div className='container-butonPanel'>
           <LinkRouter className="link-about" aria-current="page" to="#"><button onClick={openForm} className='boton-panelProduct'>Add product</button></LinkRouter>
 
-          <LinkRouter className="link-about" aria-current="page" to="#"><button className='boton-panelProduct'>Modify products</button></LinkRouter>
+          <LinkRouter className="link-about" aria-current="page" to="#"><button onClick={openForm2} className='boton-panelProduct'>Modify products</button></LinkRouter>
         </div>
 
-        <div className='container-panelCard'>
-          <div className='card-panel'>
-
-            <div className='panel-imgproducto'>
-              <img
-                src={'https://i1.wp.com/codigoespagueti.com/wp-content/uploads/2022/04/Shingeki-no-Kyojin-eren-cosplay.jpg?fit=1280%2C720&quality=80&ssl=1'}
-                alt="producto"
-                className='imagen-producto'
-              />
-            </div>
-            <div className='items-producto'>
-              <h2 className='subtitulo-producto'>Nombre producto</h2>
-              <input className='respuesta-producto' placeholder='' />
-              <h2 className='subtitulo-producto'>Precio</h2>
-              <input className='respuesta-producto' placeholder='' />
-            </div>
-            <div className='items-producto'>
-              <h2 className='subtitulo-producto'>Stock</h2>
-              <input className='respuesta-producto' placeholder='' />
-              <h2 className='subtitulo-producto'>Sale</h2>
-              <input className='respuesta-producto' placeholder='' />
-            </div>
-          </div>
-
-          <div className='boton-panel'>
-            <button className='button-modify'><span className="text">Modificar</span><span className="icon"><svg className="rotate"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
-
-            <button className='button-elimintate'><span className="text">Delete</span><span className="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
-          </div>
-        </div>
+      {props.allProducts.map(product=> 
+      <CardModify product={product} form2={form2}/>) }
       </div>
 
+      
       <FormPanle form={form} />
       <Footer />
     </div>
@@ -88,7 +73,8 @@ const mapDispatchToProps = {
   removeOneFromCart: productActions.removeOneFromCart,
   removeAllFromCart: productActions.removeAllFromCart,
   emptyCart: productActions.emptyCart,
-  loadProduct: productActions.loadProduct
+  loadProduct: productActions.loadProduct,
+  getAllProducts: productActions.getAllProducts,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PanelProducts)
