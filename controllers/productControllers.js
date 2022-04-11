@@ -68,7 +68,7 @@ const ProductController = {
     modifyProduct: async (req, res) => {
 
         try{
-            const{name, image, category, price, stock, description, flag} = req.body;
+            const{name, image, category, price, stock, description, flag} = req.body.objProd;
             let product= await Product.findById(req.params.id);
 
             if(!product){
