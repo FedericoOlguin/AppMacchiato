@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import usersActions from '../redux/actions/userAction';
 import '../Styles/signin.css';
 import { useRef } from 'react';
@@ -14,27 +14,39 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 function SignUp(props) {
   window.scrollTo(0, 0)
   const form = useRef()
+  const [files, setFiles] = useState()
 
-  function send(event) {
-
+  async function send(event) {
+console.log(files);
     event.preventDefault()
+    const file = await files[0]
     form.current.focus()
     let datosInp = new FormData(form.current)
 
-    let userObj = {
-      firstName: datosInp.get("name"),
-      lastName: datosInp.get("lastName"),
-      email: datosInp.get("email"),
-      password: datosInp.get("password"),
-      photoURL: datosInp.get("imageUrl"),
-      country: datosInp.get("pais"),
-      from: "signup",
-      rol: 'undefined',
+    datosInp.append("firstName",datosInp.get("name"))
+    datosInp.append("lastName",datosInp.get("lastName"))
+    datosInp.append("email",datosInp.get("email"))
+    datosInp.append("password",datosInp.get("password"))
+    datosInp.append("photoURL",file)
+    datosInp.append("country",datosInp.get("pais"))
+    
+console.log(datosInp.get("firstName"));
+    // let userObj = {
+    //   firstName: datosInp.get("name"),
+    //   lastName: datosInp.get("lastName"),
+    //   email: datosInp.get("email"),
+    //   password: datosInp.get("password"),
+    //   // photoURL: datosInp.get("imageUrl"),
+    //   photoURL: file,
+    //   country: datosInp.get("pais"),
+    //   from: "signup",
+    //   rol: 'undefined',
+    // }
 
-    }
 
 
-    props.signUp(userObj)
+    // props.signUp(userObj)
+    props.signUp(datosInp)
     // form.current.reset()
   }
 
@@ -74,7 +86,7 @@ function SignUp(props) {
 
                 <label className="labelForm" htmlFor="imageUrl">
                   <span className='span-signup'>Image URL</span>
-                  <input className="inputFrom" type="text" id="imageUrl" name="imageUrl" />
+                  <input className="inputFrom" onChange={(event) => setFiles(event.target.files)} type="file" id="imageUrl" name="imageUrl" />
                 </label>
 
                 <label className="labelForm" htmlFor="pais">
