@@ -83,6 +83,7 @@
   color: white;
   width: 80%;
   min-height: 15rem;
+  max-height: 20rem;
   z-index: 1000;
   flex-wrap: nowrap;
   display: flex;
