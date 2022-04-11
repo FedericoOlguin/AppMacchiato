@@ -1,0 +1,479 @@
+[
+    {"name":"Juan valdez Coffee",
+    "image": "https://global-uploads.webflow.com/5f96ebdeb7e4b038d8dc6679/609981b804a841f7509512f3_cafe-origen-paisaje-cultural-cafetero-juan-valdez.png",
+    "category":"Coffees",
+    "price": 1713,
+    "stock": 115,
+    "description":"Coffee with fruity notes, panela, a clean cup and sweet acidity. Certified Organic Colombian. Weight 1000gr.",
+    "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/400px-Flag_of_Colombia.svg.png"   
+    },
+
+    {"name":"Coffee Blend Brazil",
+     "image": "https://www.cafesoquendo.com/wp-content/uploads/fly-images/71917/OQUENDO-GRANO1000-Mezclasmall-640x584-c.png",
+    "category":" Coffees",
+    "price": 1835,
+    "stock": 115,
+    "description":"Blend 50% Brazil- 50% Colombia. Medium roast. Roaster Notes: Nuts, Cocoa, Caramel and Citrus. Weight 1000gr.",
+    "flag":"https://media.istockphoto.com/vectors/brazil-flag-vector-illustration-vector-id530810572?k=20&m=530810572&s=612x612&w=0&h=cc6hgtK8E_AsQwEM8b4ZPWOkUQYR7Lt_-df1Ci4wG3U="   
+    },
+
+    {"name":"Coffe Brasil Bourbon",
+    "image":"https://www.cafesoquendo.com/wp-content/uploads/fly-images/21010/OQUENDO-MOLIDO250-BR2020-1240x0.png",
+    "category":" Coffees",
+    "price": 1569,
+    "stock": 90,
+    "description":"Smooth bodied coffee with hints of chocolate and caramel with intense bright acidity. Weight 1000gr",
+    "flag":"https://media.istockphoto.com/vectors/brazil-flag-vector-illustration-vector-id530810572?k=20&m=530810572&s=612x612&w=0&h=cc6hgtK8E_AsQwEM8b4ZPWOkUQYR7Lt_-df1Ci4wG3U=" 
+   
+    },
+    {"name":"Coffe Colombia Guanes",
+    "image":"https://www.nescafe.com/us/sites/g/files/jgfbjl256/files/styles/gdn_product_cards_image/public/gdn_product/field_product_images/nescafe-grdj8ak5fwnpqvtlfuds.png.webp?itok=xwje_b3B",
+    "category":" Coffees",
+    "price": 1835,
+    "stock": 250,
+    "description":"Smooth bodied coffee with hints of chocolate and caramel with intense bright acidity. Weight: 750gr.",
+    "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/400px-Flag_of_Colombia.svg.png"     
+    },
+
+    {"name":"Coffee Ecuador Bourbon Cider-Organic",
+    "image":"https://escoffee.com/wp-content/uploads/2020/02/ecuador.png",
+    "category":" Coffees",
+    "price": 3392,
+    "stock": 101,
+    "description":"Filtered or in espresso, enjoy it as you like! Weight 1000gr.",
+    "flag":"https://media.istockphoto.com/photos/ecuador-waving-flag-picture-id462453297?k=20&m=462453297&s=612x612&w=0&h=997zWHZ_lIN1pnc2o2sQDG0L9Z0hJ5gwWJZX0u5QYn8="    
+    },
+
+    {"name":"Coffee Suiza Peet´s",
+    "image":"https://escoffee.com/wp-content/uploads/2020/02/ecuador.png",
+    "category":" Coffees",
+    "price": 3392,
+    "stock": 101,
+    "description":"Filtered or in espresso, enjoy it as you like! Weight 1000gr.",
+    "flag":"https://www.ecured.cu/images/2/20/Bandera_suiza.JPG"    
+    },
+
+    {"name":"Coffe Guatemala",
+    "image":"https://cdn.shopify.com/s/files/1/0583/4175/3004/products/guatemala_1024x.png?v=1625949536",
+    "category":" Coffees",
+    "price": 2214,
+    "stock": 80,
+    "description":"Floral aroma coffee, soft sweet notes of red fruits. Weight:1000gr.",
+    "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Bandera_de_Guatemala.png/640px-Bandera_de_Guatemala.png"     
+    },
+    
+    {"name":"Green Coffee Barista mode Brazil Catua x1kg",
+    "image":"https://www.nescafe.com/us/sites/g/files/jgfbjl256/files/styles/gdn_product_cards_image/public/gdn_product/field_product_images/nescafe-grdj8ak5fwnpqvtlfuds.png.webp?itok=xwje_b3B",
+    "category":" Coffees",
+    "price": 2681,
+    "stock": 200,
+    "description":"Fractionated, variety: Catuai, medium body",
+    "flag":"https://media.istockphoto.com/vectors/brazil-flag-vector-illustration-vector-id530810572?k=20&m=530810572&s=612x612&w=0&h=cc6hgtK8E_AsQwEM8b4ZPWOkUQYR7Lt_-df1Ci4wG3U="    
+    },
+
+    {"name":"Green Coffee Barista mode Brazil Catuai x10kg",
+    "image":"https://www.nescafe.com/us/sites/g/files/jgfbjl256/files/gdn_product/field_product_images/nescafe-s6to6eknj51ko0jtps1u.png",
+    "category":" Coffees",
+    "price": 287,
+    "stock": 0,
+    "description":"Coffee with fruity notes, panela, a clean cup and sweet acidity. Certified Organic Brazil",
+    "flag":"https://media.istockphoto.com/vectors/brazil-flag-vector-illustration-vector-id530810572?k=20&m=530810572&s=612x612&w=0&h=cc6hgtK8E_AsQwEM8b4ZPWOkUQYR7Lt_-df1Ci4wG3U="   
+    },
+
+    {"name":"Juan valdez Light",
+    "image":"https://global-uploads.webflow.com/5f96ebdeb7e4b038d8dc6679/6095b4549acbca3585ecc7a2_cafe-origen-santander-juan-valdez.png",
+    "category":" Coffees",
+    "price": 2834,
+    "stock": 10,
+    "description":"Coffee with fruity notes, panela, a clean cup and sweet acidity. Certified Organic Colombia",
+    "flag":"https://i0.wp.com/casatextil.co/wp-content/uploads/2018/05/Tela-bandera-de-Colombia-en-antifluido-impermeable.jpg?fit=700%2C500&ssl=1"   
+    },
+
+    {"name":"Juan valdez Coffee Origin",
+    "image":"https://global-uploads.webflow.com/5f96ebdeb7e4b038d8dc6679/6095b4270e82e8823f19d173_cafe-origen-sierra-nevada-juan-valdez.png",
+    "category":" Coffees",
+    "price": 2847,
+    "stock": 30,
+    "description":"Coffee with fruity notes, panela, a clean cup and sweet acidity. Certified Organic Colombia",
+    "flag":"https://i0.wp.com/casatextil.co/wp-content/uploads/2018/05/Tela-bandera-de-Colombia-en-antifluido-impermeable.jpg?fit=700%2C500&ssl=1"   
+    },
+
+    {"name":"Coffee buen día",
+    "image":"https://mxm.com.co/mxm//contenidos/images/ecommerce_productos/7707211631438.png",
+    "category":" Coffees",
+    "price": 4437,
+    "stock": 20,
+    "description":"Coffee with fruity notes, panela, a clean cup and sweet acidity. Certified Organic Colombia",
+    "flag":"https://i0.wp.com/casatextil.co/wp-content/uploads/2018/05/Tela-bandera-de-Colombia-en-antifluido-impermeable.jpg?fit=700%2C500&ssl=1"   
+    },
+
+    {"name":"Coffee 100% Colombian",
+    "image":"https://b-one.com.co/wp-content/uploads/2019/03/bolsa-cafe-gourmet-colombiano-250g-big.png",
+    "category":" Coffees",
+    "price": 847,
+    "stock": 0,
+    "description":"Coffee with fruity notes, panela, a clean cup and sweet acidity. Certified Organic Colombia",
+    "flag":"https://i0.wp.com/casatextil.co/wp-content/uploads/2018/05/Tela-bandera-de-Colombia-en-antifluido-impermeable.jpg?fit=700%2C500&ssl=1"   
+    },
+
+    {"name":"Coffee Mate Nestle",
+    "image":"https://www.goodnes.com/sites/g/files/jgfbjl131/files/styles/gdn_product_cards_ii_image/public/gdn_product/field_product_images/coffeemate-nyi79wnn6guasuycylmf.png.webp?itok=bAFDt6JR",
+    "category":" Coffees",
+    "price": 8470,
+    "stock": 100,
+    "description":"Coffee with fruity notes, panela, a clean cup and sweet acidity. Certified Organic Suiza",
+    "flag":"https://www.ecured.cu/images/2/20/Bandera_suiza.JPG"   
+    },
+
+    {"name":"Herbalife Coffee",
+    "image":"https://static.comunicae.com/photos/notas/1211509/1579799008_012EU_HighProteinIcedCoffee_LatteMacchiato_V2.png",
+    "category":" Coffees",
+    "price": 470,
+    "stock": 60,
+    "description":"Coffee with fruity notes, panela, a clean cup and sweet acidity. Certified Organic Suiza",
+    "flag":"https://www.ecured.cu/images/2/20/Bandera_suiza.JPG"   
+    },
+
+    {"name":"Moven pick Coffee",
+    "image":"https://dojiw2m9tvv09.cloudfront.net/29412/product/M_movenpickgustoitaliano1kilo7633.png?77",
+    "category":" Coffees",
+    "price": 470,
+    "stock": 60,
+    "description":"Coffee with fruity notes, panela, a clean cup and sweet acidity. Certified Organic Italy",
+    "flag":"https://img.freepik.com/foto-gratis/bandera-italia-fondo-textura_50039-1196.jpg"   
+    },
+
+    {"name":"Moven pick Coffee",
+    "image":"https://www.goodnes.com/sites/g/files/jgfbjl131/files/styles/gdn_hero_pdp_product_image/public/gdn_product/field_product_images/coffeemate-7daff2aa9b6853bba2ac4607c87c8b4c8a812638.png.webp?itok=ylBPPMgg7",
+    "category":" Coffees",
+    "price": 2350,
+    "stock": 68,
+    "description":"Coffee with fruity notes, panela, a clean cup and sweet acidity. Certified Organic Italy",
+    "flag":"https://img.freepik.com/foto-gratis/bandera-italia-fondo-textura_50039-1196.jpg"   
+    },
+
+    {"name":"Coffe from amaga",
+    "image":"https://cdn.shopify.com/s/files/1/0272/2873/3504/products/cafe-especial-almendra-selecta-amaga-cafe-colombiano-f_d76c90e6-e7c0-4963-8988-cf40c0dac804_320x320.png?v=1633556601",
+    "category":" Coffees",
+    "price": 1800,
+    "stock": 250,
+    "description":"Smooth bodied coffee with hints of chocolate and caramel with intense bright acidity. Weight: 750gr.",
+    "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/400px-Flag_of_Colombia.svg.png"     
+    },
+
+    {"name":"Jacobs Coffee",
+    "image":"https://sc04.alicdn.com/kf/U70836f6d7cf64a47af4d7d599e1ad8726.png",
+    "category":" Coffees",
+    "price": 800,
+    "stock": 0,
+    "description":"Smooth bodied coffee with hints of chocolate and caramel with intense bright acidity. Weight: 750gr.",
+    "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/400px-Flag_of_Colombia.svg.png"     
+    },
+
+    {"name":"Sello Rojo Colombian",
+    "image":"https://mxm.com.co/mxm//contenidos/images/ecommerce_productos/7702032252770.png",
+    "category":" Coffees",
+    "price": 8000,
+    "stock": 30,
+    "description":"Smooth bodied coffee with hints of chocolate and caramel with intense bright acidity. Weight: 750gr.",
+    "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/400px-Flag_of_Colombia.svg.png"     
+    },
+
+     {"name":"Sello Rojo Colombian",
+    "image":"https://mxm.com.co/mxm//contenidos/images/ecommerce_productos/7702032252190.png",
+    "category":" Coffees",
+    "price": 2000,
+    "stock": 75,
+    "description":"Smooth bodied coffee with hints of chocolate and caramel with intense bright acidity. Weight: 750gr.",
+    "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/400px-Flag_of_Colombia.svg.png"     
+    },  
+
+    {"name":"Nescafe Dolca",
+    "image":"https://cofiteria.com/wp-content/uploads/2021/05/NESCAFE-DOLCA.png",
+    "category":" Coffees",
+    "price": 10000,
+    "stock": 50,
+    "description":"Smooth bodied coffee with hints of chocolate and caramel with intense bright acidity. Weight: 750gr.",
+    "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/400px-Flag_of_Colombia.svg.png"     
+    },  
+
+    {"name":"Coffe to love",
+    "image":"https://cdn.shopify.com/s/files/1/0558/3215/0221/products/INSIGNIA-COSTADO.png?v=1622044125",
+    "category":" Coffees",
+    "price": 100,
+    "stock": 500,
+    "description":"Smooth bodied coffee with hints of chocolate and caramel with intense bright acidity. Weight: 750gr.",
+    "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/400px-Flag_of_Colombia.svg.png"     
+    },  
+    
+
+    {"name":"Red Bialetti Coffee Maker 6 cups + 1/4 Colombian Coffee",
+    "image":"https://www.modobarista.com/product_images/p/869/combo_14__07413_zoom.png",
+    "category":" coffee maker",
+    "price": 19770,
+    "stock": 100,
+    "description":"The Italian coffee maker is easy to use and produces a full-bodied coffee rich in aromas.",
+    "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/400px-Flag_of_Colombia.svg.png"   
+    },
+
+    {"name":"Chemex 3 cups coffee maker + Filters",
+    "image":"https://www.readyrefresh.com/medias/sys_master/images/images/h8d/hf1/h00/8944918462494/5530100-main-keurig-k-duo-coffee-maker-composite-zoom-variable.png",
+    "category":" coffee maker",
+    "price": 24470,
+    "stock": 180,
+    "description":"Chemex is a manual coffee maker for preparing filtered coffee. It was invented by the chemist Peter J: Schulumbohm. It is one of the best filter coffee machines.",
+    "flag":"https://media.istockphoto.com/vectors/germany-flag-vector-id166012239?b=1&k=20&m=166012239&s=170667a&w=0&h=v-u53fbLl2vXSDXfzZOw_SMCb5qbXHW7AIKiZ8pRSTs="    
+    },
+
+
+    {"name":" Clever Style Filter Coffee Maker",
+    "image":"https://ae01.alicdn.com/kf/U4612b914bad546e9bf9ada47d616f559o/Electric-Turk-centek-ct-1096-coffee-machine-coffee-maker-espresso-coffee-machine-coffee-cezve-for-coffee.png_.webp",
+    "category":" Coffe maker",
+    "price": 3978,
+    "stock": 200,
+    "description":"The best features of the French press and the drip filter for the production of an excellent cup of coffee.",
+    "flag":"https://media.istockphoto.com/vectors/germany-flag-vector-id166012239?b=1&k=20&m=166012239&s=170667a&w=0&h=v-u53fbLl2vXSDXfzZOw_SMCb5qbXHW7AIKiZ8pRSTs="    
+        
+    },
+
+    {"name":"Delter Coffee Maker + Eco Cup",
+    "image":"https://cdnprod.mafretailproxy.com/sys-master-root/h00/h97/15051781505054/5094300170544_main_1700Wx1700H",
+    "category":" Coffe maker",
+    "price": 9470,
+    "stock": 115,
+    "description":"It produces a cup more similar to a filtrate, but with a more controlled dosage of water and agitation.",
+    "flag":"https://www.paisesbajosytu.nl/binaries/medium/content/gallery/netherlandsandyou/content-afbeeldingen/algemeen/vlag-nederland.png"
+    
+    },
+
+
+    {"name":"Basic",
+    "image":"https://crdms.images.consumerreports.org/c_lfill,w_598/prod/products/cr/models/395401-single-serve-coffee-makers-delonghi-nespresso-lattissima-one-espresso-maker-en500bw-w-61220.png",
+    "category":" Coffe maker",
+    "price": 8999,
+    "stock": 115,
+    "description":"Basic model with the same technical features as our Dream model.",
+    "flag":"https://us.123rf.com/450wm/boldg/boldg1809/boldg180900011/110462066-bandera-de-rusia-con-efecto-ondeante-proporci%C3%B3n-oficial-.jpg?ver=6"
+   
+    },
+
+    {"name":"Baby T Plus",
+    "image": "https://bpunkt.b-cdn.net/wp-content/uploads/2021/07/CMD802WH_side-1.png",
+    "category":" Coffe maker",
+    "price": 144645,
+    "stock": 55,
+    "description":"100% professional machine, exceptional thermal stability and energy efficient.",
+    "flag":"https://media.istockphoto.com/vectors/china-flag-vector-graphic-rectangle-chinese-flag-illustration-china-vector-id1220747626?k=20&m=1220747626&s=170667a&w=0&h=u8OqDcJhELiBuGHhGviVYmonADx2UTcZLCFGPn71tRY="
+   
+    },
+
+    {"name":"Latan X-MEN Coffee",
+    "image":"https://www.sideshow.com/storage/product-images/909803/x-men-single-cup-coffee-maker-with-mug_marvel_silo.png",
+    "category":" Coffe maker",
+    "price": 420,
+    "stock": 115,
+    "description":" With everything the most demanding barista could want in a top-tier coffee machine. All its stainless steel components, thermal stability, double pre-infusion",
+    "flag":"https://tn.com.ar/resizer/iQ2rSke_ifikO_GvFslnD09S6b0=/767x0/smart/filters:quality(60)/cloudfront-us-east-1.images.arcpublishing.com/artear/3UADUTXDQACWOJLPF3VIITYBFM.jpg"
+    
+    },
+
+
+    {"name":"Domestic coffee maker 1L + 1/4 of Catuai coffee",
+    "image":"https://crdms.images.consumerreports.org/c_lfill,w_598/prod/products/cr/models/395401-single-serve-coffee-makers-delonghi-nespresso-lattissima-one-espresso-maker-en500bw-w-61220.png",
+    "category":" Coffe Maker",
+    "price": 4560,
+    "stock": 121,
+    "description":"1L domestic french press",
+    "flag":"https://us.123rf.com/450wm/boldg/boldg1809/boldg180900011/110462066-bandera-de-rusia-con-efecto-ondeante-proporci%C3%B3n-oficial-.jpg?ver=6"
+    
+    },
+
+    {"name":"Coffe Maker",
+    "image":"https://brim.coffee/wp-content/uploads/2017/10/pour-over-machine-view1.png",
+    "category":" Coffe Maker",
+    "price": 89600,
+    "stock": 115,
+    "description":"This coffee maker allows you to extract coffee, obtain steam, and hot water at the same time. It has a double boiler and a removable 1.7L water tank.",
+    "flag":"https://media.istockphoto.com/vectors/brazil-flag-vector-illustration-vector-id530810572?k=20&m=530810572&s=612x612&w=0&h=cc6hgtK8E_AsQwEM8b4ZPWOkUQYR7Lt_-df1Ci4wG3U="  
+   
+    },
+
+    {      
+        "name": "Manual mill Stainless steel ceramic wheels",
+        "image": "https://penagosclausen.co/wp-content/uploads/2021/05/Individual-en-cera%CC%81mica-pequen%CC%83o-1-300x300.png",
+        "category": " Accessories",
+        "price": 4420,
+        "stock": 10,
+        "description": " Manual mill with ceramic wheels. Easily adjustable to the type of grinding desired. Easy to wash and disassemble, removable handle",
+        "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/400px-Flag_of_Colombia.svg.png"  
+       
+    },
+    {
+        "name": "Lume Electric Grinder",
+        "image": "https://capsulasexpress.vtexassets.com/arquivos/ids/155564-300-300?v=637822796450130000&width=300&height=300&aspect=true",
+        "category": " Accessories",
+        "price": 28569,
+        "stock": 6,
+        "description": "Lume is the lightest automatic grinder on the market offering a quality grind wherever you take it. On a full charge, Lume will grind up to 50 cups",
+        "flag":"https://tn.com.ar/resizer/iQ2rSke_ifikO_GvFslnD09S6b0=/767x0/smart/filters:quality(60)/cloudfront-us-east-1.images.arcpublishing.com/artear/3UADUTXDQACWOJLPF3VIITYBFM.jpg" 
+       
+    },
+
+    {   "name": "Coffee grinder F64 EVO",
+        "image": "https://cdn.shopify.com/s/files/1/0558/3215/0221/products/OLLA-NEGRA.png?v=1629912490",
+        "category": " Accessories",
+        "price": 265000,
+        "stock": 9,
+        "description": " It has a macrometric adjustment of the grinding, the milling cutters always work flat (adjustment with 3 springs) It has an aluminum body and top quality components",
+        "flag":"https://www.ecured.cu/images/2/20/Bandera_suiza.JPG"
+       
+    }, 
+    
+    { "name": "Scale Touch Pro",
+        "image": "https://www.modobarista.com/product_images/n/815/WhatsApp_Image_2021-11-26_at_12.03.27-removebg-preview__31950_zoom.png",
+        "category": " Accessories",
+        "price": 26790,
+        "stock": 9,
+        "description": "It has 4 programs (Full automatic, manual, semi automatic and ratio mode)",
+        "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/400px-Flag_of_Colombia.svg.png"
+       
+    },
+
+
+    {   "name": "BAG WITH VALVE STAND UP POUCH 200 GR",
+        "image": "https://global-uploads.webflow.com/5f96ebdeb7e4b038d8dc6679/5ffb33ee679e677693542828_taza-de-cafe-juan-valdez-negra.png",
+        "category": " Accessories",
+        "price":180,
+        "stock": 500,
+        "description": "BAGS WITH ALUMINUM INTERIOR. Zipper Closure",
+        "flag":"https://media.istockphoto.com/vectors/china-flag-vector-graphic-rectangle-chinese-flag-illustration-china-vector-id1220747626?k=20&m=1220747626&s=170667a&w=0&h=u8OqDcJhELiBuGHhGviVYmonADx2UTcZLCFGPn71tRY="
+       
+    },
+    
+    {   "name": "Recharbable capsules",
+        "image": "https://falabella.scene7.com/is/image/Falabella/7324063_1?wid=800&hei=800&qlt=70",
+        "category": " Accessories",
+        "price": 1550,
+        "stock": 101,
+        "description": "CAFFETTINO Refillable Capsules are the best way to use your Dolce. They allow you to create your own blends and save, while not contaminating each coffee.",
+        "flag":"https://media.istockphoto.com/vectors/china-flag-vector-graphic-rectangle-chinese-flag-illustration-china-vector-id1220747626?k=20&m=1220747626&s=170667a&w=0&h=u8OqDcJhELiBuGHhGviVYmonADx2UTcZLCFGPn71tRY="
+       
+    },
+
+    {   "name": "Plastic Knockbox",
+        "image": "https://psn-shop.imgix.net/media/catalog/product/g/c/gcn-keepcup-s-_updated__1.png?auto=format&lossless=1&w=240&h=240",
+        "category": " Accessories",
+        "price": 6580,
+        "stock": 3,
+        "description": "For professional baristas and home espresso machine users it is essential to use a stable and solid barrel for quick removal of espresso surfaces.",
+        "flag":"https://media.istockphoto.com/photos/ecuador-waving-flag-picture-id462453297?k=20&m=462453297&s=612x612&w=0&h=997zWHZ_lIN1pnc2o2sQDG0L9Z0hJ5gwWJZX0u5QYn8="
+       
+    },
+  
+    {   "name": "Cafiza",
+        "image": "https://www.modobarista.com/product_images/r/254/cafiza-limpieza__81439_zoom.PNG",
+        "category": " Barista tools",
+        "price": 6580,
+        "stock": 3,
+        "description": "Concentrated formula removes residue on group heads, valves and lines. It can also be used to make a soaking solution to clean portafilters, baskets, screens, and other parts.",
+        "flag":"https://tn.com.ar/resizer/iQ2rSke_ifikO_GvFslnD09S6b0=/767x0/smart/filters:quality(60)/cloudfront-us-east-1.images.arcpublishing.com/artear/3UADUTXDQACWOJLPF3VIITYBFM.jpg"
+       
+    },
+
+    {   "name": "Red Urnex group brush",
+        "image": "https://www.modobarista.com/product_images/m/290/cepillo-urnex-rojo__59759_zoom.png",
+        "category": " Barista tools",
+        "price": 1970,
+        "stock": 97,
+        "description": "Ideal cleaning brush for espresso machines",
+        "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/1200px-Flag_of_Peru.svg.png"
+       
+    },
+
+
+
+
+    
+
+    {   "name": "Dellatazza group cleaning",
+        "image": "https://www.ecm.de/fileadmin/products/teaser/pitcher.png",
+        "category": " Barista tools",
+        "price":4651,
+        "stock": 32,
+        "description": "This product is an integral part of the daily maintenance of your espresso machine. Specifically formulated for use during group cleaning and machine unloading, Della Tazza cleaner has maximum solubility and cleaning power with easy rinsing. It is also very effective for cleaning portafilters.",
+        "flag":"https://thumbs.dreamstime.com/b/ilustraci%C3%B3n-de-la-bandera-ondeada-pensilvania-estados-unidos-perfecto-para-el-uso-fondo-y-textura-154955396.jpg"
+       
+    },
+    {   "name": "Pitcher Basic 20oz",
+        "image": "https://www.modobarista.com/product_images/i/556/pitcher_basic__31180_zoom.PNG",
+        "category": " Barista Tools",
+        "price":3760,
+        "stock": 37,
+        "description": "Milk Pitcher Basic - You cannot miss this pitcher to emulsify and serve milk in your preparations.",
+        "flag":"https://thumbs.dreamstime.com/b/ilustraci%C3%B3n-de-la-bandera-ondeada-pensilvania-estados-unidos-perfecto-para-el-uso-fondo-y-textura-154955396.jpg"
+       
+    },
+    {   "name": "Colors Pitchers",
+        "image": "https://www.modobarista.com/product_images/g/548/PITCHER-COLORES-NEW__69860_zoom.jpg",
+        "category": " Barista Tools",
+        "price":4651,
+        "stock": 32,
+        "description": "This product is an integral part of the daily maintenance of your espresso machine. Specifically formulated for use during group cleaning and machine unloading, Della Tazza cleaner has maximum solubility and cleaning power with easy rinsing. It is also very effective for cleaning portafilters.",
+        "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bandera_de_Bolivia_%28Estado%29.svg/2560px-Bandera_de_Bolivia_%28Estado%29.svg.png"
+       
+    },
+    {   "name": "Silicone Pitcher",
+        "image": "https://cdn.shopify.com/s/files/1/2425/8607/products/artpresso-black-distribution-hero-knockout.png?v=1631910421&width=1445",
+        "category": " Barista tools",
+        "price":4419,
+        "stock": 64,
+        "description": "Milk Pitcher without handle WITH SILICONE - You cannot miss this pitcher to emulsify and serve milk in your preparations.",
+        "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bandera_de_Bolivia_%28Estado%29.svg/2560px-Bandera_de_Bolivia_%28Estado%29.svg.png"
+       
+    },
+
+
+    {   "name": "Tamper + tamping mat",
+        "image": "https://www.modobarista.com/product_images/r/132/combo_15__57624_zoom.png",
+        "category": " Barista tools",
+        "price":7910,
+        "stock": 100,
+        "description": "A necessary tool for every barista and cafeteria, the tamping mat helps maintain stability for better tamping and for countertop protection!",
+        "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/800px-Flag_of_Serbia.svg.png"
+       
+    },
+    {   "name": "Clamp thermometer",
+        "image": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c549.png",
+        "category": " Barista tools",
+        "price":1900,
+        "stock": 8,
+        "description": "The perfect ally for every Barista when it comes to serving good coffee. The temperature of the milk must reach a measure of 65-70ºC for a perfect foam (and a guaranteed latte art).",
+        "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/800px-Flag_of_Serbia.svg.png"
+       
+    },
+    {   "name": "Digital thermometer with timer",
+        "image": "https://www.modobarista.com/product_images/r/621/WhatsApp_Image_2021-10-12_at_14.35.34__1_-removebg-preview__23965_zoom.png",
+        "category": " Barista tools",
+        "price":1700,
+        "stock": 15,
+        "description": "El aliado perfecto de todo Barista a la hora de servir un buen café.Timer digital para lograr tu espresso en el tiempo justo! The perfect ally for every Barista when it comes to serving good coffee. Digital timer to achieve your espresso at the right time!.",
+        "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/1200px-Flag_of_Norway.svg.png"
+       
+    },
+    {   "name": "microfiber cloth",
+        "image": "https://www.modobarista.com/product_images/s/784/PANO_MICROFIBRA__02846_zoom.png",
+        "category": " Barista tools",
+        "price":1900,
+        "stock": 58,
+        "description": "Microfiber absorbs 30% more than other fabrics. Durable, will not discolor with cleaners or bleach. They can be washed in the washing machine.",
+        "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/1200px-Flag_of_Norway.svg.png"
+       
+    }
+    
+
+
+
+]
+
+
+

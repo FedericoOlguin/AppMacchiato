@@ -1,8 +1,8 @@
 import React from 'react';
 import FacebookLogin from 'react-facebook-login';
 import { connect } from 'react-redux';
-import usuariosActions from "../redux/actions/usuariosActions"
-import '../styles/signUp.css'
+import usuariosActions from "../redux/actions/userAction"
+import '../Styles/signup.css';
 
 function FacebookSignUp(props) {
 
@@ -13,7 +13,7 @@ function FacebookSignUp(props) {
       firstName: nombre[0],
       lastName: nombre[1],
       email: res.email,
-      imageUrl: res.picture.data.url,
+      photoURL: res.picture.data.url,
       password: res.id,
       country:"Argentina",
       from: "facebook"
@@ -25,7 +25,7 @@ function FacebookSignUp(props) {
     <FacebookLogin
       cssClass="buttonFacebook"
       icon="fa-facebook"
-      textButton=" SignUp with Facebook"
+      textButton="Facebook"
       appId="726721372045263"
       autoLoad={false}
       fields="name,email,picture"

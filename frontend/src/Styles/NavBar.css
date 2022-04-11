@@ -1,6 +1,8 @@
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
+
 .navbar {
   background-color: transparent !important;
   width: 100%;
@@ -11,8 +13,27 @@
   transition: all 1s;
   flex-wrap: nowrap;
 }
-.navbarBackgound {
-  /* background-color: transparent !important; */
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  transition: 0.3s ease-in;
+  overflow: hidden;
+}
+.pruebaMenu {
+  margin-right: 2rem !important;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  padding: 5;
+}
+
+.header-bg {
+  background-color: black;
+}
+
+/* .navbarBackgound {
   width: 100%;
   position: fixed;
   display: flex;
@@ -20,47 +41,59 @@
   top: 0;
   z-index: 1000;
   padding: 1rem;
-  /* background-color: #141313 !important; */
-  background-color: #efefef !important;
+  background-color: #efefef09;
   transition: all 1s;
-}
-.menuLinks{
-  /* background-color: aliceblue; */
+} */
+
+.menuLinks {
   display: flex;
-  width: 80%;
-  justify-content: flex-end;
+  /* width: 80%; */
+  margin-left: 2rem;
 }
 
 .linkGeneral {
-  padding: 0.5rem 1rem;
+  padding: 0.1rem 1rem;
   border-radius: 5px;
-  /* color: rgba(255, 255, 255, 0.664); */
-  color: black;
+  color: #efefef;
   font-size: x-large;
   text-decoration: none;
-  font-size: 0.5!important;
+  font-size: 0.5 !important;
 }
+
 .nav-linkUser {
-  color: black;
+  color: #000;
   text-decoration: none;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
+  font-weight: 800;
+  text-align: center;
 }
+
+.container-nav-LinkUser {
+  color: black !important;
+  flex-direction: column;
+  display: flex;
+  width: 7rem;
+}
+
 .navLi {
   list-style-type: none !important;
   color: #000;
 }
+
 .linkGeneral:hover {
   /* color: white; */
   color: #000;
   background-color: rgba(255, 255, 255, 0.281);
   /* font-size: 2rem; */
 }
+
 .linkAvatar {
   text-decoration: none;
   list-style-type: none !important;
   margin: 0;
   padding: 0;
 }
+
 .linkAvatar:hover {
   background-color: transparent !important;
 }
@@ -76,24 +109,56 @@
   width: 4rem;
   border-radius: 50%;
 }
+
 .linkLogo {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto",  sans-serif;
   font-size: 2.5rem;
   /* color: white; */
-  color: #000;
+  color: #efefef;
   text-decoration: none;
   align-items: center;
   display: flex;
 }
+
 .linkLogo:hover {
   color: rgba(255, 255, 255, 0.37);
 }
+
 .spanUser {
   font-size: 1.2rem;
 }
-.pruebaMenu {
-  margin-right: 2rem !important;
+
+.carritoCompras{
+  cursor: pointer;
+  /* position: fixed; */
+  /* left: 2rem; */
+  /* bottom: 5rem; */
+  /* background-color: rgba(255, 255, 255, 0.452); */
+  /* border-radius: 20%; */
+  /* color: #f3a446; */
+  /* z-index: 8; */
+  /* box-shadow: 5px 15px 15px black; */
 }
+
+.carritoCompras2{
+  color: #000 !important;
+}
+
+.carritolink2{
+  margin: auto 1rem auto 0;
+}
+
+
+
+.carritolink{
+  text-decoration: none;
+  color: #efeefeb2;
+  margin: auto 0;
+}
+.carritolink:hover{
+  color: #fff;
+}
+
 
 @media (max-width: 567px) {
   .navbar {

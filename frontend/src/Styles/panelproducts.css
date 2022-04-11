@@ -1,0 +1,485 @@
+.caja-panel{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../img/fondo_alto.jpg");
+}
+
+.centro-panel{
+  width: 100%;
+  height: 60vh;
+  background-image: url("../img/fondoproductos.jpg");
+  background-size: cover;
+  background-position: 10% 30%;
+  filter: brightness(0.5)
+}
+
+.container-panel{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 80vh;
+  justify-content: space-evenly;
+  
+}
+
+.titulo-panel{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  color: #efeefe;
+  font-size: 3em;
+}
+
+
+.card-panel{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  height: 38vh;
+  color: #efeefe;
+  border-radius: 5px;
+  -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
+  -moz-box-shadow: inset -5px 17px 109px 8px rgba(0, 0, 0, 0.88);
+  box-shadow: inset -5px 17px 109px 8px rgba(49, 49, 49, 0.88);
+  background-image: url(https://jberlife.com/wp-content/uploads/2021/04/GettyImages-1191995863-2-scaled.jpg);
+  margin: 4rem 0 2rem;
+}
+
+.panel-imgproducto{
+  width: 30%;
+  height: 100%; 
+  display: flex;
+  align-items: center ;
+  margin-right: .2rem;
+}
+
+.imagen-producto{
+  width: 100%;
+  height: 90%;
+  margin: auto;
+  object-fit: scale-down;
+  border-right: 3px solid #efeefe;
+   
+}
+
+ .items-producto{
+  display: flex;
+  width: 33%;
+  flex-direction: column;
+  height: 100%;
+} 
+
+.subtitulo-producto{
+  width: 100%;
+  height: 30%;
+  padding: .6rem 0;
+}
+
+ .respuesta-producto{
+   padding-bottom: .5rem;
+   border-bottom: 1px solid #efeefe;
+   width: 90%;
+   font-size: 1.1em;
+ }
+
+.boton-panel{
+  width: 20%;
+  height: 35vh;
+  display: flex;
+  margin: 4rem 0 2rem;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  
+}
+
+
+.boton-panelProduct{
+  border: 2px solid #efeefe;
+  font-size: 1.2em;
+  padding: 0.3rem;
+  margin: 0 5rem ;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #efeefe;
+  cursor: pointer;
+  transition: all 0.5;
+}
+
+.boton-panelProduct:hover {
+  transform: scale(1.02, 1.02);
+}
+
+
+.container-butonPanel{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+/* -----------------botones--------------- */
+
+
+.button-elimintate {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #e62222;
+  margin: 1rem 0;
+}
+
+.button-elimintate,
+.button-elimintate span {
+  transition: 200ms;
+}
+
+.button-elimintate .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+}
+
+.button-elimintate .icon {
+  position: absolute;
+  border-left: 1px solid #c41b1b;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-elimintate svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.button-elimintate:hover {
+  background: #ff3636;
+}
+
+.button-elimintate:hover .text {
+  color: transparent;
+}
+
+.button-elimintate:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.button-elimintate:focus {
+  outline: none;
+}
+
+.button-elimintate:active .icon svg {
+  transform: scale(0.8);
+}
+
+
+/* ---boton modificar------ */
+
+.button-modify {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: seagreen;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: seagreen;
+  margin: 1rem 0;
+}
+
+.button-modify,
+.button-modify span {
+  transition: 200ms;
+}
+
+.button-modify .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+}
+
+.button-modify .icon {
+  position: absolute;
+  border-left: 1px solid #000;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-modify svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.button-modify:hover {
+  background: seagreen;
+}
+
+.button-modify:hover .text {
+  color: transparent;
+}
+
+.button-modify:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.button-modify:focus {
+  outline: none;
+}
+
+.button-modify:active .icon svg {
+  transform: scale(0.8);
+}
+
+
+
+/* --------------------------form agregar producto---------------- */
+
+#form-signup-panelProducts {
+  margin: 8rem auto;
+  width: 50%;
+  height: 100%;
+  transition: all 1s ease-in-out;
+}
+
+
+.container-panelProduct {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.butonpanelProducts {
+  cursor: pointer;
+  font-size: 1rem !important;
+}
+
+
+
+/* form */
+@keyframes ingreso {
+  0% {
+    margin-bottom: -1000px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-bottom: 5rem;
+    opacity: 1;
+  }
+}
+
+.formContainer-panelProducts {
+  min-height: 30vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+
+  /* background-color: #EFEEFE; */
+
+}
+
+.mainForm-panelProducts {
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 1rem;
+  /* background-color: #5c5b5bdc !important; */
+  background-color: #efeefed5;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle-signup-panelProducts {
+  padding: 0 0 .2rem 2rem;
+  margin-bottom: 1.5rem;
+  /* background-color: #EFEEFE; */
+  width: 80%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.form-panelProducts {
+  width: 100%;
+  /* background-color: #EFEEFE; */
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  animation: ingreso;
+  animation-duration: 1s;
+  animation-iteration-count: initial;
+  z-index: 5;
+}
+
+
+.fieldsetFrom-panelProducts {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+
+}
+
+.span-signup-panelProducts {
+  font-weight: bold;
+}
+
+.labelForm-panelProducts {
+  display: flex;
+  flex-direction: column;
+  padding: .2rem;
+  width: 70%;
+  margin-bottom: .3rem;
+  margin-top: 1rem;
+}
+
+.inputFrom-panelProducts {
+  color: black;
+  width: 100%;
+  align-self: center;
+  height: 1.60rem;
+  border: none;
+  padding-left: 2rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  border-bottom: 1px solid black;
+  background-color: transparent !important;
+}
+
+.inputFrom-panelProducts option {
+  color: black;
+}
+
+
+.button-panelProducts {
+  font-size: 1rem;
+  background: #EFEEFE;
+  color: #000;
+  padding: 0.5em .5em;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 1px;
+  overflow: hidden;
+  margin: .5rem auto 1.5rem;
+  transition: all 0.2s;
+}
+
+.button-panelProducts span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.linkSingIn-panelProducts {
+  font-size: .9rem;
+  margin-top: .5rem;
+}
+
+.button-panelProducts svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-panelProducts:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.button-panelProducts:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.button-panelProducts:hover span {
+  transform: translateX(5em);
+}
+
+.button-panelProducts:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+
+/* -------------responsividad ---------- */
+
+/* @media only screen and (min-width: 0px) and (max-width: 750px) {
+  #video-signup {
+    display: none;
+  }
+
+  #form-signup {
+    width: 100%;
+  }
+
+  .subtitle-signup {
+    font-size: 2rem;
+    padding: 0 0 .2rem 0;
+  }
+
+  
+
+  .button {
+    font-size: .8rem;
+    height: 1.9rem;
+  }
+
+  .linkSingIn {
+    text-align: center;
+  }
+
+  .inputFrom {
+    padding-left: 0;
+  }
+
+} */
