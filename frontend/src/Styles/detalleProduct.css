@@ -1,18 +1,27 @@
 .contDetalle {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../img/fondo_alto.jpg);
-  overflow: hidden;
+  /* background-image: url(../img/fondo_alto.jpg); */
+  /* overflow: hidden; */
+  background-image: url(https://images.pexels.com/photos/1419939/pexels-photo-1419939.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  
 }
 .hero {
   min-height: 100%;
-  height: 100vh;
-  background-image: url(https://images.pexels.com/photos/1419939/pexels-photo-1419939.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-  background-size: cover;
+  height: 50vh;
   filter: brightness(0.7);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.contenedorCardDetalle{
+  display: flex;
+  justify-content: center;
+  
+}
+.fondo{
+background-color: rgba(0, 0, 0, 0.678);
 }
 
 .contenedorBotonImg {
@@ -30,7 +39,7 @@
   min-height: 15rem;
   /* max-height: 31vh; */
   height: 30vh;
-  z-index: 1000;
+  z-index: 10;
   display: flex;
   border-radius: 5px;
   /* justify-content: stretch; */
@@ -177,3 +186,24 @@
   transform: scale(0.8);
 }
 
+
+@media (max-width:1074px) {
+
+  .product{
+    flex-direction: column;
+    height: auto;
+    margin: 5rem 0;
+  }
+  .textCard{
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+}
+
+@media (max-width:584px) {
+  .product{
+    width: 80%;
+  }
+
+}
