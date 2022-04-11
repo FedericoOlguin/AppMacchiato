@@ -8,6 +8,7 @@
 }
 .containerImg {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 50%;
@@ -66,7 +67,7 @@
 }
 .icon {
   display: block;
-  fill: rgb(161, 70, 70);
+  fill: #f3a446;
   height: 3rem;
   margin: 0 auto;
   width: 5rem;
@@ -118,6 +119,16 @@
 
 .telephone {
   width: 100%;
+}
+
+.container-what{
+  margin: 1rem 0 0 0;
+}
+
+.imgFormindex{
+  color: #efeefe;
+  cursor: pointer;
+  font-size: 2.5rem !important;
 }
 
 .textArea {
@@ -208,7 +219,7 @@
     width: 70%;
     color: #dfd9d7;
   }
-  .imgForm {
+  .container-what{
     display: none;
   }
   .containerImg > img {

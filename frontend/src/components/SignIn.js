@@ -7,13 +7,13 @@ import { Link as LinkRouter } from "react-router-dom";
 import VideoFormulario2 from '../img/VideoFormulario2.mp4';
 import FacebookSignIn from '../components/FacebookSignIn';
 import GoogleSignIn from '../components/GoogleSignIn'
-
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 function SignIn(props) {
   const form = useRef()
-  window.scrollTo(0,0)
-  
-  function send(event){
+  window.scrollTo(0, 0)
+
+  function send(event) {
     event.preventDefault()
     form.current.focus()
     let datosInp = new FormData(form.current)
@@ -28,12 +28,24 @@ function SignIn(props) {
   }
   return (
     <div id='container-signup'>
+      <LinkRouter className="scrollback" to={"/"}><ArrowBackIosNewIcon className='iconoBack' />
+      </LinkRouter>
       {console.log(props.user)}
       <div id='form-signin'>
-        <main className="mainForm">
-          <h2 className='subtitle-signup'>Macchiato</h2>
+        <div id='video-signup'>
+          <video
+            autoPlay
+            loop
+            muted
+            className='video'
+          >
+            <source src={VideoFormulario2} type='video/mp4' />
+          </video>
+        </div>
+        <main className="mainFormin">
           <div className="formContainer">
             <form action="" className="form" onSubmit={send} ref={form} id="form">
+              <h2 className='subtitle-signup'>Macchiato</h2>
 
               <fieldset className="fieldsetFrom">
 
@@ -72,16 +84,6 @@ function SignIn(props) {
           </div>
 
         </main>
-      </div>
-      <div id='video-signup'>
-        <video
-          autoPlay
-          loop
-          muted
-          className='video'
-        >
-          <source src={VideoFormulario2} type='video/mp4' />
-        </video>
       </div>
     </div>
   )

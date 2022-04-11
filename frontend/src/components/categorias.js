@@ -9,7 +9,9 @@ function Categorias() {
     <div id='container-categorias'>
       <div className='subcontainer-categorias'>
         <div className='primerContenedor'>
-          <img src={coffePack}  className='img-categorias' alt='productos'/>
+          <div className='container-imgcategorias'>
+            <img src={coffePack} className='img-categorias' alt='productos' />
+          </div>
         </div>
         <div className='segundoContenedor'>
           <h1 className='tituloCategorias'>
@@ -18,7 +20,9 @@ function Categorias() {
           We manufacture coffee roasters. Contact Us</p>
         </div>
         <div className='tercerContenedor'>
-          <img src={creation} className='img-categorias' alt='productos' />
+          <div className='container-imgcategorias'>
+            <img src={creation} className='img-categorias' alt='productos' />
+          </div>
         </div>
       </div>
 
@@ -29,13 +33,15 @@ function Categorias() {
           <p className='parrafoCategorias'>Exclusive coffees and brands from around the world.</p>
         </div>
         <div className='segundoContenedor'>
-          <img src={machineCoffe} className='img-categorias' alt='productos' />
+          <div className='container-imgcategorias'>
+            <img src={"https://cdn.webshopapp.com/shops/40114/files/384661026/bialetti-new-moka-induction-coffee-maker-red-for-6.jpg"} className='img-categorias' alt='productos' />
+          </div>
         </div>
         <div className='tercerContenedor'>
           <h1 className='tituloCategorias'>Coffee courses</h1>
           <p className='parrafoCategorias'>We have an educational system for baristas</p>
         </div>
-        
+
       </div>
     </div>
   )

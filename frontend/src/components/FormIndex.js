@@ -1,14 +1,18 @@
 import React from "react";
 import "../Styles/FormIndex.css";    /* daña el form sign up y sign in... */
-
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const FormIndex = () => {
   return (
     <div className="globalForm">
 
       <section className="containerImg">
-        <h1 className="tituloform">logo y nombre repetitivo :)</h1>
-        {/* <img src={imgForm} className="imgForm" />   */}
+        <h1 className="tituloform">Chat with Us</h1>
+        <div className="container-what">
+          <a target="_blank" rel="noreferrer nopener" href="https://ultramsg.com/m/38Gk1J4">
+            <WhatsAppIcon className="imgFormindex" />
+          </a>
+        </div>
       </section>
 
       <div id="containerFormIndex">
@@ -20,7 +24,7 @@ const FormIndex = () => {
             <path d="M70.865,101.78c0,4.774,3.886,8.657,8.66,8.657c4.774,0,8.657-3.883,8.657-8.657c0-4.773-3.883-8.656-8.657-8.656    C74.751,93.124,70.865,97.006,70.865,101.78z"></path>
           </svg>
         </div>
-        <form  action="#" method="post" id="contact_form">
+        <form action="#" method="post" id="contact_form">
 
           <div >
             <div className="name">
@@ -74,7 +78,7 @@ const FormIndex = () => {
             ></textarea>
           </div>
           {/* <div className="submit"> */}
-            <input type="submit" value="Send Message" className='boton-aboutUs' id="form_button" />
+          <input type="submit" value="Send Message" className='boton-aboutUs' id="form_button" />
           {/* </div> */}
         </form>
       </div>

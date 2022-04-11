@@ -15,7 +15,7 @@ import { Autoplay, Pagination, Navigation, Grid } from "swiper";
 
 
 function Carousel(props) {
-  console.log(props)
+  // console.log(props)
 
   useEffect(() => {
   }, [])

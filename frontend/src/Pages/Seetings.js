@@ -1,18 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../Styles/seetings.css';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { Link as LinkRouter } from "react-router-dom";
 import { connect } from 'react-redux'
-
+import usersActions from '../redux/actions/userAction';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 function Seetings(props) {
+  const [data, setData] = useState()
+
+  useEffect(() => {
+    props.getInfoUser(props.user?.id)
+      .then(response => setData(response))
+  }, [])
+
+
   return (
     <div className='containerCardUser'>
       <NavBar />
-      {console.log(props)}
+     
 
       <div className='container-cardppal'>
+        <LinkRouter className="scrollback-seetings" to={"/"}><ArrowBackIosNewIcon className='iconoBack-seetings' />
+        </LinkRouter>
 
         <div id='cardUser'>
           <div className="esquema-card">
@@ -26,10 +37,13 @@ function Seetings(props) {
                 />
               </div>
             </div>
-            <h2 className='infoUser'>{props.user?.name.firstName}</h2>
-            <h2 className='infoUser'>Apellido</h2>
-            <h2 className='infoUser'>País</h2>
-            <h2 className='infoUser'>{props.user?.email}</h2>
+
+            <div className='datosuser'>
+            <h2 className='infoUser'>Name: {props.user?.name.firstName}</h2>
+              <h2 className='infoUser'>Last name: {props.user?.name.lastName}</h2>
+            <h2 className='infoUser'>País: {data?.country}</h2>
+            <h2 className='infoUser'>Email: {props.user?.email}</h2>
+            </div>
 
             <div className="div-user">
               <LinkRouter className='link-user' aria-current="page" to={"/seetingsChanges"}>
@@ -58,6 +72,9 @@ function Seetings(props) {
   )
 }
 
+const mapDispatchToProps = {
+  getInfoUser: usersActions.getInfoUser
+}
 
 
 const mapStateToProps = (state) => {
@@ -66,5 +83,5 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, null)(Seetings)
+export default connect(mapStateToProps, mapDispatchToProps)(Seetings)
 

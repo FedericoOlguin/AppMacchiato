@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import empy from '../img/empy.svg'
 import { Link as LinkRouter } from "react-router-dom"
 import { connect } from 'react-redux';
@@ -9,6 +9,7 @@ import '../Styles/ProductsCards.css'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import DetailsIcon from '@mui/icons-material/Details';
 import Carousel from "../components/Carousel"
+
 
 const categories = [{ name: "Coffees", }, { name: "coffee maker", }, { name: "Accessories", }, { name: "Barista tools", }]
 
@@ -78,7 +79,7 @@ function ProductsCard(props) {
                     {props.filtered?.length !== 0 ? (
                         props.filtered?.map(products =>
                             <div className='cardProducto' key={products._id}>
-                                <LinkRouter to={`/detalle/${products._id}`} />
+
                                 <p className='precio'> {"$" + products.price} </p>
                                 <div className='bandera'>
                                     <img alt="flag" src={products.flag} className='flag' />
@@ -88,8 +89,10 @@ function ProductsCard(props) {
                                     <h2> {products.name} </h2>
                                     {/* <h4> Other property </h4> */}
                                     <div className='botonesShop'>
-                                        <LocalGroceryStoreIcon className='iconShop' />
-                                        <DetailsIcon className='iconShop' />
+                                        <LocalGroceryStoreIcon onClick={() => props.addToCart(products._id)} className='iconShop' />
+                                        <LinkRouter to={`/detalle/${products._id}`} >
+                                            <DetailsIcon className='iconShop' />
+                                        </LinkRouter>
                                     </div>
                                 </div>
                             </div>
@@ -101,6 +104,7 @@ function ProductsCard(props) {
                         </div>
                     )}
                 </div>
+               
             </div>
         </>
     )
@@ -112,11 +116,16 @@ const mapStateToProps = (state) => {
     return {
         allProducts: state.productReducer.allProducts,
         filtered: state.productReducer.filtered,
+        cart: state.productReducer.cart
     }
 }
 
 const mapDispatchToProps = {
     filter: productActions.filter,
+    addToCart: productActions.addToCart,
+    removeOneFromCart: productActions.removeOneFromCart,
+    removeAllFromCart: productActions.removeAllFromCart,
+    emptyCart: productActions.emptyCart
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductsCard)
