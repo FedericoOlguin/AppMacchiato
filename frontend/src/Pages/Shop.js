@@ -10,7 +10,6 @@ import '../Styles/shop.css'
 
 
 
-
 function Shop(props) {
   // const [cardsToDisplay, setCards] = useState();
   //para usar despues cuando apliquee filtros
@@ -21,6 +20,7 @@ function Shop(props) {
     props.getAllProducts();
   }, []);
 
+<<<<<<< HEAD
   // async function filterByName(e){
   //     const filteredCards = cardsToDisplay.filter((product) =>
   //         product.name
@@ -39,26 +39,16 @@ function Shop(props) {
      {/*  <Detalle /> */}
 
       {/* <ProductsCard /> */}
-
-
-
-    // async function filterByName(e){
-    //     const filteredCards = cardsToDisplay.filter((product) =>
-    //         product.name
-    //         .toString()
-    //         .trim()
-    //         .toLowerCaser()
-    //         .startsWith(e.target.value.trim().toLowerCaser())
-    //         );
-    //         setCards(filteredCards)
-    // }
-
+=======
+    }, [])
+>>>>>>> 4b54ed5c2f4e09d41e79051195d9113bef887a04
 
     return (
         <div className="container-shop">
             <NavBar />
             <div className="container-filterAndShop">
                 <div className="container-cards">
+
                     <ProductsCard />
                 </div>
             </div>

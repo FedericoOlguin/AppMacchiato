@@ -34,12 +34,11 @@ const ProductController = {
         .then(response=>res.json({response}));
     },
     getOneProduct: async (req, res) => {
-        const id = req.params.id;
+        const id = req.params.id
         let product;
         let error = null;
-
         try{
-            product = await axios.findOne({_id:req.params.id})
+            product = await Product.findOne({_id:id})
 
         }catch(err){
             error = err
