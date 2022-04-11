@@ -1,8 +1,7 @@
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 import React, { useState, useEffect, useRef } from "react";
 import FormModify from "./FormModify";
-
-
+import productActions from "../redux/actions/productActions";
 
 function CardModify(props) {
 
@@ -10,6 +9,11 @@ function CardModify(props) {
     function openForm3() {
         setForm3(!form3)
       }
+      
+    function deleteProduct(id){
+        props.deleteProduct(id)
+
+    }
 
   return (
     <>
@@ -52,7 +56,7 @@ function CardModify(props) {
                 </span>
             </button>
 
-            <button className="button-elimintate">
+            <button className="button-elimintate" onClick={()=>{props.deleteProduct(props.product._id)}}>
                 <span class="text">Delete</span>
                 <span class="icon">
                     <svg
@@ -77,4 +81,13 @@ function CardModify(props) {
   );
 }
 
-export default CardModify
+
+const mapDispatchToProps = {
+
+    deleteProduct: productActions.deleteProduct,
+}
+
+export default connect(null, mapDispatchToProps)(CardModify)
+
+
+// ()=>{props.deleteProduct(props.product._id)}
