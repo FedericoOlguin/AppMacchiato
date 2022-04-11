@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import { Link as LinkRouter } from "react-router-dom";
 import { connect } from 'react-redux'
 import usersActions from '../redux/actions/userAction';
-
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 function Seetings(props) {
   const [data, setData] = useState()
@@ -19,12 +19,13 @@ function Seetings(props) {
   return (
     <div className='containerCardUser'>
       <NavBar />
-      {/* {console.log(data)} */}
+     
 
       <div className='container-cardppal'>
+        <LinkRouter className="scrollback-seetings" to={"/"}><ArrowBackIosNewIcon className='iconoBack-seetings' />
+        </LinkRouter>
 
         <div id='cardUser'>
-
           <div className="esquema-card">
             <div className='img-h1'>
               <h1 className='subtitle-user'>Profile</h1>
@@ -40,7 +41,7 @@ function Seetings(props) {
             <div className='datosuser'>
             <h2 className='infoUser'>Name: {props.user?.name.firstName}</h2>
               <h2 className='infoUser'>Last name: {props.user?.name.lastName}</h2>
-            <h2 className='infoUser'>País {data?.country}</h2>
+            <h2 className='infoUser'>País: {data?.country}</h2>
             <h2 className='infoUser'>Email: {props.user?.email}</h2>
             </div>
 
