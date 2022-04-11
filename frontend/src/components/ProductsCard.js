@@ -7,8 +7,8 @@ import LoadingIcon from "./LoadingIcon"
 import productActions from "../redux/actions/productActions";
 import '../Styles/ProductsCards.css'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
-import DetailsIcon from '@mui/icons-material/Details';
-import Carousel from "../components/Carousel"
+
+
 
 
 const categories = [{ name: "Coffees", }, { name: "coffee maker", }, { name: "Accessories", }, { name: "Barista tools", }]
@@ -40,10 +40,7 @@ function ProductsCard(props) {
         <>
             <div className='contenedorCardsGeneral'>
                 <div className='sliderPromocion'>
-                    <div className='ContainerSlider'>
-                        <Carousel todosProductos={props.allProducts} />
-                        {/* <h1>Slider promociones</h1> */}
-                    </div>
+                    <h1 className='titleStore'>Shop</h1>
                 </div>
 
                 <div className='filters'>
@@ -78,24 +75,23 @@ function ProductsCard(props) {
                 <div className='ContainerStore'>
                     {props.filtered?.length !== 0 ? (
                         props.filtered?.map(products =>
-                            <div className='cardProducto' key={products._id}>
+                            <LinkRouter className="link-carta" to={`/detalle/${products._id}`} >
+                                <div className='cardProducto' key={products._id}>
 
-                                <p className='precio'> {"$" + products.price} </p>
-                                <div className='bandera'>
-                                    <img alt="flag" src={products.flag} className='flag' />
-                                </div>
-                                <img alt='cardPho' src={products.image} className="imagenHeader" />
-                                <div className='txtCard'>
-                                    <h2> {products.name} </h2>
-                                    {/* <h4> Other property </h4> */}
-                                    <div className='botonesShop'>
-                                        <LocalGroceryStoreIcon onClick={() => props.addToCart(products._id)} className='iconShop' />
-                                        <LinkRouter to={`/detalle/${products._id}`} >
-                                            <DetailsIcon className='iconShop' />
-                                        </LinkRouter>
+                                    <p className='precio'> {"$" + products.price} </p>
+                                    <div className='bandera'>
+                                        <img alt="flag" src={products.flag} className='flag' />
+                                    </div>
+                                    <img alt='cardPho' src={products.image} className="imagenHeader" />
+                                    <div className='txtCard'>
+                                        <h2> {products.name} </h2>
+                                        {/* <h4> Other property </h4> */}
+                                        <div className='botonesShop'>
+                                            <LocalGroceryStoreIcon onClick={() => props.addToCart(products._id)} className='iconShop' />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </LinkRouter>
 
                         )) : (
                         <div className='nofound'>
@@ -104,7 +100,7 @@ function ProductsCard(props) {
                         </div>
                     )}
                 </div>
-               
+
             </div>
         </>
     )
