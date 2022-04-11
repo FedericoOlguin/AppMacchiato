@@ -7,40 +7,42 @@ function FormPanel(props) {
     let formProd = useRef()
 
 
-    function enviarData(event) {
-        event.preventDefault()
-        formProd.current.focus()
-        let boolean
-        let datosInp = new FormData(formProd.current)
-        console.log(datosInp.get("sale"));
-        if (datosInp.get("sale") === "on") {
-            boolean = true
-        }else{
-            boolean=false
-        }
-        let productObj = {
-            name: datosInp.get("nameItem"),
-            image: datosInp.get("ItemPhotoUrl"),
-            category: datosInp.get("category"),
-            price: datosInp.get("price"),
-            stock: datosInp.get("stock"),
-            description: datosInp.get("description"),
-            flag: datosInp.get("flag"),
-            sale: boolean
-        }
-        props.loadProduct(productObj, props.user.id)
+    // function enviarData(event) {
+    //     event.preventDefault()
+    //     formProd.current.focus()
+    //     let boolean
+    //     let datosInp = new FormData(formProd.current)
+    //     console.log(datosInp.get("sale"));
+    //     if (datosInp.get("sale") === "on") {
+    //         boolean = true
+    //     }else{
+    //         boolean=false
+    //     }
+    //     let productObj = {
+    //         name: datosInp.get("nameItem"),
+    //         image: datosInp.get("ItemPhotoUrl"),
+    //         category: datosInp.get("category"),
+    //         price: datosInp.get("price"),
+    //         stock: datosInp.get("stock"),
+    //         description: datosInp.get("description"),
+    //         flag: datosInp.get("flag"),
+    //         sale: boolean
+    //     }
+    //     props.loadProduct(productObj, props.user.id)
 
-    }
+    // }
 
     return (
         <>
 
-            {props.form ? (
+            {props.form3 ? (
                 <div id='form-signup-panelProducts'>
                     <main className="mainForm-panelProducts">
-                        <h2 className='subtitle-signup-panelProducts'>Add new product </h2>
+                        <h2 className='subtitle-signup-panelProducts'>Modify product </h2>
                         <div className="formContainer-panelProducts">
-                            <form action="" className="form-panelProducts" onSubmit={enviarData} ref={formProd} id="form">
+                            <form action="" className="form-panelProducts" 
+                            // onSubmit={enviarData} 
+                            ref={formProd} id="form">
 
                                 <fieldset className="fieldsetFrom-panelProducts">
 
@@ -48,21 +50,21 @@ function FormPanel(props) {
                                         <div className='container-panelProduct'>
                                             <span className='span-signup-panelProducts'>Name item</span>
                                         </div>
-                                        <input className="inputFrom-panelProducts" type="text" id="nameItem" name="nameItem" required />
+                                        <input className="inputFrom-panelProducts" value={props.product.name} type="text" id="nameItem" name="nameItem" required  />
                                     </label>
 
                                     <label className="labelForm-panelProducts" htmlFor="ItemPhotoUrl">
                                         <div className='container-panelProduct'>
                                             <span className='span-signup-panelProducts'>Item photoURL</span>
                                         </div>
-                                        <input className="inputFrom-panelProducts" type="text" id="ItemPhotoUrl" name="ItemPhotoUrl" />
+                                        <input className="inputFrom-panelProducts" value={props.product.image} type="text" id="ItemPhotoUrl" name="ItemPhotoUrl" />
                                     </label>
 
                                     <label className="labelForm-panelProducts" htmlFor="category">
                                         <div className='container-panelProduct'>
                                             <span className='span-signup-panelProducts'>Category</span>
                                         </div>
-                                        <input className="inputFrom-panelProducts" type="text" id="category" name="category" />
+                                        <input className="inputFrom-panelProducts" value={props.product.category} type="text" id="category" name="category" />
                                     </label>
 
 
@@ -70,13 +72,13 @@ function FormPanel(props) {
                                         <div className='container-panelProduct'>
                                             <span className='span-signup-panelProducts'>Stock</span>
                                         </div>
-                                        <input className="inputFrom-panelProducts" type="text" id="stock" name="stock" />
+                                        <input className="inputFrom-panelProducts" value={props.product.stock} type="text" id="stock" name="stock" />
                                     </label>
                                     <label className="labelForm-panelProducts" htmlFor="price">
                                         <div className='container-panelProduct'>
                                             <span className='span-signup-panelProducts'>Price</span>
                                         </div>
-                                        <input className="inputFrom-panelProducts" type="text" id="price" name="price" />
+                                        <input className="inputFrom-panelProducts" value={props.product.price} type="text" id="price" name="price" />
                                     </label>
 
 
@@ -84,13 +86,13 @@ function FormPanel(props) {
                                         <div className='container-panelProduct'>
                                             <span className='span-signup-panelProducts'>Description</span>
                                         </div>
-                                        <input className="inputFrom-panelProducts" type="text" id="description" name="description" />
+                                        <input className="inputFrom-panelProducts" value={props.product.description} type="text" id="description" name="description" />
                                     </label>
 
                                     <label className="labelForm-panelProducts" htmlFor="sale">
                                         <div className='container-panelProduct'>
                                             <span className='span-signup-panelProducts'>Sale</span>
-                                            <input className="" type="checkbox" id="sale" name="sale" />
+                                            <input className="" type="checkbox" id="sale" name="sale" checked={props.product.sale} />
                                         </div>
                                     </label>
 
@@ -98,7 +100,7 @@ function FormPanel(props) {
                                         <div className='container-panelProduct'>
                                             <span className='span-signup-panelProducts'>Flag photoURL</span>
                                         </div>
-                                        <input className="inputFrom-panelProducts" type="text" id="flag" name="flag" />
+                                        <input className="inputFrom-panelProducts" value={props.product.flag} type="text" id="flag" name="flag" />
                                     </label>
 
                                     <button className="button-panelProducts" type="submit">
@@ -142,4 +144,3 @@ const mapDispatchToProps = {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(FormPanel)
-

@@ -3,7 +3,7 @@ const bcryptjs = require("bcryptjs")
 const crypto = require("crypto")
 const nodemaider = require("nodemailer")
 const jwt = require("jsonwebtoken")
-const { json } = require("express/lib/response")
+
 
 
 const sendEmail = async (email, uniqueString) => { //Funcion que envia email de verificcacion
@@ -75,7 +75,8 @@ const userController = {
     },
 
     signUpUser: async (req, res) => {
-        const { from, firstName, lastName, email, password, photoURL, country, rol } = req.body.objUser
+        const { from, firstName, lastName, email, password, photoURL, country } = req.body.objUser
+        // console.log(from, firstName, lastName, email, password, photoURL, country);
         const name = {
             firstName: firstName,
             lastName: lastName,
@@ -189,11 +190,20 @@ const userController = {
                         }
                         await userExiste.save()
                         const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 })
-                        res.json({
-                            success: true,
-                            response: { token, userData },
-                            message: "Welcome back " + userData.name.firstName
-                        })
+                        if (userExiste.rol === "admin") {
+                            res.json({
+                                success: true,
+                                response: { token, userData, validate: true },
+                                message: "Welcome back " + userData.name.firstName
+                            })
+                        } else {
+
+                            res.json({
+                                success: true,
+                                response: { token, userData, validate: false },
+                                message: "Welcome back " + userData.name.firstName
+                            })
+                        }
                     } else {
                         res.json({
                             success: false,
@@ -212,11 +222,19 @@ const userController = {
                                 from: from,
                             }
                             const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 })
-                            res.json({
-                                success: true,
-                                response: { token, userData },
-                                message: "Welcome back " + userData.name.firstName
-                            })
+                            if (userExiste.rol === "admin") {
+                                res.json({
+                                    success: true,
+                                    response: { token, userData, validate: true },
+                                    message: "Welcome back " + userData.name.firstName
+                                })
+                            } else {
+                                res.json({
+                                    success: true,
+                                    response: { token, userData, validate: false },
+                                    message: "Welcome back " + userData.name.firstName
+                                })
+                            }
                         } else {
                             res.json({
                                 success: false,
@@ -286,7 +304,7 @@ const userController = {
 
         try {
             let userRes
-            const devolver =  await Usuario.findOne({ _id: id })
+            const devolver = await Usuario.findOne({ _id: id })
             // console.log(devolver);
             userRes = {
                 name: devolver.name,

@@ -34,13 +34,17 @@ const ProductController = {
                 sale
             })
                 .save()
-                .then(response => res.json({
-                    success: true,
-                    reponse: name,
-                    message: "Producto " +name + " cargado exitosamente"
-                }));
+            res.json({
+                success: true,
+                reponse: name,
+                message: "Producto " + name + " cargado exitosamente"
+            })
         } catch (err) {
-
+            res.json({
+                success: false,
+                reponse: name,
+                message: "Producto " + name + " no se pudeo cargar"
+            })
         }
     },
     getOneProduct: async (req, res) => {

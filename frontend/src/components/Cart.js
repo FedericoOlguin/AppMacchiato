@@ -24,7 +24,7 @@ const Cart = (props) => {
     }
     return (
         <>
-            {console.log(props)}
+            {/* {console.log(props)} */}
             <div className='txtCard-Cart'>
                 <h1 className='titulo-shoping'> Shopping cart</h1>
             </div>
@@ -45,6 +45,8 @@ const Cart = (props) => {
                                     <h2> {products.name} </h2>
 
                                     <div className='botons-Carts'>
+                                        {/* {console.log(products._id)} */}
+                                        {/* {console.log(props.cart)} */}
                                         <button className='botonShopping' onClick={() => props.addToCart(products._id)}><AiOutlinePlus className='iconoSho' /></button>
                                         <button className='botonShopping' onClick={() => props.removeOneFromCart(products._id)}> <AiOutlineMinus className='iconoSho' /></button>
                                         <button className='botonShopping' onClick={() => props.removeAllFromCart(products._id)}> <AiOutlineClose className='iconoSho' /></button>

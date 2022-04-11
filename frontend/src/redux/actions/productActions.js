@@ -62,7 +62,7 @@ const productActions = {
                     success: res.data.success
                 }
             })
-            return res
+            // return res
         }
     },
     loadProduct: (objProd, id) => {
@@ -73,16 +73,16 @@ const productActions = {
                     Authorization: 'Bearer ' + token
                 }
             })
-            // console.log(res.data.success);
-            // dispatch({
-            //     type: 'message',
-            //     payload: {
-            //         view: false,
-            //         message: res.data.message,
-            //         success: true
-            //     }
-            // })
-            return res
+            console.log(res.data.success);
+            dispatch({
+                type: 'message',
+                payLoad: {
+                    view: true,
+                    message: res.data.message,
+                    success: res.data.success
+                }
+            })
+            // return res
         }
     },
     addToCart: (id) => {
