@@ -9,11 +9,6 @@ function CardModify(props) {
     function openForm3() {
         setForm3(!form3)
       }
-      
-    function deleteProduct(id){
-        props.deleteProduct(id)
-
-    }
 
   return (
     <>

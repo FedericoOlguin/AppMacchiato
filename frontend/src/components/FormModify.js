@@ -28,7 +28,7 @@ function FormPanel(props) {
             flag: datosInp.get("flag"),
             sale: boolean
         }
-        props.modifyProduct(productObj, props.user.id)
+        props.modifyProduct(productObj, props.product._id)
 
     }
 

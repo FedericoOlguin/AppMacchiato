@@ -82,6 +82,7 @@ const productActions = {
                     success: res.data.success
                 }
             })
+            return res
         }
     },
     deleteProduct: (id) => {
