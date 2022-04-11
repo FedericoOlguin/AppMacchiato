@@ -245,9 +245,9 @@
   #video-signup {
     display: none;
   }
-.mainForm{
-  width: 100%;
-}
+  .mainForm {
+    width: 100%;
+  }
   #form-signup {
     width: 100%;
   }
@@ -286,9 +286,9 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  width: 3rem !important;
-  height: 3rem !important;
-  background-color: rgba(180, 171, 171, 0.425);
+  width: 2.2rem !important;
+  height: 2.2rem !important;
+  background-color: rgba(180, 171, 171, 0.301);
   border-radius: 50%;
   left: 2rem;
   bottom: 4rem;
@@ -299,8 +299,9 @@
   align-self: center;
   z-index: 100;
   width: 100%;
-  width: 2rem !important;
-  height: 2rem !important;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  margin-left: -0.2rem;
 }
 
 @media only screen and (min-width: 750px) and (max-width: 1200px) {
@@ -329,3 +330,10 @@
     height: 113.55%;
   }
 } */
+
+@media only screen and (min-width: 0) and (max-width: 380px) {
+  .scrollback {
+    left: 1rem;
+    bottom: 5.5rem;
+  }
+}
