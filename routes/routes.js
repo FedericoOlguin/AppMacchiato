@@ -4,7 +4,7 @@ const passport = require("../config/passport")
 const authUsers = require("../config/authRol")
 const { verifedRol } = authUsers
 
-const { getAllProducts, loadProduct, getOneProduct, modifyStock } = require('../controllers/productControllers')
+const { getAllProducts, loadProduct, getOneProduct, modifyProduct } = require('../controllers/productControllers')
 const { signInUser, signUpUser, signOutUser, verifyEmail, verificarToken, authenticated, infoUser } = require("../controllers/userController")
 //rutas de usuarios
 
@@ -40,7 +40,7 @@ Router.route('/allproducts')
 
 Router.route('/allproducts/:id')
     .get(getOneProduct)
-    .put(passport.authenticate('jwt', { session: false }), modifyStock)
+    .put(passport.authenticate('jwt', { session: false }), modifyProduct)
     .post(passport.authenticate("jwt", { session: false }), verifedRol, loadProduct)
 
 

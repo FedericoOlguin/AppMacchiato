@@ -92,12 +92,35 @@ const ProductController = {
     },
 
     modifyProduct: async (req, res) => {
-        const id = req.params.id;
 
+        try{
+            const{name, image, category, price, stock, description, flag} = req.body;
+            let product= await Product.findById(req.params.id);
 
-        let product = await Product.findOneAndUpdate({ _id: req.params.id }, product);
-        console.log(product);
-    },
+            if(!product){
+                res.status (404).json({message:"the product does not exist"})
+            }
+            product.name= name;
+            product.image=image;
+            product.category= category;
+            product.price=price;
+            product.stock= stock;
+            product.discription= description;
+            product.flag= flag;
+
+            product= await Product.findOneAndUpdate({_id:req.params.id}, product,{new:true})
+            res.json(product)
+
+        }         
+             
+        catch(error){
+            console.log(error)
+            res.json({success: true,message:"Something went wrong try again in a few minutes"})
+        }
+    
+        
+        
+      },
     //modifyStock
     modifyStock: async (req, res) => {
         const { productId, stock } = req.body.product
