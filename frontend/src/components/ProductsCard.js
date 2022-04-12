@@ -11,7 +11,7 @@ import DetailsIcon from '@mui/icons-material/Details';
 import Carousel from "../components/Carousel"
 
 
-const categories = [{ name: "Coffees", }, { name: "coffee maker", }, { name: "Accessories", }, { name: "Barista tools", }]
+const categories = [{ name: "Coffees", }, { name: "Coffee maker", }, { name: "Accessories", }, { name: "Barista tools", }]
 
 function ProductsCard(props) {
 
