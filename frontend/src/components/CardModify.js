@@ -1,8 +1,7 @@
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 import React, { useState, useEffect, useRef } from "react";
 import FormModify from "./FormModify";
-
-
+import productActions from "../redux/actions/productActions";
 
 function CardModify(props) {
 
@@ -39,7 +38,7 @@ function CardModify(props) {
 
         <div className="boton-panel">
             <button className="button-modify" onClick={openForm3} >
-                <span class="text">Modificar</span>
+                <span class="text">Modify</span>
                 <span class="icon">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -52,9 +51,9 @@ function CardModify(props) {
                 </span>
             </button>
 
-            <button className="button-elimintate">
-                <span class="text">Delete</span>
-                <span class="icon">
+            <button className="button-elimintate" onClick={()=>{props.deleteProduct(props.product._id)}}>
+                <span className="text">Delete</span>
+                <span className="icon">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -77,4 +76,13 @@ function CardModify(props) {
   );
 }
 
-export default CardModify
+
+const mapDispatchToProps = {
+
+    deleteProduct: productActions.deleteProduct,
+}
+
+export default connect(null, mapDispatchToProps)(CardModify)
+
+
+// ()=>{props.deleteProduct(props.product._id)}

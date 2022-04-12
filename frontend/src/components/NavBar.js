@@ -12,13 +12,11 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import user from "../img/avatarWhite.svg"
-// import logo from "../img/LogoMi.svg"
 import "../Styles/NavBar.css"
 import { Link as LinkRouter } from "react-router-dom"
 import { connect } from 'react-redux';
 import logo from '../img/logo.png'
 import userActions from "../redux/actions/userAction"
-
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
 
@@ -47,8 +45,6 @@ const NavBar2 = (props) => {
 
 
     function signOutUser() {
-        console.log(props.user.email)
-
         props.signOut(props.user.email)
     }
 
@@ -198,17 +194,12 @@ const NavBar2 = (props) => {
                                 {
                                     props.user ?
                                         (<div className='container-nav-LinkUser'>
-                                            {/* <MenuItem onClick={handleCloseUserMenu} className="navLi"> */}
                                             <LinkRouter className="nav-linkUser" aria-current="page" onClick={() => {
                                                 signOutUser()
                                                 handleCloseUserMenu()
                                             }} to="#">Sign out</LinkRouter>
-                                            {/* </MenuItem> */}
-                                            {/* <MenuItem> */}
                                             <LinkRouter className="nav-linkUser" aria-current="page" to={'/seetings'}>⚙
                                                 Setting</LinkRouter>
-                                            {/* </MenuItem> */}
-                                            {/* {console.log(props.authorized)} */}
                                             {props.authorized ? (
                                                 <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/panel">Panel</LinkRouter>
                                             ) : (
@@ -217,12 +208,12 @@ const NavBar2 = (props) => {
                                         </div>
                                         ) : (
                                             <div className='container-nav-LinkUser'>
-                                                {/* <MenuItem onClick={handleCloseUserMenu} className="navLi"> */}
+                                            
                                                 <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" aria-current="page" to="/signIn">Sign In</LinkRouter>
-                                                {/* </MenuItem> */}
-                                                {/* <MenuItem onClick={handleCloseUserMenu} className="navLi"> */}
+                                                
+                                            
                                                 <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/signUp">Sign Up</LinkRouter>
-                                                {/* </MenuItem> */}
+                                                
 
                                             </div>
                                         )

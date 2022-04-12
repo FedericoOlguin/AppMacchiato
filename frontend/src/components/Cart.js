@@ -1,10 +1,6 @@
-
 import * as React from 'react';
-
 import empy from '../img/empy.svg'
-
 import { connect } from 'react-redux';
-
 import productActions from "../redux/actions/productActions";
 import '../Styles/ProductsCards.css'
 import '../Styles/shopingCart.css'
@@ -24,7 +20,7 @@ const Cart = (props) => {
     }
     return (
         <>
-            {/* {console.log(props)} */}
+           
             <div className='txtCard-Cart'>
                 <h1 className='titulo-shoping'> Shopping cart</h1>
             </div>
@@ -45,9 +41,7 @@ const Cart = (props) => {
                                     <h2> {products.name} </h2>
 
                                     <div className='botons-Carts'>
-                                        {/* {console.log(products._id)} */}
-                                        {/* {console.log(props.cart)} */}
-                                        <button className='botonShopping' onClick={() => props.addToCart(products._id)}><AiOutlinePlus className='iconoSho' /></button>
+                                        <button className='botonShopping' onClick={() => props.addToCart(products?._id)}><AiOutlinePlus className='iconoSho' /></button>
                                         <button className='botonShopping' onClick={() => props.removeOneFromCart(products._id)}> <AiOutlineMinus className='iconoSho' /></button>
                                         <button className='botonShopping' onClick={() => props.removeAllFromCart(products._id)}> <AiOutlineClose className='iconoSho' /></button>
                                     </div>
@@ -62,8 +56,6 @@ const Cart = (props) => {
                                         <p className='nofound-h2-Cart ' >{products.quantity}</p>
                                     </div>
                                     <p className='nofound-h2-Shop' > Subtotal= $ {products.price * products.quantity}</p>
-                                    {/* <div className='subtotal-shop'> */}
-                                    {/* </div> */}
                                 </div>
 
 

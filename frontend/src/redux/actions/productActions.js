@@ -46,25 +46,6 @@ const productActions = {
             return res.data.response.product
         };
     },
-    modifyStock: (id) => {
-        const token = localStorage.getItem('token')
-        return async (dispatch, getState) => {
-            const res = await axios.put(`http://localhost:4000/api/allproducts/${id}`, {}, {
-                headers: {
-                    Authorization: 'Bearer ' + token
-                }
-            })
-            dispatch({
-                type: 'message',
-                payload: {
-                    view: true,
-                    message: res.data.message,
-                    success: res.data.success
-                }
-            })
-            // return res
-        }
-    },
     loadProduct: (objProd, id) => {
         const token = localStorage.getItem('token')
         return async (dispatch, getState) => {
@@ -73,7 +54,6 @@ const productActions = {
                     Authorization: 'Bearer ' + token
                 }
             })
-            console.log(res.data.success);
             dispatch({
                 type: 'message',
                 payLoad: {
@@ -82,12 +62,50 @@ const productActions = {
                     success: res.data.success
                 }
             })
-            // return res
+            
+        }
+    },
+    modifyProduct: (objProd, id) => {
+        const token = localStorage.getItem('token')
+        return async (dispatch, getState) => {
+            const res = await axios.put(`http://localhost:4000/api/allproducts/${id}`, { objProd }, {
+                headers: {
+                    Authorization: 'Bearer ' + token
+                }
+            })
+            dispatch({
+                type: 'message',
+                payLoad: {
+                    view: true,
+                    message: res.data.message,
+                    success: res.data.success
+                }
+            })
+            return res
+        }
+    },
+    deleteProduct: (id) => {
+        const token = localStorage.getItem('token')
+        return async (dispatch, getState) => {
+            const res = await axios.post(`http://localhost:4000/api/allproducts/one/${id}`, {}, {
+                headers: {
+                    Authorization: 'Bearer ' + token
+                }
+            })
+            dispatch({
+                type: 'message',
+                payLoad: {
+                    view: true,
+                    message: res.data.message,
+                    success: res.data.success
+                }
+            })
+            
         }
     },
     addToCart: (id) => {
         return async (dispatch, getState) => {
-            // console.log(id);
+            console.log(id);
             dispatch({ type: "addToCart", payload: id })
         }
     },
@@ -104,13 +122,11 @@ const productActions = {
     },
     emptyCart: () => {
         return async (dispatch, getState) => {
-            // console.log(id);
             dispatch({ type: "emptyCart" })
         }
     },
     iniciarAlRecargar: () => {
         let datosCart = JSON.parse(localStorage.getItem("shopCart"))
-        // console.log(datosCart);
 
         return async (dispatch, getState) => {
             dispatch({ type: "iniciarAlRecargar", payload: datosCart })

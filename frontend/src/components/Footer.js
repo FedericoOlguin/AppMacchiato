@@ -1,6 +1,5 @@
 import React from "react";
 import "../Styles/FooterM.css"
-
 import InstagramIcon from '@mui/icons-material/Instagram';
 import RoomIcon from '@mui/icons-material/Room';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';

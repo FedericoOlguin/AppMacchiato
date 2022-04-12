@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Styles/categorias.css'
 import coffePack from '../img/coffePack.png'
-import machineCoffe from '../img/machineCoffe.png'
 import creation from '../img/creations.png'
 
 function Categorias() {

@@ -1,6 +1,5 @@
 * {
   font-family: "Roboto", sans-serif;
-  /* font-family: 'Poppins', sans-serif; */
 }
 
 .navbar {
@@ -33,21 +32,9 @@
   background-color: black;
 }
 
-/* .navbarBackgound {
-  width: 100%;
-  position: fixed;
-  display: flex;
-  justify-content: space-between !important;
-  top: 0;
-  z-index: 1000;
-  padding: 1rem;
-  background-color: #efefef09;
-  transition: all 1s;
-} */
 
 .menuLinks {
   display: flex;
-  /* width: 80%; */
   margin-left: 2rem;
 }
 
@@ -81,10 +68,8 @@
 }
 
 .linkGeneral:hover {
-  /* color: white; */
   color: #000;
   background-color: rgba(255, 255, 255, 0.281);
-  /* font-size: 2rem; */
 }
 
 .linkAvatar {
@@ -97,13 +82,7 @@
 .linkAvatar:hover {
   background-color: transparent !important;
 }
-/* .userImg {
-  width: 5rem;
-  background-color: rgba(255, 255, 255, 0.301);
-  border-radius: 50%;
-  padding: 1rem;
-  cursor: pointer;
-} */
+
 
 .logo {
   width: 4rem;
@@ -113,7 +92,6 @@
 .linkLogo {
   font-family: "Roboto",  sans-serif;
   font-size: 2.5rem;
-  /* color: white; */
   color: #efefef;
   text-decoration: none;
   align-items: center;
@@ -130,14 +108,6 @@
 
 .carritoCompras{
   cursor: pointer;
-  /* position: fixed; */
-  /* left: 2rem; */
-  /* bottom: 5rem; */
-  /* background-color: rgba(255, 255, 255, 0.452); */
-  /* border-radius: 20%; */
-  /* color: #f3a446; */
-  /* z-index: 8; */
-  /* box-shadow: 5px 15px 15px black; */
 }
 
 .carritoCompras2{

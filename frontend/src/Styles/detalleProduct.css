@@ -1,41 +1,41 @@
 .contDetalle {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../img/fondo_alto.jpg);
-  overflow: hidden;
+  background-image: url(https://images.pexels.com/photos/1419939/pexels-photo-1419939.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  
 }
 .hero {
   min-height: 100%;
-  height: 100vh;
-  background-image: url(https://images.pexels.com/photos/1419939/pexels-photo-1419939.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-  background-size: cover;
+  height: 50vh;
   filter: brightness(0.7);
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.contenedorCardDetalle{
+  display: flex;
+  justify-content: center;
+  
+}
+.fondo{
+background-color: rgba(0, 0, 0, 0.678);
+}
 
 .contenedorBotonImg {
   display: flex;
-  /* position: relative; */
   justify-content: flex-end;
   align-items:center;
-  /* width: 5rem; */
   flex-direction: column;
-  /* flex-grow: 2; */
 }
 
 .product {
-  width: 50%;
+  width: 70%;
   min-height: 15rem;
-  /* max-height: 31vh; */
   height: 30vh;
-  z-index: 1000;
+  z-index: 10;
   display: flex;
   border-radius: 5px;
-  /* justify-content: stretch; */
-  /* align-items: stretch; */
-  /* margin-top: 3rem; */
   padding: 0.7rem;
   -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
   -moz-box-shadow: inset -5px 17px 109px 8px rgba(0, 0, 0, 0.88);
@@ -54,15 +54,13 @@
 
 .titulo-detalle {
   padding: 2px;
-  font-size: 2em;
-  /* margin-right: 8rem; */
+  font-size: 3em;
   width: 100%;
   color: #fff;
   text-align: center;
 }
 
 .imagen-detalle {
-  /* margin-top: -8rem; */
   max-width: 15rem;
   height: auto;
   filter: brightness(1.2);
@@ -71,13 +69,10 @@
 
 .p-detalle {
   display: flex;
-  /* align-self: flex-end; */
   width: 90%;
   font-size: 1.3em;
   text-align: center;
-  /* margin-right: 3rem; */
   color: #efefefad;
-  /* margin-bottom: 1rem; */
 }
 
 .priceStock-detalle {
@@ -85,7 +80,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 80%;
-  /* align-self: flex-end; */
   justify-content: space-around;
   
   font-size: 1.5em;
@@ -96,12 +90,9 @@
 }
 
 .buy-detalle {
-  /* width: 40%; */
   display: flex;
   height: 20%;
   justify-content: center;
-  /* margin-bottom: 1rem; */
-  /* margin-left: 2rem; */
 }
 .textCard {
   display: flex;
@@ -177,3 +168,25 @@
   transform: scale(0.8);
 }
 
+/* --------------------responsividad------------------- */
+
+@media (max-width:1074px) {
+
+  .product{
+    flex-direction: column;
+    height: auto;
+    margin: 5rem 0;
+  }
+  .textCard{
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+}
+
+@media (max-width:584px) {
+  .product{
+    width: 80%;
+  }
+
+}

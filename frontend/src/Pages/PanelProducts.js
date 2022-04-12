@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { Link as LinkRouter } from "react-router-dom";
 import { connect } from "react-redux"
 import productActions from '../redux/actions/productActions';
-import FormPanle from '../components/FormPanle';
+import FormPanle from '../components/FormPanel';
 import CardModify from '../components/CardModify';
 
 function PanelProducts(props) {
@@ -14,12 +14,12 @@ function PanelProducts(props) {
   useEffect(() => {
     props.getAllProducts()
 
-}, [])
+  }, [])
 
   const [form, setForm] = useState(false)
   const [form2, setForm2] = useState(false)
 
-  
+
 
   function openForm() {
     setForm(!form)
@@ -44,18 +44,18 @@ function PanelProducts(props) {
           <LinkRouter className="link-about" aria-current="page" to="#"><button onClick={openForm2} className='boton-panelProduct'>Modify products</button></LinkRouter>
         </div>
 
-      {props.allProducts.map(product=> 
-      <CardModify product={product} form2={form2}/>) }
+        {props.allProducts.map(product =>
+          <CardModify key={product._id} product={product} form2={form2} />)}
       </div>
 
-      
+
       <FormPanle form={form} />
       <Footer />
     </div>
   )
 }
 
-// export default PanelProducts
+
 
 
 const mapStateToProps = (state) => {

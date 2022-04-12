@@ -19,7 +19,6 @@ function GoogleSignUp(props) {
             country: "Argentina",
             from: "google",
             rol: "undefine"
-            // pais: props.pais
         }
         await props.signUp(userData)
     }
