@@ -3,7 +3,7 @@ const bcryptjs = require("bcryptjs")
 const crypto = require("crypto")
 const nodemaider = require("nodemailer")
 const jwt = require("jsonwebtoken")
-const { json } = require("express/lib/response")
+
 
 
 const sendEmail = async (email, uniqueString) => { //Funcion que envia email de verificcacion
@@ -75,7 +75,8 @@ const userController = {
     },
 
     signUpUser: async (req, res) => {
-        const { from, firstName, lastName, email, password, photoURL, country, rol } = req.body.objUser
+        const { from, firstName, lastName, email, password, photoURL, country } = req.body.objUser
+        // console.log(from, firstName, lastName, email, password, photoURL, country);
         const name = {
             firstName: firstName,
             lastName: lastName,
@@ -186,14 +187,24 @@ const userController = {
                             email: userExiste.email,
                             photoURL: userExiste.photoURL,
                             from: from,
+                            country:userExiste.country
                         }
                         await userExiste.save()
                         const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 })
-                        res.json({
-                            success: true,
-                            response: { token, userData },
-                            message: "Welcome back " + userData.name.firstName
-                        })
+                        if (userExiste.rol === "admin") {
+                            res.json({
+                                success: true,
+                                response: { token, userData, validate: true },
+                                message: "Welcome back " + userData.name.firstName
+                            })
+                        } else {
+
+                            res.json({
+                                success: true,
+                                response: { token, userData, validate: false },
+                                message: "Welcome back " + userData.name.firstName
+                            })
+                        }
                     } else {
                         res.json({
                             success: false,
@@ -210,13 +221,22 @@ const userController = {
                                 email: userExiste.email,
                                 photoURL: userExiste.photoURL,
                                 from: from,
+                                country:userExiste.country
                             }
                             const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 })
-                            res.json({
-                                success: true,
-                                response: { token, userData },
-                                message: "Welcome back " + userData.name.firstName
-                            })
+                            if (userExiste.rol === "admin") {
+                                res.json({
+                                    success: true,
+                                    response: { token, userData, validate: true },
+                                    message: "Welcome back " + userData.name.firstName
+                                })
+                            } else {
+                                res.json({
+                                    success: true,
+                                    response: { token, userData, validate: false },
+                                    message: "Welcome back " + userData.name.firstName
+                                })
+                            }
                         } else {
                             res.json({
                                 success: false,
@@ -257,7 +277,7 @@ const userController = {
         if (req.user) {
             res.json({
                 success: true,
-                response: { id: req.user.id, name: req.user.name, photoURL: req.user.photoURL, email: req.user.email, from: "token", rol: req.user.rol },
+                response: { id: req.user.id, name: req.user.name, photoURL: req.user.photoURL,country:req.user.country, email: req.user.email, from: "token", rol: req.user.rol },
                 message: "Welcome back " + req.user.name.firstName
             })
 
@@ -286,7 +306,7 @@ const userController = {
 
         try {
             let userRes
-            const devolver =  await Usuario.findOne({ _id: id })
+            const devolver = await Usuario.findOne({ _id: id })
             // console.log(devolver);
             userRes = {
                 name: devolver.name,
@@ -300,6 +320,54 @@ const userController = {
         } catch (err) {
             console.log(err);
         }
+    },
+    modifiedUserData: async (req, res) => {
+        const modifyUser = req.body.objData
+        const id = req.user.id
+        try {
+
+            let usuarioAcargar = await Usuario.find({ _id: id })
+
+            usuarioAcargar = {
+                ...usuarioAcargar,
+                name: {
+                    firstName: modifyUser.firstName,
+                    lastName: modifyUser.lastName
+                },
+                photoURL: modifyUser.photoURL,
+                country:modifyUser.country
+            }
+  
+            const response = await Usuario.findOneAndUpdate({ _id: id }, usuarioAcargar, { new: true })
+            const userData = {
+                id: response._id,
+                name: response.name,
+                email: response.email,
+                photoURL: response.photoURL,
+                from: response.from,
+                country:response.country
+            }
+
+            if (response.rol === "admin") {
+                res.json({
+                    success: true,
+                    response: {  userData, validate: true },
+                    message: "Successful change" + userData.name.firstName
+                })
+            } else {
+                res.json({
+                    success: true,
+                    response: { userData, validate: false },
+                    message: "Successful change " + userData.name.firstName
+                })
+            }
+        } catch (err) {
+            res.json({
+                success: false,
+                message: "Please try again later"
+            })
+        }
+
     }
 
 }

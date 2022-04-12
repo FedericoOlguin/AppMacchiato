@@ -7,13 +7,11 @@ import '../Styles/signin.css';
 function GoogleSignIn(props) {
 
     const responseGoogle = async (res) => {
-        // console.log(res) 
 
         const userData = {
             email: res.profileObj.email,
             password: res.profileObj.googleId,
             from: "google",
-            // pais: props.pais
         }
         await props.signIn(userData)
     }

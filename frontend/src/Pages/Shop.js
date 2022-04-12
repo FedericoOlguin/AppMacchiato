@@ -11,12 +11,16 @@ import '../Styles/shop.css'
 
 
 function Shop(props) {
+  // const [cardsToDisplay, setCards] = useState();
+  //para usar despues cuando apliquee filtros
+  //const [cardsToDisplay, setCards] = useState();
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-        props.getAllProducts()
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    props.getAllProducts();
+  }, []);
 
-    }, [])
+   /*  }, []) */
 
     return (
         <div className="container-shop">
@@ -32,15 +36,10 @@ function Shop(props) {
 
 }
 
-// const mapStateToProps = (state) => {
-//     return {
-//         allProducts: state.productReducer.allProducts
-//     }
-// }
+
 
 const mapDispatchToProps = {
-    getAllProducts: productActions.getAllProducts
-}
-
+  getAllProducts: productActions.getAllProducts,
+};
 
 export default connect(null, mapDispatchToProps)(Shop);

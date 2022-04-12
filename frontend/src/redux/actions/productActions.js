@@ -46,25 +46,6 @@ const productActions = {
             return res.data.response.product
         };
     },
-    modifyStock: (id) => {
-        const token = localStorage.getItem('token')
-        return async (dispatch, getState) => {
-            const res = await axios.put(`https://macchiatoapp.herokuapp.com/api/allproducts/${id}`, {}, {
-                headers: {
-                    Authorization: 'Bearer ' + token
-                }
-            })
-            dispatch({
-                type: 'message',
-                payload: {
-                    view: true,
-                    message: res.data.message,
-                    success: res.data.success
-                }
-            })
-            return res
-        }
-    },
     loadProduct: (objProd, id) => {
         const token = localStorage.getItem('token')
         return async (dispatch, getState) => {
@@ -73,21 +54,58 @@ const productActions = {
                     Authorization: 'Bearer ' + token
                 }
             })
-            // console.log(res.data.success);
-            // dispatch({
-            //     type: 'message',
-            //     payload: {
-            //         view: false,
-            //         message: res.data.message,
-            //         success: true
-            //     }
-            // })
+            dispatch({
+                type: 'message',
+                payLoad: {
+                    view: true,
+                    message: res.data.message,
+                    success: res.data.success
+                }
+            })
+            
+        }
+    },
+    modifyProduct: (objProd, id) => {
+        const token = localStorage.getItem('token')
+        return async (dispatch, getState) => {
+            const res = await axios.put(`https://macchiatoapp.herokuapp.com/api/allproducts/${id}`, { objProd }, {
+                headers: {
+                    Authorization: 'Bearer ' + token
+                }
+            })
+            dispatch({
+                type: 'message',
+                payLoad: {
+                    view: true,
+                    message: res.data.message,
+                    success: res.data.success
+                }
+            })
             return res
+        }
+    },
+    deleteProduct: (id) => {
+        const token = localStorage.getItem('token')
+        return async (dispatch, getState) => {
+            const res = await axios.post(`https://macchiatoapp.herokuapp.com/api/allproducts/one/${id}`, {}, {
+                headers: {
+                    Authorization: 'Bearer ' + token
+                }
+            })
+            dispatch({
+                type: 'message',
+                payLoad: {
+                    view: true,
+                    message: res.data.message,
+                    success: res.data.success
+                }
+            })
+            
         }
     },
     addToCart: (id) => {
         return async (dispatch, getState) => {
-            // console.log(id);
+            console.log(id);
             dispatch({ type: "addToCart", payload: id })
         }
     },
@@ -104,13 +122,11 @@ const productActions = {
     },
     emptyCart: () => {
         return async (dispatch, getState) => {
-            // console.log(id);
             dispatch({ type: "emptyCart" })
         }
     },
     iniciarAlRecargar: () => {
         let datosCart = JSON.parse(localStorage.getItem("shopCart"))
-        // console.log(datosCart);
 
         return async (dispatch, getState) => {
             dispatch({ type: "iniciarAlRecargar", payload: datosCart })
