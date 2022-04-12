@@ -12,7 +12,6 @@ function FormPanel(props) {
         formProd.current.focus()
         let boolean
         let datosInp = new FormData(formProd.current)
-        console.log(datosInp.get("sale"));
         if (datosInp.get("sale") === "on") {
             boolean = true
         }else{
@@ -126,8 +125,6 @@ function FormPanel(props) {
         </>
     )
 }
-
-// export default FormPanel
 
 
 const mapStateToProps = (state) => {

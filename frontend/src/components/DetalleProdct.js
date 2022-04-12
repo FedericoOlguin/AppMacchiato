@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
-// import "../App.css";
 import "../Styles/detalleProduct.css"
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -32,7 +31,6 @@ const Detalle = (props) => {
         <div className="fondo">
             < div className="contDetalle">
                 <NavBar />
-                {console.log(prod)}
                 <div className="hero">
                 </div>
 
@@ -73,7 +71,7 @@ const Detalle = (props) => {
 
 
 
-// export default (Detalle)
+
 const mapDispachToProps = {
     getOneProduct: productActions.getOneProduct,
     addToCart: productActions.addToCart,

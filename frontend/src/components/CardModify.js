@@ -38,8 +38,8 @@ function CardModify(props) {
 
         <div className="boton-panel">
             <button className="button-modify" onClick={openForm3} >
-                <span className="text">Modificar</span>
-                <span className="icon">
+                <span class="text">Modify</span>
+                <span class="icon">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"

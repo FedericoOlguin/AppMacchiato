@@ -36,11 +36,7 @@ function Shop(props) {
 
 }
 
-// const mapStateToProps = (state) => {
-//     return {
-//         allProducts: state.productReducer.allProducts
-//     }
-// }
+
 
 const mapDispatchToProps = {
   getAllProducts: productActions.getAllProducts,

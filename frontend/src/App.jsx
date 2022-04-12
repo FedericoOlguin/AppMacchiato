@@ -1,6 +1,5 @@
 import Home from './Pages/Home';
 import Shop from './Pages/Shop';
-/* import NavBar from "./components/NavBar" */
 import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import SignUp from './components/SignUp';
@@ -29,7 +28,6 @@ function App(props) {
       const token = localStorage.getItem("token")
       props.verifyToken(token)
       props.verifiedRol(localStorage.getItem("token"))
-      // .then(res => setAuthorized(res))
       props.iniciarAlRecargar()
     }
 

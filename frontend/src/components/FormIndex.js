@@ -77,9 +77,7 @@ const FormIndex = () => {
               required
             ></textarea>
           </div>
-          {/* <div className="submit"> */}
           <input type="submit" value="Send Message" className='boton-aboutUs' id="form_button" />
-          {/* </div> */}
         </form>
       </div>
     </div>
