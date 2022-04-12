@@ -67,22 +67,22 @@ const ProductController = {
 
     modifyProduct: async (req, res) => {
 
-        try{
-            const{name, image, category, price, stock, description, flag} = req.body.objProd;
-            let product= await Product.findById(req.params.id);
+        try {
+            const { name, image, category, price, stock, description, flag } = req.body.objProd;
+            let product = await Product.findById(req.params.id);
 
-            if(!product){
-                res.status (404).json({message:"the product does not exist"})
+            if (!product) {
+                res.status(404).json({ message: "the product does not exist" })
             }
-            product.name= name;
-            product.image=image;
-            product.category= category;
-            product.price=price;
-            product.stock= stock;
-            product.description= description;
-            product.flag= flag;
+            product.name = name;
+            product.image = image;
+            product.category = category;
+            product.price = price;
+            product.stock = stock;
+            product.description = description;
+            product.flag = flag;
 
-            product= await Product.findOneAndUpdate({_id:req.params.id}, product,{new:true})
+            product = await Product.findOneAndUpdate({ _id: req.params.id }, product, { new: true })
             // res.json(product)
             res.json({
                 success: true,
@@ -90,35 +90,35 @@ const ProductController = {
                 message: "Product modified"
             })
 
-        }         
-             
-        catch(error){
-            console.log(error)
-            res.json({success: false, message:"Something went wrong try again in a few minutes"})
         }
-    
-        
-        
-      },
-      deleteProduct: async (req, res) => {
 
-        try{
-            let product= await Product.findById(req.params.id);
+        catch (error) {
+            console.log(error)
+            res.json({ success: false, message: "Something went wrong try again in a few minutes" })
+        }
 
-            if(!product){
-                res.status (404).json({message:"the product does not exist"})
+
+
+    },
+    deleteProduct: async (req, res) => {
+        console.log(req.params.id);
+        try {
+            let product = await Product.findById(req.params.id);
+
+            if (!product) {
+                res.status(404).json({ message: "the product does not exist" })
             }
 
-            await Product.findOneAndRemove({_id:req.params.id})
-            res.json({success: true, message:"Product removed successfully"})
+            await Product.findOneAndRemove({ _id: req.params.id })
+            res.json({ success: true, message: "Product removed successfully" })
         }
 
-        catch(error){
+        catch (error) {
             console.log(error)
-            res.json({success: false,message:"Something went wrong try again in a few minutes"})
+            res.json({ success: false, message: "Something went wrong try again in a few minutes" })
         }
 
-      },
+    },
 }
 
 module.exports = ProductController

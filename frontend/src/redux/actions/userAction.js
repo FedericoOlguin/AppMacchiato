@@ -133,6 +133,37 @@ const usersActions = {
             // console.log(res);
             return res.data.response
         }
+    },
+    modifiedUserData: (objData) => {
+        const token = localStorage.getItem("token")
+        // console.log(token);
+        return async (dispatch, getState) => {
+            const res = await axios.post(`http://localhost:4000/api/user/info`, { objData }, {
+                headers: {
+                    Authorization: "Bearer " + token   //dejar espacio en bearer antes del cierre de las comillas ( "Bearer ")
+                }
+            })
+            if (res.data.success) {
+                dispatch({ type: "user", payLoad: res.data })
+                dispatch({
+                    type: "message", payLoad: {
+                        view: true,
+                        message: res.data.message,
+                        success: res.data.success
+                    }
+                })
+                dispatch({ type: "verified", payLoad: res.data.response.validate })
+            } else {
+                dispatch({
+                    type: "message",
+                    payLoad: {
+                        view: true,
+                        message: res.data.message,
+                        success: res.data.success
+                    }
+                })
+            }
+        }
     }
 
 }

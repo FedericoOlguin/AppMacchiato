@@ -38,8 +38,8 @@ function CardModify(props) {
 
         <div className="boton-panel">
             <button className="button-modify" onClick={openForm3} >
-                <span class="text">Modificar</span>
-                <span class="icon">
+                <span className="text">Modificar</span>
+                <span className="icon">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -52,8 +52,8 @@ function CardModify(props) {
             </button>
 
             <button className="button-elimintate" onClick={()=>{props.deleteProduct(props.product._id)}}>
-                <span class="text">Delete</span>
-                <span class="icon">
+                <span className="text">Delete</span>
+                <span className="icon">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"

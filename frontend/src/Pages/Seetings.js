@@ -19,10 +19,10 @@ function Seetings(props) {
   return (
     <div className='containerCardUser'>
       <NavBar />
-     
+
 
       <div className='container-cardppal'>
-        <LinkRouter className="scrollback-seetings" to={"/"}><ArrowBackIosNewIcon className='iconoBack-seetings' />
+        <LinkRouter className="scrollback-seetings" to={`/${props.user?.country}`}><ArrowBackIosNewIcon className='iconoBack-seetings' />
         </LinkRouter>
 
         <div id='cardUser'>
@@ -39,10 +39,10 @@ function Seetings(props) {
             </div>
 
             <div className='datosuser'>
-            <h2 className='infoUser'>Name: {props.user?.name.firstName}</h2>
+              <h2 className='infoUser'>Name: {props.user?.name.firstName}</h2>
               <h2 className='infoUser'>Last name: {props.user?.name.lastName}</h2>
-            <h2 className='infoUser'>País: {data?.country}</h2>
-            <h2 className='infoUser'>Email: {props.user?.email}</h2>
+              <h2 className='infoUser'>País: {props.user?.country}</h2>
+              <h2 className='infoUser'>Email: {props.user?.email}</h2>
             </div>
 
             <div className="div-user">

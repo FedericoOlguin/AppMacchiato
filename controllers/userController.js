@@ -187,6 +187,7 @@ const userController = {
                             email: userExiste.email,
                             photoURL: userExiste.photoURL,
                             from: from,
+                            country:userExiste.country
                         }
                         await userExiste.save()
                         const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 })
@@ -220,6 +221,7 @@ const userController = {
                                 email: userExiste.email,
                                 photoURL: userExiste.photoURL,
                                 from: from,
+                                country:userExiste.country
                             }
                             const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 })
                             if (userExiste.rol === "admin") {
@@ -275,7 +277,7 @@ const userController = {
         if (req.user) {
             res.json({
                 success: true,
-                response: { id: req.user.id, name: req.user.name, photoURL: req.user.photoURL, email: req.user.email, from: "token", rol: req.user.rol },
+                response: { id: req.user.id, name: req.user.name, photoURL: req.user.photoURL,country:req.user.country, email: req.user.email, from: "token", rol: req.user.rol },
                 message: "Welcome back " + req.user.name.firstName
             })
 
@@ -318,6 +320,54 @@ const userController = {
         } catch (err) {
             console.log(err);
         }
+    },
+    modifiedUserData: async (req, res) => {
+        const modifyUser = req.body.objData
+        const id = req.user.id
+        try {
+
+            let usuarioAcargar = await Usuario.find({ _id: id })
+
+            usuarioAcargar = {
+                ...usuarioAcargar,
+                name: {
+                    firstName: modifyUser.firstName,
+                    lastName: modifyUser.lastName
+                },
+                photoURL: modifyUser.photoURL,
+                country:modifyUser.country
+            }
+  
+            const response = await Usuario.findOneAndUpdate({ _id: id }, usuarioAcargar, { new: true })
+            const userData = {
+                id: response._id,
+                name: response.name,
+                email: response.email,
+                photoURL: response.photoURL,
+                from: response.from,
+                country:response.country
+            }
+
+            if (response.rol === "admin") {
+                res.json({
+                    success: true,
+                    response: {  userData, validate: true },
+                    message: "Successful change" + userData.name.firstName
+                })
+            } else {
+                res.json({
+                    success: true,
+                    response: { userData, validate: false },
+                    message: "Successful change " + userData.name.firstName
+                })
+            }
+        } catch (err) {
+            res.json({
+                success: false,
+                message: "Please try again later"
+            })
+        }
+
     }
 
 }
