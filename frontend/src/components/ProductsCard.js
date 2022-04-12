@@ -18,7 +18,6 @@ function ProductsCard(props) {
 
     const [eventInput, setEventInput] = useState("");
     const [eventSelect, setEventSelect] = useState("");
-    // const [loaded, setLoaded] = useState(false);
 
 
 
@@ -26,7 +25,6 @@ function ProductsCard(props) {
         console.log(input);
         console.log(select);
 
-        // setLoaded(!loaded)
         props.filter(props.allProducts, input, select)
 
     }
@@ -39,6 +37,7 @@ function ProductsCard(props) {
     return (
         <>
             <div className='contenedorCardsGeneral'>
+                <LinkRouter className="link-about1" aria-current="page" to="/aboutUs"> <p> If you want to know more about us click here </p> </LinkRouter>
                 <div className='sliderPromocion'>
                     <h1 className='titleStore'>Shop</h1>
                 </div>
@@ -85,7 +84,6 @@ function ProductsCard(props) {
                                     <img alt='cardPho' src={products.image} className="imagenHeader" />
                                     <div className='txtCard'>
                                         <h2> {products.name} </h2>
-                                        {/* <h4> Other property </h4> */}
                                         <div className='botonesShop'>
                                             <LocalGroceryStoreIcon onClick={() => props.addToCart(products._id)} className='iconShop' />
                                         </div>

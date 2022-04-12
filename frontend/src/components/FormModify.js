@@ -7,31 +7,6 @@ function FormPanel(props) {
     let formProd = useRef()
 
 
-    // function enviarData(event) {
-    //     event.preventDefault()
-    //     formProd.current.focus()
-    //     let boolean
-    //     let datosInp = new FormData(formProd.current)
-    //     console.log(datosInp.get("sale"));
-    //     if (datosInp.get("sale") === "on") {
-    //         boolean = true
-    //     }else{
-    //         boolean=false
-    //     }
-    //     let productObj = {
-    //         name: datosInp.get("nameItem"),
-    //         image: datosInp.get("ItemPhotoUrl"),
-    //         category: datosInp.get("category"),
-    //         price: datosInp.get("price"),
-    //         stock: datosInp.get("stock"),
-    //         description: datosInp.get("description"),
-    //         flag: datosInp.get("flag"),
-    //         sale: boolean
-    //     }
-    //     props.loadProduct(productObj, props.user.id)
-
-    // }
-
     return (
         <>
 
@@ -41,7 +16,6 @@ function FormPanel(props) {
                         <h2 className='subtitle-signup-panelProducts'>Modify product </h2>
                         <div className="formContainer-panelProducts">
                             <form action="" className="form-panelProducts" 
-                            // onSubmit={enviarData} 
                             ref={formProd} id="form">
 
                                 <fieldset className="fieldsetFrom-panelProducts">
@@ -129,7 +103,7 @@ function FormPanel(props) {
     )
 }
 
-// export default FormPanel
+
 
 
 const mapStateToProps = (state) => {

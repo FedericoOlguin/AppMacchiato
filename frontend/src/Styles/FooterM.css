@@ -37,7 +37,6 @@ footer li {
   width: 100%;
   padding: 0;
   display: flex;
-  /* align-items: stretch; */
 }
 
 .iconFooter {
@@ -101,7 +100,6 @@ footer li {
   bottom: 0;
   text-align: center; 
   margin: auto;
-  /* left: 2rem; */
 }
 
 .divNavFooter {
@@ -154,7 +152,6 @@ footer li {
   .divNavFooter {
     display: flex;
     justify-content: center;
-    /* width: 100%; */
   }
 
   .divNavFooter ul {
@@ -187,9 +184,7 @@ footer li {
     border-radius: 0;
     margin-bottom: 0.5rem;
   }
-  /* .footerNav ul{
-    width: 100%;
-  } */
+ 
 
   .divIcon ul {
     flex-direction: row !important;

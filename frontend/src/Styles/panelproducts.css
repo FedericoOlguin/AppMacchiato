@@ -311,14 +311,12 @@
   overflow: hidden;
   position: relative;
 
-  /* background-color: #EFEEFE; */
 }
 
 .mainForm-panelProducts {
   justify-content: flex-start;
   align-items: center;
   padding-top: 1rem;
-  /* background-color: #5c5b5bdc !important; */
   background-color: #efeefed5;
   width: 100%;
   min-height: 100vh;
@@ -331,7 +329,6 @@
 .subtitle-signup-panelProducts {
   padding: 1rem;
   margin-bottom: 1.5rem;
-  /* background-color: #EFEEFE; */
   width: 80%;
   font-size: 2.5rem;
   font-weight: bold;
@@ -342,7 +339,6 @@
 
 .form-panelProducts {
   width: 100%;
-  /* background-color: #EFEEFE; */
   border: none;
   display: flex;
   flex-wrap: wrap;
@@ -452,36 +448,6 @@
 
 /* -------------responsividad ---------- */
 
-/* @media only screen and (min-width: 0px) and (max-width: 750px) {
-  #video-signup {
-    display: none;
-  }
-
-  #form-signup {
-    width: 100%;
-  }
-
-  .subtitle-signup {
-    font-size: 2rem;
-    padding: 0 0 .2rem 0;
-  }
-
-  
-
-  .button {
-    font-size: .8rem;
-    height: 1.9rem;
-  }
-
-  .linkSingIn {
-    text-align: center;
-  }
-
-  .inputFrom {
-    padding-left: 0;
-  }
-
-} */
 
 @media (max-width: 1020px) {
   .container-tituloPanel {

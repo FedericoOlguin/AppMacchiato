@@ -73,7 +73,6 @@ const productActions = {
                     Authorization: 'Bearer ' + token
                 }
             })
-            console.log(res.data.success);
             dispatch({
                 type: 'message',
                 payLoad: {
@@ -82,7 +81,7 @@ const productActions = {
                     success: res.data.success
                 }
             })
-            // return res
+            
         }
     },
     addToCart: (id) => {
@@ -104,13 +103,11 @@ const productActions = {
     },
     emptyCart: () => {
         return async (dispatch, getState) => {
-            // console.log(id);
             dispatch({ type: "emptyCart" })
         }
     },
     iniciarAlRecargar: () => {
         let datosCart = JSON.parse(localStorage.getItem("shopCart"))
-        // console.log(datosCart);
 
         return async (dispatch, getState) => {
             dispatch({ type: "iniciarAlRecargar", payload: datosCart })

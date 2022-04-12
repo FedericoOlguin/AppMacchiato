@@ -1,6 +1,5 @@
 import Home from './Pages/Home';
 import Shop from './Pages/Shop';
-/* import NavBar from "./components/NavBar" */
 import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import SignUp from './components/SignUp';
@@ -13,7 +12,7 @@ import AboutPage from './Pages/AboutPage';
 import ErrorScreen from './components/ErrorScreen';
 import Seetings from './Pages/Seetings';
 import SeetingsChange from './Pages/SeetingsChanges';
-import PanelProducts from './Pages/PanelProducts'; /* toca organizarla, solo se hzo así para poder diseñarla */
+import PanelProducts from './Pages/PanelProducts'; 
 import Detalle from "./components/DetalleProdct";
 import productActions from './redux/actions/productActions';
 import ShoppingCart from './Pages/ShopingCart';
@@ -28,7 +27,6 @@ function App(props) {
       const token = localStorage.getItem("token")
       props.verifyToken(token)
       props.verifiedRol(localStorage.getItem("token"))
-      // .then(res => setAuthorized(res))
       props.iniciarAlRecargar()
     }
 
@@ -49,8 +47,6 @@ function App(props) {
         <Route path='/signUp' element={props.user ? <Navigate replace to='/' /> : <SignUp />} />
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
         {props.user?( <Route path='/panel' element={!props.authorized ? (<Navigate replace to='/err' />) : (<PanelProducts />)} />):(<></>)}
-        {/* // <Route path='/panel' element={!props.authorized ? (<Navigate replace to='/err' />) : (<PanelProducts />)} /> */}
-        {/* <Route path='/detalle/:id' element={<Detalle />} /> */}
         <Route path='/detalle/:id' element={<Detalle />} />
         <Route path='/shoppingCart' element={<ShoppingCart/>}/>
       </Routes>

@@ -3,8 +3,6 @@
   width: 90%;
   min-height: 50vh;
   margin-bottom: 3rem;
-  /* background-color: rgba(231, 221, 221, 0.103); */
-  /* border-radius: 5px; */
 }
 .containerImg {
   display: flex;
@@ -58,7 +56,6 @@
 }
 
 .icon_wrapper {
-  /* margin: 3rem auto 0; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,16 +87,6 @@
   padding: 0 0 0.575em 0;
   text-transform: uppercase;
   width: 100%;
-  /* -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s; */
 }
 .modificado{
   margin-bottom: 1rem!important;
@@ -132,7 +119,6 @@
 }
 
 .textArea {
-  /* line-height: 150%; */
   resize: none;
   width: 100%;
 }
@@ -173,37 +159,9 @@
   transform: scale(1.02, 1.02);
 }
 
-/* #form_button {
-  background: none;
-  border: solid 2px #d8d2d0;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Helvetica", Arial, sans-serif;
-  font-size: 0.875em;
-  height: 3rem;
-  font-weight: bold;
-  outline: none;
-  padding: 0.8rem;
-  margin: 0px 0px 25px 15px;
-  text-transform: uppercase;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  border-radius: 5px;
-  transition: all 0.5;
-}
-
-#form_button:hover {
-  transform: scale(1.02, 1.02);
-  color: #fff;
-} */
 
 @media screen and (max-width: 768px) {
   .globalForm {
-    /* background-color: rgba(128, 128, 128, 0.274); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -225,7 +183,6 @@
   .containerImg > img {
     width: 18rem;
     height: 13rem;
-    /* border: #F2F3EB solid 1px; */
   }
   .icon_wrapper {
     margin: 2rem auto 0;
@@ -252,9 +209,7 @@
     width: 68px;
   }
 
-  /* #form_button {
-    padding: 1rem 1rem;
-  } */
+  
 }
 
 @media screen and (max-width: 420px) {
@@ -264,7 +219,6 @@
   .containerImg > img {
     width: 15rem;
     height: 12rem;
-    /* border: #F2F3EB solid 1px; */
   }
 
   .underline {

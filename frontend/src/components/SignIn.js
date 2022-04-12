@@ -30,7 +30,6 @@ function SignIn(props) {
     <div id='container-signup'>
       <LinkRouter className="scrollback" to={"/"}><ArrowBackIosNewIcon className='iconoBack' />
       </LinkRouter>
-      {console.log(props.user)}
       <div id='form-signin'>
         <div id='video-signup'>
           <video

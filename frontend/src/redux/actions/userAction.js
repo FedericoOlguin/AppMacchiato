@@ -58,7 +58,6 @@ const usersActions = {
             try {
                 const res = await axios.post(`http://localhost:4000/api/auth/signOut`, { userEmail })
                 localStorage.removeItem("token")
-                console.log(res);
                 dispatch({
                     type: "userSignOut", payLoad: {
                         view: true,
@@ -74,7 +73,6 @@ const usersActions = {
         }
     },
     verifyToken: (token) => {
-        // console.log(token);
         return async (dispatch, getState) => {
             try {
 
@@ -104,7 +102,6 @@ const usersActions = {
         }
     },
     verifiedRol: (token) => {
-        // console.log(token);
         return async (dispatch, getState) => {
             try {
 
@@ -123,14 +120,12 @@ const usersActions = {
     },
     getInfoUser: () => {
         const token = localStorage.getItem("token")
-        // console.log(token);
         return async (dispatch, getState) => {
             const res = await axios.get(`http://localhost:4000/api/user/info`, {
                 headers: {
                     Authorization: "Bearer " + token   //dejar espacio en bearer antes del cierre de las comillas ( "Bearer ")
                 }
             })
-            // console.log(res);
             return res.data.response
         }
     }

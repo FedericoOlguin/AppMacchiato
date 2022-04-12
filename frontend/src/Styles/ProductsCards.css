@@ -50,18 +50,15 @@
   border-bottom: 1px solid #efeefe;
   font-size: 1.3em;
   color: white;
-  /* border-radius: 5px; */
 }
 
 .form-control {
   width: 100%;
   height: 5vh;
   font-size: 1.3em;
-  /* text-align: center; */
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #efeefe;
-  /* border-radius: 5px; */
   color: white;
   margin-left: 3rem;
 }
@@ -75,9 +72,7 @@
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   flex-wrap: wrap;
-  /* background-attachment: fixed; */
   margin: auto;
   transition: all 1s ease-in-out;
 }
@@ -124,13 +119,10 @@
 
 .flag {
   border-radius: 0%;
-  /* -moz-border-radius: 50%;
-  -webkit-border-radius: 50%; */
   text-align: center;
   position: relative;
   font-size: 0.8rem;
   width: 1.8rem;
-  /* height: 1.rem; */
   top: 0.2rem;
   left: 11.8rem;
   z-index: 101;
@@ -154,7 +146,6 @@
   height: 3rem;
   align-items: center;
   justify-content: center;
-  /* color: rgb(161, 70, 70); */
   text-shadow: 1px 1px 1px rgb(0, 0, 0);
   padding: 0.1rem 1rem 0rem 1rem;
   background-color: rgba(105, 105, 105, 0.171);
@@ -185,20 +176,6 @@
 }
 
 .nofound {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 2rem 2rem 2rem 2rem;
-  width: 100%;
-  height: 400px;
-  color: #efeefe !important;
-  text-align: center;
-  border-radius: 5px;
-  -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
-  -moz-box-shadow: inset -5px 17px 109px 8px rgba(0, 0, 0, 0.88);
-  box-shadow: inset -5px 17px 109px 8px rgba(49, 49, 49, 0.88);
-  background-image: url(https://jberlife.com/wp-content/uploads/2021/04/GettyImages-1191995863-2-scaled.jpg);
-  overflow: hidden; */
   width: 100%;
   margin-top: 15rem;
   height: 50vh;
@@ -227,6 +204,21 @@
 
 .link-carta {
   text-decoration: none !important;
+}
+
+.link-about1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+  color: #efefefe8;
+  background-color: #f3a446;
+  text-decoration: none;
+ 
+  margin-bottom: 1rem;
+  font-size: 1.35em;
+  font-weight: 700;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 1200px) {
@@ -266,5 +258,19 @@
   }
   .filter {
     align-items: center;
+  }
+}
+
+
+@media (max-width: 480px){
+  .link-about1{
+    font-size: 1em;
+  }
+}
+
+
+@media (max-width: 360px){
+  .link-about1{
+    display: none;
   }
 }

@@ -55,7 +55,7 @@ function PanelProducts(props) {
   )
 }
 
-// export default PanelProducts
+
 
 
 const mapStateToProps = (state) => {

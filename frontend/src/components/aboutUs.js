@@ -1,6 +1,5 @@
 import React from 'react';
 import '../Styles/aboutUs.css';
-// import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link as LinkRouter } from "react-router-dom";
 import Slider from '../components/slider'
 
