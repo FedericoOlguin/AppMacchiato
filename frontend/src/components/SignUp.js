@@ -14,39 +14,12 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 function SignUp(props) {
   window.scrollTo(0, 0)
   const form = useRef()
-  // const [files, setFiles] = useState()
 
   async function send(event) {
     event.preventDefault()
-    // const file = await files[0]
-    // console.log(file);
     form.current.focus()
     let datosInp = new FormData(form.current)
 
-//     const firstName = datosInp.get("name")
-//     const lastName = datosInp.get("lastName")
-//     const email = datosInp.get("email")
-//     const password = datosInp.get("password")
-//     const country = datosInp.get("pais")
-// console.log(firstName,lastName,email,password,country);
-
-//     const otroObj = new FormData()
-//     otroObj.append("firstName", firstName)
-//     otroObj.append("lastName", lastName)
-//     otroObj.append("email", email)
-//     otroObj.append("password",password)
-//     otroObj.append("photoURL", file)
-//     otroObj.append("country", country)
-//     otroObj.append("from", "signup")
-//     otroObj.append("rol", 'undefined')
-
-    // datosInp.append("firstName", datosInp.get("name"))
-    // datosInp.append("lastName", datosInp.get("lastName"))
-    // datosInp.append("email", datosInp.get("email"))
-    // datosInp.append("password", datosInp.get("password"))
-    // datosInp.append("photoURL", file)
-    // datosInp.append("country", datosInp.get("pais"))
-    // console.log(otroObj);
 
     let userObj = {
       firstName: datosInp.get("name"),
@@ -54,7 +27,6 @@ function SignUp(props) {
       email: datosInp.get("email"),
       password: datosInp.get("password"),
       photoURL: datosInp.get("imageUrl"),
-      // photoURL: file,
       country: datosInp.get("pais"),
       from: "signup",
       rol: 'undefined',
@@ -62,8 +34,6 @@ function SignUp(props) {
     console.table(userObj);
 
     props.signUp(userObj)
-    // props.signUp(otroObj)
-    // form.current.reset()
   }
 
 
@@ -103,7 +73,6 @@ function SignUp(props) {
                 <label className="labelForm" htmlFor="imageUrl">
                   <span className='span-signup'>Image URL</span>
                   <input className="inputFrom"  type="text" id="imageUrl" name="imageUrl" />
-                  {/* <input className="inputFrom" onChange={(event) => setFiles(event.target.files)} type="file" id="imageUrl" name="imageUrl" /> */}
                 </label>
 
                 <label className="labelForm" htmlFor="pais">

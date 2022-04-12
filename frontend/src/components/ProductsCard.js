@@ -7,8 +7,9 @@ import LoadingIcon from "./LoadingIcon"
 import productActions from "../redux/actions/productActions";
 import '../Styles/ProductsCards.css'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
-import DetailsIcon from '@mui/icons-material/Details';
-import Carousel from "../components/Carousel"
+import lupa from "../img/VerMas.svg"
+
+
 
 
 const categories = [{ name: "Coffees", }, { name: "Coffee maker", }, { name: "Accessories", }, { name: "Barista tools", }]
@@ -18,7 +19,6 @@ function ProductsCard(props) {
 
     const [eventInput, setEventInput] = useState("");
     const [eventSelect, setEventSelect] = useState("");
-    // const [loaded, setLoaded] = useState(false);
 
 
 
@@ -26,7 +26,6 @@ function ProductsCard(props) {
         console.log(input);
         console.log(select);
 
-        // setLoaded(!loaded)
         props.filter(props.allProducts, input, select)
 
     }
@@ -39,11 +38,9 @@ function ProductsCard(props) {
     return (
         <>
             <div className='contenedorCardsGeneral'>
+                <LinkRouter className="link-about1" aria-current="page" to="/aboutUs"> <p> If you want to know more about us click here </p> </LinkRouter>
                 <div className='sliderPromocion'>
-                    <div className='ContainerSlider'>
-                        <Carousel todosProductos={props.allProducts} />
-                        {/* <h1>Slider promociones</h1> */}
-                    </div>
+                    <h1 className='titleStore'>Shop</h1>
                 </div>
 
                 <div className='filters'>
@@ -87,11 +84,10 @@ function ProductsCard(props) {
                                 <img alt='cardPho' src={products.image} className="imagenHeader" />
                                 <div className='txtCard'>
                                     <h2> {products.name} </h2>
-                                    {/* <h4> Other property </h4> */}
                                     <div className='botonesShop'>
                                         <LocalGroceryStoreIcon onClick={() => props.addToCart(products._id)} className='iconShop' />
-                                        <LinkRouter to={`/detalle/${products._id}`} >
-                                            <DetailsIcon className='iconShop' />
+                                        <LinkRouter className="link-carta" to={`/detalle/${products._id}`} >
+                                            <img src={lupa} alt='lupa' className='lupaView' />
                                         </LinkRouter>
                                     </div>
                                 </div>
@@ -104,7 +100,7 @@ function ProductsCard(props) {
                         </div>
                     )}
                 </div>
-               
+
             </div>
         </>
     )

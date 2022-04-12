@@ -15,8 +15,8 @@ function FormPanel(props) {
         console.log(datosInp.get("sale"));
         if (datosInp.get("sale") === "on") {
             boolean = true
-        }else{
-            boolean=false
+        } else {
+            boolean = false
         }
         let productObj = {
             name: datosInp.get("nameItem"),
@@ -41,9 +41,9 @@ function FormPanel(props) {
                     <main className="mainForm-panelProducts">
                         <h2 className='subtitle-signup-panelProducts'>Modify product </h2>
                         <div className="formContainer-panelProducts">
-                            <form action="" className="form-panelProducts" 
-                            onSubmit={enviarData} 
-                            ref={formProd} id="form">
+                            <form action="" className="form-panelProducts"
+                                onSubmit={(event) => enviarData(event)}
+                                ref={formProd} id="form">
 
                                 <fieldset className="fieldsetFrom-panelProducts">
 
@@ -51,7 +51,7 @@ function FormPanel(props) {
                                         <div className='container-panelProduct'>
                                             <span className='span-signup-panelProducts'>Name item</span>
                                         </div>
-                                        <input className="inputFrom-panelProducts" defaultValue={props.product.name} type="text" id="nameItem" name="nameItem" required  />
+                                        <input className="inputFrom-panelProducts" defaultValue={props.product.name} type="text" id="nameItem" name="nameItem" required />
                                     </label>
 
                                     <label className="labelForm-panelProducts" htmlFor="ItemPhotoUrl">
@@ -93,7 +93,7 @@ function FormPanel(props) {
                                     <label className="labelForm-panelProducts" htmlFor="sale">
                                         <div className='container-panelProduct'>
                                             <span className='span-signup-panelProducts'>Sale</span>
-                                            <input className="" type="checkbox" id="sale" name="sale" defaultChecked={props.product.sale}/>
+                                            <input className="" type="checkbox" id="sale" name="sale" defaultChecked={props.product.sale} />
                                         </div>
                                     </label>
 
@@ -130,7 +130,7 @@ function FormPanel(props) {
     )
 }
 
-// export default FormPanel
+
 
 
 const mapStateToProps = (state) => {

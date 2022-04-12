@@ -17,7 +17,7 @@ function AboutPage() {
     window.scrollTo(0, 0)
   }, [])
 
-  
+
   return (
     <div className='fondo-AboutUs'>
       <NavBar />
@@ -81,23 +81,17 @@ function AboutPage() {
           <div className='fotos-contenedor'>
 
             <div className='contenedorLinkedIn'>
-              {/* <div className='contenedor-devimg'> */}
-                <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/marcia-montivero-gutierrez-383009207/"><img  src={marcia} alt='desarrollador' className='img-dev' /></a>
-              {/* </div> */}
+              <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/marcia-montivero-gutierrez-383009207/"><img src={marcia} alt='desarrollador' className='img-dev' /></a>
               <h3 className='nombreDesarrollador'>Marcia Montivero</h3>
             </div>
 
             <div className='contenedorLinkedIn'>
-              {/* <div className='contenedor-devimg'> */}
-                <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/federico-olgu%C3%ADn-1b405b201/"><img src={fede} alt='desarrollador'className='img-dev' /></a>
-              {/* </div> */}
+              <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/federico-olgu%C3%ADn-1b405b201/"><img src={fede} alt='desarrollador' className='img-dev' /></a>
               <h3 className='nombreDesarrollador'>Federico Olguín</h3>
             </div>
 
             <div className='contenedorLinkedIn'>
-              {/* <div className='contenedor-devimg'> */}
-                <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/hernan-funes-50301421b/"><img src={hernan} alt='desarrollador'className='img-dev' /></a>
-              {/* </div> */}
+              <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/hernan-funes-50301421b/"><img src={hernan} alt='desarrollador' className='img-dev' /></a>
               <h3 className='nombreDesarrollador'>Hernán Funes</h3>
             </div>
 
@@ -106,30 +100,21 @@ function AboutPage() {
           <div className='fotos-contenedor'>
 
             <div className='contenedorLinkedIn'>
-              {/* <div className='contenedor-devimg'> */}
-                <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/fernanda-arrieta-755665b0/"><img src={fernanda} className='img-dev' alt='desarrollador'  /></a>
-              {/* </div> */}
+              <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/fernanda-arrieta-755665b0/"><img src={fernanda} className='img-dev' alt='desarrollador' /></a>
               <h3 className='nombreDesarrollador'>Fernanda Arrieta</h3>
             </div>
 
             <div className='contenedorLinkedIn'>
-              {/* <div className='contenedor-devimg'> */}
-                <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/juan-sebastian-londo%C3%B1o-cossio-9444781b7/"><img src={sebas} alt='desarrollador' className='img-dev' /></a>
-              {/* </div> */}
-
+              <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/juan-sebastian-londo%C3%B1o-cossio-9444781b7/"><img src={sebas} alt='desarrollador' className='img-dev' /></a>
               <h3 className='nombreDesarrollador'>Sebastian Londoño</h3>
             </div>
 
             <div className='contenedorLinkedIn'>
-              {/* <div className='contenedor-devimg'> */}
-                <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/daniel-mart%C3%ADnez-casta%C3%B1eda-8b363b15a/"><img src={dani} alt='desarrollador' className='img-dev' /></a>
-              {/* </div> */}
-              <h3 className='nombreDesarrollador'>Daniel Martinez</h3>
+              <a target="_blank" rel="noreferrer nopener" href="https://www.linkedin.com/in/daniel-mart%C3%ADnez-casta%C3%B1eda-8b363b15a/"><img src={dani} alt='desarrollador' className='img-dev' /></a>              <h3 className='nombreDesarrollador'>Daniel Martinez</h3>
             </div>
-
           </div>
         </div>
-      </div>      
+      </div>
       <Footer />
     </div>
   )

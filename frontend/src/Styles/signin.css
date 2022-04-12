@@ -14,15 +14,11 @@
   align-items: center;
   justify-content: center;
 }
-/* .form{
-  height: 100%;
-} */
+
 
 #video-signup {
   width: 50%;
   height: 100vh;
-  /* display: flex;
-   align-items: stretch; */
 }
 
 .video {
@@ -58,13 +54,6 @@
   align-items: center;
 }
 
-/* .mainForm {
-  padding-top: 1rem;
-  background-color: #EFEEFE !important;
-  display: flex;
-  justify-content: center;
-  
-} */
 .mainFormin {
   width: 50%;
   display: flex;
@@ -78,7 +67,6 @@
   padding: .3rem !important;
   margin-bottom: 1rem;
   background-color: #efeefe;
-  /* width: 80%; */
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
@@ -300,14 +288,7 @@
     height: 2.075rem;
     margin-bottom: 1rem;
   }
-  /* 
-  #video-signup {
-    height: 113.45%;
-  } */
+  
 }
 
-/* @media only screen and (min-width: 1200px) and (max-width: 1326px) {
-  #video-signup {
-    height: 113.55%;
-  }
-} */
+
