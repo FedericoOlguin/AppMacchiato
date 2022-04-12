@@ -9,7 +9,7 @@ function Hero() {
                 <span className="spanTitulo">
                 The best coffee in the world,
                 </span>
-                <h1 className="h1">you find it in Macchiato</h1>
+                <h1 className="h1"> find it in Macchiato</h1>
                 <a href="#container-categorias">
                     <div className="scroll-down"></div>
                 </a>
