@@ -11,7 +11,7 @@
   background-image: url("../img/fondoSlider.jpg");
   background-size: cover;
   background-position: 100% 60%;
-  filter: brightness(0.5);
+  /* filter: brightness(0.5); */
   background-attachment: fixed;
   width: 100%;
   height: 50vh;
