@@ -1,17 +1,38 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import '../Styles/seetingschange.css'
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
-import Countries from '../components/apiCountry';
+import NavBar from './NavBar';
+import Footer from './Footer';
+import Countries from './apiCountry';
 import BuildIcon from '@mui/icons-material/Build';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import {Link as LinkRouter} from 'react-router-dom'
+import { Link as LinkRouter } from 'react-router-dom'
+import userActions from "../redux/actions/userAction"
+import { connect } from 'react-redux';
 
-function SeetingsChange(){
-  return(
+
+function SeetingsChange(props) {
+  const formMod = useRef()
+
+  function SendData(event) {
+    event.preventDefault()
+    formMod.current.focus()
+    let datosInp = new FormData(formMod.current)
+
+    let userObj = {
+      firstName: datosInp.get("name"),
+      lastName: datosInp.get("lastName"),
+      photoURL: datosInp.get("imageUrl"),
+      country: datosInp.get("pais"),
+    }
+    console.table(userObj);
+    props.modifiedUserData(userObj)
+  }
+
+  
+  return (
     <div className='container-seetings'>
       <NavBar />
-      
+
 
       <div className='container-ppalSeetings'>
 
@@ -22,7 +43,7 @@ function SeetingsChange(){
             </LinkRouter>
             <h2 className='subtitle-signup-seetings'>Seetings your profile</h2>
             <div className="formContainer-seetings">
-              <form action="" className="form-seetings" /* onSubmit={""} ref={""} */ id="form">
+              <form action="" className="form-seetings" onSubmit={(event) => SendData(event)} ref={formMod} id="formMod">
 
                 <fieldset className="fieldsetFrom-seetings">
 
@@ -31,15 +52,15 @@ function SeetingsChange(){
                       <span className='span-signup-seetings'>First Name </span>
                       <BuildIcon className='butonSeetings' />
                     </div>
-                    <input className="inputFrom-seetings" type="text" id="name" name="name" required />
+                    <input className="inputFrom-seetings" type="text" id="name" name="name" defaultValue={props.user?.name.firstName} required />
                   </label>
 
                   <label className="labelForm-seetings" htmlFor="lastName">
                     <div className='seeting-config'>
-                      <span className='span-signup-seetings'>Last Name</span>
+                      <span className='span-signup-seetings' >Last Name</span>
                       <BuildIcon className='butonSeetings' />
                     </div>
-                    <input className="inputFrom-seetings" type="text" id="lastName" name="lastName" />
+                    <input className="inputFrom-seetings" type="text" id="lastName" name="lastName" defaultValue={props.user?.name.lastName} />
                   </label>
 
                   <label className="labelForm-seetings" htmlFor="imageUrl">
@@ -47,7 +68,7 @@ function SeetingsChange(){
                       <span className='span-signup-seetings'>Image URL</span>
                       <BuildIcon className='butonSeetings' />
                     </div>
-                    <input className="inputFrom-seetings" type="text" id="imageUrl" name="imageUrl" />
+                    <input className="inputFrom-seetings" type="text" id="imageUrl" name="imageUrl" defaultValue={props.user?.photoURL} />
                   </label>
 
                   <label className="labelForm-seetings" htmlFor="pais">
@@ -57,7 +78,7 @@ function SeetingsChange(){
                     </div>
                     <select className="inputFrom-seetings" defaultValue={"default"} name="pais" id="pais">
 
-                      <option value="default">Select your Country</option>
+                      <option value="default" >Select your Country</option>
                       {Countries.map(country => {
 
                         return (<option key={country.code} value={country.name}>{country.name}</option>)
@@ -92,4 +113,16 @@ function SeetingsChange(){
   )
 }
 
-export default SeetingsChange
+
+const mapStateToProps = (state) => {
+  return {
+    user: state.userReducer.user,
+  }
+}
+
+const mapDispatchToProps = {
+  signOut: userActions.signOut,
+  modifiedUserData: userActions.modifiedUserData
+
+}
+export default connect(mapStateToProps, mapDispatchToProps)(SeetingsChange);

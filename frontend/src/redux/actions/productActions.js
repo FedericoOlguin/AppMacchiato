@@ -88,7 +88,7 @@ const productActions = {
     deleteProduct: (id) => {
         const token = localStorage.getItem('token')
         return async (dispatch, getState) => {
-            const res = await axios.delete(`http://localhost:4000/api/allproducts/${id}`, {}, {
+            const res = await axios.post(`http://localhost:4000/api/allproducts/one/${id}`, {}, {
                 headers: {
                     Authorization: 'Bearer ' + token
                 }
