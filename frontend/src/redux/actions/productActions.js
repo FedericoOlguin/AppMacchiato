@@ -106,7 +106,7 @@ const productActions = {
     },
     addToCart: (id) => {
         return async (dispatch, getState) => {
-            // console.log(id);
+            console.log(id);
             dispatch({ type: "addToCart", payload: id })
         }
     },
