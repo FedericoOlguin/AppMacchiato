@@ -2,7 +2,7 @@ import React from "react";
 import "../Styles/aboutPage.css";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
-import VideoMacchiato from "../img/videoMacchiato.mp4";
+import Video10 from "../img/Video10.mp4";
 import fernanda from "../img/fernanda.jpg";
 import marcia from "../img/marcia.jpg";
 import fede from "../img/federico.jpg";
@@ -36,7 +36,7 @@ function AboutPage() {
 
           <div className="container-videoAbout">
             <video autoPlay loop muted className="video-AboutUs">
-              <source src={VideoMacchiato} type="video/mp4" />
+              <source src={Video10} type="video/mp4" />
             </video>
           </div>
 
