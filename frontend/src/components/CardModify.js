@@ -23,15 +23,15 @@ function CardModify(props) {
             />
             </div>
             <div className="items-producto">
-                <h2 className="subtitulo-producto">Nombre producto</h2>
+                <h2 className="subtitulo-producto">Product name</h2>
                 <h2 className="respuesta-producto"> {props.product.name}</h2>
-                <h2 className="subtitulo-producto">Precio</h2>
+                <h2 className="subtitulo-producto">Price</h2>
                 <h2 className="respuesta-producto">{props.product.price}</h2>
             </div>
             <div className="items-producto">
                 <h2 className="subtitulo-producto">Stock</h2>
                 <h2 className="respuesta-producto"> {props.product.stock}</h2>
-                <h2 className="subtitulo-producto">Sale</h2>
+                <h2 className="subtitulo-producto">On Sale</h2>
                 <h2 className="respuesta-producto"> {props.product.sale?'On Sale':'not on Sale'}</h2>
             </div>
         </div>

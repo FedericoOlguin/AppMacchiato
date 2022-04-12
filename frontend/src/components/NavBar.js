@@ -198,8 +198,8 @@ const NavBar2 = (props) => {
                                                 signOutUser()
                                                 handleCloseUserMenu()
                                             }} to="#">Sign out</LinkRouter>
-                                            <LinkRouter className="nav-linkUser" aria-current="page" to={'/seetings'}>⚙
-                                                Setting</LinkRouter>
+                                            <LinkRouter className="nav-linkUser" aria-current="page" to={'/settings'}>⚙
+                                                Settings</LinkRouter>
                                             {props.authorized ? (
                                                 <LinkRouter onClick={handleCloseUserMenu} className="nav-linkUser" to="/panel">Panel</LinkRouter>
                                             ) : (

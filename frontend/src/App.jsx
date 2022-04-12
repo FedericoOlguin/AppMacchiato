@@ -10,8 +10,8 @@ import userAction from './redux/actions/userAction';
 import { connect } from "react-redux"
 import AboutPage from './Pages/AboutPage';
 import ErrorScreen from './components/ErrorScreen';
-import Seetings from './Pages/Seetings';
-import SeetingsChange from './components/FormSeetings';
+import Settings from './Pages/Settings';
+import SettingsChange from './components/FormSettings';
 import PanelProducts from './Pages/PanelProducts'; /* toca organizarla, solo se hzo así para poder diseñarla */
 import Detalle from "./components/DetalleProdct";
 import productActions from './redux/actions/productActions';
@@ -42,11 +42,11 @@ function App(props) {
         <Route path='/' element={<Home />} />
         <Route path='/shop' element={<Shop />} />
         <Route path='/err' element={<ErrorScreen />} />
-        <Route path='/seetings' element={!props.user ? <Navigate replace to='/' /> : <Seetings />} />
+        <Route path='/settings' element={!props.user ? <Navigate replace to='/' /> : <Settings />} />
         <Route path='/aboutUs' element={<AboutPage />} />
         <Route path='/detalle/:id' element={<Detalle />} />
         <Route path='/shoppingCart' element={<ShoppingCart/>}/>
-        <Route path='/seetingsChanges' element={!props.user ? <Navigate replace to='/' /> : <SeetingsChange />} />
+        <Route path='/seetingsChanges' element={!props.user ? <Navigate replace to='/' /> : <SettingsChange />} />
         <Route path='/signUp' element={props.user ? <Navigate replace to='/' /> : <SignUp />} />
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
         {props.user?( <Route path='/panel' element={!props.authorized ? (<Navigate replace to='/err' />) : (<PanelProducts />)} />):(<></>)}

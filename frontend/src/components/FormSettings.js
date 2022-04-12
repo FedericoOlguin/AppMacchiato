@@ -10,7 +10,7 @@ import userActions from "../redux/actions/userAction"
 import { connect } from 'react-redux';
 
 
-function SeetingsChange(props) {
+function SettingsChange(props) {
   const formMod = useRef()
 
   function SendData(event) {
@@ -41,7 +41,7 @@ function SeetingsChange(props) {
           <main className="mainForm-seetings2">
             <LinkRouter className="scrollback" to={"/seetings"}><ArrowBackIosNewIcon className='iconoBack' />
             </LinkRouter>
-            <h2 className='subtitle-signup-seetings'>Seetings your profile</h2>
+            <h2 className='subtitle-signup-seetings'>Setting your profile</h2>
             <div className="formContainer-seetings">
               <form action="" className="form-seetings" onSubmit={(event) => SendData(event)} ref={formMod} id="formMod">
 
@@ -125,4 +125,4 @@ const mapDispatchToProps = {
   modifiedUserData: userActions.modifiedUserData
 
 }
-export default connect(mapStateToProps, mapDispatchToProps)(SeetingsChange);
+export default connect(mapStateToProps, mapDispatchToProps)(SettingsChange);

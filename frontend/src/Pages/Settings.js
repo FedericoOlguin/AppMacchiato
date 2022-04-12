@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import usersActions from '../redux/actions/userAction';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
-function Seetings(props) {
+function Settings(props) {
   const [data, setData] = useState()
 
   useEffect(() => {
@@ -83,5 +83,5 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Seetings)
+export default connect(mapStateToProps, mapDispatchToProps)(Settings)
 

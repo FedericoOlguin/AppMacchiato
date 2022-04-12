@@ -45,7 +45,7 @@ function FormPanel(props) {
 
                                     <label className="labelForm-seetings" htmlFor="nameItem">
                                         <div className='container-panelProduct'>
-                                            <span className='span-signup-panelProducts'>Name item</span>
+                                            <span className='span-signup-panelProducts'>Item name</span>
                                         </div>
                                         <input className="inputFrom-panelProducts" type="text" id="nameItem" name="nameItem" required />
                                     </label>
