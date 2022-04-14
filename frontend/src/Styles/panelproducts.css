@@ -58,8 +58,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 60%;
-  height: 25vh;
+  width: 75%;
+  height: 34vh;
   color: #efeefe;
   border-radius: 5px;
   -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
@@ -96,6 +96,7 @@
   width: 100%;
   height: 30%;
   padding: 0.6rem 0;
+  font-size: 1.6em;
 }
 
 .respuesta-producto {
@@ -471,6 +472,29 @@
 
 /* -------------responsividad ---------- */
 
+@media (max-width: 1310px) {
+  .card-panel{
+    height: 36vh;
+  }
+
+  .subtitulo-producto{
+    font-size: 1.3em;
+  }
+
+  .respuesta-producto{
+    font-size: .9em;
+  }
+  
+}
+
+@media (max-width: 1080px) {
+  .card-panel{
+    width: 80%;
+  }
+}
+
+
+
 @media (max-width: 1020px) {
   .container-tituloPanel {
     margin-top: 2rem;
@@ -503,14 +527,14 @@
 
   .card-panel {
     margin: 3rem 0 0;
-    width: 80%;
+    width: 90%;
+    
   }
 
   .boton-panel {
     margin: 1rem 0;
-    width: 80%;
-    flex-direction: row;
-    justify-content: space-evenly;
+    padding: .5rem;
+    flex-direction: column;  
   }
 
   .subtitulo-producto {
@@ -518,7 +542,7 @@
   }
 }
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   .container-tituloPanel {
     margin-top: 1rem;
   }
@@ -548,8 +572,45 @@
     font-size: 1em;
   }
 }
+ */
+@media (max-width: 890px) {
+  .card-panel {
+    flex-direction: column;
+    height: auto;
+  }
+  .panel-imgproducto {
+    width: 80%;
+    margin-top: 0.5rem;
+    align-self: center;
+  }
+  .imagen-producto {
+    width: 50%;
+    object-fit: contain;
+    border-left: 3px solid #efeefe;
+  }
 
-@media (max-width: 680px) {
+  .items-producto {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 1.2rem;
+  }
+
+  .respuesta-producto {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .boton-panel{
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 600px) {
   .card-panel {
     flex-direction: column;
     height: auto;
@@ -576,6 +637,7 @@
     text-align: center;
   }
 }
+
 
 @media (max-width: 570px) {
   .boton-panelProduct {

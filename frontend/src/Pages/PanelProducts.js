@@ -13,7 +13,7 @@ function PanelProducts(props) {
 
   useEffect(() => {
     props.getAllProducts()
-
+    window.scrollTo(0, 0)
   }, [])
 
   const [form, setForm] = useState(true)
