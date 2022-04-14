@@ -130,6 +130,7 @@
   color: #efeefe;
   cursor: pointer;
   transition: all 0.5;
+  margin: 1rem 0;
 }
 
 .boton-aboutUs:hover {
