@@ -37,7 +37,7 @@ function FormPanel(props) {
         <>
 
             {props.form3 ? (
-                <div id='form-signup-panelProducts'>
+                <div id='form-signup-panelProducts2'>
                     <main className="mainForm-panelProducts">
                         <h2 className='subtitle-signup-panelProducts'>Modify product </h2>
                         <div className="formContainer-panelProducts">

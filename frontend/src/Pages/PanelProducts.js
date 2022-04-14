@@ -16,7 +16,7 @@ function PanelProducts(props) {
 
   }, [])
 
-  const [form, setForm] = useState(false)
+  const [form, setForm] = useState(true)
   const [form2, setForm2] = useState(false)
 
 
@@ -46,10 +46,11 @@ function PanelProducts(props) {
 
         {props.allProducts.map(product =>
           <CardModify key={product._id} product={product} form2={form2} />)}
+           <FormPanle form={form} />
       </div>
 
 
-      <FormPanle form={form} />
+     
       <Footer />
     </div>
   )

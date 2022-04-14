@@ -1,10 +1,10 @@
 .contDetalle {
   width: 100%;
   min-height: 100vh;
-  background-image: url(https://images.pexels.com/photos/1419939/pexels-photo-1419939.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: cover;
-  
+  background-color: #000;
   filter: brightness(0.8);
+  background-image: url(https://images.pexels.com/photos/1419939/pexels-photo-1419939.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
 }
 .hero {
   min-height: 100%;
@@ -19,7 +19,9 @@
   
 }
 .fondo{
-background-color: rgba(0, 0, 0, 0.678);
+/* background-color: rgba(0, 0, 0, 0.678); 
+*/
+background-image: url("../img/fondo_alto.jpg");
 }
 
 .contenedorBotonImg {

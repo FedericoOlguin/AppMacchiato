@@ -7,13 +7,15 @@ import Footer from '../components/Footer';
 
 function ShoppingCart() {
   return (
-    <div className='contDetalle'>
+    <>
       <NavBar />
-      <div className='container-shoping'>
-        <Cart />
+      <div className='contShoping'>
+        <div className='container-shoping'>
+          <Cart />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   )
 }
 

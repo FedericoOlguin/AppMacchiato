@@ -103,13 +103,13 @@
 
 .button-user {
   font-size: 1rem;
-  background: #efeefe;
-  color: #000;
+  background: #2d2d2e;
+  color: white;
   padding: 0.5em 0.5em;
   display: flex;
   align-items: center;
-  border: 1px solid black;
-  border-radius: 1px;
+  border: 1px solid white;
+  border-radius: 5px;
   overflow: hidden;
   margin: 0.5rem auto;
   transition: all 0.2s;

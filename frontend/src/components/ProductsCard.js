@@ -50,9 +50,9 @@ function ProductsCard(props) {
                             placeholder='Search your product'
                             color='#000'
                             onChange={(event) => { setEventInput(event.target.value); filter(event.target.value, eventSelect) }} />
-                    </div>
 
-                    <div className='selectShop'>
+
+
                         <select className="form-control" onChange={(event) => { setEventSelect(event.target.value); filter(eventInput, event.target.value) }}>
                             <option value={""}>
                                 {""}
