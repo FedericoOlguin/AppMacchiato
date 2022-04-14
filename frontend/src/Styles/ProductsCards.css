@@ -1,5 +1,5 @@
 .contenedorCardsGeneral {
-  margin-top: 100px;
+  /* margin-top: 100px; */
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -15,8 +15,14 @@
   background-attachment: fixed;
   width: 100%;
   height: 50vh;
-  margin: 1rem 0;
-  position: relative;
+  margin: 0 0 2rem 0;
+  /* position: relative; */
+  box-shadow: 15px 15px 15px black;
+}
+.containergShopGlobal {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .titleStore {
@@ -33,17 +39,18 @@
 /* -------------filters------------- */
 
 .filters {
-  width: 20%;
-  height: 100vh;
-  flex-grow: 1;
+  min-width: 20%;
+  /* height: 100vh; */
+  /* flex-grow: 1; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 1rem;
 }
 
 .input-text {
-  margin: 3rem 0 3rem 3rem;
-  width: 100%;
+  margin: 2rem 0;
+  width: 90%;
   height: 5vh;
   padding: 0.5rem;
   background-color: transparent;
@@ -54,14 +61,13 @@
 }
 
 .form-control {
-  width: 100%;
+  width: 90%;
   height: 5vh;
   font-size: 1.3em;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #efeefe;
   color: white;
-  margin-left: 3rem;
 }
 .form-control option {
   background-color: rgba(5, 4, 4, 0.973);
@@ -69,12 +75,12 @@
 
 /* -------------card------------- */
 .ContainerStore {
-  max-width: 80%;
+  min-width: 80%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: auto;
+  /* margin: auto; */
   transition: all 1s ease-in-out;
 }
 .container-cards {
@@ -227,16 +233,16 @@
 
 @media only screen and (min-width: 0px) and (max-width: 1200px) {
   .filters {
-    width: 100%;
+    min-width: 100%;
     height: auto;
   }
   .ContainerStore {
-    max-width: 100%;
+    max-width: 90%;
   }
-
-  .input-text,
-  .form-control {
-    margin: 2rem auto;
+  .containergShopGlobal {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .nofound {
     margin-top: 0;
@@ -257,8 +263,7 @@
 @media only screen and (min-width: 1200px) and (max-width: 1325px) {
   .input-text,
   .form-control {
-    width: 80%;
-    margin-left: 3rem;
+    width: 100%;
   }
   .filter {
     align-items: center;
@@ -270,8 +275,8 @@
     font-size: 1em;
   }
 
-  .filters{
-    padding: 0 1.8rem;
+  .filters {
+    /* padding: 0 1.8rem; */
   }
 }
 

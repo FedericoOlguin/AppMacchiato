@@ -23,13 +23,18 @@
 */
 background-image: url("../img/fondo_alto.jpg");
 }
-
+.flag2{
+  position: absolute;
+  width: 2.5rem;
+  right: 1rem;
+}
 .contenedorBotonImg {
   display: flex;
   justify-content: flex-end;
   align-items:center;
   flex-direction: column;
 }
+
 
 .product {
   width: 70%;
@@ -43,6 +48,7 @@ background-image: url("../img/fondo_alto.jpg");
   -moz-box-shadow: inset -5px 17px 109px 8px rgba(0, 0, 0, 0.88);
   box-shadow: inset -5px 17px 109px 8px rgba(49, 49, 49, 0.88);
   background-image: url(https://jberlife.com/wp-content/uploads/2021/04/GettyImages-1191995863-2-scaled.jpg);
+  position: relative;
 }
 
 .primercontenedor-detalle {

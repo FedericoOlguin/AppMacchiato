@@ -60,6 +60,7 @@ const Detalle = (props) => {
                             </div>
 
 
+                                    <img  className="flag2" alt="flag" src={prod.flag}/>
                         </div>
 
                     </div >
