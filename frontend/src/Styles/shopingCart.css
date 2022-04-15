@@ -1,3 +1,11 @@
+.contShoping {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  filter: brightness(0.8);
+  background-image: url("../img/fondo_alto.jpg");
+}
+
 .container-shoping {
   display: flex;
   width: 100%;
@@ -5,7 +13,7 @@
   background-image: url(https://images.pexels.com/photos/1419939/pexels-photo-1419939.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: cover;
   flex-direction: column;
-  filter: brightness(0.7);
+  background-color: transparent;
 }
 
 /* ---------------------cart comrpa --------------------*/
@@ -30,7 +38,6 @@
 }
 
 /* ---------------- Carrito---------------- */
-
 
 .totalCompra {
   width: 25%;
@@ -311,7 +318,7 @@
 
   .titulo-shoping {
     font-size: 3rem;
-     text-align: center;
+    text-align: center;
   }
 }
 

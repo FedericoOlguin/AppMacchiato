@@ -34,8 +34,8 @@ function FormPanel(props) {
     return (
         <>
 
-            {props.form ? (
-                <div id='form-signup-panelProducts'>
+            {/* {props.form ? ( */}
+                <div id={props.form?'form-signup-panelProducts':"form-signup-panelProducts2"}>
                     <main className="mainForm-panelProducts">
                         <h2 className='subtitle-signup-panelProducts'>Add new product </h2>
                         <div className="formContainer-panelProducts">
@@ -118,10 +118,10 @@ function FormPanel(props) {
                     </main>
                 </div>
 
-            ) : (
+            {/* ) : (
                 <></>
 
-            )}
+            )} */}
         </>
     )
 }

@@ -38,67 +38,69 @@ function ProductsCard(props) {
     return (
         <>
             <div className='contenedorCardsGeneral'>
-                <LinkRouter className="link-about1" aria-current="page" to="/aboutUs"> <p> If you want to know more about us click here </p> </LinkRouter>
                 <div className='sliderPromocion'>
                     <h1 className='titleStore'>Shop</h1>
                 </div>
+                <LinkRouter className="link-about1" aria-current="page" to="/aboutUs"> <p> If you want to know more about us click here </p> </LinkRouter>
 
-                <div className='filters'>
-                    <div className='input'>
-                        <input
-                            className='input-text'
-                            placeholder='Search your product'
-                            color='#000'
-                            onChange={(event) => { setEventInput(event.target.value); filter(event.target.value, eventSelect) }} />
+                <div className='containergShopGlobal'>
+                    <div className='filters'>
+                        <div className='input'>
+                            <input
+                                className='input-text'
+                                placeholder='Search your product'
+                                color='#000'
+                                onChange={(event) => { setEventInput(event.target.value); filter(event.target.value, eventSelect) }} />
+
+
+
+                            <select className="form-control" onChange={(event) => { setEventSelect(event.target.value); filter(eventInput, event.target.value) }}>
+                                <option value={""}>
+                                    {""}
+                                    Choose the category
+                                </option>
+                                {categories.map((category) => {
+                                    return (
+                                        <option key={category.name} value={category.name}>
+                                            {category.name}
+                                        </option>
+                                    );
+                                })}
+                            </select>
+                        </div>
+
                     </div>
 
-                    <div className='selectShop'>
-                        <select className="form-control" onChange={(event) => { setEventSelect(event.target.value); filter(eventInput, event.target.value) }}>
-                            <option value={""}>
-                                {""}
-                                Choose the category
-                            </option>
-                            {categories.map((category) => {
-                                return (
-                                    <option key={category.name} value={category.name}>
-                                        {category.name}
-                                    </option>
-                                );
-                            })}
-                        </select>
-                    </div>
-
-                </div>
 
 
+                    <div className='ContainerStore'>
+                        {props.filtered?.length !== 0 ? (
+                            props.filtered?.map(products =>
+                                <div className='cardProducto' key={products._id}>
 
-                <div className='ContainerStore'>
-                    {props.filtered?.length !== 0 ? (
-                        props.filtered?.map(products =>
-                            <div className='cardProducto' key={products._id}>
-
-                                <p className='precio'> {"$" + products.price} </p>
-                                <div className='bandera'>
-                                    <img alt="flag" src={products.flag} className='flag' />
-                                </div>
-                                <img alt='cardPho' src={products.image} className="imagenHeader" />
-                                <div className='txtCard'>
-                                    <h2> {products.name} </h2>
-                                    <div className='botonesShop'>
-                                        <LocalGroceryStoreIcon onClick={() => props.addToCart(products._id)} className='iconShop' />
-                                        <LinkRouter className="link-carta" to={`/detalle/${products._id}`} >
-                                            <img src={lupa} alt='lupa' className='lupaView' />
-                                        </LinkRouter>
+                                    <p className='precio'> {"$" + products.price} </p>
+                                    <div className='bandera'>
+                                        <img alt="flag" src={products.flag} className='flag' />
+                                    </div>
+                                    <img alt='cardPho' src={products.image} className="imagenHeader" />
+                                    <div className='txtCard'>
+                                        <h2> {products.name} </h2>
+                                        <div className='botonesShop'>
+                                            <LocalGroceryStoreIcon onClick={() => props.addToCart(products._id)} className='iconShop' />
+                                            <LinkRouter className="link-carta" to={`/detalle/${products._id}`} >
+                                                <img src={lupa} alt='lupa' className='lupaView' />
+                                            </LinkRouter>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                        )) : (
-                        <div className='nofound'>
-                            <h2 className='nofound-h2'>Sorry we did not find your search</h2>
-                            <img alt='empy' src={empy} className='imagenVacia' />
-                        </div>
-                    )}
+                            )) : (
+                            <div className='nofound'>
+                                <h2 className='nofound-h2'>Sorry we did not find your search</h2>
+                                <img alt='empy' src={empy} className='imagenVacia' />
+                            </div>
+                        )}
+                    </div>
                 </div>
 
             </div>
