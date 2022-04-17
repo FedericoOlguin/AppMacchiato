@@ -6,6 +6,20 @@ const initialState = {
     // cart: JSON.parse(localStorage.getItem("shopCart")) || [],
 };
 
+
+
+export const getTotal = (cart) => {
+    let total = cart?.map((item) => item.price * item.quantity)
+    let totalDevolver = 0
+    total.forEach(element => {
+        totalDevolver += element
+    });
+    console.log(cart);
+    console.log(total)
+    console.log(totalDevolver)
+    return totalDevolver
+}
+
 const productReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'get_products':
