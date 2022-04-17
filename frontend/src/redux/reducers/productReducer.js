@@ -6,6 +6,20 @@ const initialState = {
     // cart: JSON.parse(localStorage.getItem("shopCart")) || [],
 };
 
+
+
+export const getTotal = (cart) => {
+    let total = cart?.map((item) => item.price * item.quantity)
+    let totalDevolver = 0
+    total.forEach(element => {
+        totalDevolver += element
+    });
+    console.log(cart);
+    console.log(total)
+    console.log(totalDevolver)
+    return totalDevolver
+}
+
 const productReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'get_products':
@@ -30,10 +44,16 @@ const productReducer = (state = initialState, action) => {
                 cart: [...action.payload]
             }
         case "addToCart":
-
+            let itemCart
             let newItem = state.allProducts.find(prod => prod._id === action.payload)
-            // console.log(newItem);
-            let itemCart = state.cart.find(prod => prod._id === newItem._id)
+            if (!newItem) {
+                newItem = JSON.parse(localStorage.getItem("shopCart")).find(prod => prod._id === action.payload)
+            } else {
+
+                itemCart = state.cart.find(prod => prod._id === newItem._id)
+            }
+
+            itemCart = state.cart.find(prod => prod._id === newItem._id)
 
 
             itemCart ? (localStorage.setItem("shopCart", JSON.stringify([...state.cart.map
@@ -53,8 +73,6 @@ const productReducer = (state = initialState, action) => {
             let poductsStorage = JSON.parse(localStorage.getItem("shopCart"))
 
             let itemDelete = poductsStorage.find(prod => prod._id === action.payload)
-            // console.log(action.payload);
-            // console.log(itemDelete.quantity);
 
             itemDelete.quantity > 1 ? (localStorage.setItem("shopCart", JSON.stringify([...state.cart.map
 
@@ -71,7 +89,6 @@ const productReducer = (state = initialState, action) => {
                 cart: state.cart.filter(prod => prod._id !== action.payload)
             }
         case "removeAllFromCart":
-            // let  = JSON.parse(localStorage.getItem("shopCart"))
             localStorage.setItem("shopCart", JSON.stringify([...state.cart.filter(prod => prod._id !== action.payload)]))
             return {
                 ...state,

@@ -1,11 +1,8 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import '../Styles/carousel.css'
@@ -15,7 +12,7 @@ import { Autoplay, Pagination, Navigation, Grid } from "swiper";
 
 
 function Carousel(props) {
-  // console.log(props)
+ 
 
   useEffect(() => {
   }, [])
@@ -32,7 +29,7 @@ function Carousel(props) {
         slidesPerGroup={2}
 
         spaceBetween={10}
-        /*centeredSlides={true}*/
+      
         autoplay={{
           delay: 4400,
           disableOnInteraction: true

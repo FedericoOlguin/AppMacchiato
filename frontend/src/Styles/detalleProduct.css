@@ -1,46 +1,56 @@
 .contDetalle {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../img/fondo_alto.jpg);
-  overflow: hidden;
+  background-size: cover;
+  background-color: #000;
+  filter: brightness(0.8);
+  background-image: url(https://images.pexels.com/photos/1419939/pexels-photo-1419939.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
 }
 .hero {
   min-height: 100%;
-  height: 100vh;
-  background-image: url(https://images.pexels.com/photos/1419939/pexels-photo-1419939.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-  background-size: cover;
-  filter: brightness(0.7);
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.contenedorBotonImg {
+.contenedorCardDetalle{
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  /* width: 5rem; */
-  flex-grow: 2;
-  position: relative;
+  
+}
+.fondo{
+/* background-color: rgba(0, 0, 0, 0.678); 
+*/
+background-image: url("../img/fondo_alto.jpg");
+}
+.flag2{
+  position: absolute;
+  width: 2.5rem;
+  right: 1rem;
+  top: 1rem;
+  z-index: 10;
+}
+.contenedorBotonImg {
+  display: flex;
+  justify-content: flex-end;
+  align-items:center;
+  flex-direction: column;
 }
 
-.product {
-  width: 60%;
-  min-height: 40vh;
 
-  z-index: 1000;
+.product {
+  width: 70%;
+  min-height: 15rem;
+  height: 30vh;
+  z-index: 10;
   display: flex;
-  /* position: relative;
-  top: -5rem; */
-  display: flex;
-  /* flex-direction: column;  */
   border-radius: 5px;
-  justify-content: space-evenly;
-  margin-top: 3rem;
+  padding: 0.7rem;
   -webkit-box-shadow: inset -5px 17px 109px 8px rgba(59, 38, 38, 0.88);
   -moz-box-shadow: inset -5px 17px 109px 8px rgba(0, 0, 0, 0.88);
   box-shadow: inset -5px 17px 109px 8px rgba(49, 49, 49, 0.88);
   background-image: url(https://jberlife.com/wp-content/uploads/2021/04/GettyImages-1191995863-2-scaled.jpg);
+  position: relative;
 }
 
 .primercontenedor-detalle {
@@ -49,59 +59,50 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .titulo-detalle {
   padding: 2px;
   font-size: 3em;
-  /* margin-right: 8rem; */
   width: 100%;
   color: #fff;
   text-align: center;
 }
 
 .imagen-detalle {
-  position: absolute;
-  top: -8rem;
-  max-width: 350px;
-  left: -1rem;
-  max-height: 350px;
+  max-width: 15rem;
+  height: auto;
   filter: brightness(1.2);
+  transform: translateY(-3rem);
 }
 
 .p-detalle {
   display: flex;
-  /* align-self: flex-end; */
-
-  width: 60%;
-  font-size: 1.7em;
+  width: 90%;
+  font-size: 1.3em;
   text-align: center;
-  /* margin-right: 3rem; */
   color: #efefefad;
-  margin-bottom: 1rem;
 }
 
 .priceStock-detalle {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 60%;
-  /* align-self: flex-end; */
+  width: 80%;
   justify-content: space-around;
-  /* margin-right: 3rem; */
-  font-size: 1.7em;
+  
+  font-size: 1.5em;
   font-weight: 700;
   color: #efefefad;
   margin-top: 1rem;
+  
 }
 
 .buy-detalle {
-  /* width: 40%; */
   display: flex;
+  height: 20%;
   justify-content: center;
-  margin-bottom: 1.5rem;
-  margin-left: 2rem;
 }
 .textCard {
   display: flex;
@@ -110,22 +111,22 @@
   align-items: center;
   flex-grow: 3;
   width: 50%;
+  height: 100%;
 }
 
 /* -----------boton -------- */
 
 .button-detalle {
   width: 150px;
-  height: 50px;
+  max-height: 150px;
+  min-height: 40px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  background: #f3a446;
-  border: none;
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
   background: #f3a446;
-  margin: 1rem 0;
+  border: solid white 1px;
 }
 
 .button-detalle,
@@ -175,4 +176,27 @@
 
 .button-detalle:active .icon svg {
   transform: scale(0.8);
+}
+
+/* --------------------responsividad------------------- */
+
+@media (max-width:1074px) {
+
+  .product{
+    flex-direction: column;
+    height: auto;
+    margin: 5rem 0;
+  }
+  .textCard{
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+}
+
+@media (max-width:584px) {
+  .product{
+    width: 80%;
+  }
+
 }

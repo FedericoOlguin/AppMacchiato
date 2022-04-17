@@ -7,7 +7,7 @@ import { Link as LinkRouter } from "react-router-dom";
 import VideoFormulario2 from '../img/VideoFormulario2.mp4';
 import FacebookSignIn from '../components/FacebookSignIn';
 import GoogleSignIn from '../components/GoogleSignIn'
-
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 function SignIn(props) {
   const form = useRef()
@@ -28,7 +28,8 @@ function SignIn(props) {
   }
   return (
     <div id='container-signup'>
-      {console.log(props.user)}
+      <LinkRouter className="scrollback" to={"/"}><ArrowBackIosNewIcon className='iconoBack' />
+      </LinkRouter>
       <div id='form-signin'>
         <div id='video-signup'>
           <video

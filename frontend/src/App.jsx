@@ -1,6 +1,5 @@
 import Home from './Pages/Home';
 import Shop from './Pages/Shop';
-/* import NavBar from "./components/NavBar" */
 import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import SignUp from './components/SignUp';
@@ -12,11 +11,13 @@ import { connect } from "react-redux"
 import AboutPage from './Pages/AboutPage';
 import ErrorScreen from './components/ErrorScreen';
 import Seetings from './Pages/Seetings';
-import SeetingsChange from './Pages/SeetingsChanges';
+import SeetingsChange from './components/FormSeetings';
 import PanelProducts from './Pages/PanelProducts'; /* toca organizarla, solo se hzo así para poder diseñarla */
 import Detalle from "./components/DetalleProdct";
 import productActions from './redux/actions/productActions';
 import ShoppingCart from './Pages/ShopingCart';
+// import {PayPalScriptProvider} from "@paypal/react-paypal-js"
+
 
 
 
@@ -28,14 +29,19 @@ function App(props) {
       const token = localStorage.getItem("token")
       props.verifyToken(token)
       props.verifiedRol(localStorage.getItem("token"))
-      // .then(res => setAuthorized(res))
       props.iniciarAlRecargar()
     }
 
   }, [])
+//   const initialOptions = { // Genero las opciones para enviarle al CDN
+//     "client-id": "AUzLXvUHDcNu5B7vgEvIt8Ag27Lz8ZDQlWfqKs6EgzhpZnYZL2Qb0Orw0hKCTkdFNKJHQ_x-RwQaOdaq",
+//     currency: "USD", //Establesco la moneda
+//     intent: "capture", //Estableco el metodos este autoriza la operacion y captura los fondos
 
+// };
 
   return (
+    // <PayPalScriptProvider  options={initialOptions}>
     <BrowserRouter>
       <Routes>
         {props.authorized}
@@ -43,19 +49,18 @@ function App(props) {
         <Route path='/' element={<Home />} />
         <Route path='/shop' element={<Shop />} />
         <Route path='/err' element={<ErrorScreen />} />
-        <Route path='/seetings' element={<Seetings />}/>
+        <Route path='/seetings' element={!props.user ? <Navigate replace to='/' /> : <Seetings />} />
         <Route path='/aboutUs' element={<AboutPage />} />
-        <Route path='/seetingsChanges' element={<SeetingsChange/>}/>
+        <Route path='/detalle/:id' element={<Detalle />} />
+        <Route path='/shoppingCart' element={<ShoppingCart/>}/>
+        <Route path='/seetingsChanges' element={!props.user ? <Navigate replace to='/' /> : <SeetingsChange />} />
         <Route path='/signUp' element={props.user ? <Navigate replace to='/' /> : <SignUp />} />
         <Route path='/signIn' element={props.user ? <Navigate replace to='/' /> : <SignIn />} />
         {props.user?( <Route path='/panel' element={!props.authorized ? (<Navigate replace to='/err' />) : (<PanelProducts />)} />):(<></>)}
-        {/* // <Route path='/panel' element={!props.authorized ? (<Navigate replace to='/err' />) : (<PanelProducts />)} /> */}
-        {/* <Route path='/detalle/:id' element={<Detalle />} /> */}
-        <Route path='/detalle/:id' element={<Detalle />} />
-        <Route path='/shoppingCart' element={<ShoppingCart/>}/>
       </Routes>
       <Snackbar />
     </BrowserRouter>
+      // </PayPalScriptProvider>
   );
 }
 

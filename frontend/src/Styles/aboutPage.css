@@ -15,7 +15,6 @@
   height: 80vh;
   background-attachment: fixed;
   background-position: center;
-  /* filter: contrast(1.1); */
   filter: brightness(0.5);
 }
 
@@ -115,10 +114,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
- /*  background-image: url(https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); */
   background-size: cover;
   border-radius: 5px;
-  /* filter: brightness(0.5); */
 }
 
 .fotos-contenedor {
@@ -127,8 +124,6 @@
   width: 100%;
   height: 50%;
 }
-
-
 
 .contenedorLinkedIn {
   width: 33%;
@@ -141,8 +136,6 @@
   align-items: center;
 }
 
-
-
 .nombreDesarrollador {
   color: #efeefe;
   font-size: 1.3em;
@@ -152,12 +145,8 @@
 }
 
 .contenedor-devimg {
-  /* background-color: black; */
   width: 130px;
   height: 130px;
-  /* -moz-border-radius: 50%; */
-  /* -webkit-border-radius: 50%; */
-  /* border-radius: 50%; */
   align-self: center;
   margin: auto;
   border-radius: 50%;
@@ -196,7 +185,15 @@
   }
 }
 
+@media (max-width: 1160px) {
+  .contenedorLinkedIn {
+    padding: 0.5rem;
+  }
 
+  .nombreDesarrollador {
+    font-size: 1em;
+  }
+}
 
 @media (max-width: 770px) {
   .contenedor-developers {
@@ -205,30 +202,28 @@
     height: 60vh;
     flex-direction: row;
   }
-  
+
   .fotos-contenedor {
-    /* flex-direction: column; */
     width: 100%;
     height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
- .contenedorLinkedIn{
-   padding: 10px;
-   width: 100%;
- }
- .fotos-developers{
-   flex-direction: row;
- }
-  
+  .contenedorLinkedIn {
+    padding: 10px;
+    width: 100%;
+  }
+  .fotos-developers {
+    flex-direction: row;
+  }
+
   .img-dev {
     flex-direction: row;
     width: 4rem;
     height: 4rem;
   }
 }
-
 
 @media (max-width: 480px) {
   .container-ppal {
@@ -237,19 +232,16 @@
   .h1-developers {
     font-size: 1.5rem;
   }
-  .fotos-developers{
+  .fotos-developers {
     width: 100%;
     display: flex;
-    /* flex-wrap: wrap; */
     height: auto;
   }
-  .contenedorLinkedIn{
-    /* align-items: flex-start; */
+  .contenedorLinkedIn {
     width: 100%;
     padding: 0;
   }
-  .nombreDesarrollador{
+  .nombreDesarrollador {
     font-size: 1rem;
   }
- 
 }

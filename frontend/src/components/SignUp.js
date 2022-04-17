@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import usersActions from '../redux/actions/userAction';
 import '../Styles/signin.css';
 import { useRef } from 'react';
@@ -15,11 +15,11 @@ function SignUp(props) {
   window.scrollTo(0, 0)
   const form = useRef()
 
-  function send(event) {
-
+  async function send(event) {
     event.preventDefault()
     form.current.focus()
     let datosInp = new FormData(form.current)
+
 
     let userObj = {
       firstName: datosInp.get("name"),
@@ -30,12 +30,10 @@ function SignUp(props) {
       country: datosInp.get("pais"),
       from: "signup",
       rol: 'undefined',
-
     }
-
+    console.table(userObj);
 
     props.signUp(userObj)
-    // form.current.reset()
   }
 
 
@@ -74,7 +72,7 @@ function SignUp(props) {
 
                 <label className="labelForm" htmlFor="imageUrl">
                   <span className='span-signup'>Image URL</span>
-                  <input className="inputFrom" type="text" id="imageUrl" name="imageUrl" />
+                  <input className="inputFrom"  type="text" id="imageUrl" name="imageUrl" />
                 </label>
 
                 <label className="labelForm" htmlFor="pais">

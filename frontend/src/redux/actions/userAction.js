@@ -36,6 +36,7 @@ const usersActions = {
                             success: res.data.success
                         }
                     })
+                    dispatch({ type: "verified", payLoad: res.data.response.validate })
                 } else {
                     dispatch({
                         type: "message",
@@ -57,7 +58,6 @@ const usersActions = {
             try {
                 const res = await axios.post(`http://localhost:4000/api/auth/signOut`, { userEmail })
                 localStorage.removeItem("token")
-                console.log(res);
                 dispatch({
                     type: "userSignOut", payLoad: {
                         view: true,
@@ -73,7 +73,6 @@ const usersActions = {
         }
     },
     verifyToken: (token) => {
-        // console.log(token);
         return async (dispatch, getState) => {
             try {
 
@@ -103,7 +102,6 @@ const usersActions = {
         }
     },
     verifiedRol: (token) => {
-        // console.log(token);
         return async (dispatch, getState) => {
             try {
 
@@ -121,16 +119,45 @@ const usersActions = {
         }
     },
     getInfoUser: () => {
-        const token =localStorage.getItem("token")
-        // console.log(token);
+        const token = localStorage.getItem("token")
         return async (dispatch, getState) => {
             const res = await axios.get(`http://localhost:4000/api/user/info`, {
                 headers: {
                     Authorization: "Bearer " + token   //dejar espacio en bearer antes del cierre de las comillas ( "Bearer ")
                 }
             })
-            // console.log(res);
             return res.data.response
+        }
+    },
+    modifiedUserData: (objData) => {
+        const token = localStorage.getItem("token")
+        // console.log(token);
+        return async (dispatch, getState) => {
+            const res = await axios.post(`http://localhost:4000/api/user/info`, { objData }, {
+                headers: {
+                    Authorization: "Bearer " + token   //dejar espacio en bearer antes del cierre de las comillas ( "Bearer ")
+                }
+            })
+            if (res.data.success) {
+                dispatch({ type: "user", payLoad: res.data })
+                dispatch({
+                    type: "message", payLoad: {
+                        view: true,
+                        message: res.data.message,
+                        success: res.data.success
+                    }
+                })
+                dispatch({ type: "verified", payLoad: res.data.response.validate })
+            } else {
+                dispatch({
+                    type: "message",
+                    payLoad: {
+                        view: true,
+                        message: res.data.message,
+                        success: res.data.success
+                    }
+                })
+            }
         }
     }
 
