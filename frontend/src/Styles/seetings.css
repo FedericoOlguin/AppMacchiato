@@ -99,6 +99,7 @@
 
 .link-user {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .button-user {
