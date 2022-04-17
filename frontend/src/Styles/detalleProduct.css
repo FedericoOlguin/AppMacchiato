@@ -27,6 +27,8 @@ background-image: url("../img/fondo_alto.jpg");
   position: absolute;
   width: 2.5rem;
   right: 1rem;
+  top: 1rem;
+  z-index: 10;
 }
 .contenedorBotonImg {
   display: flex;

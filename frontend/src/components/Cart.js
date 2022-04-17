@@ -7,6 +7,8 @@ import '../Styles/shopingCart.css'
 import { AiOutlineMinus } from 'react-icons/ai';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
+import PayPal from './Paypal';
+// import PayPalCheckOutButtom from './PaypalCheckoutButton';
 
 
 
@@ -20,7 +22,7 @@ const Cart = (props) => {
     }
     return (
         <>
-           
+
             <div className='txtCard-Cart'>
                 <h1 className='titulo-shoping'> Shopping cart</h1>
             </div>
@@ -71,14 +73,21 @@ const Cart = (props) => {
                         </div>
                     )}
                 </div>
-                <div className='totalCompra'>
-                    <div className='totalCompraCentro'>
-                        <h3>Total</h3>
-                        <h3>$ {totalCompra}</h3>
-                        <div>
-                            <button className='botonvaciar-carrito vaciar' onClick={() => props.emptyCart()} >Empty cart</button>
-                            <button className='botonvaciar-carrito finalizar' onClick={() => props.emptyCart()} >Proceed to checkout</button>
+                <div className='contenedorCheckout'>
+                    <div className='totalCompra'>
+                        <div className='totalCompraCentro'>
+                            <h3>Total</h3>
+                            <h3>$ {totalCompra}</h3>
+                            <div>
+                                <button className='botonvaciar-carrito vaciar' onClick={() => props.emptyCart()} >Empty cart</button>
+                                {/* <button className='botonvaciar-carrito finalizar' onClick={() => props.emptyCart()} >Proceed to checkout</button> */}
+                            </div>
                         </div>
+                    </div>
+                    <div className='Paypalbutton'>
+                        <PayPal />
+
+                        {/* <PayPalCheckOutButtom products={props.cart} /> */}
                     </div>
                 </div>
             </div>
