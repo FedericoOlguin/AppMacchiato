@@ -2,7 +2,7 @@ import React from 'react'
 import '../Styles/aboutPage.css'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
-import VideoMacchiato from '../img/videoMacchiato.mp4';
+import VideoMacchiato from '../img/Video10.mp4';
 import fernanda from '../img/fernanda.jpg';
 import marcia from '../img/marcia.jpg'
 import fede from '../img/federico.jpg'
@@ -27,12 +27,7 @@ function AboutPage() {
         <div className='container-ppal'>
           <div className='container-textoAbout'>
             <h1 className='tituloh1'>About Macchiato</h1>
-            <p className='parrafo-About'>Macchiato is a chain of coffee shops of its own and artisanal
-              production, whose brand experience is lived in its exclusive premises.
-              Considered a French emblem brand, it occupies a privileged place in
-              the sentiment of an entire country. It currently has more than 270
-              coffee shop distributed throughout Europe, being present in more than
-              12 countries.</p>
+            <p className='parrafo-About'>Macchiato is a chain of coffee shops of its own, whose brand experience is lived in its exclusive premises. Considered a French emblem brand, it occupies a privileged place in the sentiment of an entire country. It currently has more than 270 coffee shop distributed throughout Europe, being present in more than 12 countries.</p>
           </div>
 
           <div className='container-videoAbout'>
@@ -48,16 +43,12 @@ function AboutPage() {
 
           <div className='container-textoAbout'>
             <h2 className='tituloh2'>Vision</h2>
-            <p className='parrafo-About'>We want to be a French company with a global reach, recognized for its
-              raw materials and services, and excellence in the care of our Stores.</p>
+            <p className='parrafo-About'>We want to be a French company with a global reach, recognized for its raw materials and services, and excellence in the care of our Stores.</p>
           </div>
 
           <div className='container-textoAbout'>
             <h2 className='tituloh2'>Mission</h2>
-            <p className='parrafo-About'>Elaborate all our products and services with high quality standards,
-              maintaining their artisanal and ecological origin. We want to convey
-              the Macchiato Experience through our service style: warmth, service
-              and passion.</p>
+            <p className='parrafo-About'>To be the most complete distributor with a high quality service. We want to convey the Macchiato Experience through our style of service: warmth, service and passion.</p>
           </div>
 
           <div className='container-textoAbout'>

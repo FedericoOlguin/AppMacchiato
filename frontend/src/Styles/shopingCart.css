@@ -1,11 +1,20 @@
+.contShoping {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  filter: brightness(0.8);
+  background-image: url("../img/fondo_alto.jpg");
+}
+
 .container-shoping {
   display: flex;
   width: 100%;
   min-height: 100vh;
   background-image: url(https://images.pexels.com/photos/1419939/pexels-photo-1419939.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: cover;
+  background-repeat: no-repeat;
   flex-direction: column;
-  filter: brightness(0.7);
+  background-color: transparent;
 }
 
 /* ---------------------cart comrpa --------------------*/
@@ -30,10 +39,28 @@
 }
 
 /* ---------------- Carrito---------------- */
-
+.contenedorCheckout {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+.Paypalbutton {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  right: 1rem;
+  top: 20rem;
+  background-color: rgba(0, 0, 0, 0.685);
+  min-height: 40vh;
+  /* justify-content: center; */
+  /* align-items: center; */
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
 
 .totalCompra {
-  width: 25%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   right: 1rem;
@@ -311,7 +338,7 @@
 
   .titulo-shoping {
     font-size: 3rem;
-     text-align: center;
+    text-align: center;
   }
 }
 

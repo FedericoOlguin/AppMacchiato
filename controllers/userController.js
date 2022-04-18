@@ -67,7 +67,7 @@ const userController = {
         if (user) {
             user.verifiedEmail = true   //cambiamos el email a verificado pasando true como parametro
             await user.save()
-            res.redirect("http://localhost:3000/signIn") //redirecciona al usuario a la ruta definida
+            res.redirect("https://macchiatoapp.herokuapp.com/signIn") //redirecciona al usuario a la ruta definida
             // res.json({success:true,response:"Your email has been successfully verified"})
         } else {
             res.json({ success: false, response: "Your email could not be verified" })

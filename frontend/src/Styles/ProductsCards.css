@@ -1,5 +1,5 @@
 .contenedorCardsGeneral {
-  margin-top: 100px;
+  /* margin-top: 100px; */
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -11,11 +11,18 @@
   background-image: url("../img/fondoSlider.jpg");
   background-size: cover;
   background-position: 100% 60%;
-  filter: brightness(0.5);
+  filter: brightness(0.8);
   background-attachment: fixed;
   width: 100%;
   height: 50vh;
-  margin: 1rem 0;
+  margin: 0 0 2rem 0;
+  /* position: relative; */
+  box-shadow: 15px 15px 15px black;
+}
+.containergShopGlobal {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .titleStore {
@@ -32,17 +39,18 @@
 /* -------------filters------------- */
 
 .filters {
-  width: 20%;
-  height: 100vh;
+  min-width: 20%;
+  /* height: 100vh; */
+  /* flex-grow: 1; */
   display: flex;
   flex-direction: column;
-
   align-items: center;
+  padding-left: 1rem;
 }
 
 .input-text {
-  margin: 3rem 0 3rem 3rem;
-  width: 100%;
+  margin: 2rem 0;
+  width: 90%;
   height: 5vh;
   padding: 0.5rem;
   background-color: transparent;
@@ -53,14 +61,13 @@
 }
 
 .form-control {
-  width: 100%;
+  width: 90%;
   height: 5vh;
   font-size: 1.3em;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #efeefe;
   color: white;
-  margin-left: 3rem;
 }
 .form-control option {
   background-color: rgba(5, 4, 4, 0.973);
@@ -68,20 +75,20 @@
 
 /* -------------card------------- */
 .ContainerStore {
-  max-width: 80%;
+  min-width: 80%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: auto;
+  /* margin: auto; */
   transition: all 1s ease-in-out;
 }
 .container-cards {
   width: 100%;
   display: flex;
 }
-.lupaView{
-width: 2.5rem;
+.lupaView {
+  width: 2.5rem;
 }
 
 .cardProducto {
@@ -209,7 +216,7 @@ width: 2.5rem;
   text-decoration: none !important;
 }
 
-.link-about1{
+.link-about1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,7 +225,7 @@ width: 2.5rem;
   color: #efefefe8;
   background-color: #f3a446;
   text-decoration: none;
- 
+
   margin-bottom: 1rem;
   font-size: 1.35em;
   font-weight: 700;
@@ -226,54 +233,55 @@ width: 2.5rem;
 
 @media only screen and (min-width: 0px) and (max-width: 1200px) {
   .filters {
-    width: 100%;
+    min-width: 100%;
     height: auto;
   }
   .ContainerStore {
-    max-width: 100%;
+    max-width: 90%;
   }
-
-  .input-text,
-  .form-control {
-    margin: 2rem auto;
+  .containergShopGlobal {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .nofound {
     margin-top: 0;
     font-size: 2rem;
   }
-  .titleStore{
+  .titleStore {
     display: none;
   }
 
   .sliderPromocion {
-  display: flex;
-  background-image: url("../img/fondoSlider.jpg");
-  background-size: cover;
-  background-position: center;
+    display: flex;
+    background-image: url("../img/fondoSlider.jpg");
+    background-size: cover;
+    background-position: center;
   }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1325px) {
   .input-text,
   .form-control {
-    width: 80%;
-    margin-left: 3rem;
+    width: 100%;
   }
   .filter {
     align-items: center;
   }
 }
 
-
-@media (max-width: 480px){
-  .link-about1{
+@media (max-width: 530px) {
+  .link-about1 {
     font-size: 1em;
+  }
+
+  .filters {
+    /* padding: 0 1.8rem; */
   }
 }
 
-
-@media (max-width: 360px){
-  .link-about1{
+@media (max-width: 360px) {
+  .link-about1 {
     display: none;
   }
 }

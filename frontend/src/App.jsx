@@ -16,6 +16,7 @@ import PanelProducts from './Pages/PanelProducts'; /* toca organizarla, solo se 
 import Detalle from "./components/DetalleProdct";
 import productActions from './redux/actions/productActions';
 import ShoppingCart from './Pages/ShopingCart';
+// import {PayPalScriptProvider} from "@paypal/react-paypal-js"
 
 
 
@@ -32,9 +33,15 @@ function App(props) {
     }
 
   }, [])
+//   const initialOptions = { // Genero las opciones para enviarle al CDN
+//     "client-id": "AUzLXvUHDcNu5B7vgEvIt8Ag27Lz8ZDQlWfqKs6EgzhpZnYZL2Qb0Orw0hKCTkdFNKJHQ_x-RwQaOdaq",
+//     currency: "USD", //Establesco la moneda
+//     intent: "capture", //Estableco el metodos este autoriza la operacion y captura los fondos
 
+// };
 
   return (
+    // <PayPalScriptProvider  options={initialOptions}>
     <BrowserRouter>
       <Routes>
         {props.authorized}
@@ -53,6 +60,7 @@ function App(props) {
       </Routes>
       <Snackbar />
     </BrowserRouter>
+      // </PayPalScriptProvider>
   );
 }
 
