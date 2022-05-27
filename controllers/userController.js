@@ -13,8 +13,8 @@ const sendEmail = async (email, uniqueString) => { //Funcion que envia email de 
         port: 465,
         secure: true,
         auth: {
-            user: "macchiatoweb10@gmail.com",                //DEFINIMOS LOS DATOS DE AUTORIZACION DE NUESTRO PROVEEDOR DE CORREO 
-            pass: "macchiato123456"                                //Es necesario configurar el correo apra el uso de aplicaciones menos seguras
+            user: "",                //DEFINIMOS LOS DATOS DE AUTORIZACION DE NUESTRO PROVEEDOR DE CORREO 
+            pass: ""                                //Es necesario configurar el correo apra el uso de aplicaciones menos seguras
         },                                                     // y tambien no solocitar la verificacion en 2 pasos
         tls: {
             rejectUnauthorized: false
